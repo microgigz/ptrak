@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
   def current_user
-    
+
     @current_user ||= ((session[:id] && User.find_by_id(session[:id])) || 0)
   end
   def current_porject
