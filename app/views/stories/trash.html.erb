@@ -1,0 +1,63 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%#= "trash.html" %>
+<%= content_for :css do %>
+  <%= stylesheet_link_tag 'str'  %>
+<% end %>
+<%#= "usecase.html" %>
+<div id="main">
+  <div id="project">
+    <div id="Project-name">
+      <h1>Project name</h1>
+    </div>
+    <div id="Project-mgt">
+      Project navigation
+    </div>
+  </div>
+
+  <div class="main-con">
+    <div class="project_content">asdf</div>
+    <div class="project_content">asdf</div>
+    <div class="project_content">asdfsadf</div>
+    <div class="project_content">asdfsadf</div>
+  </div>
+  <div ></div>
+</div>
+<%# code on 14 dec whole form in html%>
+<form method="post" action="#">
+          <div id="storyname">
+            <input type="text" id="s_name"name="story name"/>
+          </div>
+          <div id="s_buttons">
+            <input type="submit" name="Save" value="Save"/>
+            <input type="reset" name="Cancel" value="Cancel"/>
+          </div>
+          <div>
+          <select>
+            <option>Feature</option>
+            <option>Bug</option>
+            <option>Core</option>
+            <option>Release</option>
+          </select>
+          <select>
+            <option>Un estimated</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+          <select>
+            <option>none</option>
+          </select><label >requested Story</label>
+          <select>
+            <option>none</option>
+          </select><label >own this Story by</label>
+          </div>
+           <input type="text" name="story name"/>
+           <input type="text" name="story name"/>
+           <input type="text" name="story name"/>
+           <input type="button"/>
+           <label >own this Story by</label>
+        </form>

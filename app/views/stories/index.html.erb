@@ -1,0 +1,91 @@
+<%= content_for :css do %>
+  <%= stylesheet_link_tag 'str'  %>
+
+<% end %>
+<%= content_for :js do %>
+  <%= javascript_include_tag 'usecase/usecase.js' %>
+<%  end %>
+<%#= "usecase.html" %>
+<div id="main">
+  <div id="project">
+    <div id="project-name">
+      <h1><%= current_user.projects.first.name %></h1>
+      <div  id="addstory_control_button" >
+        <a href="#" >Add Story +</a>
+        <span class="ieInputWrapper">
+          <input id="searchString" class="searchField" type="text" autocomplete="off" size="20" name="searchString" value=""/>
+        </span>
+      </div>
+    </div>
+    <div id="project-mgt">
+      <ul>
+        <li > 
+          <a href="#" id="tab_done">DONE</a>
+        </li>
+        <li>
+          <a href="#" id="tab_currnet">CURRENT</a>
+        </li>
+        <li>
+          <a href="#" id="tab_bl">BACK LOG</a>
+        </li>
+        <li>
+          <a href="#" id="tab_icebox ">ICE BOX</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-con">
+
+    <div class="project_content" id="panel_done">
+      <div class="panel_header">Done</div>
+<%#= render :partial=>'taskbox' %>
+      <div id="done">
+
+      </div>
+    </div>
+
+    <div class="project_content" id="panel_current">
+      <div class="panel_header">current</div>
+      <%#= render :partial=>'taskbox' %>
+      <div id="current">
+      <%= render :partial=>'current_task' %>
+      </div>
+    </div>
+
+    <div class="project_content" id="panel_backlog">
+      <div class="panel_header">Backlog</div>
+<%#= render :partial=>'taskbox' %>
+    </div>
+
+    <div class="project_content" id="panel_icebox">
+      <div class="panel_header ">icebox</div>
+      <div id="new_story" class="form-icebox">
+        <%= form_for @task, :url=>url_for(stories_path), :remote=>true do |f| %>
+
+          <table>
+            <tr>
+              <td style="text-align: center">
+                <%= f.text_field :task_name %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.select :task_status ,['Feature','bug','chore','release'] %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.select :task_level,['Unknown',0,1,2 ,3 ] %></td></tr>
+
+            <tr><td><%= f.submit %> <%=link_to 'Cancel'%></td></tr>
+          </table>
+        <%end%>
+      </div>
+      <div id="icebox">
+        <%= render :partial=>'taskbox' %>
+      </div>
+    </div>
+  </div>
+  <div ></div>
+</div>

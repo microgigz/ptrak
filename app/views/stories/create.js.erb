@@ -1,0 +1,5 @@
+$('#new_story').hide();
+$('<%= escape_javascript(render( :partial=>'newly_tasks'))  %>').insertAfter('.form-icebox');
+$('#task-<%=  @user_tasks.id%>').draggable( {
+  revert: 'invalid'
+});

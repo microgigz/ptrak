@@ -1,0 +1,157 @@
+<%#= "signup.html" %>
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%#= "new.html" %>
+    <!--[if IE]>
+      <link href="https://cdn3-pivotaltracker.pantherssl.com/stylesheets/ie_overrides_prod-release-20111025-20111129-1_pkg.css?1322624528" media="screen" rel="Stylesheet" type="text/css" />
+    <![endif]-->
+    <script type="text/javascript">
+      //<![CDATA[
+     // window._gaq = window._gaq || [];
+     // window._gaq.push(['_setAccount', 'UA-1687866-3']);
+     // window._gaq.push(['_trackPageview']);
+
+
+
+      (function() {
+     //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       // ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      //  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      //]]>
+    </script>
+  
+  <body class="signup_page signup marcom_page">
+
+    <div id="wrapper">
+      <script type="text/javascript">
+        ENVIRONMENT='prod'
+      </script>
+      
+      <div id="featured">
+        <div class="center">
+          <div class="inner">
+            <%if !(@user.errors.any?)%>
+           <h2>Sign up &amp; Get started now.</h2>
+           <% end %>
+           <!-- <form action="/signup" method="post">-->
+              <%= form_for(@user) do |f| %>
+                <%#= f.error_messages%>
+
+                <%= render  '/shared/error' ,:object => f.object%>
+            <% if flash[:notice] %>
+              <p class="notice"><%= flash[:notice] %></p>
+            <% end %>
+
+                <ul>
+                  <li>
+
+                    <%= f.label :name  %><br />
+                    <%= f.text_field :name %>
+                  </li>
+
+                  <li>
+                    <%= f.label :email,  %><br />
+                    <%= f.text_field :email %>
+                  </li>
+                  <li>
+
+                    <%= f.label :password  %><br />
+                    <%= f.password_field :e_password%>
+                  </li>
+                  <%#*<li>%>
+                    <%#= f.label :password_confirmation, "confirmation" %><br />
+                    <%#= f.password_field  :password_confirmation%>
+                  <%#*</li>%>
+                </ul>
+
+                <%= f.submit "Sign up" %>
+
+
+              <% end  %>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="section grey">
+        <div class="center">
+          <div class="inner">
+
+            <div class="testimonial">
+              <div class="inner">
+
+
+
+                <blockquote>
+
+
+                  "Tracker is the ideal story tracking tool for truly Agile/XP
+                  environments. Its slim feature set keeps you focused on stories and
+                  velocity, rather than distracted with nuances and overloaded features
+                  and process. Being Agile is about keeping energy focused on writing
+                  code, not burning cycles on tools that turn out more and more process.
+                  Tracker's sweet spot is its concise, lightweight, only-what-you-need,
+                  user interface. I'm a fanboy."
+                </blockquote>
+                <p>-- Jud Valeski, CTO, GNIP</p>
+
+
+
+
+              </div>
+            </div>
+
+
+            <div class="testimonial">
+              <div class="inner">
+
+
+
+                <blockquote>
+
+
+                  "Pivotal Tracker is as simple as a TODO list you might write on
+                  paper, but online, shared and collaborative (try the real-time
+                  collaboration and be amazed). Every bug or feature request we get ends
+                  up on our pivotal list."
+                </blockquote>
+                <p>-- Giacomo 'Peldi' Guilizzoni, Founder and CEO, Balsamiq Studios</p>
+
+
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+  <!--    <script type="text/javascript">
+        //<![CDATA[
+
+        jQuery(document).ready(function(){
+         // jQuery("label.infield").inFieldLabels({fadeDuration: 100});
+          //jQuery("#signup_name").focus();
+        });
+
+        //]]>
+      </script>
+-->
+
+      <div id="push"></div>
+
+    </div>
+    <noscript>
+      <div id='js_required'>Tracker requires JavaScript. Please enable it in your browser.</div>
+    </noscript>
+   
+
+
+  </body>

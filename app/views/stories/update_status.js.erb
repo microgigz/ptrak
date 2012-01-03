@@ -1,0 +1,17 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+
+$('#current'). prepend('<%= escape_javascript(render( :partial=>'cunnert_updated')) %>');
+$('#current > div').draggable({
+        revert: 'invalid',
+        start:function(event ,ui){
+            
+            type_status=($(this).parent().attr('id'))
+//            alert(type_status)
+        },
+        stop:function(event,ui){}
+
+    });

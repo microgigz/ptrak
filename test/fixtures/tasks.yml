@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  email: MyString
+  task_name: MyString
+  task_status: MyString
+  task_level: MyString
+
+two:
+  email: MyString
+  task_name: MyString
+  task_status: MyString
+  task_level: MyString

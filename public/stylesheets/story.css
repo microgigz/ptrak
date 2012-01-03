@@ -1,0 +1,1386 @@
+/* 
+    Document   : story
+    Created on : Dec 13, 2011, 12:36:12 PM
+    Author     : rashid
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.yui-calcontainer {position:relative; padding:5px; background-color:#F7F9FB; border:1px solid #7B9EBD; float:left; _overflow:hidden}
+.yui-calcontainer iframe {position:absolute; border:none; margin:0;padding:0; z-index:0; width:100%; height:100%; left:0px; top:0px}
+.yui-calcontainer iframe.fixedsize {width:50em; height:50em; top:-1px; left:-1px}
+.yui-calcontainer.multi {padding:0}
+.yui-calcontainer.multi .groupcal {padding:5px; background-color:transparent; z-index:1; float:left; position:relative; border:none}
+.yui-calcontainer .title {font:100% sans-serif; color:#000; font-weight:bold; margin-bottom:5px; height:25px; position:absolute; top:3px;left:5px; z-index:1}
+.yui-calcontainer .close-icon {position:absolute; right:3px; top:3px; border:none; z-index:1}
+.yui-calcontainer .calclose {background: url("calx.gif") no-repeat; width:17px; height:13px; cursor:pointer}
+.yui-calendar {font:100% sans-serif; text-align:center; border-spacing:0; border-collapse:separate; position:relative}
+.yui-calcontainer.withtitle {padding-top:1.5em}
+.yui-calendar .calnavleft {position:absolute; cursor:pointer; top:2px; bottom:0; width:9px; height:12px; left:2px; z-index:1; background: url("callt.gif") no-repeat}
+.yui-calendar .calnavright {position:absolute; cursor:pointer; top:2px; bottom:0; width:9px; height:12px; right:2px; z-index:1; background: url("calrt.gif") no-repeat}
+.yui-calendar td.calcell {padding:.1em .2em; border:1px solid #E0E0E0; text-align:center}
+.yui-calendar td.calcell a {color:#003DB8; text-decoration:none}
+.yui-calendar td.calcell.today {border:1px solid #000}
+.yui-calendar td.calcell.oom {cursor:default; color:#999; background-color:#EEE; border:1px solid #E0E0E0}
+.yui-calendar td.calcell.selected {color:#003DB8; background-color:#FFF19F; border:1px solid #FF9900}
+.yui-calendar td.calcell.calcellhover {cursor:pointer; color:#FFF; background-color:#FF9900; border:1px solid #FF9900}
+.yui-calendar td.calcell.calcellhover a {color:#FFF}
+.yui-calendar td.calcell.restricted {text-decoration:line-through}
+.yui-calendar td.calcell.previous {color:#CCC}
+.yui-calendar td.calcell.highlight1 {background-color:#CCFF99}
+.yui-calendar td.calcell.highlight2 {background-color:#99CCFF}
+.yui-calendar td.calcell.highlight3 {background-color:#FFCCCC}
+.yui-calendar td.calcell.highlight4 {background-color:#CCFF99}
+.yui-calendar .calhead {border:1px solid #E0E0E0; vertical-align:middle; background-color:#FFF}
+.yui-calendar .calheader {position:relative; width:100%; text-align:center}
+.yui-calendar .calheader img {border:none}
+.yui-calendar .calweekdaycell {color:#666; font-weight:normal; text-align:center; width:1.5em}
+.yui-calendar .calfoot {background-color:#EEE}
+.yui-calendar .calrowhead, .yui-calendar .calrowfoot {color:#666; font-size:9px; font-style:italic; font-weight:normal; width:15px}
+.yui-calendar .calrowhead {border-right-width:2px}
+.yui-calendar a.calnav {_position:relative; padding-left:2px; padding-right:2px; text-decoration:none; color:#000}
+.yui-calendar a.calnav:hover {border:1px solid #003366; background-color:#6699cc; background: url(calgrad.png) repeat-x; color:#fff; cursor:pointer}
+.yui-calcontainer .yui-cal-nav-mask {position:absolute; z-index:2; display:none; margin:0; padding:0; left:0; top:0; width:100%; height:100%; _width:0; _height:0; background-color:#000; opacity:0.25; filter:alpha(opacity=25)}/* remove * beforew filter*/
+.yui-calcontainer .yui-cal-nav {position:absolute; z-index:3; display:none; padding:0; top:1.5em; left:50%; width:12em; margin-left:-6em; border:1px solid #7B9EBD; background-color:#F7F9FB; font-size:93%}
+.yui-calcontainer.withtitle .yui-cal-nav {top:3.5em}
+.yui-calcontainer .yui-cal-nav-y, .yui-calcontainer .yui-cal-nav-m, .yui-calcontainer .yui-cal-nav-b {padding:2px 5px 2px 5px}
+.yui-calcontainer .yui-cal-nav-b {text-align:center}
+.yui-calcontainer .yui-cal-nav-e {margin-top:2px; padding:2px; background-color:#EDF5FF; border-top:1px solid black; display:none}
+.yui-calcontainer .yui-cal-nav label {display:block; font-weight:bold}
+.yui-calcontainer .yui-cal-nav-mc {width:100%; _width:auto}
+.yui-calcontainer .yui-cal-nav-y input.yui-invalid {background-color:#FFEE69; border: 1px solid #000}
+.yui-calcontainer .yui-cal-nav-yc {width:3em}
+.yui-calcontainer .yui-cal-nav-b button {font-size:93%; text-decoration:none; cursor: pointer; background-color: #79b2ea; border: 1px solid #003366; border-top-color:#FFF; border-left-color:#FFF; margin:1px}
+.yui-calcontainer .yui-cal-nav-b .yui-default button {}
+.yui-calendar .calbody a:hover {background:inherit;}
+p#clear {clear:left; padding-top:10px;}
+.file_upload {position: relative; overflow: hidden; direction: ltr; cursor: pointer; text-align: center; color: #333; font-weight: bold; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; width: 200px; height: 30px; line-height: 30px; background: palegreen; border: 1px solid limegreen}
+.file_upload_small {width: 200px; height: 30px; line-height: 30px; font-size: auto; background: palegreen; border: 1px solid limegreen}
+.file_upload_large {width: 100%; height: 150px; line-height: 150px; font-size: 20px; background: palegreen; border: 1px solid limegreen}
+.file_upload_highlight {background: lawngreen}
+.file_upload input {position: absolute; top: 0; right: 0; margin: 0; border: 300px solid transparent; opacity: 0; -ms-filter: 'alpha(opacity=0)'; filter: alpha(opacity=0); -o-transform: translate(-300px, -300px) scale(10); -moz-transform: translate(-800px, 0) scale(10); cursor: pointer}
+.file_upload iframe, .file_upload button {display: none}
+.file_upload_preview img {width: 80px}
+.file_upload_progress .ui-progressbar-value {background: url(pbar-ani.gif)}
+.file_upload_progress div {width: 150px; height: 15px}
+.file_upload_cancel button {cursor: pointer}
+.chzn-container {font-size: 13px; position: relative; display: inline-block; zoom: 1; display: inline}/*remove * before dispaly*/
+.chzn-container .chzn-drop {background: #fff; border: 1px solid #aaa; border-top: 0; position: absolute; top: 29px; left: 0; -webkit-box-shadow: 0 4px 5px rgba(0,0,0,.15); -moz-box-shadow : 0 4px 5px rgba(0,0,0,.15); -o-box-shadow : 0 4px 5px rgba(0,0,0,.15); box-shadow : 0 4px 5px rgba(0,0,0,.15); z-index: 999}
+.chzn-container-single .chzn-single {background-color: #fff; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white)); background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, white 50%); background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, white 50%); background-image: -o-linear-gradient(top, #eeeeee 0%,#ffffff 50%); background-image: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 50%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); background-image: linear-gradient(top, #eeeeee 0%,#ffffff 50%); -webkit-border-radius: 4px; -moz-border-radius : 4px; border-radius : 4px; -moz-background-clip : padding; -webkit-background-clip: padding-box; background-clip : padding-box; border: 1px solid #aaa; display: block; overflow: hidden; white-space: nowrap; position: relative; height: 26px; line-height: 26px; padding: 0 0 0 8px; color: #444; text-decoration: none}
+.chzn-container-single .chzn-single span {margin-right: 26px; display: block; overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; text-overflow: ellipsis}
+.chzn-container-single .chzn-single div {-webkit-border-radius: 0 4px 4px 0; -moz-border-radius : 0 4px 4px 0; border-radius : 0 4px 4px 0; -moz-background-clip : padding; -webkit-background-clip: padding-box; background-clip : padding-box; background: #ccc; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ccc), color-stop(0.6, #eee)); background-image: -webkit-linear-gradient(center bottom, #ccc 0%, #eee 60%); background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%); background-image: -o-linear-gradient(bottom, #ccc 0%, #eee 60%); background-image: -ms-linear-gradient(top, #cccccc 0%,#eeeeee 60%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 ); background-image: linear-gradient(top, #cccccc 0%,#eeeeee 60%); border-left: 1px solid #aaa; position: absolute; right: 0; top: 0; display: block; height: 100%; width: 18px}
+.chzn-container-single .chzn-single div b {background: url('chosen-sprite.png') no-repeat 0 1px; display: block; width: 100%; height: 100%}
+.chzn-container-single .chzn-search {padding: 3px 4px; margin: 0; white-space: nowrap}
+.chzn-container-single .chzn-search input {background: #fff url('chosen-sprite.png') no-repeat 100% -20px; background: url('chosen-sprite.png') no-repeat 100% -20px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee)); background: url('chosen-sprite.png') no-repeat 100% -20px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%); background: url('chosen-sprite.png') no-repeat 100% -20px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%); background: url('chosen-sprite.png') no-repeat 100% -20px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%); background: url('chosen-sprite.png') no-repeat 100% -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%); background: url('chosen-sprite.png') no-repeat 100% -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%); background: url('chosen-sprite.png') no-repeat 100% -20px, linear-gradient(top, #ffffff 85%,#eeeeee 99%); margin: 1px 0; padding: 4px 20px 4px 5px; outline: 0; border: 1px solid #aaa; font-family: sans-serif; font-size: 1em}
+.chzn-container-single .chzn-drop {-webkit-border-radius: 0 0 4px 4px; -moz-border-radius : 0 0 4px 4px; border-radius : 0 0 4px 4px; -moz-background-clip : padding; -webkit-background-clip: padding-box; background-clip : padding-box}
+.chzn-container-multi .chzn-choices {background-color: #fff; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee)); background-image: -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%); background-image: -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%); background-image: -o-linear-gradient(bottom, white 85%, #eeeeee 99%); background-image: -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); background-image: linear-gradient(top, #ffffff 85%,#eeeeee 99%); border: 1px solid #aaa; margin: 0; padding: 0; cursor: text; overflow: hidden; height: auto !important; height: 1%; position: relative}
+.chzn-container-multi .chzn-choices li {float: left; list-style: none}
+.chzn-container-multi .chzn-choices .search-field {white-space: nowrap; margin: 0; padding: 0}
+.chzn-container-multi .chzn-choices .search-field input {color: #666; background: transparent !important; border: 0 !important; padding: 5px; margin: 1px 0; outline: 0; -webkit-box-shadow: none; -moz-box-shadow : none; -o-box-shadow : none; box-shadow : none}
+.chzn-container-multi .chzn-choices .search-field .default {color: #999}
+.chzn-container-multi .chzn-choices .search-choice {-webkit-border-radius: 3px; -moz-border-radius : 3px; border-radius : 3px; -moz-background-clip : padding; -webkit-background-clip: padding-box; background-clip : padding-box; background-color: #e4e4e4; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e4e4e4), color-stop(0.7, #eeeeee)); background-image: -webkit-linear-gradient(center bottom, #e4e4e4 0%, #eeeeee 70%); background-image: -moz-linear-gradient(center bottom, #e4e4e4 0%, #eeeeee 70%); background-image: -o-linear-gradient(bottom, #e4e4e4 0%, #eeeeee 70%); background-image: -ms-linear-gradient(top, #e4e4e4 0%,#eeeeee 70%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#eeeeee',GradientType=0 ); background-image: linear-gradient(top, #e4e4e4 0%,#eeeeee 70%); color: #333; border: 1px solid #b4b4b4; line-height: 13px; padding: 3px 19px 3px 6px; margin: 3px 0 3px 5px; position: relative}
+.chzn-container-multi .chzn-choices .search-choice span {cursor: default}
+.chzn-container-multi .chzn-choices .search-choice-focus {background: #d4d4d4}
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close {display: block; position: absolute; right: 5px; top: 6px; width: 8px; height: 9px; font-size: 1px; background: url(chosen-sprite.png) right top no-repeat}
+.chzn-container-multi .chzn-choices .search-choice .search-choice-close:hover {background-position: right -9px}
+.chzn-container-multi .chzn-choices .search-choice-focus .search-choice-close {background-position: right -9px}
+.chzn-container .chzn-results {margin: 0 4px 4px 0; max-height: 190px; padding: 0 0 0 4px; position: relative; overflow-x: hidden; overflow-y: auto}
+.chzn-container-multi .chzn-results {margin: -1px 0 0; padding: 0}
+.chzn-container .chzn-results li {line-height: 80%; padding: 7px 7px 8px; margin: 0; list-style: none}
+.chzn-container .chzn-results .active-result {cursor: pointer}
+.chzn-container .chzn-results .highlighted {background: #3875d7; color: #fff}
+.chzn-container .chzn-results li em {background: #feffde; font-style: normal}
+.chzn-container .chzn-results .highlighted em {background: transparent}
+.chzn-container .chzn-results .no-results {background: #f4f4f4}
+.chzn-container .chzn-results .group-result {cursor: default; color: #999; font-weight: bold}
+.chzn-container .chzn-results .group-option {padding-left: 20px}
+.chzn-container-multi .chzn-drop .result-selected {display: none}
+.chzn-container-active .chzn-single {-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3); -moz-box-shadow : 0 0 5px rgba(0,0,0,.3); -o-box-shadow : 0 0 5px rgba(0,0,0,.3); box-shadow : 0 0 5px rgba(0,0,0,.3); border: 1px solid #5897fb}
+.chzn-container-active .chzn-single-with-drop {border: 1px solid #aaa; -webkit-box-shadow: 0 1px 0 #fff inset; -moz-box-shadow : 0 1px 0 #fff inset; -o-box-shadow : 0 1px 0 #fff inset; box-shadow : 0 1px 0 #fff inset; background-color: #eee; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(0.5, #eeeeee)); background-image: -webkit-linear-gradient(center bottom, white 0%, #eeeeee 50%); background-image: -moz-linear-gradient(center bottom, white 0%, #eeeeee 50%); background-image: -o-linear-gradient(bottom, white 0%, #eeeeee 50%); background-image: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 50%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); background-image: linear-gradient(top, #ffffff 0%,#eeeeee 50%); -webkit-border-bottom-left-radius : 0; -webkit-border-bottom-right-radius: 0; -moz-border-radius-bottomleft : 0; -moz-border-radius-bottomright: 0; border-bottom-left-radius : 0; border-bottom-right-radius: 0}
+.chzn-container-active .chzn-single-with-drop div {background: transparent; border-left: none}
+.chzn-container-active .chzn-single-with-drop div b {background-position: -18px 1px}
+.chzn-container-active .chzn-choices {-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3); -moz-box-shadow : 0 0 5px rgba(0,0,0,.3); -o-box-shadow : 0 0 5px rgba(0,0,0,.3); box-shadow : 0 0 5px rgba(0,0,0,.3); border: 1px solid #5897fb}
+.chzn-container-active .chzn-choices .search-field input {color: #111 !important}
+.chzn-rtl {direction:rtl;text-align: right}
+.chzn-rtl .chzn-single {padding-left: 0; padding-right: 8px}
+.chzn-rtl .chzn-single span {margin-left: 26px; margin-right: 0}
+.chzn-rtl .chzn-single div {left: 0; right: auto; border-left: none; border-right: 1px solid #aaaaaa; -webkit-border-radius: 4px 0 0 4px; -moz-border-radius : 4px 0 0 4px; border-radius : 4px 0 0 4px}
+.chzn-rtl .chzn-choices li {float: right}
+.chzn-rtl .chzn-choices .search-choice {padding: 3px 6px 3px 19px; margin: 3px 5px 3px 0}
+.chzn-rtl .chzn-choices .search-choice .search-choice-close {left: 5px; right: auto; background-position: right top;}
+.chzn-rtl.chzn-container-single .chzn-results {margin-left: 4px; margin-right: 0; padding-left: 0; padding-right: 4px}
+.chzn-rtl .chzn-results .group-option {padding-left: 0; padding-right: 20px}
+.chzn-rtl.chzn-container-active .chzn-single-with-drop div {border-right: none}
+.chzn-rtl .chzn-search input {background: url('chosen-sprite.png') no-repeat -38px -20px, #ffffff; background: url('chosen-sprite.png') no-repeat -38px -20px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee)); background: url('chosen-sprite.png') no-repeat -38px -20px, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%); background: url('chosen-sprite.png') no-repeat -38px -20px, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%); background: url('chosen-sprite.png') no-repeat -38px -20px, -o-linear-gradient(bottom, white 85%, #eeeeee 99%); background: url('chosen-sprite.png') no-repeat -38px -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%); background: url('chosen-sprite.png') no-repeat -38px -20px, -ms-linear-gradient(top, #ffffff 85%,#eeeeee 99%); background: url('chosen-sprite.png') no-repeat -38px -20px, linear-gradient(top, #ffffff 85%,#eeeeee 99%); padding: 4px 5px 4px 20px}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/main.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+body {font-family: Arial, Verdana, sans-serif; width: 100%; margin: 0; padding: 0; line-height: 130%; color: #303030; background-color: #eeeeee; text-align: left}
+img {border: none}
+.activity_url_options li {list-style-type: disc; margin-left: 42px}
+.activity_url_options em {font-family: monospace; font-style: normal; font-size: 12px}
+#flash {text-align: center; font-weight: bold; margin-bottom: 1em}
+.notice {display: inline-block; margin-top: 10px; font-size: 12px; padding: 10px 50px; background: gold; color: black; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-box-shadow: 0 0 5px #888888; -webkit-box-shadow: 0 0 5px #888888; box-shadow: 0 0 5px #888888}
+.error_message {font-weight: bold; color: red}
+.error_above_or_below {color: red}
+.trackerFieldWithErrors input[type=text] {background-color: #f2afaf}
+h1 .right_link {float: right; font-size: 12px; font-weight: bold}
+h2 .right_link {float: right; font-size: 12px; font-weight: normal}
+h2 .sublink {font-size: 12px; font-weight: normal}
+h2 .subtext {font-size: 12px; color: #888888}
+h2 .subtext + .subtext {margin-left: 1.5em}
+.preview .markdown_content ul li ul li {margin-left: 1em}
+#main > .content {margin: 0 auto; width: 1000px}
+.halfway_column {float: left; width: 455px}
+.has_right_spacer {margin-right: 45px}
+.left {float: left}
+.right {float: right}
+.clear {clear: both}
+.bold {font-weight: bold}
+#main {padding: 35px 0 50px 0; min-height: 470px; background-color: #ffffff}
+.big_link {display: block; line-height: 2em; font-size: 1.4em}
+a.disabled_big_link {font-weight: bold; color: #888888}
+a.disabled_big_link:hover {text-decoration: none; cursor: default}
+.content_subsection + .content_subsection {margin-top: 10px}
+.has_dotted_line {background: url("/images/Stories/dotted_horizontal_border.png") repeat-x bottom left}
+.bad_message {border: 3px solid #97c8e5; width: 450px; margin: 200px auto 0 auto; padding: 40px 50px; text-align: center}
+.pagination {margin-top: 2px; text-align: center; font-size: 12px}
+.pagination .current {font-weight: bold}
+.pagination .disabled {color: #888888; opacity: 0.5; filter: alpha(opacity=50); -ms-filter: "alpha(opacity=50)"}
+#from_date, #to_date {display: inline}
+.dateEditField {line-height: 22px; display: inline}
+.dateIconField {display: inline; margin-right: 4px}
+.calendar_quick_links {float: right; line-height: 16px}
+.sortable .sortcol {cursor: pointer; padding-right: 20px; background-repeat: no-repeat; background-position: right center}
+.sortable .sortasc {background-color: #ddffac; background-image: url(/images/Stories/icons/up.gif)}
+.sortable .sortdesc {background-color: #b9ddff; background-image: url(/images/Stories/icons/down.gif)}
+.sortable .nosort {cursor: default}
+#alert_box {left: 430px; position: absolute; top: 0.4em; text-align: center; background: white; padding-top: 0.4em; padding-bottom: 0.4em; padding-right: 0.5em; padding-left: 0.25em; font: normal 12px; color: #333333; width: 25em; border: 1px solid darkgray; line-height: 1em; z-index: 99}
+#alert_box a {color: #0957a4}
+#alert_box a:visited {color: #0957a4}
+#alert_box a:hover {color: #0957a4}
+#delinquency_alert_detail {color: #aa1224}
+#delinquency_alert_detail a {color: #aa1224}
+#header .messages #alert_box_dismiss {float: right; width: 13px; height: 13px}
+#delinquency_quick_add {margin-top: 7px}
+#delinquency_quick_add #shift_submit {color: #ffffff; line-height: 22px; padding: 0 8px; background: #153b5c; border: none; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px}
+#motd {color: #0957a4; margin-bottom: 0.5em}
+#motd a {color: #1d8ec9}
+#motd a:visited {color: #1d8ec9}
+.timeoutPopup {position: absolute; visibility: hidden; border: 2px solid #8dc8ff; background: #e5e5e5; padding: 5px; font-size: 13px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px}
+.timeoutPopup .urlHeader {font-size: 10px; font-style: italic; padding-left: 10px}
+.timeoutPopup .messageContainer {text-align: center; padding: 1em}
+.timeoutPopup .okButton {width: 40px}
+.timeoutPopup .okButtonContainer {text-align: center; padding-bottom: 1em}
+.calendarPopupDiv {background-color: white}
+.yui-calcontainer .calclose {background: url("/images/Stories/common/calx.gif") no-repeat}
+.yui-calendar {font-size: 12px}
+.yui-calendar .calnavleft {background: url("/images/Stories/callt.gif") no-repeat}
+.yui-calendar .calnavright {background: url("/images/Stories/calrt.gif") no-repeat}
+.yui-calendar a.calnav:hover {background: url("/images/Stories/calgrad.png") repeat-x}
+.errorText {color: red; padding: 0.4em; font-size: 12px}
+.errorTextSignin {font-weight: bold; color: darkred}
+.screencast_callout {float: left; margin: 20px 0; padding: 20px; background: #ffffdd}
+#screencast .screencast_callout a.lightwindow {float: left; margin: 10px 64px 0px 64px; text-decoration: none}
+.screencast_callout h3 {margin-top: 10px; text-align: center}
+.policy_content li {list-style-position: inside}
+.policy_content ul li {list-style-position: inside; margin-left: 0px; text-indent: 40px; font-size: 1.2em; padding-bottom: 10px}
+.policy_content p {padding-bottom: 20px}
+.policy_content ul {padding-bottom: 20px}
+.policy_content h3 {padding-bottom: 10px; color: #666666}
+.policy_content h4 {padding-bottom: 10px; color: #666666}
+.policy_content p {padding-bottom: 10px; color: #666666}
+.policy_content li {padding-bottom: 10px; color: #666666}
+.simple-overlay {background: black; opacity: 0.4}
+.close_popup {cursor: pointer; color: #999999; display: block; font-size: 12px}
+.close_popup img {padding-right: 0.5em; vertical-align: text-top}
+.centered_miniform {background-color: #97c8e5; width: 364px; margin: 65px auto 0 auto; padding: 10px 50px}
+.centered_miniform .field {margin-bottom: 20px}
+.centered_miniform label {display: block; font-size: 1.06em; margin-bottom: 3px}
+.centered_miniform input[type='text'] {display: block; border: 1px solid #cccccc; padding: 4px; font-size: 1.06em; width: 354px}
+.centered_miniform input[type='password'] {display: block; border: 1px solid #cccccc; padding: 4px; font-size: 1.06em; width: 354px}
+.centered_miniform .buttons {text-align: right}
+.centered_miniform .field a {display: block; text-align: right; font-weight: normal; font-size: 0.8em; margin-top: 2px}
+.third_party_licenses td {padding-right: 8px}
+.warning_message_box {background-color: #fff8d7; padding: 1em 1.5em; color: black}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/shared.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+html {font-size: 125% !important; font-family: Arial, Helvetica, sans-serif}
+body {font-size: 50%; line-height: 1.3}
+a {color: #327a9f; text-decoration: none}
+a:hover {text-decoration: underline}
+a:active {outline: none}
+a:focus {outline: none}
+p {color: #666666; font-size: 1.2em; line-height: 1.4; margin-bottom: 1em}
+blockquote {font-family: Georgia, "Times New Roman", serif; font-size: 1.3em; font-style: italic; color: #666666}
+select, input, textarea {font-size: 12px; font-family: Arial, Helvetica, sans-serif}
+li, ul, div {margin: 0; padding: 0}
+li {list-style: none outside none}
+input[type=submit]:-moz-focus-inner {border: 0}/*remove : before moz*/
+div.center {width: 960px; margin: 0 auto}
+div.center > div.inner {margin: 0 15px; overflow: hidden}
+.right {float: right}
+.left {float: left}
+#header {height: 45px; background: #256188; overflow: hidden}
+#header h1 {float: left; width: 326px; height: 25px; margin-top: 11px; margin-bottom: 0; padding: 0}
+#header h1 a {display: block; width: 100%; height: 100%; text-indent: -9999em; background: url(/images/pivotal_tracker_white.png) no-repeat left top}
+#header ul.nav_links {float: right; margin-top: 11px; width: 750px}/**remove before width*/
+#header ul.nav_links > li {float: left; width: auto}
+#header ul.nav_links > li + li {margin-left: 17px}
+#header ul.nav_links > li a {display: block; color: #ffffff; font-size: 1.1em; font-weight: bold; line-height: 24px; padding: 0 10px; text-transform: uppercase; text-shadow: 1px 1px 3px #111111}
+#header ul.nav_links > li a:hover {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-decoration: none; background-color: #153b5c}
+#header ul.nav_links > li a.current {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-decoration: none; background-color: #153b5c}
+html, body {height: 100%}
+#wrapper {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -282px}
+.simple_overlay {display: none; z-index: 10000; background-color: #333333; -moz-box-shadow: 0 0 90px 5px #000000; -webkit-box-shadow: 0 0 90px #000000}
+.simple_overlay .close {background-image: url(/images/v7/marcom/buttons/close_overlay.png); position: absolute; right: -17px; top: -15px; cursor: pointer; height: 34px; width: 34px}
+.simple_overlay embed {display: block}
+a.button.white {color: #256188; background-color: #ffffff}
+a.button.white:hover {background-color: #256188; color: #ffffff}
+a.outlined.button {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; color: #256188; border: 1px solid #cccccc; font-size: 11px; font-weight: bold; padding: 6px 7px 4px; text-transform: uppercase}
+a.outlined.button:hover {text-decoration: none}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/main.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+h3, h4 {margin-top: 0}
+.s_admin #header .navigation_area ul.nav_links > li + li {margin-left: 3px}
+#header {padding: 0 14px 0 20px; overflow: visible; position: relative; z-index: 12}
+#header .navigation_area {float: right; margin-top: 8px; position: relative}
+#header .navigation_area .welcome_message {font-size: 1.1em; text-align: right; line-height: 1; color: #aaaaaa; margin-right: 7px}
+#header .navigation_area ul.nav_links {position: relative; margin: 0}
+#header .navigation_area ul.nav_links > li {list-style: none outside none}
+#header .navigation_area ul.nav_links > li a {padding: 0 8px; line-height: 22px; text-shadow: none; letter-spacing: -0.01em}
+#header .navigation_area ul.nav_links > li a:hover {background-color: transparent; text-decoration: underline}
+#header .navigation_area ul.nav_links > li + li {margin-left: 6px}
+#header .navigation_area ul.nav_links > li.dropdown:first-child > a {padding-right: 17px; background: url(/images/Stories/arrow_dropdown_white.png) no-repeat 72px 8px; margin-right: 3px}
+#header .navigation_area ul.nav_links > li.dropdown:first-child > a.active {position: relative; z-index: 10; margin-right: 1px; color: #256188; background-image: url(/images/Stories/arrow_dropdown_aqua.png)}/*remove * before margin*/
+#header .navigation_area ul.nav_links > li.dropdown:first-child div.nav_dropdown ul > li a span {padding: 3px 40px 3px 2px}
+#header .nav_links #account_callout {position: absolute; top: 130%; right: 105px; width: 316px; z-index: 10; text-align: left; padding-top: 5px; border: solid 2px #6c6c6c; background: -webkit-gradient(linear, left top, left bottom, from(#e9e9e9), to(#d6d6d6)); background: -moz-linear-gradient(top, #e9e9e9, #d6d6d6); -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; -moz-box-shadow: 0, 0, 3px, #111111; -webkit-box-shadow: 0, 0, 3px, #111111; box-shadow: 0, 0, 3px, #111111}
+#header .nav_links #account_callout:before {content: ""; position: absolute; left: 265px; top: -12px; width: 0; height: 0; z-index: 11; border-right: 10px solid transparent; border-bottom: 12px solid #e9e9e9; border-left: 10px solid transparent}
+#header .nav_links #account_callout:after {content: ""; position: absolute; left: 262px; top: -15px; width: 0; height: 0; z-index: -1; border-right: 13px solid transparent; border-bottom: 15px solid #6c6c6c; border-left: 13px solid transparent}
+#header .nav_links #account_callout > .inner {position: relative; margin: 12px 18px 0}
+#header .nav_links #account_callout p {font-size: 11px; font-weight: bold; line-height: 1.3em; padding-left: 15px}
+#header .nav_links #account_callout p strong {color: #720613; text-transform: uppercase; font-weight: bold}
+#header .nav_links #account_callout hr {border-top: 1px solid #b0b0af; border-bottom: 1px solid #eaeaea; border-left: none; border-right: none; margin: 11px 0 9px}
+#header .nav_links #account_callout a.upgrade {display: block; width: 282px; height: 26px; background: url(/images/Stroies/notice_choose_plan.png) no-repeat; text-indent: -9999em; padding-top: 5px}
+#header .nav_links #account_callout a.upgrade:hover {background-image: url(/images/Stories/notice_choose_plan_hover.png)}
+#header .nav_links #account_callout a.close {position: absolute; top: -20%; right: -5px; font-weight: bold; color: #999999; font-size: 11px}
+#header .nav_links #account_callout a.close:hover {text-decoration: underline; background: none}
+#header .nav_links #account_callout.med {height: 157px; background: url(/images/Stories/notice_bg_med.png) no-repeat}
+#header .relative {position: relative}
+#header .messages .message {margin: 0; float: left; font-weight: bold}
+#header .messages #status {margin: 0; float: left; font-weight: bold}
+#header .messages .message {float: none; padding: 0.25em 0}
+#header .messages .message .date {color: #aa1224}
+#header .messages #status {font-size: 11px; left: 344px; position: absolute; top: 9px}
+#header .messages #offlineMessage {font-size: 11px; left: 344px; position: absolute; top: 9px}
+#header .messages #offlineMessage {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-box-shadow: 0 0 5px #222222; -webkit-box-shadow: 0 0 5px #222222; box-shadow: 0 0 5px #222222; background-color: #a70201; border: 1px solid white; padding: 5px 20px; color: white; font-weight: bold; text-align: center}
+#header .statusOn {font-weight: bold; padding-right: 10px}
+#header .statusFading {font-weight: bold; padding-right: 10px}
+#header .statusOff {font-weight: bold; padding-right: 10px}
+#header .statusOn {color: black}
+#header .statusOff {color: white}
+#header .statusOff {color: white}
+.content h1 {font-size: 2.6em; text-transform: uppercase; font-weight: bold; margin-bottom: 20px}
+.content h2 {font-size: 1.8em; background: url(/images/Stories/hr.png) repeat-x scroll left bottom; padding-bottom: 12px; margin-bottom: 16px; text-indent: 2px}
+#header .navigation_area ul.nav_links a:active {outline: none}
+#header .navigation_area ul.nav_links a:focus {outline: none}
+#header .navigation_area ul.nav_links li.dropdown {z-index: 9}
+#header .navigation_area ul.nav_links li.dropdown a.tab.active {height: 22px; background-color: #ffffff; color: #256188; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #777777; border-bottom: none; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0; position: relative; z-index: 10}
+#header .navigation_area ul.nav_links li.dropdown div.knockout {position: absolute; z-index: 1; top: 0; left: 0; height: 22px; width: 86px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0; -moz-box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7); box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7)}
+#header .navigation_area ul.nav_links li.dropdown div.nav_dropdown {position: absolute; z-index: 9; top: 21px; left: 0; background-color: #ffffff; border: 1px solid #777777; min-width: 136px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-top-left-radius: 0; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-topleft: 0; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 4px; -webkit-border-bottom-left-radius: 4px; -moz-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7); box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7)}
+#header .navigation_area ul.nav_links li.dropdown div.nav_dropdown ul > li a {display: block; color: #000000; font-size: 12px; font-weight: normal; text-transform: none; padding: 0 8px; line-height: 22px}
+#header .navigation_area ul.nav_links li.dropdown div.nav_dropdown ul > li a span {display: block; padding: 5px 5px 5px 0}
+#header .navigation_area ul.nav_links li.dropdown div.nav_dropdown ul > li a.view_all span {background-image: url(/images/Stories/view_all_projects.png); background-position: right center; background-repeat: no-repeat}
+#header .navigation_area ul.nav_links li.dropdown div.nav_dropdown ul > li a.fave span {background-image: url(/images/Stories/fave.png); background-position: right center; background-repeat: no-repeat}
+#header .navigation_area ul.nav_links li.dropdown div.nav_dropdown ul > li a:hover {-moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; color: #ffffff; text-decoration: none; background: #153b5c; background: -moz-linear-gradient(100% 100% 90deg, #256188, #153b5c); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#153b5c), to(#256188)); background: #256188 url(/images/Stories/project_dropdown_hover.png) repeat-x left top}/**/
+#header .navigation_area ul.nav_links li.dropdown div.nav_dropdown ul li + li a {border-top: 1px solid #eeeeee}
+#controlPanel #controls_search_velocity_row ul#buttonPanel a:active {outline: none}
+#controlPanel #controls_search_velocity_row ul#buttonPanel a:focus {outline: none}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown {z-index: 9}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a.tab.active {height: 22px; background-color: #ffffff; color: #256188; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #777777; border-bottom: none; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0; position: relative; z-index: 10}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown div.knockout {position: absolute; z-index: 1; top: 0; left: 0; height: 22px; width: 86px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0; -moz-box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7); box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7)}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown div.nav_dropdown {position: absolute; z-index: 9; top: 21px; left: 0; background-color: #ffffff; border: 1px solid #777777; min-width: 136px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-top-left-radius: 0; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-topleft: 0; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 4px; -webkit-border-bottom-left-radius: 4px; -moz-box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.7); -webkit-box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7); box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.7)}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown div.nav_dropdown ul > li a {display: block; color: #000000; font-size: 12px; font-weight: normal; text-transform: none; padding: 0 8px; line-height: 22px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown div.nav_dropdown ul > li a span {display: block; padding: 5px 5px 5px 0}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown div.nav_dropdown ul > li a.view_all span {background-image: url(/images/Stories/view_all_projects.png); background-position: right center; background-repeat: no-repeat}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown div.nav_dropdown ul > li a.fave span {background-image: url(/images/Stories/fave.png); background-position: right center; background-repeat: no-repeat}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown div.nav_dropdown ul > li a:hover {-moz-border-radius: 0px; -webkit-border-radius: 0px; border-radius: 0px; color: #ffffff; text-decoration: none; background: #153b5c; background: -moz-linear-gradient(100% 100% 90deg, #256188, #153b5c); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#153b5c), to(#256188)); background: #256188 url(/images/Stories/project_dropdown_hover.png) repeat-x left top}/*brfoe backgroun '*'*/
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown div.nav_dropdown ul li + li a {border-top: 1px solid #eeeeee}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/stories.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+.multi_drag_story.ui-draggable-dragging {border: 1px solid #666666}
+.multi_drag_story.ui-draggable-dragging .storyItem {background-color: #ffff99}
+.multi_drag_story.ui-draggable-dragging div.moving {background-color: #808080; color: #ffffff; font-weight: bold; font-szie: 120%; opacity: 1 !important; padding: 4px 8px; margin-left: -1px; margin-right: -1px}
+.overlay.dropdown_menu {background: #f5f5f5; border: 1px solid #adb0b6; -moz-box-shadow: 0 1px 2px #cccccc; -webkit-box-shadow: 0 1px 2px #cccccc; box-shadow: 0 1px 2px #cccccc; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -moz-border-radius-bottomright: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0; -webkit-border-bottom-right-radius: 4px; -webkit-border-bottom-left-radius: 4px}
+.overlay.dropdown_menu .balloon {padding: 0; border: 0; background: transparent}
+.overlay.dropdown_menu .balloon .balloonContents {padding: 0}
+.overlay.dropdown_menu .balloon ul li a {text-indent: 10px; line-height: 23px; display: block; font-size: 11px; color: #333333; text-decoration: none; cursor: pointer}
+.overlay.dropdown_menu .balloon ul li a:hover {background: -webkit-gradient(linear, left top, left bottom, from(#153b5c), to(#256188)); background: -moz-linear-gradient(top, #153b5c, #256188); color: #ffffff}
+.overlay.dropdown_menu .balloon ul li:last-child a {border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -moz-border-radius-bottomright: 2px; -moz-border-radius-bottomleft: 2px; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0; -webkit-border-bottom-right-radius: 2px; -webkit-border-bottom-left-radius: 2px}
+.overlay.dropdown_menu .balloon li + li {border-top: 1px solid #dddddd}
+.story_content {overflow-x: auto; overflow-y: hidden; padding-bottom: 1px; margin-top: -2px}
+.story_content .items .storyItem.drag-highlight {background-color: #ffff99}
+.story_content .items .endOfList.drop_target {border-top: 2px solid #333333; margin-top: -2px}
+.story_content .items .item.drop_target.dark {border-top: 2px solid #333333; margin-top: -2px}
+.story_content .items .item.drop_target {border-top: 2px solid #666666; margin-top: -2px}
+.story_content .items div div:first-child.drop_target {border-top: 2px solid #333333; margin-top: 0px}
+body {background-color: white; min-width: 1024px; color: #000000; overflow-y: hidden}
+#main {padding-bottom: 5px}
+p {color: #000000; font-size: 1em}
+.story_content a {color: #0957a4; text-decoration: none; font-weight: normal}
+.story_content a:visited {color: #0957a4; text-decoration: none; font-weight: normal}
+.story_content a:hover {color: #0957a4; text-decoration: none; font-weight: normal}
+.simple_footer {text-align: center; color: #555555; font-size: 0.8em}
+#status {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; background-color: #ffd700; padding: 5px 10px; -moz-box-shadow: 0 0 5px #222222; -webkit-box-shadow: 0 0 5px #222222; box-shadow: 0 0 5px #222222}
+.statusOff {display: none}
+#status.maintenance {background-color: #a70201; color: white}
+#serverConnectivityWrapper {float: right; width: 25px; margin-left: 10px; text-align: right}
+#main {padding-top: 0}
+#newStory {background-color: #aaaaaa}
+#newStory .title {color: black}
+#noprojects_content {background-color: #ffffff; clear: both; padding: 4px; margin-top: -10px}
+.unestimatedText .storyPreviewHeader {font-style: italic}
+.deployed .storyPreviewHeader {font-weight: bold}
+.storyPreviewHeader, .epicPreviewHeader {padding: 0px 0 2px 1px}
+.storyPreviewButtons {float: right; text-align: center}
+.story_content .storyPreviewButtons.custom a.expand_points {font-size: 12px; font-weight: bold; font-style: normal; color: #3f79a5; line-height: 23px; padding: 0 2px}
+.story_content .storyPreviewButtons.custom a.custom {font-size: 12px; font-weight: bold; font-style: normal; color: #3f79a5; line-height: 23px; padding: 0 2px}
+.storyPreviewText {font-size: 12px; line-height: 19px; padding: 2px 1px 0 73px}
+.underEdit .storyPreviewHeader {background-color: #ffeda1}
+.underEdit .storyDetails {background-color: #fff8d7; padding-left: 25px; padding-bottom: 6px; padding-right: 36px}
+.underEdit {background-color: white}
+.projectBorderRight {border-right: 1pt solid darkgray}
+.projectBorderLeft {border-left: 1pt solid darkgray}
+.projectStoryCounts {margin-left: 8px}
+.projectBugCountLabel {vertical-align: top}
+.projectUnestimatedLabel {vertical-align: middle}
+.projectUnestimatedFeatures, .projectBugCount {font-weight: bold}
+.layout {padding: 0; border-collapse: separate; border-spacing: 5px 0; width: 100%}
+.panel {vertical-align: top; border: none; min-width: 240px}
+.fixed_width_panel {min-width: 0}
+.panelLoading {padding: 8px; font-weight: bold}
+#appLoading {font-size: 14px; padding: 10px 15px; font-weight: bold}
+#appLoading img {vertical-align: middle; margin-left: 2px; margin-right: 10px}
+.list {height: 100%; background: #ffffff url(/images/Stories/panel_bg_left.png) repeat-y left top; padding-left: 3px; position: relative}
+.list > .btm {bottom: -3px; left: 0; position: absolute; width: 100%}
+.list > .btm .left {height: 3px}
+.list > .btm .mid {height: 3px}
+.list > .btm .right {height: 3px}
+.list > .btm .mid {background: url(/images/Stories/panel_bg_btm.png) repeat-x}
+.list > .btm .left {float: left}
+.list > .btm .right {float: right; background-position: right top}
+.list > .btm .left {position: relative; z-index: 5; width: 3px; background-image: url(/images/Stories/panel_bg_btm_corners.png)}
+.list > .btm .right {position: relative; z-index: 5; width: 3px; background-image: url(/images/Stories/panel_bg_btm_corners.png)}
+.items {background: #ffffff url(/images/Stories/panel_bg_right.png) repeat-y right top; padding-right: 3px}
+.endOfList {height: 202px; border-top: 1px solid #6e6e6e; background: #aeb6b9 url(/images/Stories/dropzone_repeating_pattern.png) repeat-x top; color: #666666}
+.searchResults, .integrationResults {border-top: 1px solid #6e6e6e; border-bottom: 1px solid #6e6e6e}
+.searchResults {padding: 6px; background: #e5e5e5; font-size: 12px; padding: 7px 7px 8px}
+.integrationResults {padding: 5px 7px 4px; background: #ffffcc; color: #777777; font-size: 12px; font-weight: bold}
+.integrationResults.found, .searchResults.found {border-bottom: 1px solid #aaaaaa}
+a.showDoneStoriesLink {text-decoration: none}
+a.showDoneStoriesLink:hover {text-decoration: underline}
+.panelHeader, .panelHeaderLeft, .panelHeaderRight {height: 26px; *height: 29px; background: #333333}
+.panelHeader {color: #ffffff; font-weight: bold; overflow: hidden; *background: transparent url(/images/Stories/panel_header_bg.png) repeat-x center top}
+.panelHeader > div {*margin-top: 2px}
+.panelHeader strong {font-weight: bold}
+.panelHeaderLeft, .panelHeaderRight {width: 10px; margin-right: -1px; margin-left: -1px}
+.panelHeaderLeft {float: left; border-top-left-radius: 6px; border-top-right-radius: inherit; border-bottom-right-radius: inherit; border-bottom-left-radius: inherit; -moz-border-radius-topleft: 6px; -moz-border-radius-topright: inherit; -moz-border-radius-bottomright: inherit; -moz-border-radius-bottomleft: inherit; -webkit-border-top-left-radius: 6px; -webkit-border-top-right-radius: inherit; -webkit-border-bottom-right-radius: inherit; -webkit-border-bottom-left-radius: inherit; margin-left: 2px; *background: transparent url(/images/Stories/panel_header.png) no-repeat left top; margin-left: 0}
+.panelHeaderRight {float: right; border-top-left-radius: inherit; border-top-right-radius: 6px; border-bottom-right-radius: inherit; border-bottom-left-radius: inherit; -moz-border-radius-topleft: inherit; -moz-border-radius-topright: 6px; -moz-border-radius-bottomright: inherit; -moz-border-radius-bottomleft: inherit; -webkit-border-top-left-radius: inherit; -webkit-border-top-right-radius: 6px; -webkit-border-bottom-right-radius: inherit; -webkit-border-bottom-left-radius: inherit; margin-right: 2px; *background: transparent url(/images/Stories/panel_header.png) no-repeat right top; margin-right: 0}
+td.epic_stories .panelHeader {background: -webkit-gradient(linear, left top, left bottom, from(#4f3371), to(#291d3d)); background: -moz-linear-gradient(top, #4f3371, #291d3d); *background: #392653}
+td.epic_stories .panelHeaderLeft {background: -webkit-gradient(linear, left top, left bottom, from(#4f3371), to(#291d3d)); background: -moz-linear-gradient(top, #4f3371, #291d3d); *background: #392653}
+td.epic_stories .panelHeaderRight {background: -webkit-gradient(linear, left top, left bottom, from(#4f3371), to(#291d3d)); background: -moz-linear-gradient(top, #4f3371, #291d3d); *background: #392653}
+td#sidebar .panelHeader {background: -webkit-gradient(linear, left top, left bottom, from(#2d5a2b), to(#1c3414)); background: -moz-linear-gradient(top, #2d5a2b, #1c3414); *background: #1f3b18}
+td#sidebar .panelHeaderLeft {background: -webkit-gradient(linear, left top, left bottom, from(#2d5a2b), to(#1c3414)); background: -moz-linear-gradient(top, #2d5a2b, #1c3414); *background: #1f3b18}
+td#sidebar .panelHeaderRight {background: -webkit-gradient(linear, left top, left bottom, from(#2d5a2b), to(#1c3414)); background: -moz-linear-gradient(top, #2d5a2b, #1c3414); *background: #1f3b18}
+.panelTitle {font-size: 1.1em; position: relative; top: 5px; line-height: 16px}
+.integration .external_icon {background: url(/images/Stories/external.png) no-repeat; display: inline-block; height: 9px; margin-left: 4px; position: relative; text-indent: -9999em; top: 5px; width: 9px}
+.panelSubtitle {font-weight: normal; font-size: 9px; padding-left: 1.25em; position: relative; top: 3px}
+.story_content .panelSubtitle a {color: #ccccff}
+.story_content a.panelLink {color: #888888; line-height: 25px; font-size: 1em; margin-left: 9px; margin-top: 0}
+.story_content a.panelLink:hover {color: #bbbbbb}
+.panelLink {float: right; margin-left: 5px; margin-top: 2px; font-size: 0.8em}
+.story_content .panelLink.closePanel {background: url("/images/Stories/close_panel.png") transparent no-repeat 0 0; width: 16px; height: 16px; margin-top: 5px; margin-left: 5px}
+.story_content .panelLink.closePanel:hover {background-image: url("/images/Stories/close_panel_hover.png")}
+.story_content .panelLink.expandAllPanel {background: url("/images/Stories/expand_all.png") transparent no-repeat 0 8px; width: 11px; height: 20px}
+.story_content .panelLink.expandAllPanel:hover {background-image: url("/images/Stories/expand_all_hover.png")}
+.story_content .panelLink.cloneLink {background: url("/images/Stories/clone_on.png") transparent no-repeat 1px 9px; width: 16px; height: 18px}
+.story_content .panelLink.cloneLink:hover {background-image: url("/images/Stories/clone_hover.png")}
+.story_content .panelLink.cloneLink.disabled {background-image: url("/images/v7/application/stories_view/icons/clone_active.png"); cursor: default}
+.story_content .panelLink.collapseAllPanel {background: url("/images/v7/application/stories_view/icons/collapse_all.png") transparent no-repeat 0 8px; width: 11px; height: 20px}
+.story_content .panelLink.collapseAllPanel:hover {background-image: url("/images/v7/application/stories_view/icons/collapse_all_hover.png")}
+.story_content .panelLink.add_epic {background: url("/images/v7/application/stories_view/buttons/quickadd.png") no-repeat 0 0; width: 24px; height: 22px; margin-top: 2px}
+.story_content .panelLink.add_epic:hover {background-image: url("/images/v7/application/stories_view/buttons/quickadd_hover.png")}
+.story_content .panelLink.reveal_epic {background: url("/images/v7/application/stories_view/buttons/epic_details.png") no-repeat 0 0; width: 24px; height: 22px; margin-top: 2px}
+.story_content .panelLink.reveal_epic:hover {background-image: url("/images/v7/application/stories_view/buttons/epic_details_hover.png")}
+.panelLink.helpIconPanel {margin-right: 10px; width: 12px; height: 12px}
+.story_content .panelLink.pinPanel {width: 16px; height: 20px; margin-left: 7px; background: url(/images/v7/application/stories_view/icons/pin_normal.png) no-repeat center 5px}
+.story_content .panelLink.pinPanel:hover {background-image: url(/images/v7/application/stories_view/icons/pin_hover.png)}
+.story_content .panelLink.pinPanel.active {background-image: url(/images/v7/application/stories_view/icons/pin_active.png)}
+.panelLink.refresh {background: transparent url(/images/v7/application/stories_view/icons/refresh.png) no-repeat scroll 0px 4px; width: 14px; height: 20px; margin-top: 3px}
+.panelLink.refresh:hover {background-image: url(/images/v7/application/stories_view/icons/refresh_hover.png)}
+.lastCell {width: 95%}
+.story_content .storyLabels {font-size: 12px; color: #006633; margin-right: 4px; margin-top: 1px; font-family: arial, sans-serif; cursor: default}
+.story_content .storyLabels.empty {margin-right: 0}
+.story_content .storyLabels a {font-size: 10px; color: #006633; font-weight: bold; font-family: arial, sans-serif}
+.story_content .storyLabels a:visited {font-size: 10px; color: #006633; font-weight: bold; font-family: arial, sans-serif}
+.story_content .storyLabels a:hover {font-size: 10px; color: #006633; font-weight: bold; font-family: arial, sans-serif}
+.story_content .item .releaseMarkerNotAccepted .storyLabels a {color: #eeda7d; font-weight: normal}
+.story_content .item .releaseMarkerPastDeadline .storyLabels a {color: #eeda7d; font-weight: normal}
+.story_content .item .releaseMarkerAccepted .storyLabels a {color: #eeda7d; font-weight: normal}
+.story_content .item .storyLabels a.epic_label {color: #4b306b}
+.attachment_drop_area {display: none}
+.formatted_text_area {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; width: 100%; border: 1px solid #9a9a9a; font-size: 12px; line-height: 18px; padding: 2px 1px 1px 4px}
+.story_content .item {background-color: #ffffff}
+.story_content .item a.reveal {display: inline-block; width: 49px; height: 18px; padding-top: 4px; text-align: center; color: #eeeeee; font-size: 11px; font-weight: bold}
+.story_content .item a.stateChangeButton {display: inline-block; width: 49px; height: 18px; padding-top: 4px; text-align: center; color: #eeeeee; font-size: 11px; font-weight: bold}
+.story_content .item a.disabledStateChangeButton {display: inline-block; width: 49px; height: 18px; padding-top: 4px; text-align: center; color: #eeeeee; font-size: 11px; font-weight: bold}
+.story_content .item a.reveal {text-align: left; padding-left: 18px; width: 6px; background-image: url(/images/v7/application/stories_view/button_backgrounds/compact_reveal.png); background-repeat: no-repeat; float: right; margin-right: 4px}
+.story_content .item .history_header a.reveal {margin-top: -3px}
+.story_content .item a.reveal:hover {background-image: url(/images/v7/application/stories_view/button_backgrounds/compact_reveal_hover.png)}
+.story_content .item .storyItem.notUnderEdit {user-select: none; -moz-user-select: none; -khtml-user-select: none}
+.story_content .item .storyItem.notUnderEdit .storyDetailElement {display: none}
+.story_content .item .storyItem.attachment_drop_zone {position: relative}
+.story_content .item .storyItem.attachment_drop_zone .attachment_drop_area {display: block; position: absolute; background: #000000; width: 100%; height: 100%; padding: 0; background: url(/images/v7/application/stories_view/backgrounds/story_details_dragdrop_bg.png) repeat-x left top; z-index: 7}
+.story_content .item .storyItem.attachment_drop_zone .attachment_drop_area img {display: block; position: relative; z-index: 8; margin: 0 auto; top: 40%}
+.story_content .item .storyItem.highlight {background-color: #ffff99 !important}
+.story_content .item .storyItem {min-height: 21px; border-bottom: 1px solid #dddddd; border-top: 1px solid #ffffff}
+.story_content .item .storyItem a.accept {background-image: url(/images/v7/application/stories_view/button_backgrounds/accept.png)}
+.story_content .item .storyItem a.accept:hover {background-image: url(/images/v7/application/stories_view/button_backgrounds/accept_hover.png)}
+.story_content .item .storyItem a.start {color: #222222; background-image: url(/images/v7/application/stories_view/button_backgrounds/start.png)}
+.story_content .item .storyItem a.start:hover {background-image: url(/images/v7/application/stories_view/button_backgrounds/start_hover.png)}
+.story_content .item .storyItem a.reject {background-image: url(/images/v7/application/stories_view/button_backgrounds/reject.png)}
+.story_content .item .storyItem a.reject:hover {background-image: url(/images/v7/application/stories_view/button_backgrounds/reject_hover.png)}
+.story_content .item .storyItem a.finish {background-image: url(/images/v7/application/stories_view/button_backgrounds/finish.png)}
+.story_content .item .storyItem a.finish:hover {background-image: url(/images/v7/application/stories_view/button_backgrounds/finish_hover.png)}
+.story_content .item .storyItem a.deliver {background-image: url(/images/v7/application/stories_view/button_backgrounds/deliver.png)}
+.story_content .item .storyItem a.deliver:hover {background-image: url(/images/v7/application/stories_view/button_backgrounds/deliver_hover.png)}
+.story_content .item .storyItem a.restart {text-align: left; padding-left: 20px; width: 46px; color: #222222; background-image: url(/images/v7/application/stories_view/button_backgrounds/restart.png)}
+.story_content .item .storyItem a.restart:hover {background-image: url(/images/v7/application/stories_view/button_backgrounds/restart_hover.png)}
+.story_content .item .storyItem textarea {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; width: 100%; border: 1px solid #9a9a9a; font-size: 12px; line-height: 18px; padding: 2px 1px 1px 4px; display: block}
+.story_content .item .storyItem div.formatted_text_area {background: #ffffff}
+.story_content .item ol.task_list * {cursor: pointer}
+.story_content .item ol.task_list > li:hover {background: #ebe29c}
+.story_content .item ol.task_list > li.readonly label.completed {text-decoration: line-through}
+.story_content .item ol.task_list > li.readonly div {float: left; margin: 0; padding: 0}
+.story_content .item ol.task_list > li:hover ul li a {display: block}
+.story_content .item ol.task_list > li {position: relative; padding: 3px 2px 1px 3px; overflow: hidden; font-size: 12px}
+.story_content .item ol.task_list > li input[type=checkbox] {display: block; float: left; margin: 2px 0 0; padding: 0}
+.story_content .item ol.task_list > li label {padding-left: 14px; margin-right: 50px}
+.story_content .item ol.task_list > li > div {padding-left: 14px; margin-right: 50px}
+.story_content .item ol.task_list > li label {display: block; color: #333333; line-height: 1.3em; padding: 0 5px 1px 19px}
+.story_content .item ol.task_list > li textarea {display: block; font-family: Arial, Helvetica, sans-serif; font-size: 12px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid #9a9a9a; line-height: 18px; width: 100%; overflow: hidden; cursor: default; color: #000000; font-weight: normal; padding: 1px 5px 1px 4px; margin: -1px 0 0 1px}
+.story_content .item ol.task_list > li > ul {position: absolute; right: 0; top: 0; margin-top: 3px; overflow: hidden; height: 16px}
+.story_content .item ol.task_list > li > ul li {display: block; float: left; margin-left: 5px}
+.story_content .item ol.task_list > li > ul li a {display: none}
+.story_content .item ol.task_list > li > ul li a:hover {display: block}
+.story_content .item ol.task_list > li > ul li a:first-child {margin-top: -1px}
+.story_content .item .storyItem.readOnly div.formatted_text_area {background-color: #f0f0f0; color: #7f7f7f}
+.story_content .item .epicItem {border-bottom: 1px solid #c2c0b9}
+.story_content .item .finished {border-bottom: 1px solid #dddfb4}
+.story_content .item .accepted {border-bottom: 1px solid #c3d5b4}
+.story_content .item .storyPreviewInput {margin: 0 37px 0 25px; padding: 3px 0}
+.story_content .item .storyPreviewInput .titleInputField {resize: none}
+.story_content .item .storyPreviewText {-moz-user-select: none; -khtml-user-select: none; user-select: none}
+.story_content .item .storyLabels {-moz-user-select: none; -khtml-user-select: none; user-select: none}
+.story_content .item .unstarted {background-color: #f4f4f4}
+.story_content .item .newStory {background-color: #f4f4f4}
+.story_content .item .unstarted:hover {background-color: #e6e6e6}
+.story_content .item .newStory:hover {background-color: #e6e6e6}
+.story_content .item .accepted {background-color: #daebcf; border-top: 1px solid #eefce2; border-bottom: 1px solid #c3d5b4}
+.story_content .item .accepted:hover {background-color: #c6d9b7}
+.story_content .item .unscheduled {background-color: #e4eff7}
+.story_content .item .unscheduled:hover {background-color: #d1e0ed}
+.story_content .item .started {background-color: #f3f3d1; border-top: 1px solid #ffffff; border-bottom: 1px solid #dbdbb0}
+.story_content .item .finished {background-color: #f3f3d1; border-top: 1px solid #ffffff; border-bottom: 1px solid #dbdbb0}
+.story_content .item .delivered {background-color: #f3f3d1; border-top: 1px solid #ffffff; border-bottom: 1px solid #dbdbb0}
+.story_content .item .rejected {background-color: #f3f3d1; border-top: 1px solid #ffffff; border-bottom: 1px solid #dbdbb0}
+.story_content .item .started:hover {background-color: #f0f0c6}
+.story_content .item .finished:hover {background-color: #f0f0c6}
+.story_content .item .delivered:hover {background-color: #f0f0c6}
+.story_content .item .rejected:hover {background-color: #f0f0c6}
+.story_content .item .releaseMarkerNotAccepted {background: #407aa5; border-bottom: 1px solid #306494; border-top: 1px solid #5982a7; color: white}
+.story_content .item .releaseMarkerAccepted {background: #407aa5; border-bottom: 1px solid #306494; border-top: 1px solid #5982a7; color: white}
+.story_content .item .releaseMarkerPastDeadline {background: #923131; border-bottom: 1px solid #7c2324; border-top: 1px solid #a74648; color: white}
+.story_content .item .releaseMarkerPastDeadline:hover {background: #7c2323}
+.story_content .item .releaseMarkerAccepted:hover {background: #306494}
+.story_content .item .releaseMarkerNotAccepted:hover {background: #306494}
+.item.proxy {font-size: 0.8em}
+.items {height: 100%; position: relative}
+.items > div.inner {height: 100%; overflow-x: hidden; overflow-y: auto; background: #aeb6b9}
+.search {height: 100%; position: relative}
+.search > div.inner {height: 100%; overflow-x: hidden; overflow-y: auto; background: #aeb6b9}
+.integration {height: 100%; position: relative}
+.integration > div.inner {height: 100%; overflow-x: hidden; overflow-y: auto; background: #aeb6b9}
+.no_xscroll {overflow-x: hidden; padding-bottom: 15px}
+.no_yscroll {overflow-y: hidden; padding-right: 15px}
+.search .panelHeader + .search .list {border: none}
+.integration .panelHeader + .integration .list {border: none}
+.search #search_no_messages_message {padding: 0.5em 1em}
+.search .panelTitle {line-height: 17px}
+.iterationHeader {background: url(/images/v7/application/stories_view/backgrounds/iteration_bg.png) #747f8a repeat-x top; color: #ffffff; cursor: default; height: 22px; padding: 1px 4px 1px 1px; border-top: 1px solid #e5e5e5}
+.iterationHeader > div {margin-top: 3px}
+.iterationHeader > div span.strengthWidgetContainer {font-size: 1em}
+.iterationHeader > div span.strengthWidgetContainer span {cursor: pointer; margin-left: 5px}
+.iterationHeader > div span.strengthWidgetContainer.read_only span {cursor: default}
+.iterationHeader > div span {font-size: 1.1em; text-shadow: 1px 1px 2px #343a40}
+.iterationHeader > div .current {display: block; float: left; margin: 1px 1px 0 3px}
+.iterationHeader > div .iteration_length {border-right: 1px solid #7a848f; padding: 0 8px 0 0}
+.iterationHeader > div .date {padding-left: 7px; border-left: 1px solid #b0b6bb}
+.iterationHeader > div .points {display: block; float: left}
+.iterationHeader > div .teamStrengthIcon {display: block; float: left}
+.iterationHeader > div .teamStrengthIcon {margin-top: 1px; margin-left: 6px; margin-right: 1px; cursor: pointer}
+.iterationHeader a.date_label {color: #ffffff !important; cursor: pointer}
+.iterationHeader a.date_label.overridden {color: #ffcc44 !important}
+.iterationHeader a.date_label:hover {text-decoration: underline !important}
+.iterationHeader .toggle img {margin: 2px 3px 0}
+.iterationHeaderInfo {-moz-user-select: none; -khtml-user-select: none; user-select: none}
+.deadline {background-color: #333333; cursor: default; -moz-user-select: none; -khtml-user-select: none; user-select: none}
+.deadlineBar {color: white; font-weight: bold; font-size: 10px; line-height: 13px; text-align: center; padding: 3px 0}
+.deadlineLabel {font-weight: bold; font-size: 10px; line-height: 13px; text-align: left; margin-top: 4px; margin-right: 4px; display: inline}
+.storyLabelsInline {font-size: 10.2px; color: #006633; margin-right: 4px; font-family: arial, sans-serif; cursor: default; height: 10px; padding-top: 1px}
+a.storyOwnerInitials {text-decoration: none}
+a.storyOwnerInitials:hover {text-decoration: underline}
+.revealLink {margin-left: 4px; vertical-align: middle; cursor: pointer}
+.storyDetailsLabelIcon {width: 25px; text-align: center}
+.calendarLabelIcon {width: 16px; text-align: left; margin-right: 4px}
+.acceptedAtText {float: left; margin-right: 5px; margin-left: 5px}
+.dateIconField {float: left; margin-right: 4px}
+.commandDateAndMember {clear: both; margin-left: 24px}
+.commandActionIconAndDescription {clear: both; padding-bottom: 4px}
+.commandAffectedElementType {margin-left: 6px; vertical-align: middle; float: left}
+.commandTitle {margin-left: 5px; padding-left: 24px; padding-right: 2px; font-weight: bold}
+.commandDate, .commandMember {padding-left: 2px; padding-right: 2px; display: inline}
+.commandDescription {margin-left: 5px; padding-left: 24px; padding-right: 2px; font-style: italic; line-height: 18px}
+.commandActionIcon {margin-left: 6px; vertical-align: middle; float: left}
+.iterationPoints {text-align: right; float: right; padding-right: 4px}
+a.teamStrengthIcon {width: 14px; height: 13px; display: block; background: url("/images/v7/application/stories_view/icons/team_strength.png") no-repeat center !important}
+span.strengthWidgetContainer.read_only span.teamStrengthIcon {width: 14px; height: 13px; display: block; background: url("/images/v7/application/stories_view/icons/team_strength.png") no-repeat center !important}
+a.teamStrengthIcon:hover {background-image: url("/images/v7/application/stories_view/icons/team_strength_hover.png") !important}
+.teamStrengthLabel {float: right; padding-right: 4px}
+a.iterationModeIcon {float: left; width: 16px; height: 16px; display: block; margin-right: 3px; background: url("/images/v7/application/stories_view/icons/diamond_off.png") no-repeat center}
+a.iterationModeIcon.on {background-image: url("/images/v7/application/stories_view/icons/diamond_on.png")}
+a.iterationModeIcon:hover {background-image: url("/images/v7/application/stories_view/icons/diamond_active.png") !important}
+.icons {float: left; padding-top: 2px}
+.storySelector {cursor: pointer; float: right; width: 15px; height: 100%; padding: 2px; margin: 2px 0 -2px 4px; border-left: 1px dotted gray; background: url("/images/v7/application/stories_view/icons/selectbox_off.png") no-repeat 5px 4px}
+.selected .storySelector {background-image: url("/images/v7/application/stories_view/icons/selectbox_on.png")}
+.lion_scrollbars .storySelector {margin-right: 4px}
+.storyPreviewHeader .selected {border: 2px solid}
+.underEdit .storyTypeIcon[title=pending] {display: none}
+.storyTypeIcon, .flyoverIcon {display: block; float: left; margin-top: 3px}
+.flyoverIcon {margin-top: 2px}
+.rejectPopupStoryTypeIcon {vertical-align: text-bottom}
+.story_content .storyPreviewButtons.custom a.expand_points {color: #999999}
+.overlayContentWrapper.balloon.custom_points a:hover {color: #244b83; text-decoration: none}
+.story_content .storyPreviewButtons.custom a:hover {color: #244b83; text-decoration: none}
+.story_content .storyPreviewHeader .icons .estimateIcon {float: left; display: block; width: 6px; margin: 0 7px 3px 7px; vertical-align: bottom}
+.story_content .storyPreviewHeader .icons span.estimate {float: left; display: block; margin: 0 0 0 3px; width: 20px; text-align: center; font-size: 12px; line-height: 19px; font-weight: bold; color: #999999; cursor: default}
+.overlayContentWrapper.balloon.custom_points {padding: 0 4px; border: 1px solid #666666; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #ffffff; background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd)); background: -moz-linear-gradient(top, #ffffff, #dddddd); margin-top: 0px; -moz-box-shadow: 0 0 3px #555555; overflow: hidden}
+.overlayContentWrapper.balloon.custom_points .balloonContents {padding: 0}
+.overlayContentWrapper.balloon.custom_points .balloonContents ol {margin: 0; padding: 0; list-style-type: none}
+.overlayContentWrapper.balloon.custom_points .balloonContents li {float: left}
+.overlayContentWrapper.balloon.custom_points .balloonContents li a {display: block; padding: 3px 3px 2px; font-size: 12px; font-weight: bold}
+.overlayContentWrapper.balloon.custom_points .balloonContents li:first-child a {border-left: none}
+.sectionDivider {background: goldenrod; height: 1px}
+.overlay.google_doc_balloon {-moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2)}
+.overlay .sectionDivider {display: none}
+.overlay .google_doc_balloon.overlayContentWrapper {padding: 0; border: 1px solid #acacac; background: #eeeeee}
+.overlay .google_doc_balloon.overlayContentWrapper .balloonContents {padding: 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list {min-height: 172px; border-bottom: 1px solid #acacac}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .google_doc_filter {padding: 3px; border-bottom: 1px solid #acacac}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .google_doc_filter input {width: 228px; background: #ffffff url("/images/v7/marcom/public_projects/search.png") no-repeat 243px center; border: 2px solid #cccccc; padding: 2px 30px 2px 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .google_doc_scroller {overflow: auto; max-height: 180px; padding: 3px; border-top: 1px solid #fefefe}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .google_doc_scroller li {line-height: 19px}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list label {display: block; width: 252px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color: #555555; font-weight: normal; font-size: 11px}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list label em {background: url('/images/v7/application/stories_view/icons/google_doc_icons.png') no-repeat; margin: 0 2px 0 6px; padding: 0 5px 0 6px}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .document label em {background-position: 0 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .pdf label em {background-position: -11px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .spreadsheet label em {background-position: -22px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .presentation label em {background-position: -33px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .image_png label em {background-position: -44px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .image_jpeg label em {background-position: -44px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .image_jpg label em {background-position: -44px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .image_gif label em {background-position: -44px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .form label em {background-position: -55px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .folder label em {background-position: -66px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .google_doc_list .drawing label em {background-position: -77px 0}
+.overlay .google_doc_balloon.overlayContentWrapper .balloonButtons {border-top: 1px solid #fefefe; padding: 3px 5px}
+.overlay .google_doc_balloon.overlayContentWrapper .balloonButtons button {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-box-shadow: 0 0 1px #999999 inset; -webkit-box-shadow: 0 0 1px #999999 inset; background: #333333; border: 1px solid #24364c; color: #eeeeee; font-size: 10px; font-weight: bold; padding: 2px 4px; cursor: pointer}
+.externalLinkLabel {font-weight: bold; font-size: 8pt; margin-left: 1em}
+.externalLink {padding-left: 1em}
+.storyDetailsLabel {vertical-align: middle}
+.calendarRow, .calendarLabelIcon {line-height: normal}
+.storyDetailsRow .fieldLabel {margin-left: 5px}
+.storyDetailsDiv div {display: block; float: left}
+.storyButtonsRow, .storyDetailsRow {clear: both; width: 400px}
+.storyButtonsRow {margin-top: 10px; margin-bottom: 10px}
+.storyButtonsRow div {margin-right: 10px}
+.storyDeadlineField {font: normal 12px verdana, sans-serif; line-height: 20px}
+.spacerCell {width: 99%}
+.emphasizedFieldLabel {display: inline; margin-left: 5px}
+.fieldLabel {display: inline; color: gray}
+.storyDetailsField, .storyDeadlineField, .storyDetailsTextField {width: 150px; margin-top: 1px; margin-bottom: 1px}
+.storyDetailsTextField {width: 146px}
+.storyDetailsStoryLink {width: 100%; margin-top: 1px; margin-bottom: 1px; margin-right: 10px; padding: 2px}
+.storyDetails .storyLabels {padding-left: 5px}
+.storyDetails label {font-size: 12px}
+.storyDetails select {font-size: 12px}
+.storyDetails input {font-size: 12px}
+.storyDetails textarea {font-size: 12px}
+.storyDetails a {font-size: 12px}
+.storyDetails .attachmentWidget a {font-size: 12px; cursor: pointer}
+.dateChangeLink {margin-left: 3px}
+.inlinePopup {background-color: #ffffff; border: green 2px solid; overflow: auto; width: 20em; margin: 5px; text-align: center; z-index: 3000}
+.stateChangeButton, .disabledStateChangeButton {margin-left: 4px; vertical-align: bottom}
+.disabledStateChangeButton {opacity: 0.6; -moz-opacity: 0.6; filter: alpha(opacity=60)}
+.stateChangeButton {cursor: pointer; width: auto}
+.estimateButton {border-bottom: 1px solid #888888; margin-left: 4px; padding-bottom: 2px; vertical-align: bottom; cursor: pointer}
+div.iterationHeaderToggleExpandedButton {height: 13px; width: 13px}
+.toggleExpandedButton, .iterationHeaderToggleExpandedButton {cursor: pointer; display: block; margin-right: 3px; padding-top: 2px; float: left}
+.unsaved .icons .toggleExpandedButton {display: none}
+.iterationHeaderToggleExpandedButton {margin: 0 3px; padding: 0}
+.iterationHeaderInfo {margin-left: 19px}
+.teamStrengthEditor {padding: 4px 0px 4px 19px; background-color: #666666; color: white}
+.teamStrengthControl {float: right; padding-right: 4px}
+.teamStrengthButtons {clear: both; padding-top: 4px}
+.teamStrengthButtonClearer {clear: both}
+.teamStrengthApplyButton, .teamStrengthCancelButton {float: right; border-color: white}
+.floatClear {clear: both}
+.export {float: right; margin-top: 10px; margin-right: 5px}
+.export p {margin-top: 0; margin-bottom: 0}
+.sidebar {position: relative; overflow: hidden; padding: 1px}
+.sidebar .list {min-width: 220px}
+.sidebar .list .items {background: #fafafa url(/images/v7/application/stories_view/backgrounds/panel_bg_right.png) repeat-y right top}
+.sidebar .list .inner {background: #f3f3f3}
+.sidebar .list h3 {color: #444444; font-size: 1em; padding: 7px 0 0 20px; cursor: pointer; background: url(/images/v7/application/icons/arrow_dropdown_grey.png) no-repeat 10px 11px; margin-bottom: 2px}
+.sidebar .list h3.collapsed {background-image: url(/images/v7/application/icons/arrow_dropdown_grey_right.png); margin-bottom: 5px}
+.sidebar .list h3 {font-size: 12px}
+.sidebar .list li {font-size: 12px}
+.sidebar .list ul {overflow: hidden; white-space: nowrap; padding-bottom: 4px}
+.sidebar .list ul li a.link {display: block; padding-left: 21px}
+.sidebar .list ul li span {display: block; padding-left: 10px}
+.sidebar .list ul li:hover a.link {background: #ffffff}
+.sidebar .list li.list_item > span {float: right; display: inline-block; padding-left: 12px; cursor: pointer}
+.sidebar .list li.list_item {clear: both; width: 100%; z-index: 2; line-height: 20px}
+.sidebar .list li.list_item .link {z-index: 2; display: block}
+.sidebar .list li.list_item .link:hover {z-index: 2}
+.sidebar .list li.list_item .link.hover {z-index: 2}
+.sidebar .list li.list_item .menu_gear {top: 2px; width: 5px; visibility: hidden; display: inline-block; height: 12px; background: url(/images/v7/application/stories_view/icons/label_options.png) no-repeat scroll 0 0}
+.sidebar .list li.list_item .down_arrow {top: 2px; width: 12px; visibility: hidden; display: inline-block; height: 12px; background: url(/images/v7/application/icons/arrow_dropdown_grey.png) no-repeat scroll 0 4px}
+.sidebar .list li.list_item .destroy {position: relative; text-indent: -10000px; float: right; display: none; height: 18px; width: 16px; z-index: 2; cursor: pointer}
+.sidebar .list li.list_item .destroy {margin-right: 10px; background: url(/images/v7/application/stories_view/icons/trash_click.png) no-repeat scroll 0 1px}
+.sidebar .list li.list_item .destroy:hover {background: url(/images/v7/application/stories_view/icons/trash_on.png) no-repeat scroll 0 1px}
+.sidebar .list li.list_item .destroy:active {background: url(/images/v7/application/stories_view/icons/trash_hover.png) no-repeat scroll 0 1px}
+.sidebar .list li.list_item:hover {background-color: #eeeeee}
+.sidebar .list li.list_item:hover .destroy {z-index: 3; display: inline-block}
+.sidebar .list li.list_item.hover {background-color: #eeeeee}
+.sidebar .list li.list_item.hover .destroy {z-index: 3; display: inline-block}
+.sidebar .list li.list_item:hover .down_arrow {z-index: 3; visibility: visible; position: relative}
+.sidebar .list li.list_item.hover .down_arrow {z-index: 3; visibility: visible; position: relative}
+.sidebar .list li.list_item:hover .menu_gear {z-index: 3; visibility: visible; position: relative}
+.sidebar .list li.list_item.hover .menu_gear {z-index: 3; visibility: visible; position: relative}
+.sidebar .list li.list_item span:hover .menu_gear {background: url(/images/v7/application/stories_view/icons/label_options_hover.png) no-repeat scroll 0 0}
+.sidebar .list li.list_item span:hover .down_arrow {background: url(/images/v7/application/icons/arrow_dropdown_aqua.png) no-repeat scroll 0 4px}
+.story_content .sidebar div.labels ul li a {color: #006633}
+.story_content .sidebar div.labels ul li.epic_label a {color: #4b306b}
+.sidebar div.labels ul li a.with_count {font-weight: bold !important}
+.sidebar .saved_searches {border-top: 1px solid #cccccc}
+#rename_label {background: white; border: 4px solid gray; font-size: 12px; padding: 10px}
+#rename_label label {font-weight: bold}
+#rename_label input {margin: 0 5px 0 10px; font-size: 12px}
+#rename_label input.submit {font-size: 0.9em; margin: 0 2px; vertical-align: middle}
+#rename_label input.cancel {font-size: 0.9em; margin: 0 2px; vertical-align: middle}
+#rename_label .error_message {background: #eeeeee; margin: 5px 0 0; text-align: center}
+.story_history .item {border-top: 1px solid #6e6e6e}
+.history .item {border-top: 1px solid #6e6e6e}
+.history_item {padding: 5px; background-color: #eeeeee}
+.history_item .history_header {padding: 5px; background-color: #dddddd}
+.history_item .history_header span {font-weight: bold; font-size: 12px}
+.history_item .history_header img {float: right}
+.history_item .history_header img.reveal_icon {float: right; margin-right: 5px}
+.history_item .history_content {padding: 5px 0 0 5px; font-size: 12px}
+.history_item .history_content img.action_icon {margin-right: 10px; float: left}
+.history_item .time_ago {font-style: italic; color: #888888; font-size: 0.9em; line-height: 10px; margin-top: 5px; padding-bottom: 4px}
+.history_item.aggregated .time_ago {padding-left: 2em}
+.history_item.aggregated .description .text {margin-left: 27px}
+.history_item .history_content .description a.details_link {float: right; color: #666666 !important; font-style: italic}
+.history_item .history_content .details {padding: 0.4em; margin-top: 0.5em; background-color: #ffffff}
+.history_item .history_content .details .field {font-style: italic}
+.history_item .history_content .details .key {font-style: italic; padding: 0.2em}
+.history_item .history_content .details .story_name {padding: 0.2em}
+.history_item .history_content .description p {margin: 0 0 0.2em}
+.help.flyover {background: url(/images/v7/application/stories_view/backgrounds/bg_gradient_comments_hover.gif) #ffffff repeat-x scroll left top; border: 1px solid #5593d8; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; padding: 8px; font-size: 12px}
+.help.flyover .storyTitle {font-size: 13px; font-weight: bold; margin: 3px 0}
+.externalStory {background-color: white; padding: 3px; font-size: 12px}
+.externalStory .titleRow {margin: 3px 0 0 4px}
+.externalStory .titleRow .icon {float: left; margin-right: 2px; width: 41px}
+.externalStory .titleRow .icon img {margin-right: 1px; margin-top: 3px}
+.externalStory .titleRow .icon img.flyoverIcon {vertical-align: top; margin-left: 2px}
+.externalStory.bugTool .secondRow {margin-left: 39px; color: #999999; font-size: 93%}
+.externalStory.bugTool .secondRow .reportedBy {float: left}
+.externalStory.bugTool .secondRow .createdAt {float: right; margin-right: 5px; display: inline}
+.externalStory.bugTool .thirdRow {background-color: #e6e6e6; padding: 0px 5px; margin-top: 1px; font-size: 93%; color: #999999}
+.externalStory.bugTool .thirdRow .state {float: left; color: #444444; font-weight: bold; background-color: #e6e6e6}
+.externalStory.bugTool .thirdRow .idText {float: right; font-weight: bold}
+.externalStory.bugTool .thirdRow .idText .id {color: #0957a4; padding-left: 3px}
+.externalStory.flyover .idText .id {color: #0957a4; padding-left: 3px}
+.externalStory.flyover .idText {margin-right: 5px; color: #999999}
+.inactive_integration_logo {padding-left: 5px}
+.storyDetails .taskTableDiv {position: relative}
+.scrolling_item_list {position: relative}
+div.storyDetails {padding: 2px 20px 6px 26px; background-color: #fff8d7}
+div.storyDetails .storyDetailsTable {padding-top: 10px; border-spacing: 0px 0; border-collapse: separate}
+div.storyDetails .buttons {padding-top: 7px; min-width: 236px}
+div.storyDetails .storyDetailsTable td.letContentExpand {width: 1px}
+div.storyDetails .storyDetailsButton {padding: 0px; display: inline}
+div.storyDetails .section {color: #333333; font-weight: normal; font-size: 12px; line-height: 14px; margin-top: 15px}
+div.storyDetails .section .header {font-weight: bold; color: #3f3d35; font-size: 13px; margin-bottom: 0}
+div.storyDetails .section textArea {width: 100%; overflow: auto; color: #cccccc; padding: 0 3px; font-weight: bold; margin-top: 5px; font-size: 104%}
+div.storyDetails .storyDescriptionTable textArea {margin-top: 3px}
+div.storyDetails .section textArea.textAreaFocus {color: black; font-weight: normal}
+div.storyDetails .section .italic {font-style: italic; color: #7c7b76; font-size: 0.85em}
+div.storyDetails .section .highlight {color: #333333; font-weight: bold; font-size: 103%}
+div.storyDetails .section input[type='submit'] {margin-top: 4px; display: block}
+div.storyDetails .section .storyDescriptionTable .descriptionHeaderEdit {font-size: 8pt; width: 1px; padding-right: 4px}
+div.storyDetails .labels input::-webkit-input-placeholder {color: #cccccc; font-weight: bold; font-size: 12px}
+div.storyDetails div.labels input.create:-moz-placeholder {color: #cccccc; font-weight: bold; font-size: 12px}
+div.storyDetails .section .storyDescriptionTable .header {margin-bottom: 4px}
+div.storyDetails .section .storyDescriptionTable .header .helpIcon {float: left}
+div.storyDetails .section .storyDescriptionTable .header .label {float: left}
+div.storyDetails .section .storyDescriptionTable .header .helpIcon {margin-left: 8px}
+div.storyDetails .section .notesTable {width: 100%}
+div.storyDetails .section .notesTable .italic {margin-left: 8px}
+div.storyDetails .section .notesTable td.noteInfo a.deleteLink {opacity: 0; padding-left: 10px; display: block; float: left}
+div.storyDetails .section .notesTable td.noteInfo a.deleteLink img {display: block}
+div.storyDetails .section .notesTable td.noteInfo div {float: left}
+div.storyDetails .section .notesTable td.noteInfo div.hightlight_row:hover {background-color: #ebe29c}
+div.storyDetails .section .notesTable td.noteInfo div.hightlight_row:hover a.deleteLink {opacity: 1}
+div.storyDetails .section tr.noteTextRow + tr.noteInfoRow > td.noteInfo {padding-top: 10px}
+div.storyDetails .section .notesTable tr:first-child td {padding-top: 4px}
+div.storyDetails .section .tasksTable tr:first-child td {padding-top: 4px}
+div.storyDetails .attachmentWidget table td.resource_details_cell {vertical-align: top; padding-left: 15px}
+div.storyDetails .attachmentWidget table td.imageCell {text-align: center; width: 75px}
+div.storyDetails .attachmentWidget .resource_image {cursor: pointer}
+div.storyDetails .attachmentWidget table span.resource_row_span {padding-right: 0.5em}
+div.storyDetails .attachmentWidget .attachments .header {padding-bottom: 10px}
+div.storyDetails .attachmentWidget .attachments a.cancelLink {padding-left: 1em}
+div.storyDetails .attachmentWidget .attachments .attachmentHint {font-size: 90%; color: #ff6600; font-weight: bold}
+div.storyDetails .attachmentWidget .attachment_controls_wrapper {overflow: hidden; opacity: 0; position: absolute; top: 0; left: 0; width: 75px}
+div.storyDetails .attachmentWidget .attachment_controls_wrapper input {font-size: 16px}
+div.storyDetails .attachmentWidget form {position: relative}
+div.storyDetails .attachmentWidget form button {display: none}
+div.storyDetails .attachmentWidget .attach_files {margin-top: 5px}
+div.storyDetails .attachmentWidget .attach_files .upload_button {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-box-shadow: 0 0 1px #999999 inset; -webkit-box-shadow: 0 0 1px #999999 inset; background: #333333; border: 1px solid #24364c; color: #eeeeee; font-size: 10px; font-weight: bold; height: 20px; line-height: 20px; margin-top: -2px; padding: 3px 6px; margin-right: 5px; cursor: pointer}
+div.storyDetails .attachmentWidget .attach_files .google_doc_attach_button {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-box-shadow: 0 0 1px #999999 inset; -webkit-box-shadow: 0 0 1px #999999 inset; background: #333333; border: 1px solid #24364c; color: #eeeeee; font-size: 10px; font-weight: bold; height: 20px; line-height: 20px; margin-top: -2px; padding: 3px 6px; margin-right: 5px; cursor: pointer}
+div.storyDetails .attachmentWidget .attach_files .google_doc_attach_button {border: 1px solid #2e435c; background: #3a5875}
+div.storyDetails .attachmentWidget .attach_files .text {color: #666666}
+div.storyDetails .section.storyIdTable {border-spacing: 0px 0; border-collapse: separate; width: 100%}
+div.storyDetails .section.storyIdTable .header {float: left}
+div.storyDetails .section.storyIdTable .storyId {font-size: 110%; padding-left: 4px; float: left}
+.storyDetails div.attachments ul {list-style-type: none; margin: 0; padding: 0}
+.storyDetails div.attachments ol {list-style-type: none; margin: 0; padding: 0}
+.storyDetails div.attachments ol.attachments_list {overflow: hidden}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail a {display: block; background: url('/images/v7/application/stories_view/icons/google_doc_attachment.png') no-repeat; width: 46px; height: 45px}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail img {width: 11px; height: 11px; float: right; margin: 3px; background: url('/images/v7/application/stories_view/icons/google_doc_icons.png')}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .document img {background-position: 0 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .pdf img {background-position: -11px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .spreadsheet img {background-position: -22px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .presentation img {background-position: -33px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .image_png img {background-position: -44px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .image_jpeg img {background-position: -44px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .image_jpg img {background-position: -44px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .image_gif img {background-position: -44px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .form img {background-position: -55px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .folder img {background-position: -66px 0}
+.storyDetails div.attachments ol.attachments_list > li.google_doc_resource .attachment_thumbnail .drawing img {background-position: -77px 0}
+.storyDetails div.attachments ol.attachments_list > li {overflow: hidden; margin-bottom: 13px}
+.storyDetails div.attachments ol.attachments_list > li > div.attachment_thumbnail {float: left; margin-right: 18px; min-width: 72px}
+.storyDetails div.attachments ol.attachments_list > li > div.attachment_details_container {padding-left: 90px}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details {float: left; font-size: 11px}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li {margin-bottom: 2px}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li.name {color: #222222; font-weight: bold}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li.uploader {color: #666666}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li.metadata {color: #888888}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li.actions {color: #888888}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li.metadata {font-style: italic}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li.actions a {font-size: 11px}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li.edit_description {display: none}
+.storyDetails div.attachments ol.attachments_list > li ul.attachment_details li.edit_description input {width: 20em}
+.storyFlyover div.attachments > ol {margin-left: 20px}
+#keyboard_shortcuts {position: absolute; color: #ffffff; top: 5em; width: 80%; left: 8%; background: #333333; padding: 1.5em; border: 3px solid #cccccc}
+#keyboard_shortcuts_help h4 {color: #ffff00}
+#keyboard_shortcuts_help p span {clear: both; display: block; float: left; width: 200px}
+#keyboard_shortcuts_help span {display: block; clear: both}
+#keyboard_shortcuts_help {background: black; color: white; font-family: monaco, courier new, monospaced; opacity: 0.9; z-index: 1000}
+#keyboard_shortcuts_help p {background: black; color: white; font-family: monaco, courier new, monospaced; opacity: 0.9; z-index: 1000}
+#keyboard_shortcuts_help p {margin: 10px 0}
+#keyboard_shortcuts_help {position: absolute; top: 6px; left: 6px; padding: 0}
+#layout td.td_no_panels_open {width: 100%; text-align: center}
+div .no_panels_open {background-color: #f3f3f3; color: #999999; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; font-size: 20px; margin-top: 15%; margin-left: 30%; padding: 20px 40px; text-align: center; width: 336px}
+.clientErrorLogAlertContainer {position: fixed; top: 0; left: 0; z-index: 100; background-color: none}
+.clientErrorLogAlert {float: left; width: 40px; height: 40px; margin: 15px; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; background-color: #ff611f}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/epics.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+.epics .epicPreviewHeader {position: relative}
+.epics .epicPreviewHeader .titleField {font-size: 12px; line-height: 19px}
+.epics .epicPreviewHeader .epicPreviewText {padding-left: 19px}
+.epics .epicPreviewHeader .toggle_expanded_button {padding-top: 1px; float: left; cursor: pointer}
+.epics .epicPreviewHeader .epic_details_graph {margin: 7px 7px 0 0; width: 85px; height: 8px; float: right; cursor: pointer}
+.epics .epicPreviewHeader .epic_details_graph div {float: right; height: 8px}
+.epics .epicPreviewHeader .epic_details_graph .accepted_bar {background-color: #7aa634; -moz-box-shadow: 0 3px 4px #597a26 inset; -webkit-box-shadow: 0 3px 4px #597a26 inset; box-shadow: 0 3px 4px #597a26 inset}
+.epics .epicPreviewHeader .epic_details_graph .active_bar {background-color: #f7f79f; -moz-box-shadow: 0 3px 4px #b5b575 inset; -webkit-box-shadow: 0 3px 4px #b5b575 inset; box-shadow: 0 3px 4px #b5b575 inset}
+.epics .epicPreviewHeader .epic_details_graph .unstarted_bar {background-color: #999999; -moz-box-shadow: 0 3px 4px #767676 inset; -webkit-box-shadow: 0 3px 4px #767676 inset; box-shadow: 0 3px 4px #767676 inset}
+.epics .epicPreviewHeader .epic_details_graph .unscheduled_bar {background-color: #a2c4e5; -moz-box-shadow: 0 3px 4px #7790a8 inset; -webkit-box-shadow: 0 3px 4px #7790a8 inset; box-shadow: 0 3px 4px #7790a8 inset}
+.epics .epic_icon_container {padding-right: 3px; right: 3px; top: 0}
+.epics .endOfList {background: #aeb6b9 url(/images/v7/application/stories_view/backgrounds/epic_list_dropshadow.png) repeat-x left top}
+.epics .epic_icon_empty {display: inline-block; width: 16px; height: 19px}
+.epics .items .item {border-top-color: #fbfaee; border-bottom-color: #c2c0b9; background-color: #ebe9e3}
+.epics .items .item:hover {background-color: #dad9ce}
+.epics .epic_details {-moz-box-shadow: 0 0 7px #888888 inset; -webkit-box-shadow: 0 0 7px #888888 inset; box-shadow: 0 0 7px #888888 inset; background: #dadada; padding: 6px 0 12px 2px}
+.epics .epic_details .toggle_expanded_button {padding-top: 1px}
+.epics .epic_details .epic_name_container {margin: -18px 0 0 9px}
+.epics .epic_details .control_bar {margin: 10px -6px 10px 0; max-width: 280px}
+.epics .epic_details .control_bar .common_controls {background: #c9c9c9; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font-size: 11px}
+.epics .epic_details .control_bar .delete_controls {background: #c9c9c9; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font-size: 11px}
+.epics .epic_details .control_bar .common_controls {margin-right: 36px}
+.epics .epic_details .control_bar .common_controls a {-khtml-opacity: 0.4; -moz-opacity: 0.4; -ms-filter: alpha(opacity=100); filter: alpha(opacity=100); opacity: 0.4}
+.epics .epic_details .control_bar .delete_controls {float: right}
+.epics .epic_details .control_bar .delete_controls a {display: block; margin: 5px}
+.epics .epic_details .control_bar ul {margin: 0 4px}
+.epics .epic_details .control_bar ul li {margin: 5px 2px; float: left}
+.epics .epic_details .control_bar ul li.right {float: right}
+.epics .epic_details .control_bar a {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; font-size: 11px; display: block; border: 1px solid #999999; background: #eeeeee url('') no-repeat left top; color: #888888; padding: 3px 4px; font-weight: bold; cursor: pointer}
+.epics .epic_details .control_bar a:hover {color: #cccccc; background: #2b4c74 url('') no-repeat left bottom; border: 1px solid #24364c}
+.epics .epic_details .control_bar a.full_url {width: 11px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; font-size: 11px; display: block; border: 1px solid #999999; background: #eeeeee url('/images/v7/icons/stories_view/story_details_controls.png') no-repeat 1px 1px; color: #888888; padding: 3px 4px; font-weight: bold; cursor: pointer}
+.epics .epic_details .control_bar a.full_url:hover {color: #cccccc; background: #2b4c74 url('/images/v7/icons/stories_view/story_details_controls.png') no-repeat 1px -17px; border: 1px solid #24364c}
+.epics .epic_details .control_bar a.full_view em {padding: 0 6px; background: url(/images/v7/icons/stories_view/story_details_controls.png) no-repeat -20px -3px}
+.epics .epic_details .control_bar a.full_view:hover em {background-position: -20px -21px}
+.epics .epic_details .control_bar a.delete {width: 11px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; font-size: 11px; display: block; border: 1px solid #999999; background: #eeeeee url('/images/v7/icons/stories_view/story_details_controls.png') no-repeat -36px 1px; color: #888888; padding: 3px 4px; font-weight: bold; cursor: pointer}
+.epics .epic_details .control_bar a.delete:hover {color: #cccccc; background: #2b4c74 url('/images/v7/icons/stories_view/story_details_controls.png') no-repeat -36px -17px; border: 1px solid #24364c; background-color: #8c0101; border: 1px solid #540000}
+.epics .epic_details ul.meta {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 7px #999999 inset; -webkit-box-shadow: 0 0 7px #999999 inset; box-shadow: 0 0 7px #999999 inset; max-width: 280px; margin: 0 -6px 10px 0; text-shadow: 0 1px 0px #f3f3f3}
+.epics .epic_details ul.meta > li.linked_label {min-height: 17px}
+.epics .epic_details ul.meta > li {height: 25px; padding: 0 10px; border-top: 1px solid #e9e9e9; border-bottom: 1px solid #aaaaaa; color: #666666; line-height: 25px}
+.epics .epic_details ul.meta > li div.left {font-size: 11px; font-weight: bold}
+.epics .epic_details ul.meta > li div.left a {font-weight: bold; color: #256188}
+.epics .epic_details ul.meta > li div.label {line-height: 27px}
+.epics .epic_details ul.meta > li div.label span {-moz-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px; border: 1px solid #4e2088; background: #663399; background: -webkit-gradient(linear, left top, left bottom, from(#834dc8), to(#5f3ca3)); background: -moz-linear-gradient(top, #834dc8, #5f3ca3); text-shadow: none; color: #f3f3f3; padding: 1px 5px}
+.epics .epic_details ul.meta > li div.left.linked_label {position: relative; top: 2px}
+.epics .epic_details ul.meta > li div.right {font-size: 11px; color: #333333}
+.epics .epic_details ul.meta > li div.right select.chzn-select {width: 140px}
+.epics .epic_details ul.meta > li div.right .chzn-container {margin-top: 5px}
+.epics .epic_details ul.meta > li div.right .chzn-single-with-drop {background: none; border: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none}
+.epics .epic_details ul.meta > li div.right .chzn-container-single .chzn-search input {padding: 2px 20px 2px 5px; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none}
+.epics .epic_details ul.meta > li div.right .chzn-container-active .chzn-single {-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none}
+.epics .epic_details ul.meta > li div.right .chzn-single {height: 17px; line-height: 17px; font-size: 11px; background: none; border: none; text-align: right}
+.epics .epic_details ul.meta > li div.right .chzn-single > span {-moz-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px; border: 1px solid #4e2088; background: #663399; background: -webkit-gradient(linear, left top, left bottom, from(#834dc8), to(#5f3ca3)); background: -moz-linear-gradient(top, #834dc8, #5f3ca3); display: inline; margin-right: 13px; text-shadow: none; color: #f3f3f3; padding: 1px 5px}
+.epics .epic_details ul.meta > li div.right .chzn-single > span:hover {background-color: #685382; background: -webkit-gradient(linear, left top, left bottom, from(#663399), to(#3c1a67)); background: -moz-linear-gradient(top, #663399, #3c1a67)}
+.epics .epic_details ul.meta > li div.right .chzn-single > div {width: 13px; background: none; border: none}
+.epics .epic_details ul.meta > li div.right .chzn-single div b {background-position: 0 -4px}
+.epics .epic_details ul.meta > li div.right .chzn-drop {border: 1px solid #aaaaaa; text-shadow: none; color: #000000; font-size: 11px}
+.epics .epic_details ul.meta > li div.right .chzn-drop ul.chzn-results {-moz-border-radius: inherit; -webkit-border-radius: inherit; border-radius: inherit; margin: 0; padding: 0}
+.epics .epic_details ul.meta > li div.right .chzn-drop ul.chzn-results .highlighted {background: -webkit-gradient(linear, left top, left bottom, from(#153b5c), to(#256188)); background: -moz-linear-gradient(top, #153b5c, #256188); color: #ffffff}
+.epics .epic_details ul.meta > li div.right .chzn-drop ul.chzn-results li {font-size: 11px; color: #333333}
+.epics .epic_details ul.meta > li div.right .chzn-drop ul.chzn-results li + li {border-top: 1px solid #dddddd}
+.epics .epic_details ul.meta li:first-child {border-top: none}
+.epics .epic_details ul.meta li:last-child {border-bottom: none}
+.epics .panelTitle {top: 6px}
+.epics .panelLink.closePanel {margin-top: 6px}
+.epics .editForm {margin: 0 16px 7px 8px}
+.epics label {display: block; font-weight: bold; line-height: 18px; font-size: 11px; color: #666666; text-shadow: 0 1px 1px #eeeeee; text-transform: uppercase}
+.epics .readonly_description {min-height: 34px}
+.epics textarea {-moz-box-shadow: 0 1px 0 #eeeeee; -webkit-box-shadow: 0 1px 0 #eeeeee; box-shadow: 0 1px 0 #eeeeee}
+.epics input {-moz-box-shadow: 0 1px 0 #eeeeee; -webkit-box-shadow: 0 1px 0 #eeeeee; box-shadow: 0 1px 0 #eeeeee}
+.epics .buttons {margin: 10px -7px 0 0; text-align: right}
+.epics .buttons input {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; font-size: 11px; display: block; border: 1px solid #999999; background: #eeeeee url('') no-repeat left top; color: #888888; padding: 3px 4px; font-weight: bold; cursor: pointer; display: inline-block}
+.epics .buttons input:hover {color: #cccccc; background: #2b4c74 url('') no-repeat left bottom; border: 1px solid #24364c}
+.overlay.add_epic {-moz-border-radius: 7px; -webkit-border-radius: 7px; border-radius: 7px; border: 1px solid #666666; -moz-box-shadow: 0 0 4px #666666; -webkit-box-shadow: 0 0 4px #666666; box-shadow: 0 0 4px #666666}
+.overlay.add_epic > div {-webkit-border-radius: inherit}
+.overlay.add_epic .balloon {border: none; -webkit-border-radius: inherit}
+.balloon.add_epic {padding: 0; background: #dddddd; margin-top: 0px}
+.balloon.add_epic .balloonContents {padding: 0}
+.balloon.add_epic .balloonContents .top {padding: 9px; border-bottom: 1px solid #999999}
+.balloon.add_epic .balloonContents .top textarea {width: 245px; height: 18px; border: 1px solid #bbbbbb; margin: 0; resize: none}
+.balloon.add_epic .balloonContents .bottom {height: 36px; background: url(/images/v7/application/stories_view/backgrounds/crosshatch.png) repeat scroll left top; border-top: 1px solid #eeeeee; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px; -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -moz-border-radius-bottomright: 7px; -moz-border-radius-bottomleft: 7px; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0; -webkit-border-bottom-right-radius: 7px; -webkit-border-bottom-left-radius: 7px}
+.balloon.add_epic .balloonContents .bottom select.chzn-select {width: 140px}
+.balloon.add_epic .balloonContents .bottom .chzn-drop {border: 1px solid #aaaaaa; text-shadow: none; color: #000000; font-size: 11px; margin-top: 7px}
+.balloon.add_epic .balloonContents .bottom .chzn-drop ul.chzn-results {-moz-border-radius: inherit; -webkit-border-radius: inherit; border-radius: inherit; margin: 0; padding: 0}
+.balloon.add_epic .balloonContents .bottom .chzn-drop ul.chzn-results .highlighted {background: -webkit-gradient(linear, left top, left bottom, from(#153b5c), to(#256188)); background: -moz-linear-gradient(top, #153b5c, #256188); color: #ffffff}
+.balloon.add_epic .balloonContents .bottom .chzn-drop ul.chzn-results li {font-size: 11px; color: #333333}
+.balloon.add_epic .balloonContents .bottom .chzn-drop ul.chzn-results li + li {border-top: 1px solid #dddddd}
+.balloon.add_epic .balloonContents .bottom .chzn-container {margin-left: 10px; padding-top: 8px}
+.balloon.add_epic .balloonContents .bottom .chzn-container .chzn-single {height: 19px; line-height: 19px; font-size: 11px; background: #eff0f4; border: 1px solid #aaaaaa; padding-left: 1px}
+.balloon.add_epic .balloonContents .bottom .chzn-container .chzn-single > div {border: none; background: none}
+.balloon.add_epic .balloonContents .bottom .chzn-container .chzn-single > span.default {border: none; background: none; color: black}
+.balloon.add_epic .balloonContents .bottom .chzn-container .chzn-single > span.default:hover {border: none; background: none; color: black}
+.balloon.add_epic .balloonContents .bottom .chzn-container .chzn-single > span {-moz-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px; border: 1px solid #4e2088; background: #663399; background: -webkit-gradient(linear, left top, left bottom, from(#834dc8), to(#5f3ca3)); background: -moz-linear-gradient(top, #834dc8, #5f3ca3); display: inline; font-size: 11px; margin-right: 13px; text-shadow: none; color: #f3f3f3; padding: 1px 5px}
+.balloon.add_epic .balloonContents .bottom .chzn-container .chzn-single > span:hover {background-color: #685382; background: -webkit-gradient(linear, left top, left bottom, from(#663399), to(#3c1a67)); background: -moz-linear-gradient(top, #663399, #3c1a67)}
+.balloon.add_epic .balloonContents .bottom .chzn-container a {height: 17px; line-height: 17px; font-size: 12px; font-weight: normal}
+.balloon.add_epic .balloonContents .bottom .chzn-container a div b {background-position: 0 -3px}
+.balloon.add_epic .balloonContents .bottom .chzn-container a span {height: 17px; line-height: 17px; font-size: 12px; font-weight: normal}
+.balloon.add_epic .balloonContents .bottom .chzn-container a span div b {background-position: 0 -3px}
+.balloon.add_epic .balloonContents .bottom a#add_epic {text-indent: -9999em; width: 24px; height: 22px; background-image: url(/images/v7/application/stories_view/buttons/epicsave.png); float: right; margin-top: 7px; margin-right: 9px}
+.balloon.add_epic .balloonContents .bottom a#add_epic:hover {background-image: url(/images/v7/application/stories_view/buttons/epicsave_hover.png)}
+label.infield {text-shadow: none; position: absolute; color: #cccccc; top: 13px !important; margin-left: 7px}
+.epicItem .comments {margin: 0 10px 0 7px; font-size: 12px}
+.epicItem .comments h4 {padding: 0, 12px; color: #666666; text-transform: uppercase}
+.epicItem .comments hr {padding: 0, 12px; color: #666666; text-transform: uppercase}
+.epicItem .comments .cancel_comment {line-height: 25px; text-shadow: 0 1px 1px #ffffff; font-size: 10px; color: #666666; font-weight: bold; margin-right: 15px}
+.epicItem .comments .commentList {padding: 0}
+.epicItem .comments .commentList .comment {clear: left; padding: 7px 12px; background: #cccccc; margin-bottom: 4px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px}
+.epicItem .comments .commentList .comment .delete_comment {float: right; font-size: 10px; margin-right: 10px}
+.epicItem .comments .commentList .comment .delete_comment a {color: #666666; font-style: italic; font-family: Georgia, "Times New Roman", serif; text-decoration: underline}
+.epicItem .comments .commentList .comment .delete_comment a:hover {color: #96a2af}
+.epicItem .comments .commentList .comment .created_at {float: right; color: #666666; font-style: italic; font-size: 10px; font-family: Georgia, "Times New Roman", serif}
+.epicItem .comments .commentList .comment .author {text-shadow: 0 1px 1px #ffffff; color: #333333; font-weight: bold}
+.epicItem .comments .commentList .comment .text {margin-top: 5px; color: #000000}
+.epicItem .comments .new {padding: 0}
+.epicItem .comments .new .comment {clear: left; padding: 7px 12px; background: #cccccc; margin-bottom: 4px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px}
+.epicItem .comments .new .comment .delete_comment {float: right; font-size: 10px; margin-right: 10px}
+.epicItem .comments .new .comment .delete_comment a {color: #666666; font-style: italic; font-family: Georgia, "Times New Roman", serif; text-decoration: underline}
+.epicItem .comments .new .comment .delete_comment a:hover {color: #96a2af}
+.epicItem .comments .new .comment .created_at {float: right; color: #666666; font-style: italic; font-size: 10px; font-family: Georgia, "Times New Roman", serif}
+.epicItem .comments .new .comment .author {text-shadow: 0 1px 1px #ffffff; color: #333333; font-weight: bold}
+.epicItem .comments .new .comment .text {margin-top: 5px; color: #000000}
+.epicItem .comments .commentList {padding-top: 3px}
+.epicItem .comments .cancel_comment {display: block; float: right}
+.epicItem .comments .addComment {display: block; float: right}
+.epicItem .comments .new {padding: 8px 12px; background: #cccccc; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px}
+.epicItem .comments .new .author {text-shadow: 0 1px 1px #ffffff; color: #333333; font-weight: bold}
+.epicItem .comments .new form.commentForm {margin-right: 6px}
+.epicItem .comments .new form.commentForm .buttonRow {margin: 4px -7px 0 0; min-height: 20px}
+.epicItem .comments .new form.commentForm .buttonRow .right {position: relative; z-index: 1; width: 200px}
+.epicItem .comments .new form.commentForm .addComment {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; font-size: 11px; display: block; border: 1px solid #999999; background: #eeeeee url('') no-repeat left top; color: #888888; padding: 3px 4px; font-weight: bold; cursor: pointer; zoom: 1; background: #555555; border: 1px solid #333333; color: #ffffff; font-size: 10px; padding: 4px 11px; height: 25px}
+.epicItem .comments .new form.commentForm .addComment:hover {color: #cccccc; background: #2b4c74 url('') no-repeat left bottom; border: 1px solid #24364c; color: #ffffff}
+.epicItem .comments .attachments {padding-top: 5px; clear: both}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail a {display: block; background: url('/images/v7/application/stories_view/icons/google_doc_attachment.png') no-repeat; width: 40px; height: 40px}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail img {width: 11px; height: 11px; float: right; margin: 3px; background: url('/images/v7/application/stories_view/icons/google_doc_icons.png')}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .document img {background-position: 0 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .pdf img {background-position: -11px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .spreadsheet img {background-position: -22px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .presentation img {background-position: -33px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .image_png img {background-position: -44px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .image_jpeg img {background-position: -44px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .image_jpg img {background-position: -44px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .image_gif img {background-position: -44px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .form img {background-position: -55px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .folder img {background-position: -66px 0}
+.epicItem .comments .attachments li.google_doc_resource .attachment_thumbnail .drawing img {background-position: -77px 0}
+.epicItem .comments .attachments li {zoom: 1; padding-bottom: 5px}
+.epicItem .comments .attachments .header {display: none}
+.epicItem .comments .attachments .attachment_thumbnail {margin-right: 10px; min-width: 40px; float: left}
+.epicItem .comments .attachments .attachment_thumbnail img {max-height: 40px; max-width: 40px}
+.epicItem .comments .attachments .attachment_details_container {padding-left: 60px}
+.epicItem .comments .attachments .attachment_details_container ul.attachment_details {float: left; margin-top: 5px}
+.epicItem .comments .attachments .attachment_details_container .edit_description {display: none}
+.epicItem .comments .attachments .attachment_details_container .description {display: none}
+.epicItem .comments .attachments .attachment_details_container .uploader {display: none}
+.epicItem .comments .attachments .attachment_details_container .actions {display: none}
+.epicItem .comments .attachments .attachment_details_container .name {color: #333333; text-shadow: 0 1px 1px #ffffff; font-size: 11px; font-weight: bold}
+.epicItem .comments .attachments .attachment_details_container .metadata {color: #999999; font-size: 11px; font-weight: normal; text-transform: lowercase}
+.epicItem .comments .attachments .attachment_details_container .metadata span {display: none}
+.epicItem .comments form.attachment_form {position: relative}
+.epicItem .comments form.attachment_form img {max-height: 40px; max-width: 40px}
+.epicItem .comments form.attachment_form .attach_files a {float: left; height: 17px; width: 15px; margin-right: 4px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; font-size: 11px; display: block; border: 1px solid #999999; background: #eeeeee url('') no-repeat left top; color: #888888; padding: 3px 4px; font-weight: bold; cursor: pointer}
+.epicItem .comments form.attachment_form .attach_files a:hover {color: #cccccc; background: #2b4c74 url('') no-repeat left bottom; border: 1px solid #24364c}
+.epicItem .comments form.attachment_form .attach_files a.upload_button {overflow: hidden; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; font-size: 11px; display: block; border: 1px solid #999999; background: #eeeeee url('/images/v7/icons/stories_view/upload_button.png') no-repeat left top; color: #888888; padding: 3px 4px; font-weight: bold; cursor: pointer}
+.epicItem .comments form.attachment_form .attach_files a.upload_button:hover {color: #cccccc; background: #2b4c74 url('/images/v7/icons/stories_view/upload_button.png') no-repeat 0 -23px; border: 1px solid #24364c}
+.epicItem .comments form.attachment_form .attach_files a.upload_button span {-khtml-opacity: 0; -moz-opacity: 0; -ms-filter: alpha(opacity=100); filter: alpha(opacity=100); opacity: 0}
+.epicItem .comments form.attachment_form .attach_files a.google_doc_attach_button {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; box-shadow: 0 0 1px rgba(255, 255, 255, 0.7) inset; font-size: 11px; display: block; border: 1px solid #999999; background: #eeeeee url('/images/v7/icons/stories_view/google_doc_attach_button.png') no-repeat left top; color: #888888; padding: 3px 4px; font-weight: bold; cursor: pointer}
+.epicItem .comments form.attachment_form .attach_files a.google_doc_attach_button:hover {color: #cccccc; background: #2b4c74 url('/images/v7/icons/stories_view/google_doc_attach_button.png') no-repeat left bottom; border: 1px solid #24364c}
+.epic_progress_flyover {-moz-box-shadow: 0 0 5px #111111; -webkit-box-shadow: 0 0 5px #111111; box-shadow: 0 0 5px #111111; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; overflow: hidden; background: rgba(51, 51, 51, 0.7); cursor: pointer; font-family: Arial; text-shadow: 0 1px 0px #222222; font-size: 10px; color: #d3d3d3}
+.epic_progress_flyover .overlayContentWrapper {padding: 0}
+.epic_progress_flyover ul {padding: 5px 6px 2px; border-bottom: 1px solid #363636; font-size: 11px}
+.epic_progress_flyover ul li {line-height: 17px; list-style: none}
+.epic_progress_flyover ul li span {color: #999999}
+.epic_progress_flyover ul li span em {display: inline-block; width: 8px; height: 8px; margin-right: 5px}
+.epic_progress_flyover ul li em {font-weight: bold; font-style: normal}
+.epic_progress_flyover ul li.accepted span em {-moz-box-shadow: 0 3px 4px #597a26 inset; -webkit-box-shadow: 0 3px 4px #597a26 inset; box-shadow: 0 3px 4px #597a26 inset; background-color: #7aa634}
+.epic_progress_flyover ul li.accepted em {color: #7aa634}
+.epic_progress_flyover ul li.active span em {-moz-box-shadow: 0 3px 4px #b5b575 inset; -webkit-box-shadow: 0 3px 4px #b5b575 inset; box-shadow: 0 3px 4px #b5b575 inset; background-color: #f7f79f}
+.epic_progress_flyover ul li.active em {color: #f7f79f}
+.epic_progress_flyover ul li.unstarted span em {-moz-box-shadow: 0 3px 4px #bababa inset; -webkit-box-shadow: 0 3px 4px #bababa inset; box-shadow: 0 3px 4px #bababa inset; background-color: #eeeeee}
+.epic_progress_flyover ul li.unstarted em {color: #eeeeee}
+.epic_progress_flyover ul li.unscheduled span em {-moz-box-shadow: 0 3px 4px #7790a8 inset; -webkit-box-shadow: 0 3px 4px #7790a8 inset; box-shadow: 0 3px 4px #7790a8 inset; background-color: #a2c4e5}
+.epic_progress_flyover ul li.unscheduled em {color: #a2c4e5}
+.epic_progress_flyover h3 {margin: 0; padding: 3px 7px; border-top: 1px solid #5f5f5f; background: #2e2e2e; font-size: 11px; font-weight: normal}
+.epic_progress_flyover h3 b {font-size: 14px}
+.epic_progress_flyover h3 span {font-weight: bold; color: #7bba26}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/labels.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+div.storyDetails div.wrapper {position: relative}
+div.storyDetails div.labels {color: #ffffff; margin: 4px 0 0; padding: 4px 4px 0; width: 100%; overflow: hidden; background: #ffffff; background-clip: border-box; background-origin: content-box; box-shadow: 0 1px 0 #ffffff; cursor: text; border: 1px solid #999999; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; *padding-bottom: 4px}
+div.storyDetails div.labels .labels_dropdown_arrow {padding: 7px 0px 10px 4px; float: right; cursor: pointer}
+div.storyDetails div.labels.active {border-top-left-radius: inherit; border-top-right-radius: inherit; border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: inherit; -moz-border-radius-topright: inherit; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: inherit; -webkit-border-top-right-radius: inherit; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0}
+div.storyDetails div.labels a {font-size: 11px; color: #ffffff; display: inline-block; padding: 1px 0; -moz-border-radius: inherit; -webkit-border-radius: inherit; border-radius: inherit}
+div.storyDetails div.labels a:hover {background-color: #3c6000; background: -webkit-gradient(linear, left top, left bottom, from(#729a07), to(#507d02)); background: -moz-linear-gradient(top, #729a07, #507d02); text-decoration: none}
+div.storyDetails div.labels a.text {padding-left: 7px; padding-right: 4px; border-top-left-radius: inherit; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: inherit; -moz-border-radius-topleft: inherit; -moz-border-radius-topright: 0; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: inherit; -webkit-border-top-left-radius: inherit; -webkit-border-top-right-radius: 0; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: inherit}
+div.storyDetails div.labels a.remove {position: absolute; top: 0; bottom: 0; right: 0; text-indent: -9999em; border-top-left-radius: 0; border-top-right-radius: inherit; border-bottom-right-radius: inherit; border-bottom-left-radius: 0; -moz-border-radius-topleft: 0; -moz-border-radius-topright: inherit; -moz-border-radius-bottomright: inherit; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: inherit; -webkit-border-bottom-right-radius: inherit; -webkit-border-bottom-left-radius: 0}
+div.storyDetails div.labels a.remove > span {text-indent: -9999em; display: block; width: 14px; height: 9px; margin: 3px 0; border-left: 1px solid #b2d165; background: url(/images/v7/application/stories_view/icons/labels_close_icon.png) no-repeat 4px center}
+div.storyDetails div.labels input.create {font-size: 12px; line-height: 17px; width: 100px; white-space: nowrap; height: 17px; float: left; margin-top: 2px; margin-bottom: 3px; margin-right: 12px; padding: 0 3px; color: #333333; border: none; outline: none}
+div.storyDetails div.labels ul {margin-right: 12px}
+div.storyDetails div.labels ul > li {font-size: 11px; position: relative; float: left; margin-right: 3px; margin-bottom: 3px; padding: 0; padding-right: 14px; background-color: #759d07; background: -webkit-gradient(linear, left top, left bottom, from(#88af0a), to(#729a07)); background: -moz-linear-gradient(top, #88af0a, #729a07); border: 1px solid #447200; cursor: pointer; -moz-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px; zoom: 1}
+div.storyDetails div.labels ul > li.active {background-color: #3c6000; background: -webkit-gradient(linear, left top, left bottom, from(#729a07), to(#507d02)); background: -moz-linear-gradient(top, #729a07, #507d02)}
+div.storyDetails div.labels .epic_label {border: 1px solid #4e2088; background-color: #663399; background: -webkit-gradient(linear, left top, left bottom, from(#834dc8), to(#5f3ca3)); background: -moz-linear-gradient(top, #834dc8, #5f3ca3)}
+div.storyDetails div.labels .epic_label a:hover {background-color: #685382; background: -webkit-gradient(linear, left top, left bottom, from(#663399), to(#3c1a67)); background: -moz-linear-gradient(top, #663399, #3c1a67)}
+div.storyDetails div.labels .epic_label a.remove > span {border-left: 1px solid #956bd4}
+div.storyDetails div.labels.read-only {min-height: 14px}
+div.storyDetails div.labels.read-only .labels_dropdown_arrow {display: none}
+div.storyDetails div.labels.read-only input.create {display: none}
+div.storyDetails div.labels.read-only ul > li {-khtml-opacity: 0.8; -moz-opacity: 0.8; -ms-filter: alpha(opacity=100); filter: alpha(opacity=100); opacity: 0.8; padding-right: 0px}
+div.storyDetails div.labels.read-only a {padding-right: 7px; -moz-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px}
+div.storyDetails div.labels.read-only a.remove {display: none}
+#multi_story_labels div.wrapper {position: relative}
+#multi_story_labels div.labels {color: #ffffff; margin: 4px 0 0; padding: 4px 4px 0; width: 100%; overflow: hidden; background: #ffffff; background-clip: border-box; background-origin: content-box; box-shadow: 0 1px 0 #ffffff; cursor: text; border: 1px solid #999999; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; *padding-bottom: 4px}
+#multi_story_labels div.labels .labels_dropdown_arrow {padding: 7px 0px 10px 4px; float: right; cursor: pointer}
+#multi_story_labels div.labels.active {border-top-left-radius: inherit; border-top-right-radius: inherit; border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: inherit; -moz-border-radius-topright: inherit; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: inherit; -webkit-border-top-right-radius: inherit; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0}
+#multi_story_labels div.labels a {font-size: 11px; color: #ffffff; display: inline-block; padding: 1px 0; -moz-border-radius: inherit; -webkit-border-radius: inherit; border-radius: inherit}
+#multi_story_labels div.labels a:hover {background-color: #3c6000; background: -webkit-gradient(linear, left top, left bottom, from(#729a07), to(#507d02)); background: -moz-linear-gradient(top, #729a07, #507d02); text-decoration: none}
+#multi_story_labels div.labels a.text {padding-left: 7px; padding-right: 4px; border-top-left-radius: inherit; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: inherit; -moz-border-radius-topleft: inherit; -moz-border-radius-topright: 0; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: inherit; -webkit-border-top-left-radius: inherit; -webkit-border-top-right-radius: 0; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: inherit}
+#multi_story_labels div.labels a.remove {position: absolute; top: 0; bottom: 0; right: 0; text-indent: -9999em; border-top-left-radius: 0; border-top-right-radius: inherit; border-bottom-right-radius: inherit; border-bottom-left-radius: 0; -moz-border-radius-topleft: 0; -moz-border-radius-topright: inherit; -moz-border-radius-bottomright: inherit; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: inherit; -webkit-border-bottom-right-radius: inherit; -webkit-border-bottom-left-radius: 0}
+#multi_story_labels div.labels a.remove > span {text-indent: -9999em; display: block; width: 14px; height: 9px; margin: 3px 0; border-left: 1px solid #b2d165; background: url(/images/v7/application/stories_view/icons/labels_close_icon.png) no-repeat 4px center}
+#multi_story_labels div.labels input.create {font-size: 12px; line-height: 17px; width: 100px; white-space: nowrap; height: 17px; float: left; margin-top: 2px; margin-bottom: 3px; margin-right: 12px; padding: 0 3px; color: #333333; border: none; outline: none}
+#multi_story_labels div.labels ul {margin-right: 12px}
+#multi_story_labels div.labels ul > li {font-size: 11px; position: relative; float: left; margin-right: 3px; margin-bottom: 3px; padding: 0; padding-right: 14px; background-color: #759d07; background: -webkit-gradient(linear, left top, left bottom, from(#88af0a), to(#729a07)); background: -moz-linear-gradient(top, #88af0a, #729a07); border: 1px solid #447200; cursor: pointer; -moz-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px; zoom: 1}
+#multi_story_labels div.labels ul > li.active {background-color: #3c6000; background: -webkit-gradient(linear, left top, left bottom, from(#729a07), to(#507d02)); background: -moz-linear-gradient(top, #729a07, #507d02)}
+#multi_story_labels div.labels .epic_label {border: 1px solid #4e2088; background-color: #663399; background: -webkit-gradient(linear, left top, left bottom, from(#834dc8), to(#5f3ca3)); background: -moz-linear-gradient(top, #834dc8, #5f3ca3)}
+#multi_story_labels div.labels .epic_label a:hover {background-color: #685382; background: -webkit-gradient(linear, left top, left bottom, from(#663399), to(#3c1a67)); background: -moz-linear-gradient(top, #663399, #3c1a67)}
+#multi_story_labels div.labels .epic_label a.remove > span {border-left: 1px solid #956bd4}
+#multi_story_labels div.labels.read-only {min-height: 14px}
+#multi_story_labels div.labels.read-only .labels_dropdown_arrow {display: none}
+#multi_story_labels div.labels.read-only input.create {display: none}
+#multi_story_labels div.labels.read-only ul > li {-khtml-opacity: 0.8; -moz-opacity: 0.8; -ms-filter: alpha(opacity=100); filter: alpha(opacity=100); opacity: 0.8; padding-right: 0px}
+#multi_story_labels div.labels.read-only a {padding-right: 7px; -moz-border-radius: 11px; -webkit-border-radius: 11px; border-radius: 11px}
+#multi_story_labels div.labels.read-only a.remove {display: none}
+ul.ui-autocomplete {z-index: 10; max-height: 180px; overflow: auto; border: 1px solid #999999; border-top: none; box-shadow: 0 2px 4px #999999; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -moz-border-radius-bottomright: 3px; -moz-border-radius-bottomleft: 3px; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0; -webkit-border-bottom-right-radius: 3px; -webkit-border-bottom-left-radius: 3px}
+.ui-autocomplete {position: absolute; cursor: default}
+* html .ui-autocomplete {width: 1px}
+.ui-menu {list-style: none; padding: 0; margin: 0; display: block; float: left; background: white}
+.ui-menu .ui-menu {margin-top: -3px}
+.ui-menu .ui-menu-item {margin: 0; padding: 0; zoom: 1; float: left; clear: left; width: 100%; border-top: 1px solid #cccccc; font-size: 11px}
+.ui-menu .ui-menu-item a {color: #333333; text-decoration: none; display: block; padding: 0.2em 0.7em; line-height: 1.5; zoom: 1; cursor: pointer}
+.ui-menu .ui-menu-item a.ui-state-hover {font-weight: normal; background: #ffffe4}
+.ui-menu .ui-menu-item a.ui-state-active {font-weight: normal; background: #ffffe4}
+.ui-menu .ui-menu-item:first-child {border-top: none}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/browser_specific.less instead. */body.mozilla #content .item .storyItem div.formatted_text_area {padding-left: 5px; padding-right: 0px}
+body.mozilla #content .item .storyItem textarea {padding-left: 4px; padding-right: 1px}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/control_panel.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin: 0; padding: 0}
+#controlPanel *:focus {outline: 0}
+#controlPanel
+{height: 69px; border-top: 2px solid #bbbbbb; margin-bottom: 11px; min-width: 930px; background: url(/images/Stories/control_panel.png) repeat-x left bottom}
+#controlPanel .dropdown > a {background: url(/images/Stories/arrow_dropdown_grey.png) no-repeat right center}
+#controlPanel div#velocity {float: right; cursor: pointer}
+#controlPanel div#velocity .velocityLabel {font-size: 1.2em; color: #b9b9b9; font-weight: bold; background: url(/images/Stories/arrow_dropdown_grey.png) no-repeat left center; padding-left: 10px; padding-right: 2px}
+#controlPanel div#velocity .projectVelocity {font-size: 2em; color: #000000; font-weight: bold; margin-top: -2px}
+#controlPanel #project_name_row {padding: 5px 20px 0 19px; overflow: hidden}
+#controlPanel #project_name_row .projectName {float: left}
+#controlPanel #project_name_row .projectName a {color: #000000; font-size: 22px; letter-spacing: -0.02em}
+#controlPanel a#join_project_button {display: block; background-image: url(/images/Stories/join_project.png); width: 105px; height: 30px; margin-top: -3px; text-indent: -9999em}
+#controlPanel a#join_project_button.join_project_button_disabled {opacity: 0.5; -moz-opacity: 0.5; filter: alpha(opacity=50); cursor: default}
+#controlPanel a#join_project_button:hover {background-position: 0 -30px}
+#controlPanel #controls_search_velocity_row {padding: 0px 20px 0 19px; margin-top: 3px}
+#controlPanel #controls_search_velocity_row > div.right {float: right; margin-top: -7px}
+#controlPanel #controls_search_velocity_row > div.right a#addstory_control_button {float: left; display: block; width: 102px; height: 30px; background: url(/images/Stories/add_story.png) no-repeat; text-indent: -9999em; margin-right: 7px}
+#controlPanel #controls_search_velocity_row > div.right a#addstory_control_button:hover {background-position: 0 -30px}
+#controlPanel #controls_search_velocity_row > div.right .searchField {float: left; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; font-size: 1.1em; width: 150px; padding: 6px 26px 5px 6px; border: 1px solid #cccccc; background: #ffffff url(/images/Stories/public_projects/search.png) 161px 5px no-repeat}
+#controlPanel #controls_search_velocity_row > div.right .ieInputWrapper {float: left}
+#controlPanel #controls_search_velocity_row ul#buttonPanel a.button {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; display: block; color: #999999; font-size: 11px; font-weight: bold; text-transform: uppercase; height: 22px; line-height: 23px; padding: 0 6px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel a:hover {color: #256188; text-decoration: none}
+#controlPanel #controls_search_velocity_row ul#buttonPanel > li {float: left; margin-right: 10px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel #panelList > li {float: left; margin-right: 10px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown {position: relative; color: #999999; font-size: 11px; margin-right: 3px; font-weight: bold; text-transform: uppercase}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown > a {background-position: right 8px; *background-position: right 9px; padding: 0 19px 0 6px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown > a:hover {background-image: url(/images/Stories/arrow_dropdown_aqua.png)}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown > a.active {background-image: url(/images/Stories/arrow_dropdown_aqua.png); color: #256188; position: relative; z-index: 10; top: -1px; padding: 0 18px 0 5px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown .nav_dropdown {margin-top: -1px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown .nav_dropdown a {font-size: 11px; line-height: 1; padding: 4px 8px 2px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown .nav_dropdown a span {padding: 5px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown .nav_dropdown a:hover {color: #ffffff}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown .nav_dropdown a.disabled_menu_item {cursor: default; color: #cccccc}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown .nav_dropdown a.disabled_menu_item:hover {background: none; color: #cccccc}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a#more_button {background-position: 44px 8px; *background-position: 44px 9px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a#more_button.active {background-position: 43px 7px; *background-position: 43px 8px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown #more_dropdown {width: 180px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a#project_button {background-position: 63px 8px; *background-position: 63px 9px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a#project_button.active {background-position: 62px 7px; *background-position: 62px 8px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown #project_dropdown {width: 165px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a#project_button {margin-left: 6px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown #project_dropdown {margin-left: 6px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a#stories_button {background-position: 58px 8px; *background-position: 58px 9px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a#stories_button span {color: #ffffff; background: #990000; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 1px 3px 1px 3px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown a#stories_button.active {background-position: 57px 7px; *background-position: 57px 8px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown #stories_dropdown {width: 175px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel li.dropdown span.selected_stories {font-size: 11px; display: block; padding: 5px 40px 5px 5px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel ul#panelList + li {border-left: 1px solid #ffffff; z-index: 7}
+#controlPanel #controls_search_velocity_row ul#buttonPanel ul#panelList {float: left; border-right: 1px solid #cccccc; padding-right: 5px}
+#controlPanel #controls_search_velocity_row ul#buttonPanel ul#panelList li a.selected {color: #256188; background: #ffffff}
+#controlPanel #controls_search_velocity_row ul#buttonPanel ul#panelList li a.selected:hover {color: #153b5c}
+#controlPanel #controls_search_velocity_row ul#buttonPanel ul#panelList li.dropdown {margin-right: 2px}
+#controlPanel.tabs {border-top: none}
+#controlPanel.tabs #project_name_row {padding-top: 0; background: #256188 url(/images/Stories/control_panel_tabs.png) repeat-x left bottom}
+#controlPanel.tabs #project_name_row #project_tabs {width: 100%; overflow: hidden}
+#controlPanel.tabs #project_name_row #project_tabs ul {float: left; overflow: hidden; height: 24px}
+#controlPanel.tabs #project_name_row #project_tabs ul li {float: left; color: #333333; margin-right: 15px}
+#controlPanel.tabs #project_name_row #project_tabs ul li a {display: block; font-size: 12px; text-shadow: 1px 1px 1px #333333; font-weight: bold; padding: 5px 11px 4px}
+#controlPanel.tabs #project_name_row #project_tabs ul li a {color: #eeeeee}
+#controlPanel.tabs #project_name_row #project_tabs ul li.current {background: #eeeeee; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; -moz-border-radius-bottomright: 0; -moz-border-radius-bottomleft: 0; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -webkit-border-bottom-right-radius: 0; -webkit-border-bottom-left-radius: 0}
+#controlPanel.tabs #project_name_row #project_tabs ul li.current span {text-shadow: 1px 1px 1px #999999; display: block; font-size: 12px; font-weight: bold; padding: 5px 11px 4px}
+#controlPanel.tabs #project_name_row #project_tabs ul li.ellipsify {position: relative; height: 22px; white-space: nowrap}
+#controlPanel.tabs #project_name_row #project_tabs ul li.ellipsify a {overflow: hidden}
+#controlPanel.tabs #project_name_row #project_tabs ul li.ellipsify span {background: url(/images/Stories/ellipse_gradient.png) no-repeat; display: block; float: right; height: 20px; padding: 0; position: absolute; right: -1px; top: 4px; width: 18px; z-index: 2}
+#controlPanel.tabs #controls_search_velocity_row {padding-top: 7px; padding-bottom: 6px}
+#controlPanel.tabs #controls_search_velocity_row > div.right {margin-top: -3px}
+#controlPanel.tabs #controls_search_velocity_row > div.right .searchField {margin-right: 12px}
+#controlPanel.tabs #controls_search_velocity_row > div.right #velocity {margin-top: 2px}
+#controlPanel.tabs #controls_search_velocity_row ul#buttonPanel ul#panelList {margin-top: 1px}
+body .simple-overlay {background: white}
+body #label_actions {display: block; padding: 1em 1em 0.6em; font-size: 12px; background: white; border: 1px solid #808080; position: absolute}
+body #label_actions select {font-size: 12px}
+body #label_actions input {font-size: 12px}
+body #destination_project_selection {display: block; padding: 1em 1em 0.6em; font-size: 12px; background: white; border: 1px solid #808080; position: absolute}
+body #destination_project_selection select {font-size: 12px}
+body #destination_project_selection input {font-size: 12px}
+body #multi_story_labels div.labels {width: 340px}
+body #label_actions {width: 348px}
+body #label_actions strong {display: block; font-weight: bold}
+body #label_actions select {cursor: pointer; display: block; margin: 10px 0 12px; min-width: 200px}
+body #label_actions input#new_label {cursor: pointer; display: block; margin: 10px 0 12px; min-width: 200px}
+body #label_actions input.toApply {cursor: pointer}
+body #label_actions input.toRemove {cursor: pointer}
+body #label_actions a {font-weight: normal}
+body #label_actions .close_popup {margin-top: 1em}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/overlay.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+.balloon {border: 1px solid #288fb9; background-color: white}
+.balloonContents {margin: 0; padding: 0.5em 0; font-size: 12px}
+.balloonContents input {font-size: 12px}
+.balloonContents .override_velocity {margin-bottom: 10px; text-align: right}
+.balloonContents .iteration_planning {margin-bottom: 10px; text-align: right}
+.balloonContents .team_strength {margin-bottom: 10px; text-align: right}
+.balloonContents .iteration_length {margin-bottom: 10px; text-align: right}
+.balloonContents .iteration_length span {margin-left: 2px}
+.balloonContents label {font-weight: bold}
+.balloonContents span {font-weight: bold}
+.balloonContents .iteration_planning label {font-weight: normal}
+.balloonContents textarea {margin: 3px 0 10px; width: 100%}
+.balloonContents .override_velocity input {margin: 0 2px; text-align: right; width: 25px}
+.balloonContents .team_strength input {margin: 0 2px; text-align: right; width: 25px}
+.balloonContents .iteration_length input {margin: 0 2px; text-align: right; width: 25px}
+.balloonContents .iteration_length input {width: 20px}
+.balloonContents .iteration_planning input {margin-left: 5px; vertical-align: middle}
+.saved_search_balloon label {display: block; width: 195px}
+.saved_search_balloon input {display: block; width: 195px}
+.saved_search_balloon input {float: left; margin: 10px 0}
+.saved_search_balloon button {margin-top: 9px}
+.balloonComponent {padding: 0.25em 0}
+.balloonField.balloonComponent textarea {font-weight: normal; font-size: 90%}
+.balloonErrorMessage {background: #990000; padding: 5px; text-align: center; font-size: 11px; color: #ffffff}
+.balloonDescription {border-top: 1px solid #999999; padding: 1em 0; margin-top: 1em; line-height: 1.2em}
+.balloonButtons {text-align: right}
+.balloonButtons button {font-size: 10px}
+.balloonField {font-weight: bold}
+.overlay {font-size: 0.9em; z-index: 10}
+.overlayContentWrapper {padding: 0 1em}
+.overlayContentWrapper.storyFlyover.flyover {padding: 0}
+.storyFlyover {font-size: 13px}
+.storyFlyover.flyover {-moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; border: 1px solid #5593d8; background: url(/images/v7/application/stories_view/backgrounds/flyover_gray_gradient.png) #fdfdfd top left repeat-x}
+.storyFlyover.flyover .storyTitle {font-size: 1.15em; font-weight: bold; margin: 0.5em 0.75em}
+.storyFlyover.flyover .flyoverContent {font-size: 0.9em; background: #ffffff; padding: 0; border-top-left-radius: inherit; border-top-right-radius: inherit; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; -moz-border-radius-topleft: inherit; -moz-border-radius-topright: inherit; -moz-border-radius-bottomright: 8px; -moz-border-radius-bottomleft: 8px; -webkit-border-top-left-radius: inherit; -webkit-border-top-right-radius: inherit; -webkit-border-bottom-right-radius: 8px; -webkit-border-bottom-left-radius: 8px}
+.storyFlyover.flyover .flyoverContent.storyDetails .section {margin-bottom: 12px; margin-top: 0px}
+.storyFlyover.flyover .flyoverContent.storyDetails .section + .section {margin-top: 13px; margin-bottom: 4px}
+.storyFlyover.flyover .flyoverContent.storyDetails .section .header {background: url(/images/v7/application/stories_view/backgrounds/flyover_blue_gradient.png) #ffffff top left repeat-x; padding-left: 1em; line-height: 1.7em; font-size: 106%; color: #333333; font-weight: bold; letter-spacing: 0.01em; margin-bottom: 5px}
+.storyFlyover.flyover .storyDetails .section .notesTable tr:first-child td {padding-top: auto}
+.storyFlyover.flyover .storyDetails .section .tasksTable tr:first-child td {padding-top: auto}
+.storyFlyover.flyover .flyoverContent.storyDetails table {margin: 0 1.9em 0 1.9em}
+.storyFlyover.flyover .flyoverContent.storyDetails .descriptionText {margin: 0 1.9em 0 1.9em}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list {cursor: pointer; margin-left: 22px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list > li.readonly label.completed {text-decoration: line-through}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list > li.readonly div {float: left; margin: 0; padding: 0}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list > li {padding: 3px 2px 1px 3px; overflow: hidden; font-size: 12px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list > li label {padding-left: 14px; margin-right: 50px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list > li > div {padding-left: 14px; margin-right: 50px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list > li label {display: block; color: #333333; line-height: 1.3em; padding: 0 5px 0 19px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list > li > ul {float: right; overflow: hidden; height: 16px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.task_list > li > ul li {display: block; float: left; margin-left: 5px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list {overflow: hidden}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li {overflow: hidden; margin-bottom: 13px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li > div.attachment_thumbnail {float: left; margin-right: 18px; min-width: 72px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li > div.attachment_details_container {margin-left: 90px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details {float: left; font-size: 11px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li {margin-bottom: 2px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li.name {color: #222222; font-weight: bold}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li.uploader {color: #666666}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li.metadata {color: #888888}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li.actions {color: #888888}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li.metadata {font-style: italic}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li.actions a {font-size: 11px}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li.edit_description {display: none}
+.storyFlyover.flyover .flyoverContent.storyDetails ol.attachments_list > li ul.attachment_details li.edit_description input {width: 20em}
+.storyFlyover.flyover .flyoverContent.storyDetails .section table td.resource_details_cell {padding-top: 8px}
+.storyFlyover.flyover .storyId {color: #888888; font-size: 0.85em; padding-top: 10px}
+.storyFlyover.flyover .externalId {color: #888888; font-size: 0.85em; padding-top: 10px}
+.storyFlyover.flyover .metaInfo {color: #888888; font-size: 0.85em; padding-top: 10px}
+.storyFlyover.flyover .externalId {font-weight: normal; margin-right: 12px}
+.storyFlyover.flyover .storyId {font-weight: normal; margin-right: 12px}
+.storyFlyover.flyover .metaInfo {margin: 0 1.1em 0.5em}
+.storyFlyover.flyover .metaInfo .infoSection {color: #666666; font-weight: bold}
+.storyFlyover.flyover .metaInfo .infoSection img {display: block; padding-top: 1px; padding-right: 3px}
+.storyFlyover.flyover .metaInfo .infoSection img.estimateIcon {margin-top: -5px; margin-right: 3px; padding-top: 0px; float: left; display: block; width: 6px; height: 16px}
+.storyFlyover.flyover .metaInfo .infoSection .text {vertical-align: middle}
+.storyFlyover.flyover .metaInfo .infoSection + .infoSection {margin-right: 6px}
+.storyFlyover.flyover .flyoverContent.storyDetails .section .notesTable {width: auto}
+.storyFlyover.externalStory.bugTool .secondRow {margin: 0 0 0.5em 1.7em}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/canvaschart.less instead. */.chart {font: menu; background: white; color: black; position: relative; height: 275px; margin-left: 10px; overflow: hidden}
+.chart .legend {float: left; border: 1px solid black; background: white; padding: 1px 2px 1px 2px}
+.chart .legend ul {margin: 0px; padding: 0px 0px 0px 20px; font-size: 8pt}
+.chart .legend ul li {list-style: square}
+.chart .legend ul li span {color: black}
+.chartHelpIcon {float: right; padding-right: 10px; padding-top: 8px}
+.chartYAxisLabel {margin-left: 10px; margin-right: 4px; font-style: italic; font-size: 9px}
+.chartXAxisLabel {margin-left: 4px; margin-right: 4px; float: right; font-style: italic; font-weight: lighter; font-size: 9px; height: 15px}
+.chartText {font-size: 10px; padding-left: 10px}
+.chartTextFeature {font-size: 10px; color: #0000cc; padding-right: 5px}
+.chartTextChore {font-size: 10px; color: #000000; padding-right: 5px}
+.chartTextBug {font-size: 10px; color: #dd0000; padding-right: 5px}
+.chartWait {font-size: 10px; padding: 5px; float: left}
+.chartLabel {font-size: 10px; padding-left: 10px}
+.chartField {font-size: 10px}
+.chartType {margin-left: 10px; margin-top: 10px; font-weight: bold}
+.chartUnacceptedReleaseOption {font-weight: bold}
+.chartFooter {padding-top: 10px}
+.chartsDropdown {margin-left: 10px; margin-top: 10px; font-weight: bold}
+.charts .items > div.inner {background: #ffffff}
+.chartBusinessSummary {background-color: white; font-size: 10px; font-weight: bold; padding-top: 15px; padding-left: 10px; padding-right: 3px}
+.chartSeparator {background-color: lightgray; height: 1px; width: 85%; margin-top: 8px; margin-bottom: 8px; margin-left: 2px; margin-right: 2px}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/tutorial.less instead. */.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+#hint {font-size: 0.9em; background: #222425; position: absolute; z-index: 1000; bottom: 40px; right: 40px; width: 400px; min-height: 70px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 10px; opacity: 0.9}
+#hint .message {color: white; text-align: left; padding-left: 30px; font-size: 1.3em; margin-bottom: 5px}
+#hint .message a {color: #88c2e5}
+#hint .icon {position: absolute; top: 11px; left: 7px}
+#hint .close_button {position: absolute; top: -10px; left: -10px}
+#hint .hint-disabler {vertical-align: middle; margin-right: 4px}
+#hint .hint-label {color: #ffffff; font-size: 1.1em; vertical-align: middle; padding-top: 2px}
+.tooltip {position: absolute; width: 400px; z-index: 1000; font-size: 10px}
+.tooltip span.inner {display: block; overflow: hidden}
+.tooltip .footer {position: absolute; bottom: 10px; overflow: hidden; left: -20px; width: 100%}
+.tooltip.modal {position: fixed; top: 29%; left: 50%; width: 487px}
+.tooltip.modal .footer {left: -26px; bottom: 16px}
+.tooltip .footer a {font-size: 1.1em; float: right; width: auto; margin: 0 5px; line-height: 26px}
+.tooltip.relative {top: 10px; left: 5%; width: 90%}
+.tooltip h3 {font-size: 2.4em; color: #aa1224; margin-bottom: 0.8em}
+.tooltip h4 {color: #000000; font-size: 2em; margin-bottom: 0.4em}
+.tooltip h5 {color: #000000; font-size: 1.8em; line-height: 133px; text-align: center; font-weight: bold}
+.tooltip h6 {color: #000000; font-size: 1.4em; text-align: left; font-weight: bold; margin-bottom: 1em}
+.tooltip p {color: #666666; font-size: 1.5em; font-weight: bold; margin-bottom: 1.1em}
+.tooltip dt {color: #666666; font-size: 1.5em; font-weight: bold; margin-bottom: 1.1em}
+.tooltip dd {color: #666666; font-size: 1.5em; font-weight: bold; margin-bottom: 1.1em}
+.tooltip dt {display: inline; color: #000000}
+.tooltip dd {display: inline}
+#glass {display: none; position: fixed; top: 0; left: 0; z-index: 990; width: 100%; height: 100%; background-color: #000000; filter: alpha(opacity=45); opacity: 0.45}
+body[rel*='glass'] #glass {display: block}
+.tooltip > .wrapper {height: 100%; position: relative; font-size: 1.3em}
+.tooltip .left {float: none; position: relative; width: 16px}
+.tooltip .right {float: none; position: relative; width: 16px}
+.tooltip.tooltip_top > .wrapper > .pointer {background: url(/images/v7/backgrounds/tooltips/pointer_top.png) no-repeat; width: 23px; height: 13px; position: absolute; top: -7px; left: 10%}
+.tooltip.tooltip_left > .wrapper > .pointer {background: url(/images/v7/backgrounds/tooltips/pointer_left.png) no-repeat; width: 13px; height: 23px; position: absolute; top: 20%; left: -7px}
+.tooltip.tooltip_right > .wrapper > .pointer {background: url(/images/v7/backgrounds/tooltips/pointer_right.png) no-repeat; width: 13px; height: 23px; position: absolute; top: 20%; right: -7px}
+.tooltip .left {left: -16px}
+.tooltip > .wrapper > .top {height: 16px; background: url(/images/v7/backgrounds/tooltips/tooltips_bg.png) no-repeat top right; padding-right: 16px; margin-left: 16px}
+.tooltip.modal > .wrapper > .top {height: 6px; background-image: url(/images/v7/backgrounds/tooltips/modal_bg.png)}
+.tooltip > .wrapper > .top > .left {height: 16px; background: url(/images/v7/backgrounds/tooltips/tooltips_bg.png) no-repeat top left}
+.tooltip.modal > .wrapper > .top > .left {height: 6px; background-image: url(/images/v7/backgrounds/tooltips/modal_bg.png)}
+.tooltip > .wrapper > .btm {background: url(/images/v7/backgrounds/tooltips/tooltips_bg.png) no-repeat bottom right; padding-right: 16px; margin-left: 16px}
+.tooltip.modal > .wrapper > .btm {height: 6px; background-image: url(/images/v7/backgrounds/tooltips/modal_bg.png)}
+.tooltip > .wrapper > .btm > .left {height: 16px; background: url(/images/v7/backgrounds/tooltips/tooltips_bg.png) no-repeat bottom left}
+.tooltip.modal > .wrapper > .btm > .left {height: 6px; background-image: url(/images/v7/backgrounds/tooltips/modal_bg.png)}
+.tooltip > .wrapper > .mid {height: 100%; background: url(/images/v7/backgrounds/tooltips/tooltips_bg.png) no-repeat right -16px; padding-right: 6px; margin-left: 6px}
+.tooltip.modal > .wrapper > .mid {background: url(/images/v7/backgrounds/tooltips/modal_bg.png) no-repeat right -6px}
+.tooltip > .wrapper > .mid > .left {height: 100%; width: 100%; left: -6px; padding-left: 6px; background: url(/images/v7/backgrounds/tooltips/tooltips_bg.png) no-repeat left -16px}
+.tooltip.modal > .wrapper > .mid > .left {padding-left: 6px; background: url(/images/v7/backgrounds/tooltips/modal_bg.png) no-repeat left -6px}
+.tooltip > .wrapper > .mid > .left > div {height: 100%; position: relative}
+.tooltip > .wrapper > .mid > .left > div > .inner {padding: 10px 20px}
+.tooltip.modal > .wrapper > .mid > .left > div {background: url(/images/v7/backgrounds/tooltips/modal_bg.png) no-repeat -6px -6px; height: 100%}
+.tooltip.modal > .wrapper > .mid > .left > div > .inner {padding: 26px 26px 16px}
+.tooltip a.forward {display: block; text-indent: -9999em; height: 26px}
+.tooltip a.help_me_get_started {display: block; text-indent: -9999em; height: 26px}
+.tooltip a.restart_guide {display: block; text-indent: -9999em; height: 26px}
+.tooltip a.forward {width: 74px; background-image: url(/images/v7/tutorial/forward.png)}
+.tooltip a.help_me_get_started {width: 134px; background-image: url(/images/v7/tutorial/help_me_get_started.png)}
+.tooltip a.restart_guide {width: 100px; background-image: url(/images/v7/tutorial/restart_guide.png)}
+.tooltip a.help {color: #666666; font-weight: bold; font-size: 1.2em}
+.tooltip#add_story {margin-top: -15px; margin-left: 94px}
+.tooltip#describe_story {top: -34px; left: -407px}
+.tooltip#estimate_points, .tooltip#additional_stories {top: 30px; left: -9px}
+.tooltip#velocity_new_project {margin-top: -33px; margin-left: -490px}
+.tooltip#estimate_points .pointer {left: 82%}
+.tooltip#additional_stories .pointer {left: 82%}
+.tooltip#add_story .pointer {top: 14px}
+.tooltip#current_and_backlog_reiterated, .tooltip#story_states {margin-left: 272px; margin-top: 5px}
+#current_itemList {position: relative}
+body[rel*='current_and_backlog'] td#current {position: relative; z-index: 996}
+body[rel*='current_and_backlog'] td#backlog {position: relative; z-index: 996}
+body[rel*='icebox'] td#icebox {position: relative; z-index: 996}
+body[rel*='current_and_backlog'] td#backlog {z-index: 995}
+#icebox_itemList {position: relative}
+.tooltip#intro {height: 24em}
+.tooltip#this_is_your_icebox {height: 18em}
+.tooltip#current_and_backlog {height: 32em; left: 43%; width: 120%}
+.tooltip#additional_stories h5 {line-height: 25px}
+.tooltip#current_and_backlog_reiterated h5 {line-height: 25px}
+.tooltip#current_and_backlog_reiterated, .tooltip#story_states {height: 21em; width: 45em}
+.tooltip#current_and_backlog_reiterated p {color: #666666; font-weight: normal}
+.tooltip#current_and_backlog_reiterated p span {color: #000000; font-weight: normal}
+.tooltip#velocity_new_project {height: 16em}
+.tooltip#velocity_new_project p {font-weight: normal}
+.tooltip#story_states {height: 30em; width: 49em}
+.tooltip#next_steps {height: 28em}
+.tooltip#tutorial_popup p {line-height: 1.2em}
+.tooltip#tutorial_popup img {margin-bottom: 15px}
+.tooltip .tutorial_footer {text-align: center}
+body #screencast_popup {z-index: 200}
+/* This file was auto generated by Less (http://lesscss.org). To change the contents of this file, edit app/stylesheets/less/application/stories/jquery.fileupload-ui.less instead. */.file_upload_progress .ui-progressbar-value {background: url(/stylesheets/jquery_plugins/pbar-ani.gif) !important}
+.file_upload_progress div {width: 98px}

@@ -1,0 +1,164 @@
+    /*
+    Document   : str
+    Created on : Dec 13, 2011, 6:01:19 PM
+    Author     : rashid
+    Description:
+        Purpose of the stylesheet follows.
+*/
+#main
+{
+    width: 100%;
+    float: left;
+
+
+}
+#project
+{
+    width: 100%;
+    height: 10%;
+    background-image: url(/images/Stories/control_panel.png);
+    background-repeat:  repeat-x;
+
+/*    background-color: #FFCCCC;*/
+/*    padding-top: 10%;*/
+}
+#project a{
+    
+}
+#project-name h1{ width: 200px; float:left; }
+#project-name
+{
+    width: 100%;
+    height: 10%;
+    padding: 2px;
+}
+/*#project-name a
+{
+    
+}*/
+#project-name a{
+    float: left;
+    padding-right: 5px;
+/*    display: inline;*/
+}
+#project-mgt
+{
+    width: 100%;
+    height: 10%;
+    padding: 2px;
+    clear: both;
+}
+#project-mgt li
+{
+    display: inline;
+    margin-right: 5px;
+    padding: 2px;
+}
+#project-mgt a.hover{
+    text-decoration: underline;
+}
+.main-con
+{
+    margin-top: 1%;
+    width: 100%;
+    
+
+}
+#panel_icebox
+{
+
+}
+#new_story
+{
+    width: auto;
+    height: auto;
+}
+#new_story form
+{
+    background-color: #FFF8D7;
+    text-align: center;
+    
+}
+#storyname
+{
+    width: 100%;
+    background-color: #FFEDA1;
+    text-align: center;
+}
+#s_buttons
+{
+    width: 100%;
+    background-color: #FFF8D7;
+}
+#new_story input[type=text]{
+/*    background-color: yellow;*/
+    margin-left: 8%;
+}
+#new_story select{
+    width: 50%;
+}
+.project_content
+{
+    width: 23%;
+    margin: 0 10px;
+    padding: 10px 0;
+    float: left;
+    
+    background-color: #eaeeee;
+/*    border-color: #CCFF99;
+    border-style: ridge;*/
+    height: 345px;
+}
+.panel_header{
+    background-color: #fff;
+    border-radius:  10px;
+    padding-left: 4px;
+    
+}
+#addstory_control_button
+{
+
+    float: right;
+    margin-right: 1%;
+}
+#icebox
+{
+    width: 100%;
+/*    background-color: #D1E0ED;*/
+    
+    
+}
+#current
+{
+    width: 100%;
+    height: 100%;
+/*    background-color: #D1E0ED;*/
+
+
+}
+#done
+{
+    width: 100%;
+    height: 100%;
+/*    background-color: #D1E0ED;*/
+
+
+}
+.estimation{
+/*    margin: 1px;*/
+}
+.detials{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    cursor: move;
+    border-color:  #09fefe;
+    border-bottom-style: ridge;
+    background-color: #D1E0ED;
+    height: 30px;
+}
+.round
+{
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+}

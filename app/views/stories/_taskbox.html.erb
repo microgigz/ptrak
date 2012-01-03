@@ -1,0 +1,27 @@
+
+<%@user_tasks.each do |i| %>
+  <% if i.task_type!= 'icebox' %>
+      <%  next %>
+    <%end%>
+  <div class="detials" id="task-<%=  i.id%>">
+    
+    <%= i.task_name %>
+    <%= i.task_type %>
+    <span style="float: right">
+      <% case i.task_level%>
+      <% when "1" %>
+        <%= image_tag("Stories/estimate_1pt_linear.gif",:class => "estimation") %>
+      <% when "2"%>
+        <%= image_tag("Stories/estimate_2pt_linear.gif")  %>
+      <% when "3"%>
+        <%= image_tag("Stories/estimate_3pt_linear.gif")  %>
+      <% when "Unknown" %>
+        <%=  image_tag("Stories/estimate_unestimated_linear.gif")%>
+      <%else%>
+        <%=  image_tag("Stories/estimate_0pt_linear.gif")%>
+      <%  end %>
+    </span>
+  </div>
+
+<%end%>
+
