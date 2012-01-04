@@ -1,4 +1,6 @@
 Ptrak::Application.routes.draw do
+  devise_for :users , :controllers => { :registrations => "registrations"}
+
   #get "project/new"
 
   #get "project/show"
@@ -10,17 +12,14 @@ Ptrak::Application.routes.draw do
   #get "users/show"
   #get "stories/usecase"
 
-  resources :users
-  resources :sessions
+  #resources :users
+  #resources :sessions
   resources :projects
   resources :stories do
     get :update_status, :on=>:member
   end
 
   
-  match "/signin" , :to => 'sessions#new'
-  match "/signup" , :to => 'users#signup'
-  match "/signout", :to=>  'sessions#destroy'
   match "/feature", :to=>  'pages#feature'
   match "/story",   :to => 'stories#usecase'
   match "/tasks",   :to => 'stories#usecase'
