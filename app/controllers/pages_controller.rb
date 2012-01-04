@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def feature
     
   end
-  def Index
+  def index
     
   end
 end

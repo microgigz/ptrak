@@ -8,7 +8,9 @@ gem "jquery-rails"
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2', '0.2.7'
+gem 'devise' ,  '1.1.3'
 gem "simple_form"
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
