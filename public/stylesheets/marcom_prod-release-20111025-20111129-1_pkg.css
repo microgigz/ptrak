@@ -91,7 +91,7 @@ body.marcom_page #featured > div.center {position: relative; height: 100%}
 body.marcom_page #featured > div.center > div.inner {margin-right: 0; overflow: hidden}
 body.marcom_page #featured h2 {text-indent: -9999em}
 body.marcom_page #featured h3 {text-indent: -9999em}
-body.marcom_page #featured h4 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-weight: 200; margin: 15px 0 24px 4px; font-size: 1.5em; color: #ffffff; -webkit-font-smoothing: subpixel-antialiased}
+body.marcom_page #featured h4 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-weight: 200; margin: 15px 0 24px 4px; font-size: 1.5em; color: #999999; -webkit-font-smoothing: subpixel-antialiased}
 body.marcom_page #featured div.hr_container {width: 335px}
 body.marcom_page #featured hr {border-top: 1px solid #000000; border-bottom: 1px solid #666666; border-left: none; border-right: none; clear: left}
 body.marcom_page a.button {float: left; display: block; height: 42px; text-indent: -9999em}
@@ -233,7 +233,7 @@ body.marcom_page.features #featured a.button.sign_up:hover {background-position:
 body.marcom_page.features #featured a.button.sign_up:focus {background-position: 0 -42px}
 body.marcom_page.features #featured img.screenshot {float: right}
 body.marcom_page.features #featured div.features_nav_wrapper {position: absolute; width: 100%; bottom: 0; left: 0; border: 1px solid #666666; overflow: hidden}
-body.marcom_page.features #featured div.features_nav_wrapper a.nav {display: block; width: 53px; height: 55px; background: url(/iamges/feature/left_right_bg.png) repeat-x}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav {display: block; width: 53px; height: 55px; background: url(/images/feature/left_right_bg.png) repeat-x}
 body.marcom_page.features #featured div.features_nav_wrapper a.nav span {display: block; width: 100%; height: 100%; text-indent: -9999em; background-repeat: no-repeat}
 body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev.enabled:hover {background-image: url(/images/feature/nav_active_bg.png)}
 body.marcom_page.features #featured div.features_nav_wrapper a.nav.next.enabled:hover {background-image: url(/images/feature/nav_active_bg.png)}
@@ -241,7 +241,7 @@ body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev {float: 
 body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev span {background-position: 48% 53%}
 body.marcom_page.features #featured div.features_nav_wrapper a.nav {cursor: auto}
 body.marcom_page.features #featured div.features_nav_wrapper a.nav.enabled {cursor: pointer}
-body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev.enabled span {background-image: url(/images/feature/prev_enabled.png)}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev.enabled span {background-image: url(/images/prev_enabled.png)}
 body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev.enabled:hover {border-right: 1px solid #720713}
 body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev span {background-image: url(/images/feature/prev_disabled.png)}
 body.marcom_page.features #featured div.features_nav_wrapper a.nav.next {float: right; border-left: 1px solid #666666}
@@ -252,8 +252,8 @@ body.marcom_page.features #featured div.features_nav_wrapper div.inner {float: l
 body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav {position: absolute; width: 2000em; overflow: hidden; left: 0; top: 0}
 body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li + li {border-left: 1px solid #666666}
 body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li {float: left}
-body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li a {display: block; line-height: 55px; color: #cccccc; font-size: 1.3em; font-weight: bold; padding: 0px 20px; border-right: 1px solid #000000; background: url(//iamges/feature//nav_bg.png) repeat-x; text-shadow: 0 -1px 1px #000000}
-body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li a.selected {color: #ffffff; background-image: url(/iamges/feature/nav_active_bg.png); background-color: #700712; border-right: 1px solid #720713; text-decoration: none; text-shadow: 0 -1px 1px #222222}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li a {display: block; line-height: 55px; color: #cccccc; font-size: 1.3em; font-weight: bold; padding: 0px 20px; border-right: 1px solid #000000; background: url(/images/nav_bg.png) repeat-x; text-shadow: 0 -1px 1px #000000}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li a.selected {color: #ffffff; background-image: url(/images/feature/nav_active_bg.png); background-color: #700712; border-right: 1px solid #720713; text-decoration: none; text-shadow: 0 -1px 1px #222222}
 body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li a:hover {color: #ffffff; background-image: url(/images/feature/nav_active_bg.png); background-color: #700712; border-right: 1px solid #720713; text-decoration: none; text-shadow: 0 -1px 1px #222222}
 body.marcom_page.features .section.grey > div.center > div.inner {padding-top: 35px}
 body.marcom_page.features .section.grey h3 {color: #720713}
@@ -501,7 +501,7 @@ body.marcom_page.testimonials #featured ul.testimonial li {padding: 28px 16px}
 body.marcom_page.testimonials #featured ul.testimonial li.callout {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #383838; border: 1px solid #333333; padding: 12px 16px; background-image: none; margin-top: 16px}
 body.marcom_page.testimonials #featured ul.testimonial li.video blockquote {overflow: hidden}
 body.marcom_page.testimonials #featured ul.testimonial li.video blockquote img {float: left; margin-right: 12px}
-body.marcom_page.testimonials #featured ul.testimonial li + li {background: url(/images/v7/marcom/clients_testimonials/horizontal_divider.png) no-repeat left top}
+body.marcom_page.testimonials #featured ul.testimonial li + li {background: url(/images/horizontal_divider.png) no-repeat left top}
 body.marcom_page.testimonials #featured ul.testimonial li + li.callout {margin-top: 0}
 body.marcom_page.testimonials #featured ul.testimonial li.callout + li {background-image: none}
 body.marcom_page.testimonials #featured ul.testimonial blockquote {color: #cccccc}
@@ -521,22 +521,22 @@ body.marcom_page.testimonials > #wrapper > .section.grey > .center > .inner {pad
 body.public_projects #footer {display: none}
 body.public_projects > #wrapper #panels .panel_body ul.list > li.no_projects_found {font-size: 13px; font-weight: bold; text-align: center; color: #aaaaaa; padding: 100px 0 0; border-bottom: none}
 body.public_projects > #wrapper {background: #efefef}
-body.public_projects > #wrapper > .section {background: url(/images/v7/marcom/public_projects/bg.png) repeat-x; border-top: 1px solid #ffffff}
+body.public_projects > #wrapper > .section {background: url(/images/bg.png) repeat-x; border-top: 1px solid #ffffff}
 body.public_projects > #wrapper > .section > .center {position: relative}
-body.public_projects > #wrapper > .section h1 {position: absolute; top: -2px; left: 0; height: 58px; width: 100%; text-indent: -9999em; background: url(/images/v7/marcom/public_projects/explore_badge.png) no-repeat center top}
+body.public_projects > #wrapper > .section h1 {position: absolute; top: -2px; left: 0; height: 58px; width: 100%; text-indent: -9999em; background: url(/images/public_projects/explore_badge.png) no-repeat center top}
 body.public_projects > #wrapper > .section a.nav_button {display: block; height: 28px; width: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: left top}
 body.public_projects > #wrapper > .section a.nav_button:hover {background-position: 0 -28px}
 body.public_projects > #wrapper > .section a.disabled {cursor: default}
 body.public_projects > #wrapper > .section ul.stats li {color: #aaaaaa; font-size: 1.2em}
 body.public_projects > #wrapper > .section ul.stats li + li {margin-left: 30px}
-body.public_projects > #wrapper > .section ul.stats li.stories {background: url(/images/v7/marcom/public_projects/stories.png) no-repeat left top}
-body.public_projects > #wrapper > .section ul.stats li.members {background: url(/images/v7/marcom/public_projects/members.png) no-repeat left top}
-body.public_projects > #wrapper > .section ul.stats li.activity {background: url(/images/v7/marcom/public_projects/activity.png) no-repeat left top}
+body.public_projects > #wrapper > .section ul.stats li.stories {background: url(/images/public_projects/stories.png) no-repeat left top}
+body.public_projects > #wrapper > .section ul.stats li.members {background: url(/images/public_projects/members.png) no-repeat left top}
+body.public_projects > #wrapper > .section ul.stats li.activity {background: url(/images/public_projects/activity.png) no-repeat left top}
 body.public_projects > #wrapper div.pagination {width: 66px}
 body.public_projects > #wrapper div.pagination * {display: block; float: left; height: 28px; width: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: left top; margin-left: 5px}
 body.public_projects > #wrapper div.pagination a:hover {background-position: 0 -28px}
-body.public_projects > #wrapper div.pagination .prev_page {background-image: url(/images/v7/marcom/public_projects/left_light.png)}
-body.public_projects > #wrapper div.pagination .next_page {background-image: url(/images/v7/marcom/public_projects/right_light.png)}
+body.public_projects > #wrapper div.pagination .prev_page {background-image: url(/images/public_projects/left_light.png)}
+body.public_projects > #wrapper div.pagination .next_page {background-image: url(/images/public_projects/right_light.png)}
 body.public_projects > #wrapper #featured_project {margin-top: 17px; margin-bottom: 18px; padding: 0 17px 0 10px}
 body.public_projects > #wrapper #featured_project h2 {position: relative; top: 5px; font-size: 1.3em; color: #666666; font-weight: bold; text-transform: lowercase; margin: 0}
 body.public_projects > #wrapper #featured_project .main_details {position: relative; overflow: hidden}
@@ -544,7 +544,7 @@ body.public_projects > #wrapper #featured_project .main_details h3 {float: left;
 body.public_projects > #wrapper #featured_project .main_details img {float: left; margin: 5px 0 0 20px}
 body.public_projects > #wrapper #featured_project .main_details ul {float: right; overflow: hidden; margin-top: 14px}
 body.public_projects > #wrapper #featured_project .main_details ul li {float: left; text-indent: -9999em}
-body.public_projects > #wrapper #featured_project .main_details ul li a.view_project {display: block; width: 124px; height: 30px; margin-right: 10px; background: url(/images/v7/marcom/public_projects/view_project.png) no-repeat left top}
+body.public_projects > #wrapper #featured_project .main_details ul li a.view_project {display: block; width: 124px; height: 30px; margin-right: 10px; background: url(/images/public_projects/view_project.png) no-repeat left top}
 body.public_projects > #wrapper #featured_project .main_details ul li a.view_project:hover {background-position: 0 -30px}
 body.public_projects > #wrapper #featured_project .main_details ul li a {margin-top: 2px}
 body.public_projects > #wrapper #featured_project .main_details ul li span.disabled {margin-top: 2px}
@@ -557,14 +557,14 @@ body.public_projects > #wrapper #featured_project .secondary_details ul li.stori
 body.public_projects > #wrapper #featured_project .secondary_details ul li.members {padding-left: 19px}
 body.public_projects > #wrapper #featured_project .secondary_details ul li.activity {padding-left: 27px}
 body.public_projects > #wrapper #panels {overflow: hidden}
-body.public_projects > #wrapper #panels .panel {float: left; width: 450px; padding-bottom: 5px; background: url(/images/v7/marcom/public_projects/panel_bg_btm.png) no-repeat left bottom}
-body.public_projects > #wrapper #panels .panel_header {height: 41px; background: url(/images/v7/marcom/public_projects/panel_header.png) no-repeat left top}
+body.public_projects > #wrapper #panels .panel {float: left; width: 450px; padding-bottom: 5px; background: url(/images/public_projects/panel_bg_btm.png) no-repeat left bottom}
+body.public_projects > #wrapper #panels .panel_header {height: 41px; background: url(/images/public_projects/panel_header.png) no-repeat left top}
 body.public_projects > #wrapper #panels .panel_header > .inner {padding: 3px 9px 0 17px; overflow: hidden}
 body.public_projects > #wrapper #panels .panel_header div.controls {float: right; margin-top: 5px}
 body.public_projects > #wrapper #panels .panel_header div.controls a.nav_button {margin-left: 3px}
 body.public_projects > #wrapper #panels .panel_header h2 {float: left; font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 1.3em; font-weight: bold; text-transform: uppercase; line-height: 38px; margin: 0}
-body.public_projects > #wrapper #panels .panel_body {position: relative; height: 675px; background: url(/images/v7/marcom/public_projects/panel_bg.png) repeat-y; overflow: hidden}
-body.public_projects > #wrapper #panels .panel_body .panel_gradient {position: absolute; width: 442px; height: 19px; bottom: 0; left: 4px; background: url(/images/v7/marcom/public_projects/panel_gradient.png) no-repeat left bottom; background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #ffffff); background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff)); pointer-events: none}
+body.public_projects > #wrapper #panels .panel_body {position: relative; height: 675px; background: url(/images/public_projects/panel_bg.png) repeat-y; overflow: hidden}
+body.public_projects > #wrapper #panels .panel_body .panel_gradient {position: absolute; width: 442px; height: 19px; bottom: 0; left: 4px; background: url(/images/public_projects/panel_gradient.png) no-repeat left bottom; background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #ffffff); background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff)); pointer-events: none}
 body.public_projects > #wrapper #panels .panel_body > .inner {padding: 0 4px}
 body.public_projects > #wrapper #panels .panel_body ul.list {overflow: hidden}
 body.public_projects > #wrapper #panels .panel_body ul.list > li {overflow: hidden; padding: 5px 17px 6px 13px; border-top: 2px solid #ffffff; border-bottom: 1px solid #dddddd}
@@ -579,21 +579,21 @@ body.public_projects > #wrapper #panels .panel_body ul.stats li.members {backgro
 body.public_projects > #wrapper #panels .panel_body ul.stats li.activity {background-position: 0 0}
 body.public_projects > #wrapper #panels #active_projects {margin-right: 30px}
 body.public_projects > #wrapper #panels #active_projects div.panel_header div.controls {overflow: hidden}
-body.public_projects > #wrapper #panels #active_projects div.panel_header span.prev_page {cursor: pointer; background-image: url(/images/v7/marcom/public_projects/left_dark.png)}
-body.public_projects > #wrapper #panels #active_projects div.panel_header span.prev_page.disabled {cursor: default; background-image: url(/images/v7/marcom/public_projects/left_dark_disabled.png)}
-body.public_projects > #wrapper #panels #active_projects div.panel_header span.next_page {cursor: pointer; background-image: url(/images/v7/marcom/public_projects/right_dark.png)}
-body.public_projects > #wrapper #panels #active_projects div.panel_header span.next_page.disabled {cursor: default; background-image: url(/images/v7/marcom/public_projects/right_dark_disabled.png)}
+body.public_projects > #wrapper #panels #active_projects div.panel_header span.prev_page {cursor: pointer; background-image: url(/images/public_projects/left_dark.png)}
+body.public_projects > #wrapper #panels #active_projects div.panel_header span.prev_page.disabled {cursor: default; background-image: url(/images/public_projects/left_dark_disabled.png)}
+body.public_projects > #wrapper #panels #active_projects div.panel_header span.next_page {cursor: pointer; background-image: url(/images/public_projects/right_dark.png)}
+body.public_projects > #wrapper #panels #active_projects div.panel_header span.next_page.disabled {cursor: default; background-image: url(/images/public_projects/right_dark_disabled.png)}
 body.public_projects > #wrapper #panels #active_projects div.panel_header a.active {display: block}
 body.public_projects > #wrapper #panels #active_projects div.panel_header a.disabled:hover {background-position: 0 0}
 body.public_projects > #wrapper #panels #active_projects div.panel_header ul {overflow: hidden}
 body.public_projects > #wrapper #panels #active_projects div.panel_header ul li {position: relative; float: left}
 body.public_projects > #wrapper #panels #active_projects div.panel_header label {position: absolute; top: 6px !important; left: 9px !important; font-size: 1.3em; font-weight: bold; color: #cccccc}
-body.public_projects > #wrapper #panels #active_projects div.panel_header input#find_projects {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; width: 152px; padding: 4px 22px 4px 6px; margin-right: 1px; border: 1px solid #222222; color: #333333; background: #ffffff url(/images/v7/marcom/public_projects/search.png) 161px 5px no-repeat}
+body.public_projects > #wrapper #panels #active_projects div.panel_header input#find_projects {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; width: 152px; padding: 4px 22px 4px 6px; margin-right: 1px; border: 1px solid #222222; color: #333333; background: #ffffff url(/images/public_projects/search.png) 161px 5px no-repeat}
 body.public_projects > #wrapper #panels #active_projects div.main_details {float: left; width: 77%}
 body.public_projects > #wrapper #panels #active_projects ul.stats {width: 12%}
 body.public_projects > #wrapper #panels #activity_feed div.panel_header a.nav_button {display: none}
-body.public_projects > #wrapper #panels #activity_feed div.panel_header a.pause {background-image: url(/images/v7/marcom/public_projects/pause.png)}
-body.public_projects > #wrapper #panels #activity_feed div.panel_header a.play {background-image: url(/images/v7/marcom/public_projects/play.png)}
+body.public_projects > #wrapper #panels #activity_feed div.panel_header a.pause {background-image: url(/images/public_projects/pause.png)}
+body.public_projects > #wrapper #panels #activity_feed div.panel_header a.play {background-image: url(/images/public_projects/play.png)}
 body.public_projects > #wrapper #panels #activity_feed div.panel_header a.active {display: block}
 body.public_projects > #wrapper #panels #activity_feed ul.list > li.unexpanded {padding: 5px 11px 13px 13px; height: 48px; display: block}
 body.public_projects > #wrapper #panels #activity_feed ul.list > li.unexpanded .short {display: auto}
@@ -607,9 +607,9 @@ body.public_projects > #wrapper #panels #activity_feed div.main_details .activit
 body.public_projects > #wrapper #panels #activity_feed div.main_details .activity_description.long {padding-left: 0}
 body.public_projects > #wrapper #panels #activity_feed div.main_details p {font-size: 1.3em; font-weight: bold; color: #666666}
 body.public_projects > #wrapper #panels #activity_feed div.secondary_details {float: right; margin-top: 1px}
-body.public_projects > #wrapper #panels #activity_feed div.secondary_details a {float: left; display: block; width: 55px; height: 17px; background: url(/images/v7/marcom/public_projects/details.png) no-repeat; text-indent: -9999em; margin: 1px 6px 0 0}
-body.public_projects > #wrapper #panels #activity_feed div.secondary_details a:hover {background-image: url(/images/v7/marcom/public_projects/details_hover.png)}
-body.public_projects > #wrapper #panels #activity_feed div.secondary_details a.active {background-image: url(/images/v7/marcom/public_projects/details_inset.png)}
+body.public_projects > #wrapper #panels #activity_feed div.secondary_details a {float: left; display: block; width: 55px; height: 17px; background: url(/images/public_projects/details.png) no-repeat; text-indent: -9999em; margin: 1px 6px 0 0}
+body.public_projects > #wrapper #panels #activity_feed div.secondary_details a:hover {background-image: url(/images/public_projects/details_hover.png)}
+body.public_projects > #wrapper #panels #activity_feed div.secondary_details a.active {background-image: url(/images/public_projects/details_inset.png)}
 body.public_projects > #wrapper #panels #activity_feed div.project_info {clear: left}
 body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats {float: none; overflow: hidden; margin-top: 4px}
 body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats li {float: left; padding-left: 26px; margin-bottom: 0}
