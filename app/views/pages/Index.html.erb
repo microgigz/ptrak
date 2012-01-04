@@ -23,7 +23,7 @@
 
       <h4>Collaborative, lightweight agile project management tool, brought to you by the experts in agile software development.</h4>
       <%if (signedin?)%>
-      <%= link_to "Signup",signup_path, :class => "button sign_up"%><!--<a href="https://www.pivotaltracker.com/signup/new" class="button sign_up ">Sign up</a>-->
+      <%= link_to "Signup",new_user_registration_path, :class => "button sign_up"%><!--<a href="https://www.pivotaltracker.com/signup/new" class="button sign_up ">Sign up</a>-->
       <%end%>
       <%= link_to "View Features",feature_path, :class => "button view_features"%><!--<a href="https://www.pivotaltracker.com/features" class="button view_features">View Features</a>-->
     </div>

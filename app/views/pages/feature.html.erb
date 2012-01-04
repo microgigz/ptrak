@@ -18,7 +18,7 @@
     <%#*<link href="features_files/kep3kek-e.css" rel="stylesheet">%>
     <%= stylesheet_link_tag 'kep3kek-e' %>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <%= javascript_include_tag "feature/features_prod-release-20111025-20111129-1_pkg"  %>
+    <%= javascript_include_tag "features/features_prod-release-20111025-20111129-1_pkg"  %>
   <%#*<script src="features_files/features_prod-release-20111025-20111129-1_pkg.js" type="text/javascript"></script>%>
 
 
@@ -59,7 +59,7 @@
       <div class="features_tour">
         <h2>Features Tour</h2>
        <% if (signedin?) %>
-        <%= link_to "Sign up",signup_path, :class => "button sign_up"%>
+        <%= link_to "Sign up",new_user_registration_path, :class => "button sign_up"%>
 
         <%#*<a href="https://#/signup/new" class="button sign_up ">Sign up</a>%>
        <%end%>
@@ -947,5 +947,5 @@ product on your Get Satisfaction powered support site.</p>
     <noscript>
   <div id='js_required'>Tracker requires JavaScript. Please enable it in your browser.</div>
 </noscript>
-          
+
 </body>
