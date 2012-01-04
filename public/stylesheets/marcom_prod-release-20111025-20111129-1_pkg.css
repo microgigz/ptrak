@@ -91,7 +91,7 @@ body.marcom_page #featured > div.center {position: relative; height: 100%}
 body.marcom_page #featured > div.center > div.inner {margin-right: 0; overflow: hidden}
 body.marcom_page #featured h2 {text-indent: -9999em}
 body.marcom_page #featured h3 {text-indent: -9999em}
-body.marcom_page #featured h4 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-weight: 200; margin: 15px 0 24px 4px; font-size: 1.5em; color: #ffffff; -webkit-font-smoothing: subpixel-antialiased}
+body.marcom_page #featured h4 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-weight: 200; margin: 15px 0 24px 4px; font-size: 1.5em; color: #999; -webkit-font-smoothing: subpixel-antialiased}
 body.marcom_page #featured div.hr_container {width: 335px}
 body.marcom_page #featured hr {border-top: 1px solid #000000; border-bottom: 1px solid #666666; border-left: none; border-right: none; clear: left}
 body.marcom_page a.button {float: left; display: block; height: 42px; text-indent: -9999em}
@@ -616,42 +616,42 @@ body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats
 body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats li.stories {margin-right: 15px}
 body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats li.members {margin-right: 22px}
 .field_with_errors {
-  margin-top: 10px;
-  padding: 2px;
-  background-color: red;
-  display: table;
+    margin-top: 10px;
+    padding: 2px;
+    background-color: red;
+    display: table;
 }
 
 .field_with_errors label {
-  color: #fff;
+    color: #fff;
 }
 
 #error_explanation {
-  width: 400px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+    width: 400px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
 }
 
 #error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff;
 }
 
 #error_explanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px;
 }
 
 #error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
+    font-size: 12px;
+    list-style: square;
 }

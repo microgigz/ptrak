@@ -18,6 +18,7 @@ Features={
                 },speed);
                 $('#navPrev').toggleClass('enabled');
                 $('#navNext').toggleClass('enabled');
+                alert(Features.totalWidth);
             }
         });
     $('#navNext').click(function(){
