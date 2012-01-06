@@ -214,8 +214,9 @@ a.outlined.button:hover {text-decoration: none}
 h3, h4 {margin-top: 0}
 .s_admin #header .navigation_area ul.nav_links > li + li {margin-left: 3px}
 #header {padding: 0 14px 0 20px; overflow: visible; position: relative; z-index: 12}
+#header .welcome_message {color:#AAAAAA ;font-size: 1.1em; text-align: right; line-height: 1;}
 #header .navigation_area {float: right; margin-top: 8px; position: relative}
-#header .navigation_area .welcome_message {font-size: 1.1em; text-align: right; line-height: 1; color: #aaaaaa; margin-right: 7px}
+#header .navigation_area .welcome_message {color:#AAAAAA ;font-size: 1.1em; text-align: right; line-height: 1;  margin-right: 7px}
 #header .navigation_area ul.nav_links {position: relative; margin: 0}
 #header .navigation_area ul.nav_links > li {list-style: none outside none}
 #header .navigation_area ul.nav_links > li a {padding: 0 8px; line-height: 22px; text-shadow: none; letter-spacing: -0.01em}
