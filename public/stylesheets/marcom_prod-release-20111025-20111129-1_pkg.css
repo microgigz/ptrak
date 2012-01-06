@@ -655,3 +655,11 @@ body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats
   font-size: 12px;
   list-style: square;
 }
+
+.welcome_message {
+    color: #AAAAAA;
+    font-size: 1.1em;
+    line-height: 1;
+    margin-right: 7px;
+    text-align: right;
+}

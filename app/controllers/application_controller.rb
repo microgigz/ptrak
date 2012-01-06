@@ -16,7 +16,6 @@ class ApplicationController < ActionController::Base
     #redirect_to 'destroy_user_session_path'
     redirect_to 'devise/sessions#destroy'
     #redirect_to 'pages#index'
-
+  end
   
 end
-#before_filter me check karo k user login hai k nie.. us k bad kisi b view me ja k session ki value dekho agr session empty hai to login show karo otherwise logout

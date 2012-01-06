@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def signup
     @user=User.new
-    
+
   end
   def create
     @user = User.new(params[:user])

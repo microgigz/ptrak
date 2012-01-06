@@ -10,11 +10,9 @@
 
     <div class="inner">
       <h1><a href="/">Pivotal Tracker</a></h1>
+      <div class="navigation_area clearfix">
+        <div class="welcome_message"> Welcome, <%= current_user.email %> </div>
       <ul class="nav_links">
-
-
-
-
             <% if user_signed_in? %>
 
             <li class="dashboard">
@@ -40,10 +38,7 @@
             <li>
               <%= link_to "Sign Out",destroy_user_session_path %>
             </li>
-            <li style="color: white">
-              Welcome <br/>
-              <%= current_user.email %>
-            </li>
+            
             <%else%>
               <li>
               <%#*<a href="https://www.pivotaltracker.com/features">Features</a>%>
@@ -68,6 +63,7 @@
             <%end%>
           <!--<a href="https://www.pivotaltracker.com/signin" tabindex="1">Sign In</a>-->
       </ul>
+    </div>
     </div>
   </div>
 
