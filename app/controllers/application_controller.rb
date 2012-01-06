@@ -17,5 +17,5 @@ class ApplicationController < ActionController::Base
     redirect_to 'devise/sessions#destroy'
     #redirect_to 'pages#index'
   end
-  
+
 end
