@@ -8,12 +8,10 @@ class User < ActiveRecord::Base
   attr_accessible :email,:name, :password, :password_confirmation, :remember_me
   #attr_accessible :name, :email , :e_password
 
- 
   has_many :tasks
   has_many :projects
   
   validates :name, :presence => true
- 
   #validates :e_password, :presence => true
   
 end

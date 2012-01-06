@@ -663,3 +663,34 @@ body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats
     font-size: 12px;
     list-style: square;
 }
+
+.welcome_message {
+    color: #AAAAAA;
+    font-size: 1.1em;
+    line-height: 1;
+    margin-right: 7px;
+    text-align: right;
+}
+
+#signup{
+    /* background: url("/text_signup.png") no-repeat scroll 0 0 transparent; */
+    height: 34px;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    width: 280px;
+}
+
+.label_sign_up{
+    color: #E0E0E0;
+    display: block;
+    float: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 33px;
+    margin-right: 12px;
+    text-align: right;
+    text-indent: 3px;
+    text-shadow: 1px 1px 2px #333333;
+    text-transform: uppercase;
+    width: 125px;
+}

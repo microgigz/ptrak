@@ -6,84 +6,59 @@
 <%#= "_header.html" %>
 <%= stylesheet_link_tag "/projects/non_stories_view_prod-release-20111025-20111221-3_pkg"  %>
 <header>
-<div id="header" class="notice_header">
-  <%#*<div class="navigation_area">%>
-  <% if !user_signed_in? %>
-  <div class="center">
-  <%end%>
-    <div class="inner">
-      <h1><a href="/">Pivotal Tracker</a></h1>
-      
-
-        <div class="navigation_area clearfix">
-
-
-
-            <% if user_signed_in? %>
-      <div class="welcome_message" >Welcome,<%= current_user.name.capitalize %></div>
-      <ul class="nav_links">
-            <li class="dashboard">
-              <%#*<a class="current">Dashboard</a>%>
-              <%= link_to "Dashboard", stories_path,:class => "current" %>
-            </li>
-            <li>
-              <%#*<a href="https://www.pivotaltracker.com/reports/progress">Reports</a>%>
-              <%= link_to "Reports",'#' %>
-            </li>
-            <li>
-              <%#*<a href="https://www.pivotaltracker.com/profile">Profile</a>%>
-              <%link_to "Profile", '#'%>
-            </li>
-            <li>
-              <%#*<li><a href="https://www.pivotaltracker.com/accounts/338789/plans">Account</a>%>
-              <%#= link_to "Account",edit_user_path(current_user.id) %>
-            </li>
-            <li>
-              <%#*<a href="https://www.pivotaltracker.com/help">Help</a>%>
-              <%= link_to "Help", '#' %>
-            </li>
-            <li>
-              <%= link_to "Sign Out",destroy_user_session_path %>
-            </li>
-            <%#*<li style="color: white">%>
-              <%#*Welcome <br/>%>
-              <%#= current_user.name %>
-            <%#*</li>%>
-            </ul>
-            <%else%>
-      <ul class="nav_links">
-              <li>
-              <%#*<a href="https://www.pivotaltracker.com/features">Features</a>%>
-              <%= link_to "Features",feature_path %>
-            </li>
-            <li>
-              <%#*<a href="https://www.pivotaltracker.com/testimonials">Clients &amp; Testimonials</a>%>
-              <%= link_to "Clients & Testimonials" , '#' %>
-            </li>
-            <li>
-              <%#*<a href="https://www.pivotaltracker.com/public_projects">Public Projects</a>%>
-              <%= link_to "Public Projects",'#' %>
-            </li>
-
-            <li>
-              <%#*<a href="https://www.pivotaltracker.com/pricing">Pricing</a>%>
-              <%= link_to "Pricing",'#' %>
-            </li>
-
-
-            <li><%= link_to "Sign In",new_user_session_path %></li>
-
-      </ul>
-            <%end%>
-          <!--<a href="https://www.pivotaltracker.com/signin" tabindex="1">Sign In</a>-->
-      
-    </div>
+  <div id="header" class="notice_header">
     <% if !user_signed_in? %>
-      </div>
-    <%end%>
+      <div class="center">
+      <%end%>
+      <div class="inner">
+        <h1><a href="/">Pivotal Tracker</a></h1>
+        <div class="navigation_area clearfix">
+          <% if user_signed_in? %>
+            <div class="welcome_message" >Welcome,<%= current_user.name.capitalize %></div>
+            <ul class="nav_links">
+              <li class="dashboard">
+                <%= link_to "Dashboard", stories_path,:class => "current" %>
+              </li>
+              <li>
+                <%= link_to "Reports",'#' %>
+              </li>
+              <li>
+                <%link_to "Profile", '#'%>
+              </li>
+              <li>
+              </li>
+              <li>
+                <%= link_to "Help", '#' %>
+              </li>
+              <li>
+                <%= link_to "Sign Out",destroy_user_session_path %>
+              </li>
+            </ul>
+          <%else%>
+            <ul class="nav_links">
+              <li>
+                <%= link_to "Features",feature_path %>
+              </li>
+              <li>
+                <%= link_to "Clients & Testimonials" , '#' %>
+              </li>
+              <li>
+                <%= link_to "Public Projects",'#' %>
+              </li>
+
+              <li>
+                <%= link_to "Pricing",'#' %>
+              </li>
+
+
+              <li><%= link_to "Sign In",new_user_session_path %></li>
+
+            </ul>
+          <%end%>
+        </div>
+        <% if !user_signed_in? %>
+        </div>
+      <%end%>
+    </div>
   </div>
-
-
-</div>
-<%#*</div>%>
 </header>
