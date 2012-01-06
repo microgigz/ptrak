@@ -4,19 +4,24 @@
 %>
 
 <%#= "_header.html" %>
+<%= stylesheet_link_tag "/projects/non_stories_view_prod-release-20111025-20111221-3_pkg"  %>
 <header>
 <div id="header" class="notice_header">
+  <%#*<div class="navigation_area">%>
+  <% if !user_signed_in? %>
   <div class="center">
-
+  <%end%>
     <div class="inner">
       <h1><a href="/">Pivotal Tracker</a></h1>
-      <ul class="nav_links">
+      
 
+        <div class="navigation_area clearfix">
 
 
 
             <% if user_signed_in? %>
-
+      <div class="welcome_message" >Welcome,<%= current_user.name.capitalize %></div>
+      <ul class="nav_links">
             <li class="dashboard">
               <%#*<a class="current">Dashboard</a>%>
               <%= link_to "Dashboard", stories_path,:class => "current" %>
@@ -40,11 +45,13 @@
             <li>
               <%= link_to "Sign Out",destroy_user_session_path %>
             </li>
-            <li style="color: white">
-              Welcome <br/>
-              <%= current_user.email %>
-            </li>
+            <%#*<li style="color: white">%>
+              <%#*Welcome <br/>%>
+              <%#= current_user.name %>
+            <%#*</li>%>
+            </ul>
             <%else%>
+      <ul class="nav_links">
               <li>
               <%#*<a href="https://www.pivotaltracker.com/features">Features</a>%>
               <%= link_to "Features",feature_path %>
@@ -66,14 +73,17 @@
 
             <li><%= link_to "Sign In",new_user_session_path %></li>
 
-            
+      </ul>
             <%end%>
           <!--<a href="https://www.pivotaltracker.com/signin" tabindex="1">Sign In</a>-->
-      </ul>
+      
     </div>
+    <% if !user_signed_in? %>
+      </div>
+    <%end%>
   </div>
 
 
-
 </div>
+<%#*</div>%>
 </header>
