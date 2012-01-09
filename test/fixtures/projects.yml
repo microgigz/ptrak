@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  status: MyString
+  pro_name: MyString
+  pro_status: MyString
   user_id: 1
 
 two:
-  name: MyString
-  status: MyString
+  pro_name: MyString
+  pro_status: MyString
   user_id: 1
