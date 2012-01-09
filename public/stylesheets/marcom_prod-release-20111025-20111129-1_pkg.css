@@ -694,3 +694,6 @@ body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats
     text-transform: uppercase;
     width: 125px;
 }
+.settting.content_scetion{
+     margin-top: 0;
+}
