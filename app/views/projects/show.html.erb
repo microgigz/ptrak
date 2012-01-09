@@ -1,4 +1,20 @@
-<%@projects.each do|p|%>
-<h1 style="margin-left: 10px"><%= p.name %>
-</h1><br/>
-<%end%>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pro name:</b>
+  <%= @project.pro_name %>
+</p>
+
+<p>
+  <b>Pro status:</b>
+  <%= @project.pro_status %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @project.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

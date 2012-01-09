@@ -39,7 +39,7 @@
 
     <div class="project_content" id="panel_done">
       <div class="panel_header">Done</div>
-<%#= render :partial=>'taskbox' %>
+        <%#= render :partial=>'taskbox' %>
       <div id="done">
 
       </div>
@@ -47,15 +47,15 @@
 
     <div class="project_content" id="panel_current">
       <div class="panel_header">current</div>
-      <%#= render :partial=>'taskbox' %>
+        <%#= render :partial=>'taskbox' %>
       <div id="current">
-      <%= render :partial=>'current_task' %>
+        <%= render :partial=>'current_task' %>
       </div>
     </div>
 
     <div class="project_content" id="panel_backlog">
       <div class="panel_header">Backlog</div>
-<%#= render :partial=>'taskbox' %>
+        <%#= render :partial=>'taskbox' %>
     </div>
 
     <div class="project_content" id="panel_icebox">
@@ -76,9 +76,14 @@
             </tr>
             <tr>
               <td>
-                <%= f.select :task_level,['Unknown',0,1,2 ,3 ] %></td></tr>
+                <%= f.select :task_level,['Unknown',0,1,2 ,3 ] %>
+              </td>
+            </tr>
 
-            <tr><td><%= f.submit %> <%=link_to 'Cancel'%></td></tr>
+            <tr>
+              <td><%= f.submit %> <%=link_to 'Cancel'%>
+              </td>
+            </tr>
           </table>
         <%end%>
       </div>
@@ -86,6 +91,5 @@
         <%= render :partial=>'taskbox' %>
       </div>
     </div>
-  </div>
-  <div ></div>
+  </div>  
 </div>
