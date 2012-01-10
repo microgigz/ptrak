@@ -26,7 +26,9 @@ class StoriesController < ApplicationController
 
     @user_task.task_type=(params[:type])
     @user_task.save
-
+    logger.debug "/*******/"
+    logger.debug current_user.present?
+    logger.debug "/*******/"
   end
 
   

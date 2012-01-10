@@ -5,11 +5,12 @@
 <header>
   <div id="header" class="notice_header">
     <% if !user_signed_in? %>
-      <div class="center">
+      <%#*<div class="center">%>
       <%end%>
       <div class="inner">
         <h1><a href="/">Pivotal Tracker</a></h1>
         <div class="navigation_area clearfix">
+          
           <% if user_signed_in? %>
             <div class="welcome_message" >Welcome,<%= current_user.name.capitalize %></div>
             <ul class="nav_links">
@@ -53,7 +54,7 @@
           <%end%>
         </div>
         <% if !user_signed_in? %>
-        </div>
+        <%#*</div>%>
       <%end%>
     </div>
   </div>
