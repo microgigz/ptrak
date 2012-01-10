@@ -2,15 +2,15 @@
 # To apply heaer on a page
 %>
 <%= stylesheet_link_tag "/projects/non_stories_view_prod-release-20111025-20111221-3_pkg"  %>
-<header>
+<%#*<header>%>
   <div id="header" class="notice_header">
     <% if !user_signed_in? %>
       <div class="center">
       <%end%>
       <div class="inner">
-        <h1><a href="/">Pivotal Tracker</a></h1>
-        <div class="navigation_area clearfix">
+        <h1><a href="/">Pivotal Tracker</a></h1>        
           <% if user_signed_in? %>
+        <div class="navigation_area clearfix">
             <div class="welcome_message" >Welcome,<%= current_user.name.capitalize %></div>
             <ul class="nav_links">
               <li class="dashboard">
@@ -30,6 +30,7 @@
                 <%= link_to "Sign Out",destroy_user_session_path %>
               </li>
             </ul>
+            </div>
           <%else%>
             <ul class="nav_links">
               <li>
@@ -51,10 +52,10 @@
 
             </ul>
           <%end%>
-        </div>
+        
         <% if !user_signed_in? %>
         </div>
       <%end%>
     </div>
   </div>
-</header>
+<%#*</header>%>
