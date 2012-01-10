@@ -290,8 +290,76 @@ html.with_footer body #main {padding: 7px 0 50px 0; background-color: #ffffff}
 .form_table td.field_column .error_field input {background-color: #f2afaf}
 .form_table td.field_column textarea {width: 40em; font-family: Helvetica, sans-serif; border: 1px solid #cccccc; padding: 5px}
 input[type="checkbox"], input[type="text"] {border-width: 1px; border-style: solid; border-color: #888888 #c3c3c3 #dddddd; padding: 3px 2px 1px 2px; margin-right: 5px}
-input[type="submit"], input[type="button"] {padding: 2px 1px 0px 1px; cursor: pointer}
-input[type="submit"][disabled], input[type="button"][disabled] {cursor: default}
+
+#featured{
+    background: url("/images/light_bg.jpg") repeat scroll center transparent;
+    overflow: hidden;
+}
+input[type="submit"], input[type="button"] {
+    background: url("/images/get_started.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    height: 47px;
+    margin-bottom: 15px;
+    margin-left: 180px;
+    text-indent: -9999em;
+    width: 158px
+
+}
+input[type="submit"]:hover, input[type="button"]:hover {
+    background: url("/images/get_started.png") no-repeat scroll 0 -47px transparent;
+    border: medium none;
+    height: 47px;
+    margin-bottom: 15px;
+    margin-left: 180px;
+    text-indent: -9999em;
+    width: 158px
+
+}
+#user_new label{
+    color: #E0E0E0;
+    display: block;
+    float: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 65px;
+    margin-right: 12px;
+    text-align: right;
+    text-indent: 3px;
+    text-shadow: 1px 1px 2px #333333;
+    text-transform: uppercase;
+    width: 170px;
+}
+
+ #footer .section.light {
+    border-top: 1px solid #444444;
+    background: url(/images/footer_light_bg.png) repeat-x
+}
+
+ #footer .section.light p {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
+ #footer .section.light a {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
+ #footer .section.light div.center {position: relative; background: url(/images/grey_fold_down.png) no-repeat center top}
+ #footer .section.light div.center #embossed_logo {position: absolute; bottom: 0; right: 100%}
+ #footer .section.light .article {float: left; width: 282px; margin: 0 68px 23px 0}
+ #footer .section.light .article h4 {height: 34px; margin-top: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: -3px 0}
+ #footer .section.light .article ul {margin-top: 5px; padding-top: 6px; background: url(/images/dotted_line.png) repeat-x left top}
+ #footer .section.light .article ul li {padding-top: 4px}
+ #footer .section.light .article.pivotal h4 {background-image: url(/images/text_developed_by_pivotal_labs.png)}
+ #footer .section.light .article.pivotal a {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; color: #8cc5e9; background-color: #4b4b4b; font-family: Georgia, "Times New Roman", serif; font-size: 1.2em; font-style: italic; padding: 4px 10px 5px}
+ #footer .section.light .article.pivotal a:hover {background-color: #444444}
+ #footer .section.light .article.pivotal ul li + li {margin-top: 10px}
+ #footer .section.light .article.blog h4 a {background-image: url(/images/text_blog.png); display: block; text-indent: -9999px; width: 53px; height: 34px}
+ #footer .section.light .article.blog ul li {padding: 10px 2px 7px; background: url(/images/dotted_line.png) repeat-x left bottom}
+ #footer .section.light .article.blog ul li:last-child {background-image: none}
+ #footer .section.light .article.connect {width: 212px; margin-right: 0}
+ #footer .section.light .article.connect h4 {background-image: url(/images/text_connect_with_us.png)}
+ #footer .section.light .article.connect a strong {color: #dddddd; font-weight: normal}
+ #footer .section.dark {height: 41px; line-height: 41px; background: url(/images/footer_dark_bg.png) repeat-x; font-weight: bold}
+ #footer .section.dark span {color: #b9b9b9; font-size: 1.3em; text-shadow: 1px 1px 3px #000000}
+ #footer .section.dark a {color: #ffffff; font-weight: 600}
+ #footer .section.dark span + span {float: right; color: #cccccc}
+ #footer .section.dark span + span a {padding-left: 3px; position: relative; top: 8px}
+
+ input[type="submit"][disabled], input[type="button"][disabled] {cursor: default}
 select {margin-right: 5px; padding-top: 1px}
 div#or {position: relative; height: 0.6em; width: 700px; margin-bottom: 30px; border-bottom: 1px solid black}
 div#or span {position: absolute; left: 3em; padding: 0 0.5em; background-color: white}
@@ -412,8 +480,23 @@ html.with_footer {height: 100%}
 html.with_footer body {height: 100%}
 html.with_footer body #main {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -50px; padding: 0; overflow: hidden; background: #fafafa}
 label {font-size: 12px; color: #333333}
+
+/*sign up page */
 select {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 4px 5px; border: 1px solid #cccccc}
-input[type=text], input[type=password], textarea {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font-size: 12px; padding: 5px 5px 4px; border: 1px solid #cccccc}
+input[type=text], input[type=password], textarea {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 9px 0 7px 7px;
+    border: 1px solid #333333;
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    width: 350px
+}
 #footer, .push {height: 50px; padding: 0}
 .right_link {float: right; line-height: 25px}
 a.create_new_project_button {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; display: block; color: #256188; border: 1px solid #cccccc; font-size: 11px; font-weight: bold; text-transform: uppercase; padding: 5px 19px 4px 6px; line-height: 12px; background: #ffffff url(/images/v7/application/buttons/plus.png) no-repeat 112px center}

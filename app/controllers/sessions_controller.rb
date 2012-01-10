@@ -1,9 +1,8 @@
-class SessionsController < ApplicationController
-  layout  'special'
-  def new
-    
-    render 'Singin/signin'
-  end
+class SessionsController < Devise::SessionsController
+
+#  def new
+#    render 'Singin/signin'
+#  end
 
 #  def create
 #    @user=User.find_by_email_and_e_password(params[:session][:email],params[:session][:e_password])
