@@ -1,0 +1,116 @@
+.marcom_ancillary
+{
+    background: url("/images/dark_bg_2.png") repeat-x scroll left #3E3E3E;
+    min-width: 960px;
+    margin: 0;
+    padding: 0;
+}
+#header {
+    background: none repeat scroll 0 0 #256188;
+    height: 45px;
+    margin-top: 0;
+    overflow: visible;
+    padding: 0 14px 0 20px;
+    position: relative;
+    z-index: 12;
+}
+#header h1 {
+    float: left;
+    width: 326px;
+    height: 25px;
+    margin-top: 11px;
+    margin-bottom: 0;
+    padding-right: 30px;}
+
+#header h1 a {
+    background: url("/images/pivotal_tracker_white.png") no-repeat scroll left top transparent;
+    display: block;
+    height: 100%;
+    text-indent: -9999em;
+    width: 100%;
+}
+
+body.marcom_ancillary > .section {
+    border-top: 1px solid #777777;
+    height: 352px;
+}
+
+body.marcom_ancillary > .section div.dialog {
+    background: url("/images/dialog_bg.png") no-repeat scroll 0 0 transparent;
+    height: 230px;
+    margin: 15% auto 0;
+    overflow: hidden;
+    position: relative;
+    width: 477px;
+}
+
+body.marcom_ancillary.signin_page > .section div.dialog #sign_in{
+    margin-left: 40px;
+}
+
+body.marcom_ancillary > .section div.dialog h1 {
+    height: 34px;
+    margin-bottom: 8px;
+    text-indent: -9999em;
+}
+input[type=text], input[type=password], textarea {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 9px 0 7px 7px;
+    border: 1px solid #333333;
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: -2.7em;
+    font-weight: bold;
+    margin: 0;
+    width: 375px;
+    
+}
+#user_new label{
+    color: #E0E0E0;
+    display: block;
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 0;
+    margin-right: 12px;
+    /*text-align: right;*/
+    text-indent: 3px;
+    text-shadow: 1px 1px 2px #333333;
+    text-transform: uppercase;
+    width: 170px;
+}
+body.marcom_ancillary.signin_page > .section div.dialog #sign_in h1 {
+    background: url("/images/text_signin.png") no-repeat scroll 0 0 transparent;
+}
+
+
+
+/*body.marcom_ancillary.signin_page > .section div.dialog form input[type="submit"] {
+    bottom: 20px;
+    z-index: 10;
+}*/
+
+body.marcom_ancillary > .section div.dialog form input[type="submit"] {
+    background: url("/images/start_tracking.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    bottom: 14px;
+    height: 47px;
+    position: absolute;
+    right: 50px;
+    text-indent: -9999em;
+    width: 173px;
+}
+
+body.marcom_ancillary > .section div.dialog form input[type="submit"]:hover {
+    background: url("/images/start_tracking.png") no-repeat scroll 0 -47px transparent;
+    border: medium none;
+    bottom: 14px;
+    height: 47px;
+    position: absolute;
+    right: 50px;
+    text-indent: -9999em;
+    width: 173px;
+}
