@@ -1,9 +1,6 @@
 <%#
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
+# To apply heaer on a page
 %>
-
-<%#= "_header.html" %>
 <%= stylesheet_link_tag "/projects/non_stories_view_prod-release-20111025-20111221-3_pkg"  %>
 <header>
   <div id="header" class="notice_header">
@@ -17,16 +14,15 @@
             <div class="welcome_message" >Welcome,<%= current_user.name %></div>
             <ul class="nav_links">
               <li class="dashboard">
-                <%= link_to "Dashboard", stories_path,:class => "current" %>
+                <%= link_to "Dashboard", projects_path %><%#:class => "current"%>
               </li>
               <li>
                 <%= link_to "Reports",'#' %>
               </li>
               <li>
-                <%link_to "Profile", '#'%>
+                <%=link_to "Profile", edit_user_registration_path%>
               </li>
-              <li>
-              </li>
+              
               <li>
                 <%= link_to "Help", '#' %>
               </li>

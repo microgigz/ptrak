@@ -12,7 +12,7 @@ Ptrak::Application.routes.draw do
   #get "users/show"
   #get "stories/usecase"
 
-  #resources :users
+  match "pages/Index", :to => "pages#index"
   #resources :sessions
   resources :projects
   resources :stories do

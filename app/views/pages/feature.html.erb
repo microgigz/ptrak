@@ -1,951 +1,932 @@
 <!DOCTYPE html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-	  <title>Pivotal Tracker - Features Tour</title>
-    <meta name="description" content="Learn more about Pivotal Tracker, a simple, effective, agile project management tool from Pivotal Labs"/>
-    <meta name="keywords" content="agile project management,agile software,agile tools,project planning,hosted,scrum,extreme programming,emergent iterations"/>
-    <meta name="verify-v1" content="wrsZ2GjaOb2/63fviRr2sK2wf9k9tFFT2Ny9oC0flGc="/>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
-    <meta name="msvalidate.01" content="C62019333E31EAE246C3EC4C77F6ED01"/>
-		<link href="/images/feature/marcom_prod-release-20111025-20111129-1_pkg.css" media="screen" rel="Stylesheet" type="text/css"/>
-    <%= javascript_include_tag "feature/ga" %>
-    <%#*<script src="/javascripts/feature/ga.js" async="" type="text/javascript"></script><!--<script src="/images/feature/marcom_prod-release-20111025-20111129-1_pkg.js" type="text/javascript"></script>-->%>
-    <%= javascript_include_tag "features/jquery.tools.min" %>
-    <%#*<script src="/javascripts/feature/jquery.tools.min.js" async="" type="text/javascript"></script>%>
-    <%= javascript_include_tag "kep3kek" %>
-    <%#*<script type="text/javascript" src="javascripts/features/kep3kek.js"></script>%>
-    <style type="text/css">.tk-myriad-pro{font-family:"myriad-pro-1","myriad-pro-2",sans-serif;}.tk-myriad-pro-semi-condensed{font-family:"myriad-pro-semi-condensed-1","myriad-pro-semi-condensed-2",sans-serif;}</style>
-    <%#*<link href="features_files/kep3kek-e.css" rel="stylesheet">%>
-    <%= stylesheet_link_tag 'kep3kek-e' %>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <%= javascript_include_tag "features/features_prod-release-20111025-20111129-1_pkg"  %>
-  <%#*<script src="features_files/features_prod-release-20111025-20111129-1_pkg.js" type="text/javascript"></script>%>
+  <link href="/images/feature/marcom_prod-release-20111025-20111129-1_pkg.css" media="screen" rel="Stylesheet" type="text/css"/>
+  <%= javascript_include_tag "feature/ga" %>
 
+  <%= javascript_include_tag "features/jquery.tools.min" %>
 
+  <%= javascript_include_tag "kep3kek" %>
 
+  <style type="text/css">.tk-myriad-pro{font-family:"myriad-pro-1","myriad-pro-2",sans-serif;}.tk-myriad-pro-semi-condensed{font-family:"myriad-pro-semi-condensed-1","myriad-pro-semi-condensed-2",sans-serif;}</style>
 
+  <%= stylesheet_link_tag 'kep3kek-e' %>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <%= javascript_include_tag "features/features_prod-release-20111025-20111129-1_pkg"  %>
+  <script type="text/javascript">
+    //<![CDATA[
+    window._gaq = window._gaq || [];
+    window._gaq.push(['_setAccount', 'UA-1687866-3']);
+    window._gaq.push(['_trackPageview']);
+    
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
+    //]]>
+  </script>
+</head>
+<body class="marcom_page features">
 
-    <!--[if IE]>
-      <link href="https://cdn3-pivotaltracker.pantherssl.com/stylesheets/ie_overrides_prod-release-20111025-20111129-1_pkg.css?1322624528" media="screen" rel="Stylesheet" type="text/css" />
-    <![endif]-->
+  <div id="wrapper">
     <script type="text/javascript">
-//<![CDATA[
-            window._gaq = window._gaq || [];
-            window._gaq.push(['_setAccount', 'UA-1687866-3']);
-            window._gaq.push(['_trackPageview']);
+      ENVIRONMENT='prod'
+    </script>
 
-
-
-            (function() {
-              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-
-//]]>
-</script>
-  </head>
-  <body class="marcom_page features">
-
-    <div id="wrapper">
-      <script type="text/javascript">
-  ENVIRONMENT='prod'
-</script>
-
-<div id="featured">
-  <div class="center">
-    <div class="inner">
-      <div class="features_tour">
-        <h2>Features Tour</h2>
-       <% if (signedin?) %>
-        <%= link_to "Sign up",new_user_registration_path, :class => "button sign_up"%>
-
-        <%#*<a href="https://#/signup/new" class="button sign_up ">Sign up</a>%>
-       <%end%>
-      </div>
-
-  <div style="display: block;" class="feature_content overview enabled">
-
-    <div class="feature_right">
-      <a href="#">
-        <img rel="#overview_video" class="screenshot" src="/images/feature/overview.png">
-      </a>
-
-      <div style="top: 50.52px; left: 207px; position: fixed; display: none;" class="simple_overlay" id="overview_video">
-        <div class="close"></div>
-        <object>
-          <embed src="/player/flvplayer.swf?file=/video/pivotal-tracker-intro.flv&autostart=true" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="676" width="850"/>
-                 <%#*?&image=/images/v7/application/screenshots/Tracker101.png&autostart=true%>
-        </object>
-
-      </div>
-
-      <script type="text/javascript">
-  $(document).ready(function() {
-    $("img[rel]").overlay({
-      top: '10%'
-    });
-  });
-</script>
-
-    </div>
-    <div class="feature_left">
-      <h3>Simple, yet powerful.</h3>
-      <div class="hr_container"><hr></div>
-      <h4>“Forget the bug tracker or issue tool you're using now. This
-is an iPod. You're using a Zune. You can run your whole company on it.
-And you probably should.” <span>-- Nivi, Venture Hacks</span></h4>
-    </div>
-  </div>
-
-
-  <div class="feature_content tracker_story">
-    <div class="feature_right">
-      <img class="screenshot" src="/images/feature/tracker_story.png">
-    </div>
-    <div class="feature_left">
-      <h3>The Tracker Story</h3>
-      <div class="hr_container"><hr></div>
-      <h4>Pivotal Labs is a consulting shop and not a product company,
-so it might seem odd for us to release an agile project management tool
-like Tracker. We didn't build Tracker for the sake of building a
-product; we needed it.</h4>
-    </div>
-  </div>
-
-
-  <div class="feature_content one_view">
-    <div class="feature_right">
-      <img class="screenshot" src="/images/feature/one_view.png">
-    </div>
-    <div class="feature_left">
-      <h3>One View.<br>Plan and work seamlessly.</h3>
-      <div class="hr_container"><hr></div>
-      <h4>From exec to developer, everyone shares one view. Collaborate
-at a fine-grained level, without losing sight of the bigger picture.</h4>
-    </div>
-  </div>
-
-
-  <div class="feature_content real_time">
-    <div class="feature_right">
-      <img class="screenshot" src="/images/feature/realtime_photo.png">
-    </div>
-    <div class="feature_left">
-      <h3>Real Time, Focused Collaboration.</h3>
-      <div class="hr_container"><hr></div>
-      <h4>Manage and react to everything that matters on your project,
-in real time. Bring your distributed team together into one virtual
-room, and collaborate around a shared, prioritized backlog.</h4>
-    </div>
-  </div>
-
-
-  <div class="feature_content agile">
-    <div class="feature_right">
-      <img class="screenshot" src="/images/feature/agile_burndown.png">
-    </div>
-    <div class="feature_left">
-      <h3>Agile Development, by the Experts.</h3>
-      <div class="hr_container"><hr></div>
-      <h4>Effective, practical agile software development, from the
-people that helped invent it. This is agile that works and has helped
-ship hundreds of successful products.</h4>
-    </div>
-  </div>
-
-
-  <div class="feature_content workflow">
-    <div class="feature_right">
-      <img class="screenshot" src="/images/feature/simple_workflow.png">
-    </div>
-    <div class="feature_left">
-      <h3>Simple, Effective Workflow.</h3>
-      <div class="hr_container"><hr></div>
-      <h4>Easy to adopt, out of the box collaborative workflow that's surprisingly powerful. Transform your productivity.</h4>
-    </div>
-  </div>
-
-
-  <div class="feature_content for_developers">
-    <div class="feature_right">
-      <img class="screenshot" src="/images/feature/developer.png">
-    </div>
-    <div class="feature_left">
-      <h3>Developer Tested.<br>Just add Stories.</h3>
-      <div class="hr_container"><hr></div>
-      <h4>Focus on building great software, not keeping your agile project management tool in sync with reality.</h4>
-    </div>
-  </div>
-
-
-  <div class="feature_content integrations">
-    <div class="feature_right">
-      <img class="screenshot" src="/images/feature/integrations.png">
-    </div>
-    <div class="feature_left">
-      <h3>Plays well with Others.</h3>
-      <div class="hr_container"><hr></div>
-      <h4>With a full blown API and built-in integrations, Tracker complements the tools and services you already use.</h4>
-    </div>
-  </div>
-
-      <div class="features_nav_wrapper">
-        <a id="navPrev" href="#" onclick="return false;" class="nav prev"><span>Previous</span></a>
-        <div class="inner">
-          <ul style="width: 1136px;" id="features_nav">
-            <li><a href="#overview" class="selected">Overview</a></li>
-            <li><a href="#tracker_story">The Tracker Story</a></li>
-            <li><a href="#one_view">One View</a></li>
-            <li><a href="#real_time">Real-time Collaboration</a></li>
-            <li><a href="#agile">Agile the Pivotal Way</a></li>
-            <li><a href="#workflow">Simple Workflow</a></li>
-            <li><a href="#for_developers">Developer Friendly</a></li>
-            <li class="last"><a href="#integrations">Integrations</a></li>
-          </ul>
-        </div>
-        <a id="navNext" href="#" onclick="return false;" class="nav next enabled"><span>Next</span></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div style="display: block;" class="feature_content overview content enabled">
-
-    <div class="section grey">
+    <div id="featured">
       <div class="center">
         <div class="inner">
-          <ul>
-            <li>
-              <h4>What is Pivotal Tracker?</h4>
-              <p><a href="https://#/">Pivotal Tracker</a> is an easy to use, agile project management tool that brings focused collaboration to software development teams. Built by <a href="http://www.pivotallabs.com/">Pivotal Labs</a>, it embodies proven agile methods, based on experience from hundreds of successful large scale <a href="http://www.pivotallabs.com/clients" target="_blank">projects</a>. </p>
-            </li>
-            <li>
-              <h4>Join the Community</h4>
-              <p>Pivotal Tracker is the agile project management tool of
- choice for over 300,000 users across thousands of companies, from large
- public companies to fast growing startups, and open source development
-teams.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+          <div class="features_tour">
+            <h2>Features Tour</h2>
+            <% if (signedin?) %>
+              <%= link_to "Sign up",new_user_registration_path, :class => "button sign_up"%>
 
-    <div class="section white">
-      <div class="center">
-        <div class="inner">
-          <h3>Learn more.</h3>
-          <ul>
-            <li>
-              <a href="#one_view">
-                <h4>One View</h4>
-                <p>From CEO to developer, everyone shares one view. Work at a fine-grained level, without losing sight of the bigger picture.<span>Learn more.</span></p>
-              </a>
-            </li>
-            <li>
-              <a href="#real_time">
-                <h4>Real-time Collaboration</h4>
-                <p>See and react to everything that matters on your project, in real time. Bring your distributed team together.<span>Learn more.</span></p>
-              </a>
-            </li>
-            <li>
-              <a href="#agile">
-                <h4>Agile, the Pivotal Way</h4>
-                <p>Effective agile software development, from the people that helped invent it. This is agile that really works.<span>Learn more.</span></p>
-              </a>
-            </li>
-            <li>
-              <a href="#workflow">
-                <h4>Simple Workflow</h4>
-                <p>Easy to adopt, out of the box workflow that's surprisingly powerful. Transform your productivity.<span>Learn more.</span></p>
-              </a>
-            </li>
-            <li>
-              <a href="#for_developers">
-                <h4>Developer-friendly</h4>
-                <p>Focus on building great software, not keeping your project management tool in sync with reality. <span>Learn more.</span></p>
-              </a>
-            </li>
-            <li>
-              <a href="#integrations">
-                <h4>Integrations</h4>
-                <p>Tracker complements tools and services you already use at your company, and is easy to extend.<span>Learn more.</span></p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
-    <div class="section white">
-      <div class="center">
-        <div class="testimonial">
-          <div class="inner">
-            <blockquote>“I've waited 15 years for a computer program
-that out-performs index cards. Pivotal Tracker's smooth interface and
-network-native architecture supports my team's collaborative/distributed
- planning without giving up the simplicity and physicality of cards.
-This product had to come from a team that understands how I work.”</blockquote>
-            <p>-- Ward Cunningham, CTO, AboutUs.org</p>
+            <%end%>
           </div>
-        </div>
-      </div>
-    </div>
 
+          <div style="display: block;" class="feature_content overview enabled">
 
-  </div>
+            <div class="feature_right">
+              <a href="#">
+                <img rel="#overview_video" class="screenshot" src="/images/feature/overview.png"/>
+              </a>
 
-  <div class="feature_content tracker_story content">
-    <div class="section grey">
-      <div class="center">
-        <div class="inner">
-          <ul>
-            <li class="index_cards">
-              <h3>State of the art: index cards</h3>
-              <p><strong>We've been doing agile software development since before terms like "Agile" and "XP" existed.</strong><br>
- Over the years we've made numerous attempts to use the variety of
-software project management and agile development applications
-available, from Microsoft Project to the more current agile-specific
-products.
-              <strong>We kept returning to index cards,</strong>
-sometimes augmented with a patchwork of wikis and spreadsheets. We
-followed the agile planning tools out there, but each attempt to adopt
-one resulted in frustration.</p>
-              <p>Configuration and data entry were a constant expense. User interfaces were clunky and had too much back and forth navigation. <strong>The workflows were inefficient and the overhead was high.</strong>
- (We kept hearing circus music in our heads, with all the hoops we were
-jumping through.) The usage cost never seemed sustainable. <strong>It always felt like we were working for the product, instead of it working for us.</strong></p>
-            </li>
-            <li class="need_solution">
-              <h3>But we needed something...</h3>
-              <p>As our business grew, so did our frustration; <strong>index cards were far from ideal but the alternatives were worse.</strong>
- And at the same time, we were just starting to look at a promising new
-technology, Ruby on Rails. So we decided to build our own agile project
-management tool.
-              We started working on Pivotal Tracker in late 2006. Its
-beginnings were very humble. All we needed was to have a backlog and be
-able to easily prioritize. <strong>We created simple story editing and built drag-and-drop prioritization and we were ready to start the switch from index cards.</strong> (These simple features gave us parity with index cards, with the bonus of having the backlog online.)</p>
-            </li>
-            <li class="project_management">
-              <h3>Who gets excited by agile project management software?</h3>
-              <p>We started using Tracker on all of our client
-development projects. We continually improved and tweaked the
-application, integrating our experience and feedback, and we started to
-find that it really <strong>transformed both the transparency and the flow of development.</strong></p>
-              <p>Tracker quickly developed a following among client
-developers who had used it when working with us, too. We would routinely
- receive requests for accounts: <em>"I used Tracker at my last job. Can I have an account to use in my new one?"</em></p>
-              <p>We would always accommodate these word-of-mouth,
-friends and family type requests. Entire client organizations, beyond
-our projects, started using Tracker. The interest continued to grow and
-with much greater enthusiasm. We kept getting emails saying things like,
- <em>"Please let me pay for Tracker; I can't live without it."</em></p>
-              <p>So we decided to make Tracker publicly available. We
-launched the public beta at RailsConf 2008 as a free agile project
-management tool. Over 10% of the attendees signed up that week.</p>
-            </li>
-            <li class="why">
-              <h3>Why is Pivotal Tracker Special?</h3>
-              <div class="callout">
-                <div class="inner">
-                  <p>We had three key insights at the outset that made Tracker work:</p>
-                  <ol>
-                    <li>The user interface needed to be simple.</li>
-                    <li>The project status and backlog needed to be easily (always) available.</li>
-                    <li>You shouldn't have to constantly plan iterations.</li>
-                  </ol>
-                </div>
+              <div style="top: 50.52px; left: 207px; position: fixed; display: none;" class="simple_overlay" id="overview_video">
+                <div class="close"></div>
+                <object>
+                  <embed src="/player/flvplayer.swf?file=/video/pivotal-tracker-intro.flv&autostart=true" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="676" width="850"/>
+
+                </object>
+
               </div>
-              <p>The first point is simply about good UI design, but it's amazing how many tools out there get this wrong.</p>
-              <p>The last point is more subtle. In agile processes, particularly <a href="http://www.extremeprogramming.org/" rel="nofollow" target="_blank">Extreme Programming (XP)</a>,
- there is a concept called velocity. The basic idea is that you assign a
- point cost to stories and the sum of the point costs of completed
-stories in a given iteration is the velocity. You then use the velocity
-to project how much you will be able to get done in each future
-iteration.</p>
-              <p>As software development teams start to gel, they
-exhibit a strong central tendency to get a consistent amount done each
-week, and this velocity becomes extremely predictive and reliable.
-              Traditionally in XP, after completing an iteration, you
-would re-plan each subsequent iteration, adjusting for the actual rate
-of progress. This can be organizationally onerous, but it's critical, as
- it allows you to project when each milestone will be reached. The
-feedback loop needs to be maintained to insure better-informed
-decisions.</p>
-              <p>The solution is the <strong>emergent iteration.</strong>
- Pivotal Tracker automatically (and in real-time) tracks story
-completions, iterations and velocity and will dynamically adjust
-iteration backlogs based on actual progress; Tracker does the grunt work
- and your project schedule is always up-to-date.</p>
-            </li>
-            <li class="philosophy">
-              <h3>Learn more about <a href="http://www.pivotallabs.com/" target="_blank">Pivotal Labs</a>.</h3>
-              <h3>The Tracker Philosophy</h3>
-              <p><strong>Tracker embraces simplicity. It should make managing projects easy, rather than make its users slaves to maintaining the plan.</strong>
- It should give every user of the system more information back than they
- put in.
-              Tracker doesn't have a huge list of features, because it
-tries to stay true to its core purpose. (Remember, it exists partly
-because of our frustration with the bloated alternatives.)
-              At times, Tracker appears opinionated as it can place
-strict limits on how you manage your project. But this is a consequence
-of its focus and the interdependence of features; the sum of Tracker is
-far greater than its parts.
-              While we don't always get it right, we try to make sure
-each additional feature or product change adds a lot of value and makes
-users' work easier.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="feature_content one_view content">
+              <script type="text/javascript">
+                $(document).ready(function() {
+                  $("img[rel]").overlay({
+                    top: '10%'
+                  });
+                });
+              </script>
 
-    <div class="section grey">
-      <div class="center">
-        <div class="inner">
-          <div class="testimonial">
-            <div class="inner">
-              <blockquote>“Pivotal Tracker is a fantastic product. We've
- become a more efficient development team since we started using it. And
- even better, the management team gets on-demand visibility into my
-team's priorities and accomplishments.”</blockquote>
-              <p>-- Jim Gochee, VP Engineering, New Relic</p>
+            </div>
+            <div class="feature_left">
+              <h3>Simple, yet powerful.</h3>
+              <div class="hr_container"><hr></div>
+              <h4>“Forget the bug tracker or issue tool you're using now. This
+                is an iPod. You're using a Zune. You can run your whole company on it.
+                And you probably should.” <span>-- Nivi, Venture Hacks</span></h4></hr>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="section white">
-      <div class="center">
-        <div class="inner">
-          <ul>
-            <li>
-              <img src="/images/feature/birds_eye_view.png">
-              <h4>Get on the Same Page</h4>
-              <p>With <a href="https://#/">Pivotal Tracker</a>,
- everyone shares the same, up to the minute view of what's going on with
- the project, and what needs to be done next. It lets product owners
-know in intimate detail where things are, without having to ask, and
-lets developers spend time on work, rather than on reporting the work.</p>
-            </li>
-            <li>
-              <img src="/images/feature/focus.png">
-              <h4>Stay Focused</h4>
-              <p>Imagine if everyone on the team knew what the highest
-priority thing to do was, what one thing they could do next that would
-move the company forward? Tracker facilitates that communication, by
-letting developers focus on what's next, without losing sight of the big
- picture.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <img src="/images/feature/search.png">
-              <h4>Find Stories Easily</h4>
-              <p>Every story is within reach with Tracker's easy to use
-full text search, with support for more powerful structured queries when
- you need them.</p>
-            </li>
-            <li>
-              <img src="/images/feature/charts.png">
-              <h4>Visualize Progress</h4>
-              <p>Keep an eye on your project with Tracker's built-in
-charts, including release burn-down, iteration burn-up, story type
-breakdown, and historical velocity.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <img src="/images/feature/history.png">
-              <h4>See How You Got Here</h4>
-              <p>See everything that's recently happened in your
-software development project recently. or a particular user story. All
-with one click or keystroke.</p>
-            </li>
-            <li>
-              <img src="/images/feature/drag_drop.png">
-              <h4>React to What You See</h4>
-              <p>Rearrange stories in your project to reflect new
-priorities with simple drag and drop, and see the impact on your release
- schedule immediately. </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="feature_content real_time content">
-    <div class="section grey">
-      <div class="center">
-        <div class="inner">
-          <ul class="screens">
-            <li>
-              <img src="/images/feature/realtime_updates.png">
-              <h4>Virtual Team Room</h4>
-              <p>Your view of your project is always up to date, without
- ever refreshing the browser. Updates from others are seen instantly,
-and changes from multiple people are merged seamlessly, in real time.</p>
-            </li>
-            <li>
-              <img src="/images/feature/team_communication.png" class="team_communication">
-              <h4>Encourages Conversation</h4>
-              <p>Tracker drives conversation from it's workflow
-transparency to help your team work better and faster. Story comments
-allow each story to evolve based on feedback and discussion.</p>
-            </li>
-            <li>
-              <img src="/images/feature/notifications.png">
-              <h4>Stay Up to Date</h4>
-              <p>Whether your team is in the same room, across the hall
-or across the world, Tracker keeps everyone in sync with the latest
-changes. Not logged in? Tracker can keep you up to date through email,
-RSS, <a href="https://#/help/integrations#twitter">Twitter</a> or <a href="https://#/help/integrations#campfire">Campfire</a>, or use web callbacks to keep you up-to-date however you like.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <img src="/images/feature/attachments.png">
-              <h4>Attach your Mockups</h4>
-              <p>Take the assets you've gathered for your project and
-attach them directly to stories, so your developers don't have to hunt
-for them when they're ready to turn those mockups into working software.</p>
-            </li>
-            <li>
-              <img src="/images/feature/labels.png">
-              <h4>Organize by Label</h4>
-              <p>Tag your stories with labels to tie related stories
-together. Labels let you find stories quickly, and see progress at a
-higher level.</p>
-            </li>
-            <li>
-              <img src="/images/feature/campfire.png">
-              <h4>Campfire Chat</h4>
-              <p>See updates from Tracker in your Campfire chatroom,
-allowing your entire team to stay abreast of the project development
-activity.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="section white">
-      <div class="center">
-        <div class="inner">
-          <div class="testimonial">
-            <div class="inner">
-              <blockquote>“Pivotal Tracker is as simple as a to-do list
-you might write on paper, but online, shared and collaborative (try the
-real-time collaboration and be amazed). Every bug or feature request we
-get ends up on our Pivotal list.”</blockquote>
-              <p>-- Jim Gochee, VP Engineering, New Relic</p>
+          <div class="feature_content tracker_story">
+            <div class="feature_right">
+              <img class="screenshot" src="/images/feature/tracker_story.png"/>
+            </div>
+            <div class="feature_left">
+              <h3>The Tracker Story</h3>
+              <div class="hr_container"><hr></div>
+              <h4>Pivotal Labs is a consulting shop and not a product company,
+                so it might seem odd for us to release an agile project management tool
+                like Tracker. We didn't build Tracker for the sake of building a
+                product; we needed it.</h4></hr>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-  </div>
 
-  <div class="feature_content agile content">
-    <div class="section grey">
-      <div class="center">
-        <div class="inner">
-          <div class="headline">
-            <img src="/images/feature/realworld_xp.png">
-            <h3 class="callout">Based on Real-World Experience</h3>
-            <p class="callout">The agile, iterative workflow and story management in <a href="https://#/">Pivotal Tracker</a> embodies years of experience by Pivotal Labs on real world <a href="http://www.pivotallabs.com/clients" target="_blank">client projects</a>. This is agile project management that really works!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section white">
-      <div class="center">
-        <div class="inner">
-          <ul class="screens">
-            <li>
-              <img src="/images/feature/emergence.png">
-              <h4>Velocity and Emergent Iterations</h4>
-              <p>Tracker calculates future iterations automatically,
-based on historical performance. Focus on prioritizing and completing
-your stories; let Tracker take care of planning future iterations, based
- on actual progress.</p>
-            </li>
-            <li>
-              <img src="/images/feature/release_planning.png" class="release_planning">
-              <h4>Release and Scope Management</h4>
-              <p>Planning a release and focusing on milestones as real
-world changes occur is easy with Tracker. Completion dates are
-calculated automatically, based on velocity - your live measure of
-historical performance. See impact on scope as new stories are added
-immediately, and move stories around easily via drag and drop as
-priorities change.</p>
-            </li>
-            <li>
-              <img src="/images/feature/ownership.png" class="ownership">
-              <h4>Collective Ownership</h4>
-              <p>Tracker is especially effective when used by
-self-organizing teams, who embrace collective code ownership. Since
-anyone can work on the next available story in the shared, highly
-visible backlog, you'll see fewer bottlenecks, and the team will move
-faster toward shared goals.</p>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <img src="/images/feature/workflow.png">
-              <h4>Simple, Effective Workflow</h4>
-              <p>Jump right into your project with a <a href="https://#/features#workflow">simple workflow</a>
- that emphasizes rapid delivery and lots of feedback. Simplify your
-process, rather than struggle trying to manage shifting complexity.</p>
-            </li>
-            <li>
-              <img src="/images/feature/feedback_loop.png" class="feedback">
-              <h4>Feedback Loop</h4>
-              <p>A Tracker story is only considered done when accepted
-by the project's customer. This creates a constant feedback loop,
-starting in the very first iteration, which shapes your product and
-eliminates costly surprises typically found only after software ships to
- production.</p>
-            </li>
-            <li>
-              <img src="/images/feature/mvp.png">
-              <h4>Focus on MVP</h4>
-              <p>Long software development projects that don't ship are
-expensive and often lead to failure. Focus on delivering stories and
-shipping working software often are tightly woven into the fabric of
-Tracker. </p>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="section white">
-      <div class="center">
-        <div class="inner">
-          <div class="testimonial">
-            <div class="inner">
-              <blockquote>“Pivotal Tracker is a great lightweight tool for running distributed Scrum.”</blockquote>
-              <p>-- Jeff Sutherland, Chairman, Scrum Training Institute &amp; CEO, Scrum, Inc.</p>
+          <div class="feature_content one_view">
+            <div class="feature_right">
+              <img class="screenshot" src="/images/feature/one_view.png"/>
+            </div>
+            <div class="feature_left">
+              <h3>One View.<br>Plan and work seamlessly.</h3>
+              <div class="hr_container"><hr></div>
+              <h4>From exec to developer, everyone shares one view. Collaborate
+                at a fine-grained level, without losing sight of the bigger picture.</h4></hr>
             </div>
           </div>
+
+
+          <div class="feature_content real_time">
+            <div class="feature_right">
+              <img class="screenshot" src="/images/feature/realtime_photo.png"/>
+            </div>
+            <div class="feature_left">
+              <h3>Real Time, Focused Collaboration.</h3>
+              <div class="hr_container"><hr></div>
+              <h4>Manage and react to everything that matters on your project,
+                in real time. Bring your distributed team together into one virtual
+                room, and collaborate around a shared, prioritized backlog.</h4></hr>
+            </div>
+          </div>
+
+
+          <div class="feature_content agile">
+            <div class="feature_right">
+              <img class="screenshot" src="/images/feature/agile_burndown.png"/>
+            </div>
+            <div class="feature_left">
+              <h3>Agile Development, by the Experts.</h3>
+              <div class="hr_container"><hr></div>
+              <h4>Effective, practical agile software development, from the
+                people that helped invent it. This is agile that works and has helped
+                ship hundreds of successful products.</h4>
+            </div>
+          </div>
+
+
+          <div class="feature_content workflow">
+            <div class="feature_right">
+              <img class="screenshot" src="/images/feature/simple_workflow.png">
+            </div>
+            <div class="feature_left">
+              <h3>Simple, Effective Workflow.</h3>
+              <div class="hr_container"><hr></div>
+              <h4>Easy to adopt, out of the box collaborative workflow that's surprisingly powerful. Transform your productivity.</h4>
+            </div>
+          </div>
+
+
+          <div class="feature_content for_developers">
+            <div class="feature_right">
+              <img class="screenshot" src="/images/feature/developer.png">
+            </div>
+            <div class="feature_left">
+              <h3>Developer Tested.<br>Just add Stories.</h3>
+              <div class="hr_container"><hr></div>
+              <h4>Focus on building great software, not keeping your agile project management tool in sync with reality.</h4>
+            </div>
+          </div>
+
+
+          <div class="feature_content integrations">
+            <div class="feature_right">
+              <img class="screenshot" src="/images/feature/integrations.png">
+            </div>
+            <div class="feature_left">
+              <h3>Plays well with Others.</h3>
+              <div class="hr_container"><hr></div>
+              <h4>With a full blown API and built-in integrations, Tracker complements the tools and services you already use.</h4>
+            </div>
+          </div>
+
+          <div class="features_nav_wrapper">
+            <a id="navPrev" href="#" onclick="return false;" class="nav prev"><span>Previous</span></a>
+            <div class="inner">
+              <ul style="width: 1136px;" id="features_nav">
+                <li><a href="#overview" class="selected">Overview</a></li>
+                <li><a href="#tracker_story">The Tracker Story</a></li>
+                <li><a href="#one_view">One View</a></li>
+                <li><a href="#real_time">Real-time Collaboration</a></li>
+                <li><a href="#agile">Agile the Pivotal Way</a></li>
+                <li><a href="#workflow">Simple Workflow</a></li>
+                <li><a href="#for_developers">Developer Friendly</a></li>
+                <li class="last"><a href="#integrations">Integrations</a></li>
+              </ul>
+            </div>
+            <a id="navNext" href="#" onclick="return false;" class="nav next enabled"><span>Next</span></a>
+          </div>
         </div>
       </div>
     </div>
 
+    <div style="display: block;" class="feature_content overview content enabled">
 
-  </div>
-
-  <div class="feature_content workflow content">
-
-    <div class="section grey">
-      <div class="center">
-        <div class="testimonial">
+      <div class="section grey">
+        <div class="center">
           <div class="inner">
-            <blockquote>"We are using Pivotal Tracker to manage all of
-our new web apps under development. This thing rocks! It has a very nice
- workflow and has really helped us know what other team members are
-working on and to know what our velocity of development is."</blockquote>
-            <p>-- Ezra Zygmuntowicz, Founder and Senior Fellow, Engine Yard</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="section white">
-      <div class="center">
-        <div class="inner">
-          <ul>
-            <li>
-              <img src="/images/feature/workflow_projectbreakdown.png">
-              <h4>The First Step: User Stories</h4>
-              <p>Start your project by breaking down user features into
-small concrete user stories. Each story is bite size, about what might
-fit on a small index card, and represents an increment of value for your
- product's customer. Deconstructing your project into concrete stories
-can be enlightening, and gets your entire team on the same page what's
-really important about your project.</p>
-            </li>
-            <li>
-              <img src="/images/feature/workflow_estimate.png">
-              <h4>Next: Estimate Complexity</h4>
-              <p>Once you've broken down your project into concrete
-stories, huddle as a team, and estimate them in terms of complexity
-using 'points'. To get started, take a really small story, give it 1
-point, and estimate the rest keeping relative complexity in mind. This
-helps <a href="https://#/">Pivotal Tracker</a>
-predict when you might be finished with a milestone or release, but more
- importantly, estimation drives important conversations and helps you
-flesh out hidden complexity early.</p>
-            </li>
-            <li>
-              <img src="/images/feature/workflow_label.png">
-              <h4>Organize by Label</h4>
-              <p>Tag your stories with labels to tie related stories
-together. Labels let you find stories quickly, and see progress at a
-higher level.</p>
-            </li>
-            <li>
-              <img src="/images/feature/workflow_mockups.png">
-              <h4>Attach your Mockups</h4>
-              <p>Take the assets you've gathered for your project and
-attach them directly to stories, so your developers don't have to hunt
-for them when they're ready to turn those mockups into working software.</p>
-            </li>
-            <li>
-              <img src="/images/feature/workflow_prioritize.png">
-              <h4>Prioritize User Stories</h4>
-              <p>Drag stories from the Icebox, where all new stories
-start out, and into the Backlog, in the order that reflects business
-priorities. As these change, reflect new priorities by dragging stories
-up or down in the backlog, and let Tracker adjust projected release
-dates automatically.</p>
-            </li>
-            <li>
-              <img src="/images/feature/workflow_software.png">
-              <h4>Turn Stories into Working Software</h4>
-              <p>Development work begins when your team starts the first
- story in the Current panel, which shows this week's iteration from the
-Backlog. As coding for a given story is completed, the whole team will
-see that story change state and color <a href="https://#/features#real_time">in real time</a>,
- giving everyone visibility where things stand with the project.
-Developers always know what they have to do next by grabbing the next
-available story from the backlog.</p>
-            </li>
-            <li>
-              <img src="/images/feature/workflow_collaborate.png">
-              <h4>Collaborate with the Team</h4>
-              <p>Stories are evolving conversations, it's easy for
-anyone to engage by posting comments on stories, and receiving instant
-notifications via email, Twitter, or RSS. Bring your distributed team
-into the <a href="https://#/features#one_view">same virtual room</a>!</p>
-            </li>
-            <li>
-              <img src="/images/feature/workflow_acceptance.png">
-              <h4>Customer Acceptance</h4>
-              <p>Your team delivers finished stories by deploying new
-features to a staging or QA site where the team's product manager or
-customer can verify them. A story is only considered done when it's
-accepted by the customer, and story rejection is an opportunity to
-incorporate feedback early!</p>
-            </li>
-            <li class="last">
-              <img src="/images/feature/workflow_track.png">
-              <h4>Track Velocity and Project Release Dates</h4>
-              <p>Tracker takes the busy work out of agile project
-management by automatically updating your project's velocity, a measure
-of progress, at every iteration, based on the point estimates of
-accepted stories. Future iterations and release dates are projected
-seamlessly, allowing your team to focus on prioritization and delivering
- great working software.</p>
-            </li>
-         </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="feature_content for_developers content">
-    <!-- <h3>TODO: photo of two happy developers pairing, with two monitors, IDE in one and Tracker in the other </H3> -->
-
-    <div class="section white">
-      <div class="center">
-        <div class="inner">
-          <div class="headline">
-            <img src="/images/feature/game.png">
-            <h3 class="callout">Fun, simple, powerful.</h3>
-            <p class="callout">It’s been said that <strong><a href="https://#/">Pivotal Tracker</a> turns work into a game.</strong>
- Keep working to improve your velocity by honing your software
-development process, identifying problem areas through the transparency
-provided by Tracker. As your team takes stories through their life
-cycle, watch Tracker’s colors <strong>come to life</strong> as your vision for your product crystallizes.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section grey">
-      <div class="center">
-        <div class="inner">
-          <div class="features">
             <ul>
+              <li>
+                <h4>What is Pivotal Tracker?</h4>
+                <p><a href="https://#/">Pivotal Tracker</a> is an easy to use, agile project management tool that brings focused collaboration to software development teams. Built by <a href="http://www.pivotallabs.com/">Pivotal Labs</a>, it embodies proven agile methods, based on experience from hundreds of successful large scale <a href="http://www.pivotallabs.com/clients" target="_blank">projects</a>. </p>
+              </li>
+              <li>
+                <h4>Join the Community</h4>
+                <p>Pivotal Tracker is the agile project management tool of
+                  choice for over 300,000 users across thousands of companies, from large
+                  public companies to fast growing startups, and open source development
+                  teams.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section white">
+        <div class="center">
+          <div class="inner">
+            <h3>Learn more.</h3>
+            <ul>
+              <li>
+                <a href="#one_view">
+                  <h4>One View</h4>
+                  <p>From CEO to developer, everyone shares one view. Work at a fine-grained level, without losing sight of the bigger picture.<span>Learn more.</span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#real_time">
+                  <h4>Real-time Collaboration</h4>
+                  <p>See and react to everything that matters on your project, in real time. Bring your distributed team together.<span>Learn more.</span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#agile">
+                  <h4>Agile, the Pivotal Way</h4>
+                  <p>Effective agile software development, from the people that helped invent it. This is agile that really works.<span>Learn more.</span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#workflow">
+                  <h4>Simple Workflow</h4>
+                  <p>Easy to adopt, out of the box workflow that's surprisingly powerful. Transform your productivity.<span>Learn more.</span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#for_developers">
+                  <h4>Developer-friendly</h4>
+                  <p>Focus on building great software, not keeping your project management tool in sync with reality. <span>Learn more.</span></p>
+                </a>
+              </li>
+              <li>
+                <a href="#integrations">
+                  <h4>Integrations</h4>
+                  <p>Tracker complements tools and services you already use at your company, and is easy to extend.<span>Learn more.</span></p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section white">
+        <div class="center">
+          <div class="testimonial">
+            <div class="inner">
+              <blockquote>“I've waited 15 years for a computer program
+                that out-performs index cards. Pivotal Tracker's smooth interface and
+                network-native architecture supports my team's collaborative/distributed
+                planning without giving up the simplicity and physicality of cards.
+                This product had to come from a team that understands how I work.”</blockquote>
+              <p>-- Ward Cunningham, CTO, AboutUs.org</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="feature_content tracker_story content">
+      <div class="section grey">
+        <div class="center">
+          <div class="inner">
+            <ul>
+              <li class="index_cards">
+                <h3>State of the art: index cards</h3>
+                <p><strong>We've been doing agile software development since before terms like "Agile" and "XP" existed.</strong><br>
+                  Over the years we've made numerous attempts to use the variety of
+                  software project management and agile development applications
+                  available, from Microsoft Project to the more current agile-specific
+                  products.
+                  <strong>We kept returning to index cards,</strong>
+                  sometimes augmented with a patchwork of wikis and spreadsheets. We
+                  followed the agile planning tools out there, but each attempt to adopt
+                  one resulted in frustration.</p>
+                <p>Configuration and data entry were a constant expense. User interfaces were clunky and had too much back and forth navigation. <strong>The workflows were inefficient and the overhead was high.</strong>
+                  (We kept hearing circus music in our heads, with all the hoops we were
+                  jumping through.) The usage cost never seemed sustainable. <strong>It always felt like we were working for the product, instead of it working for us.</strong></p>
+              </li>
+              <li class="need_solution">
+                <h3>But we needed something...</h3>
+                <p>As our business grew, so did our frustration; <strong>index cards were far from ideal but the alternatives were worse.</strong>
+                  And at the same time, we were just starting to look at a promising new
+                  technology, Ruby on Rails. So we decided to build our own agile project
+                  management tool.
+                  We started working on Pivotal Tracker in late 2006. Its
+                  beginnings were very humble. All we needed was to have a backlog and be
+                  able to easily prioritize. <strong>We created simple story editing and built drag-and-drop prioritization and we were ready to start the switch from index cards.</strong> (These simple features gave us parity with index cards, with the bonus of having the backlog online.)</p>
+              </li>
+              <li class="project_management">
+                <h3>Who gets excited by agile project management software?</h3>
+                <p>We started using Tracker on all of our client
+                  development projects. We continually improved and tweaked the
+                  application, integrating our experience and feedback, and we started to
+                  find that it really <strong>transformed both the transparency and the flow of development.</strong></p>
+                <p>Tracker quickly developed a following among client
+                  developers who had used it when working with us, too. We would routinely
+                  receive requests for accounts: <em>"I used Tracker at my last job. Can I have an account to use in my new one?"</em></p>
+                <p>We would always accommodate these word-of-mouth,
+                  friends and family type requests. Entire client organizations, beyond
+                  our projects, started using Tracker. The interest continued to grow and
+                  with much greater enthusiasm. We kept getting emails saying things like,
+                  <em>"Please let me pay for Tracker; I can't live without it."</em></p>
+                <p>So we decided to make Tracker publicly available. We
+                  launched the public beta at RailsConf 2008 as a free agile project
+                  management tool. Over 10% of the attendees signed up that week.</p>
+              </li>
+              <li class="why">
+                <h3>Why is Pivotal Tracker Special?</h3>
+                <div class="callout">
+                  <div class="inner">
+                    <p>We had three key insights at the outset that made Tracker work:</p>
+                    <ol>
+                      <li>The user interface needed to be simple.</li>
+                      <li>The project status and backlog needed to be easily (always) available.</li>
+                      <li>You shouldn't have to constantly plan iterations.</li>
+                    </ol>
+                  </div>
+                </div>
+                <p>The first point is simply about good UI design, but it's amazing how many tools out there get this wrong.</p>
+                <p>The last point is more subtle. In agile processes, particularly <a href="http://www.extremeprogramming.org/" rel="nofollow" target="_blank">Extreme Programming (XP)</a>,
+                  there is a concept called velocity. The basic idea is that you assign a
+                  point cost to stories and the sum of the point costs of completed
+                  stories in a given iteration is the velocity. You then use the velocity
+                  to project how much you will be able to get done in each future
+                  iteration.</p>
+                <p>As software development teams start to gel, they
+                  exhibit a strong central tendency to get a consistent amount done each
+                  week, and this velocity becomes extremely predictive and reliable.
+                  Traditionally in XP, after completing an iteration, you
+                  would re-plan each subsequent iteration, adjusting for the actual rate
+                  of progress. This can be organizationally onerous, but it's critical, as
+                  it allows you to project when each milestone will be reached. The
+                  feedback loop needs to be maintained to insure better-informed
+                  decisions.</p>
+                <p>The solution is the <strong>emergent iteration.</strong>
+                  Pivotal Tracker automatically (and in real-time) tracks story
+                  completions, iterations and velocity and will dynamically adjust
+                  iteration backlogs based on actual progress; Tracker does the grunt work
+                  and your project schedule is always up-to-date.</p>
+              </li>
+              <li class="philosophy">
+                <h3>Learn more about <a href="http://www.pivotallabs.com/" target="_blank">Pivotal Labs</a>.</h3>
+                <h3>The Tracker Philosophy</h3>
+                <p><strong>Tracker embraces simplicity. It should make managing projects easy, rather than make its users slaves to maintaining the plan.</strong>
+                  It should give every user of the system more information back than they
+                  put in.
+                  Tracker doesn't have a huge list of features, because it
+                  tries to stay true to its core purpose. (Remember, it exists partly
+                  because of our frustration with the bloated alternatives.)
+                  At times, Tracker appears opinionated as it can place
+                  strict limits on how you manage your project. But this is a consequence
+                  of its focus and the interdependence of features; the sum of Tracker is
+                  far greater than its parts.
+                  While we don't always get it right, we try to make sure
+                  each additional feature or product change adds a lot of value and makes
+                  users' work easier.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature_content one_view content">
+
+      <div class="section grey">
+        <div class="center">
+          <div class="inner">
+            <div class="testimonial">
+              <div class="inner">
+                <blockquote>“Pivotal Tracker is a fantastic product. We've
+                  become a more efficient development team since we started using it. And
+                  even better, the management team gets on-demand visibility into my
+                  team's priorities and accomplishments.”</blockquote>
+                <p>-- Jim Gochee, VP Engineering, New Relic</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section white">
+        <div class="center">
+          <div class="inner">
+            <ul>
+              <li>
+                <img src="/images/feature/birds_eye_view.png">
+                <h4>Get on the Same Page</h4>
+                <p>With <a href="https://#/">Pivotal Tracker</a>,
+                  everyone shares the same, up to the minute view of what's going on with
+                  the project, and what needs to be done next. It lets product owners
+                  know in intimate detail where things are, without having to ask, and
+                  lets developers spend time on work, rather than on reporting the work.</p>
+              </li>
               <li>
                 <img src="/images/feature/focus.png">
-                <h4>Keeps you Focused</h4>
-                <p>Tracker lets you focus on what's next, without losing
- sight of the big picture, or getting in the way. Plus, scoring lots of
-points in the iteration can be rewarding!</p>
-              </li>
-              <li>
-                <img src="/images/feature/api.png">
-                <h4>API</h4>
-                <p>It's easy to extend Tracker and build your own tools using the <a href="https://#/help/api">Tracker Developer API</a>. There is a growing collection of useful <a href="https://#/help/thirdpartytools">third-party tools</a> already available.</p>
+                <h4>Stay Focused</h4>
+                <p>Imagine if everyone on the team knew what the highest
+                  priority thing to do was, what one thing they could do next that would
+                  move the company forward? Tracker facilitates that communication, by
+                  letting developers focus on what's next, without losing sight of the big
+                  picture.</p>
               </li>
             </ul>
             <ul>
               <li>
-                <img src="/images/feature/source_commit_hooks.png">
-                <h4>Source Commit Hooks</h4>
-                <p>Tracker supports integration with your Source Control
- Management system. We support Subversion, GitHub, and Git, plus you can
- create your own hooks for other systems.</p>
+                <img src="/images/feature/search.png">
+                <h4>Find Stories Easily</h4>
+                <p>Every story is within reach with Tracker's easy to use
+                  full text search, with support for more powerful structured queries when
+                  you need them.</p>
               </li>
               <li>
-                <img src="/images/feature/public_projects.png">
-                <h4>Public Projects</h4>
-                <p>Open source teams can harness the collaborative power
- of Tracker and share progress with the community, with public projects.
- Check out some <a href="https://#/public_projects">public projects</a> now!</p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="featured_tools">
-            <h3>Featured 3rd Party Tools</h3>
-            <ul>
-              <li>
-                <h4><a href="http://www.trackerstorymaps.com/" target="_blank">Story Mapper</a></h4>
-                <p>High-level release planning tool, based on Jeff Patton's story mapping techniques. From <a href="http://www.carbonfive.com/">Carbon Five</a>.</p>
-              </li>
-              <li>
-                <h4><a href="http://www.smallbydesign.de/ptmobile" target="_blank">PT Mobile</a></h4>
-                <p>Free Pivotal Tracker app for Android, by Niels Linnemann.</p>
-              </li>
-              <li>
-                <h4><a href="http://github.com/hashrocket/slurper" target="_blank">Slurper</a></h4>
-                <p>Written by our friends at Hashrocket, Slurper is a
-ruby script that allows you to compose stories in a plain text file and
-then slurp them into Pivotal Tracker through the API.</p>
+                <img src="/images/feature/charts.png">
+                <h4>Visualize Progress</h4>
+                <p>Keep an eye on your project with Tracker's built-in
+                  charts, including release burn-down, iteration burn-up, story type
+                  breakdown, and historical velocity.</p>
               </li>
             </ul>
             <ul>
               <li>
-                <h4><a href="http://techpolcook.blogspot.com/2009/11/widget-for-pivotals-tracker.html" target="_blank">Mac OS/X Widget</a></h4>
-                <p>Simple but useful Mac OS X Dashboard widget that lets you create Pivotal Tracker stories easily, by Thomas Vie.</p>
+                <img src="/images/feature/history.png">
+                <h4>See How You Got Here</h4>
+                <p>See everything that's recently happened in your
+                  software development project recently. or a particular user story. All
+                  with one click or keystroke.</p>
               </li>
               <li>
-                <h4><a href="http://github.com/tpope/pickler/tree/master" target="_blank">Pickler</a></h4>
-                <p>Synchronize stories in Pivotal Tracker with Cucumber
-features. Cucumber is a test framework that can execute plain-text
-documents as automated functional tests.</p>
-              </li>
-              <li>
-                <h4><a href="http://github.com/dougmcbride/Pivotal-Tracker-IRC-bot" target="_blank">Pivotal-Tracker-IRC-bot</a></h4>
-                <p>A Ruby-based IRC bot that lets you interact with Pivotal Tracker projects, by Doug McBride.</p>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <h4><a href="https://chrome.google.com/extensions/detail/iegbkljacgfochoondhgibofiijnedjd" target="_blank">Chrome Story Board</a></h4>
-                <p>Chrome extension that allows you to visualize your current Tracker iteration as a cardwall.</p>
-              </li>
-              <li>
-                <h4><a href="http://www.gooddata.com/apps/pivotal-tracker" target="_blank">Pivotal Tracker Analytics</a></h4>
-                <p>Analyze your agile development process with this
-full-blown business intelligence app for Pivotal Tracker, built on the
-GoodData cloud business intelligence platform.</p>
-              </li>
-              <li>
-                <h4><a href="http://github.com/jsmestad/pivotal-tracker/tree/master" target="_blank">Ruby API Wrapper</a></h4>
-                <p>Ruby wrapper for the Tracker API, Justin Smestad.</p>
+                <img src="/images/feature/drag_drop.png">
+                <h4>React to What You See</h4>
+                <p>Rearrange stories in your project to reflect new
+                  priorities with simple drag and drop, and see the impact on your release
+                  schedule immediately. </p>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="feature_content real_time content">
+      <div class="section grey">
+        <div class="center">
+          <div class="inner">
+            <ul class="screens">
+              <li>
+                <img src="/images/feature/realtime_updates.png">
+                <h4>Virtual Team Room</h4>
+                <p>Your view of your project is always up to date, without
+                  ever refreshing the browser. Updates from others are seen instantly,
+                  and changes from multiple people are merged seamlessly, in real time.</p>
+              </li>
+              <li>
+                <img src="/images/feature/team_communication.png" class="team_communication">
+                <h4>Encourages Conversation</h4>
+                <p>Tracker drives conversation from it's workflow
+                  transparency to help your team work better and faster. Story comments
+                  allow each story to evolve based on feedback and discussion.</p>
+              </li>
+              <li>
+                <img src="/images/feature/notifications.png">
+                <h4>Stay Up to Date</h4>
+                <p>Whether your team is in the same room, across the hall
+                  or across the world, Tracker keeps everyone in sync with the latest
+                  changes. Not logged in? Tracker can keep you up to date through email,
+                  RSS, <a href="https://#/help/integrations#twitter">Twitter</a> or <a href="https://#/help/integrations#campfire">Campfire</a>, or use web callbacks to keep you up-to-date however you like.</p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="/images/feature/attachments.png">
+                <h4>Attach your Mockups</h4>
+                <p>Take the assets you've gathered for your project and
+                  attach them directly to stories, so your developers don't have to hunt
+                  for them when they're ready to turn those mockups into working software.</p>
+              </li>
+              <li>
+                <img src="/images/feature/labels.png">
+                <h4>Organize by Label</h4>
+                <p>Tag your stories with labels to tie related stories
+                  together. Labels let you find stories quickly, and see progress at a
+                  higher level.</p>
+              </li>
+              <li>
+                <img src="/images/feature/campfire.png">
+                <h4>Campfire Chat</h4>
+                <p>See updates from Tracker in your Campfire chatroom,
+                  allowing your entire team to stay abreast of the project development
+                  activity.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section white">
+        <div class="center">
+          <div class="inner">
+            <div class="testimonial">
+              <div class="inner">
+                <blockquote>“Pivotal Tracker is as simple as a to-do list
+                  you might write on paper, but online, shared and collaborative (try the
+                  real-time collaboration and be amazed). Every bug or feature request we
+                  get ends up on our Pivotal list.”</blockquote>
+                <p>-- Jim Gochee, VP Engineering, New Relic</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="feature_content agile content">
+      <div class="section grey">
+        <div class="center">
+          <div class="inner">
+            <div class="headline">
+              <img src="/images/feature/realworld_xp.png">
+              <h3 class="callout">Based on Real-World Experience</h3>
+              <p class="callout">The agile, iterative workflow and story management in <a href="https://#/">Pivotal Tracker</a> embodies years of experience by Pivotal Labs on real world <a href="http://www.pivotallabs.com/clients" target="_blank">client projects</a>. This is agile project management that really works!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section white">
+        <div class="center">
+          <div class="inner">
+            <ul class="screens">
+              <li>
+                <img src="/images/feature/emergence.png">
+                <h4>Velocity and Emergent Iterations</h4>
+                <p>Tracker calculates future iterations automatically,
+                  based on historical performance. Focus on prioritizing and completing
+                  your stories; let Tracker take care of planning future iterations, based
+                  on actual progress.</p>
+              </li>
+              <li>
+                <img src="/images/feature/release_planning.png" class="release_planning">
+                <h4>Release and Scope Management</h4>
+                <p>Planning a release and focusing on milestones as real
+                  world changes occur is easy with Tracker. Completion dates are
+                  calculated automatically, based on velocity - your live measure of
+                  historical performance. See impact on scope as new stories are added
+                  immediately, and move stories around easily via drag and drop as
+                  priorities change.</p>
+              </li>
+              <li>
+                <img src="/images/feature/ownership.png" class="ownership">
+                <h4>Collective Ownership</h4>
+                <p>Tracker is especially effective when used by
+                  self-organizing teams, who embrace collective code ownership. Since
+                  anyone can work on the next available story in the shared, highly
+                  visible backlog, you'll see fewer bottlenecks, and the team will move
+                  faster toward shared goals.</p>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <img src="/images/feature/workflow.png">
+                <h4>Simple, Effective Workflow</h4>
+                <p>Jump right into your project with a <a href="https://#/features#workflow">simple workflow</a>
+                  that emphasizes rapid delivery and lots of feedback. Simplify your
+                  process, rather than struggle trying to manage shifting complexity.</p>
+              </li>
+              <li>
+                <img src="/images/feature/feedback_loop.png" class="feedback">
+                <h4>Feedback Loop</h4>
+                <p>A Tracker story is only considered done when accepted
+                  by the project's customer. This creates a constant feedback loop,
+                  starting in the very first iteration, which shapes your product and
+                  eliminates costly surprises typically found only after software ships to
+                  production.</p>
+              </li>
+              <li>
+                <img src="/images/feature/mvp.png">
+                <h4>Focus on MVP</h4>
+                <p>Long software development projects that don't ship are
+                  expensive and often lead to failure. Focus on delivering stories and
+                  shipping working software often are tightly woven into the fabric of
+                  Tracker. </p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section white">
+        <div class="center">
+          <div class="inner">
+            <div class="testimonial">
+              <div class="inner">
+                <blockquote>“Pivotal Tracker is a great lightweight tool for running distributed Scrum.”</blockquote>
+                <p>-- Jeff Sutherland, Chairman, Scrum Training Institute &amp; CEO, Scrum, Inc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="feature_content workflow content">
+
+      <div class="section grey">
+        <div class="center">
+          <div class="testimonial">
+            <div class="inner">
+              <blockquote>"We are using Pivotal Tracker to manage all of
+                our new web apps under development. This thing rocks! It has a very nice
+                workflow and has really helped us know what other team members are
+                working on and to know what our velocity of development is."</blockquote>
+              <p>-- Ezra Zygmuntowicz, Founder and Senior Fellow, Engine Yard</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section white">
+        <div class="center">
+          <div class="inner">
+            <ul>
+              <li>
+                <img src="/images/feature/workflow_projectbreakdown.png">
+                <h4>The First Step: User Stories</h4>
+                <p>Start your project by breaking down user features into
+                  small concrete user stories. Each story is bite size, about what might
+                  fit on a small index card, and represents an increment of value for your
+                  product's customer. Deconstructing your project into concrete stories
+                  can be enlightening, and gets your entire team on the same page what's
+                  really important about your project.</p>
+              </li>
+              <li>
+                <img src="/images/feature/workflow_estimate.png">
+                <h4>Next: Estimate Complexity</h4>
+                <p>Once you've broken down your project into concrete
+                  stories, huddle as a team, and estimate them in terms of complexity
+                  using 'points'. To get started, take a really small story, give it 1
+                  point, and estimate the rest keeping relative complexity in mind. This
+                  helps <a href="https://#/">Pivotal Tracker</a>
+                  predict when you might be finished with a milestone or release, but more
+                  importantly, estimation drives important conversations and helps you
+                  flesh out hidden complexity early.</p>
+              </li>
+              <li>
+                <img src="/images/feature/workflow_label.png">
+                <h4>Organize by Label</h4>
+                <p>Tag your stories with labels to tie related stories
+                  together. Labels let you find stories quickly, and see progress at a
+                  higher level.</p>
+              </li>
+              <li>
+                <img src="/images/feature/workflow_mockups.png">
+                <h4>Attach your Mockups</h4>
+                <p>Take the assets you've gathered for your project and
+                  attach them directly to stories, so your developers don't have to hunt
+                  for them when they're ready to turn those mockups into working software.</p>
+              </li>
+              <li>
+                <img src="/images/feature/workflow_prioritize.png">
+                <h4>Prioritize User Stories</h4>
+                <p>Drag stories from the Icebox, where all new stories
+                  start out, and into the Backlog, in the order that reflects business
+                  priorities. As these change, reflect new priorities by dragging stories
+                  up or down in the backlog, and let Tracker adjust projected release
+                  dates automatically.</p>
+              </li>
+              <li>
+                <img src="/images/feature/workflow_software.png">
+                <h4>Turn Stories into Working Software</h4>
+                <p>Development work begins when your team starts the first
+                  story in the Current panel, which shows this week's iteration from the
+                  Backlog. As coding for a given story is completed, the whole team will
+                  see that story change state and color <a href="https://#/features#real_time">in real time</a>,
+                  giving everyone visibility where things stand with the project.
+                  Developers always know what they have to do next by grabbing the next
+                  available story from the backlog.</p>
+              </li>
+              <li>
+                <img src="/images/feature/workflow_collaborate.png">
+                <h4>Collaborate with the Team</h4>
+                <p>Stories are evolving conversations, it's easy for
+                  anyone to engage by posting comments on stories, and receiving instant
+                  notifications via email, Twitter, or RSS. Bring your distributed team
+                  into the <a href="https://#/features#one_view">same virtual room</a>!</p>
+              </li>
+              <li>
+                <img src="/images/feature/workflow_acceptance.png">
+                <h4>Customer Acceptance</h4>
+                <p>Your team delivers finished stories by deploying new
+                  features to a staging or QA site where the team's product manager or
+                  customer can verify them. A story is only considered done when it's
+                  accepted by the customer, and story rejection is an opportunity to
+                  incorporate feedback early!</p>
+              </li>
+              <li class="last">
+                <img src="/images/feature/workflow_track.png">
+                <h4>Track Velocity and Project Release Dates</h4>
+                <p>Tracker takes the busy work out of agile project
+                  management by automatically updating your project's velocity, a measure
+                  of progress, at every iteration, based on the point estimates of
+                  accepted stories. Future iterations and release dates are projected
+                  seamlessly, allowing your team to focus on prioritization and delivering
+                  great working software.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature_content for_developers content">
+      <!-- <h3>TODO: photo of two happy developers pairing, with two monitors, IDE in one and Tracker in the other </H3> -->
+
+      <div class="section white">
+        <div class="center">
+          <div class="inner">
+            <div class="headline">
+              <img src="/images/feature/game.png">
+              <h3 class="callout">Fun, simple, powerful.</h3>
+              <p class="callout">It’s been said that <strong><a href="https://#/">Pivotal Tracker</a> turns work into a game.</strong>
+                Keep working to improve your velocity by honing your software
+                development process, identifying problem areas through the transparency
+                provided by Tracker. As your team takes stories through their life
+                cycle, watch Tracker’s colors <strong>come to life</strong> as your vision for your product crystallizes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section grey">
+        <div class="center">
+          <div class="inner">
+            <div class="features">
+              <ul>
+                <li>
+                  <img src="/images/feature/focus.png">
+                  <h4>Keeps you Focused</h4>
+                  <p>Tracker lets you focus on what's next, without losing
+                    sight of the big picture, or getting in the way. Plus, scoring lots of
+                    points in the iteration can be rewarding!</p>
+                </li>
+                <li>
+                  <img src="/images/feature/api.png">
+                  <h4>API</h4>
+                  <p>It's easy to extend Tracker and build your own tools using the <a href="https://#/help/api">Tracker Developer API</a>. There is a growing collection of useful <a href="https://#/help/thirdpartytools">third-party tools</a> already available.</p>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <img src="/images/feature/source_commit_hooks.png">
+                  <h4>Source Commit Hooks</h4>
+                  <p>Tracker supports integration with your Source Control
+                    Management system. We support Subversion, GitHub, and Git, plus you can
+                    create your own hooks for other systems.</p>
+                </li>
+                <li>
+                  <img src="/images/feature/public_projects.png">
+                  <h4>Public Projects</h4>
+                  <p>Open source teams can harness the collaborative power
+                    of Tracker and share progress with the community, with public projects.
+                    Check out some <a href="https://#/public_projects">public projects</a> now!</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="featured_tools">
+              <h3>Featured 3rd Party Tools</h3>
+              <ul>
+                <li>
+                  <h4><a href="http://www.trackerstorymaps.com/" target="_blank">Story Mapper</a></h4>
+                  <p>High-level release planning tool, based on Jeff Patton's story mapping techniques. From <a href="http://www.carbonfive.com/">Carbon Five</a>.</p>
+                </li>
+                <li>
+                  <h4><a href="http://www.smallbydesign.de/ptmobile" target="_blank">PT Mobile</a></h4>
+                  <p>Free Pivotal Tracker app for Android, by Niels Linnemann.</p>
+                </li>
+                <li>
+                  <h4><a href="http://github.com/hashrocket/slurper" target="_blank">Slurper</a></h4>
+                  <p>Written by our friends at Hashrocket, Slurper is a
+                    ruby script that allows you to compose stories in a plain text file and
+                    then slurp them into Pivotal Tracker through the API.</p>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <h4><a href="http://techpolcook.blogspot.com/2009/11/widget-for-pivotals-tracker.html" target="_blank">Mac OS/X Widget</a></h4>
+                  <p>Simple but useful Mac OS X Dashboard widget that lets you create Pivotal Tracker stories easily, by Thomas Vie.</p>
+                </li>
+                <li>
+                  <h4><a href="http://github.com/tpope/pickler/tree/master" target="_blank">Pickler</a></h4>
+                  <p>Synchronize stories in Pivotal Tracker with Cucumber
+                    features. Cucumber is a test framework that can execute plain-text
+                    documents as automated functional tests.</p>
+                </li>
+                <li>
+                  <h4><a href="http://github.com/dougmcbride/Pivotal-Tracker-IRC-bot" target="_blank">Pivotal-Tracker-IRC-bot</a></h4>
+                  <p>A Ruby-based IRC bot that lets you interact with Pivotal Tracker projects, by Doug McBride.</p>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <h4><a href="https://chrome.google.com/extensions/detail/iegbkljacgfochoondhgibofiijnedjd" target="_blank">Chrome Story Board</a></h4>
+                  <p>Chrome extension that allows you to visualize your current Tracker iteration as a cardwall.</p>
+                </li>
+                <li>
+                  <h4><a href="http://www.gooddata.com/apps/pivotal-tracker" target="_blank">Pivotal Tracker Analytics</a></h4>
+                  <p>Analyze your agile development process with this
+                    full-blown business intelligence app for Pivotal Tracker, built on the
+                    GoodData cloud business intelligence platform.</p>
+                </li>
+                <li>
+                  <h4><a href="http://github.com/jsmestad/pivotal-tracker/tree/master" target="_blank">Ruby API Wrapper</a></h4>
+                  <p>Ruby wrapper for the Tracker API, Justin Smestad.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature_content integrations content">
+      <div class="section grey">
+        <div class="center">
+          <div class="inner">
+            <ul class="features">
+              <li>
+                <img src="/images/feature/integrates.png">
+                <h4>Integrates with your other applications</h4>
+                <p>Prioritize and collaborate online around stories linked
+                  to tickets in your bug tracking tool or support site. Tracker
+                  integrates with JIRA, Lighthouse, Bugzilla, Satisfaction, Zendesk, and
+                  includes a flexible interface to support other tools. More integrations
+                  are on the way!</p>
+              </li>
+              <li>
+                <img src="/images/feature/csv.png">
+                <h4>Import &amp; Export</h4>
+                <p>It's easy to import stories from other tools, or export
+                  them to a CSV file. You can even use a spreadsheet program - just
+                  export your project, move, update, or add stories with Excel, and import
+                  them back to Tracker.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section white">
+        <div class="center">
+          <div class="inner">
+            <div class="featured_integrations">
+              <h3>Built In Integrations</h3>
+              <ul>
+                <li>
+                  <h4><a href="https://#/help/integrations#lighthouse">Lighthouse</a><img class="logo" src="/images/feature/lighthouse_logo.png"></h4>
+                  <p>See and import your Lighthouse tickets directly into
+                    Tracker with drag and drop, and keep them updated as you collaborate and
+                    complete related stories.</p>
+                </li>
+                <li>
+                  <h4><a href="https://#/help/integrations#zendesk">Zendesk</a><img class="logo" src="/images/feature/logo_zendesk.png"></h4>
+                  <p>Turn your Zendesk support tickets that involve bux fixes into Tracker stories, and reflect status of these to your support team.</p>
+                </li>
+                <li>
+                  <h4><a href="https://#/help/integrations#bugzilla">Bugzilla</a><img class="logo" src="/images/feature/bugzilla_logo.png"></h4>
+                  <p>Report and manage your bugs in this popular defect
+                    tracking tool, and use Tracker in conjunction to prioritize them along
+                    with feature work and collaborate in real time.</p>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <h4><a href="https://#/help/integrations#jira">JIRA</a><img class="logo" src="/images/feature/JIRA_logo.png"></h4>
+                  <p>Leverage the openness and flexibility of JIRA while
+                    keeping your team focused with Tracker. Import and link your issues via
+                    drag and drop, and share story progress and conversation with JIRA
+                    users.</p>
+                </li>
+                <li>
+                  <a href="https://#/help/integrations#get_satisfaction"><h4 class="getsatisfaction">Get Satisfaction</h4></a>
+                  <p>Engage with your user community easily. View, import,
+                    and collaborate around ideas, questions, and problems posted for your
+                    product on your Get Satisfaction powered support site.</p>
+                </li>
+                <li>
+                  <h4><a href="https://#/help/integrations#other">Create your own</a><img class="logo" src="/images/feature/api_logo.png"></h4>
+                  <p>An open <a href="https://#/help/integrations#other">integration</a> framework, a rich <a href="https://#/help/api">developer API</a>, and <a href="https://#/help/integrations#activity_web_hook">activity webhooks</a> allow you to connect Tracker with just about any software tool in your workflow.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="push"></div>
+
   </div>
-
-  <div class="feature_content integrations content">
-    <div class="section grey">
-      <div class="center">
-        <div class="inner">
-          <ul class="features">
-            <li>
-              <img src="/images/feature/integrates.png">
-              <h4>Integrates with your other applications</h4>
-              <p>Prioritize and collaborate online around stories linked
- to tickets in your bug tracking tool or support site. Tracker
-integrates with JIRA, Lighthouse, Bugzilla, Satisfaction, Zendesk, and
-includes a flexible interface to support other tools. More integrations
-are on the way!</p>
-            </li>
-            <li>
-              <img src="/images/feature/csv.png">
-              <h4>Import &amp; Export</h4>
-              <p>It's easy to import stories from other tools, or export
- them to a CSV file. You can even use a spreadsheet program - just
-export your project, move, update, or add stories with Excel, and import
- them back to Tracker.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="section white">
-      <div class="center">
-        <div class="inner">
-          <div class="featured_integrations">
-            <h3>Built In Integrations</h3>
-            <ul>
-              <li>
-                <h4><a href="https://#/help/integrations#lighthouse">Lighthouse</a><img class="logo" src="/images/feature/lighthouse_logo.png"></h4>
-                <p>See and import your Lighthouse tickets directly into
-Tracker with drag and drop, and keep them updated as you collaborate and
- complete related stories.</p>
-              </li>
-              <li>
-                <h4><a href="https://#/help/integrations#zendesk">Zendesk</a><img class="logo" src="/images/feature/logo_zendesk.png"></h4>
-                <p>Turn your Zendesk support tickets that involve bux fixes into Tracker stories, and reflect status of these to your support team.</p>
-              </li>
-              <li>
-                <h4><a href="https://#/help/integrations#bugzilla">Bugzilla</a><img class="logo" src="/images/feature/bugzilla_logo.png"></h4>
-                <p>Report and manage your bugs in this popular defect
-tracking tool, and use Tracker in conjunction to prioritize them along
-with feature work and collaborate in real time.</p>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <h4><a href="https://#/help/integrations#jira">JIRA</a><img class="logo" src="/images/feature/JIRA_logo.png"></h4>
-                <p>Leverage the openness and flexibility of JIRA while
-keeping your team focused with Tracker. Import and link your issues via
-drag and drop, and share story progress and conversation with JIRA
-users.</p>
-              </li>
-              <li>
-                <a href="https://#/help/integrations#get_satisfaction"><h4 class="getsatisfaction">Get Satisfaction</h4></a>
-                <p>Engage with your user community easily. View, import,
- and collaborate around ideas, questions, and problems posted for your
-product on your Get Satisfaction powered support site.</p>
-              </li>
-              <li>
-                <h4><a href="https://#/help/integrations#other">Create your own</a><img class="logo" src="/images/feature/api_logo.png"></h4>
-                <p>An open <a href="https://#/help/integrations#other">integration</a> framework, a rich <a href="https://#/help/api">developer API</a>, and <a href="https://#/help/integrations#activity_web_hook">activity webhooks</a> allow you to connect Tracker with just about any software tool in your workflow.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-        <div id="push"></div>
-
-    </div>
-    <noscript>
-  <div id='js_required'>Tracker requires JavaScript. Please enable it in your browser.</div>
-</noscript>
+  <noscript>
+    <div id='js_required'>Tracker requires JavaScript. Please enable it in your browser.</div>
+  </noscript>
 
 </body>

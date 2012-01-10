@@ -1,13 +1,16 @@
-<!DOCTYPE html>
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
 <html>
   <head>
     <title>Pivital</title>
-    <%#= stylesheet_link_tag 'marcon' %>
+    <%= stylesheet_link_tag 'marcon' %>
     <%= stylesheet_link_tag 'marcom_prod-release-20111025-20111129-1_pkg' %>
     <%= javascript_include_tag "jquery.js" %>
     <%= javascript_include_tag "features/jquery.tools.min" %>
     <%= javascript_include_tag "kep3kek" %>
-    <%= javascript_include_tag "features/flowplayer-3.2.6.min.js" %>
+    <%= javascript_include_tag "feature/flowplayer-3.2.6.min.js" %>
     <style type="text/css">.tk-myriad-pro{font-family:"myriad-pro-1","myriad-pro-2",sans-serif;}.tk-myriad-pro-semi-condensed{font-family:"myriad-pro-semi-condensed-1","myriad-pro-semi-condensed-2",sans-serif;}</style>
     <%= csrf_meta_tag %>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -21,10 +24,6 @@
   <body>
     <%= render 'layouts/header' %>
     <%= yield %>
-    <% if user_signed_in? %>
-      <%= render 'layouts/signIn_footer' %>
-    <%else%>
-      <%= render 'layouts/footer' %>
-    <%end%>
+    
   </body>
 </html>
