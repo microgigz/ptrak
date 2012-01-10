@@ -125,7 +125,10 @@ body.marcom_page ul.clientlist li + li {margin-left: 7px}
 body.marcom_page #footer {height: 282px}
 body.marcom_page #push {height: 282px}
 body.marcom_page #footer {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif}
-body.marcom_page #footer .section.light {border-top: 1px solid #444444; background: url(/images/footer_light_bg.png) repeat-x}
+body.marcom_page #footer .section.light {
+    border-top: 1px solid #444444;
+    background: url(/images/footer_light_bg.png) repeat-x
+}
 body.marcom_page #footer .section.light p {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
 body.marcom_page #footer .section.light a {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
 body.marcom_page #footer .section.light div.center {position: relative; background: url(/images/grey_fold_down.png) no-repeat center top}
