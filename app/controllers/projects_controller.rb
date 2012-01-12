@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  
   layout 'project'
   # GET /projects
   # GET /projects.xml
