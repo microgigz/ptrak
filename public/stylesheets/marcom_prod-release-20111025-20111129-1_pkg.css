@@ -220,7 +220,7 @@ body.marcom_page.index #featured {height: 330px}
 body.marcom_page.index #featured div.center > div.inner {margin-right: 0}
 body.marcom_page.index #featured h2 {margin-top: 82px; margin-bottom: 36px; width: 341px; font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-size: 24px; font-weight: normal; color: #eeeeee; text-shadow: 1px 2px 3px #000000; width: auto !important; text-indent: 0px; background-image: none !important}
 body.marcom_page.index #featured hr {margin-top: 15px}
-body.marcom_page.index #featured img.screenshot {float: right; margin-top: -24px; position: relative; z-index: 2}
+body.marcom_page.index #featured img.screenshot {float: right; margin-top: -24px; position: relative; z-index: 100 !important;}
 body.marcom_page.index #featured a.button.sign_up {width: 175px; height: 47px; margin-right: 25px; background: url(/images/signup_red.png) no-repeat 0 0}
 body.marcom_page.index #featured a.button.sign_up:hover {background-position: 0 -47px}
 body.marcom_page.index #featured a.button.sign_up:focus {background-position: 0 -47px}
