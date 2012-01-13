@@ -62,61 +62,29 @@
               <div class="header">
                 <h3><%= current_user.name %></h3>
 
-                <a class="header_button right_link" href="#" id="new_project_link_338789" onclick="    SimpleOverlay.create(function(overlay){
+                <a class="header_button right_link" href="#" id="new_project_link" onclick="    SimpleOverlay.create(function(overlay){
                   overlay.overlay.setOpacity(0.3);
                   overlay.onCancel = function() { $$('.add_project_error_message').each(function(el){el.innerHTML = '';}) };
 
-                  img = $$('#new_project_popup_338789 .close_image').first();
+                  img = $$('#new_project_popup .close_image').first();
                   YAHOO.util.Event.addListener(img, 'click', overlay.cancel.bind(overlay));
 
-                  return $('new_project_popup_338789');
+                  return $('new_project_popup');
                 });
-
-                $('new_project_popup_338789').show();
-                setTimeout(function() { $$('#new_project_popup_338789 .project_name_field').first().focus(); }, 50);
+                
+                $('new_project_popup').show();
+                setTimeout(function() { $$('#new_project_popup .project_name_field').first().focus(); }, 50);
                 jQuery(&quot;label.infield&quot;).inFieldLabels({fadeDuration: 100});
                 ; return false;">Create Project</a>
-                <div class="new_project_popup" id="new_project_popup_338789" style="display:none">
-                  <div class="popup_head">
-                    <img src="projects_files/close_button_overlay.png" class="close_image">
-                    <div class="inner">
-
-                      <form action="/projects" id="create_project_form_338789" method="post" onsubmit="ProjectPopup.ajaxBefore('new_project_popup_338789'); new Ajax.Request('/projects', {asynchronous:true, evalScripts:true, onFailure:function(request){ProjectPopup.ajaxFailure('new_project_popup_338789')}, parameters:Form.serialize(this)}); return false;">
-                        <div class="heading">
-                          <input id="add_project_button" name="commit" tabindex="3" value="Create Project" type="submit">
-                          <h3>Create New Project</h3>
-                        </div>
-                        <div class="popup_content">
-                          <div class="add_project_flash" id="add_project_flash_338789"></div>
-                          <ul>
-                            <li>
-                              <label for="project_name">Project Name</label>
-                              <input class="project_name_field" id="project_name" maxlength="50" name="project[name]" size="50" tabindex="1" type="text">
-
-
-                              <span> or, <a href="#" onclick="ProjectPopup.ajaxBefore('new_project_popup_338789'); new Ajax.Request('/projects/create_demo', {asynchronous:true, evalScripts:true, method:'post', onFailure:function(request){ProjectPopup.ajaxFailure('new_project_popup_338789')}, parameters:'project[account_id]=' + ($('project_account_id_338789') ? $('project_account_id_338789').value : '&amp;project[account_name]=' + $('project_account_name').value)}); return false;">create a sample project</a>            </span>
-                            </li>
-
-
-                            <input id="project_account_id_338789" name="project[account_id]" value="338789" type="hidden">
-
-
-                            <li>
-                              <label for="project_public">Public Project</label>
-                              <input name="project[public]" value="0" type="hidden"><input id="project_public" name="project[public]" value="1" type="checkbox">              <span class="public_projects_help">Make this project publicly visible. <a href="https://www.pivotaltracker.com/help#whatarepublicprojects">Read more...</a></span>
-                            </li>
-
-                          </ul>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+                <div class="new_project_popup" id="new_project_popup" style="display:none">
+                  <%=render "form"%>
+                  
                   <div class="popup_foot"></div>
 
                 </div>
 
 
-                <a href="https://www.pivotaltracker.com/accounts/338789/plans" class="header_button right_link" id="manage_account_link_338789">Manage Account</a>
+                <a href="#" class="header_button right_link" id="manage_account_link_338789">Manage Account</a>
 
               </div>
               <ul class="rows">
@@ -125,7 +93,7 @@
                   <li>
                     <div class="title">
 
-                      <a href="https://www.pivotaltracker.com/projects/432771" class="project_name"><%= project.pro_name %></a>
+                      <a href="https://#/projects/432771" class="project_name"><%= project.pro_name %></a>
 
                     </div>
 
@@ -135,11 +103,11 @@
                     <div class="actions"><a href="#">Members</a></div>
 
 
-                    <div class="actions"> <a href="https://www.pivotaltracker.com/projects/432771/archive" onclick="if (confirm('You are about to archive the project \&quot;bibleography.\&quot; Are you sure you want to do this?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit(); };return false;">Archive</a> </div>
+                    <div class="actions"> <a href="https://#/projects/432771/archive" onclick="if (confirm('You are about to archive the project \&quot;bibleography.\&quot; Are you sure you want to do this?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;f.submit(); };return false;">Archive</a> </div>
 
 
 
-                    <div class="actions"> <a href="https://www.pivotaltracker.com/projects/432771" onclick="if (confirm('You are about to permanently delete the project \&quot;bibleography.\&quot; Are you sure you want to do this?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a> </div>
+                    <div class="actions"> <a href="https://#/projects/432771" onclick="if (confirm('You are about to permanently delete the project \&quot;bibleography.\&quot; Are you sure you want to do this?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Delete</a> </div>
 
 
 
@@ -163,7 +131,7 @@
   </div>
   <div id="footer">
     <div id="footer_content">
-      <a href="https://pivotallabs.com/" target="_blank">About Pivotal Labs</a> | <a href="https://www.pivotaltracker.com/help">Help</a> | <a href="https://www.pivotaltracker.com/help">Feedback</a> | <a href="http://pivotallabs.com/tracker" target="_blank">Blog</a> | <a href="https://www.pivotaltracker.com/policy/eula">Policies</a> | <a href="mailto:tracker@pivotallabs.com">Contact Us</a>
+      <a href="https://pivotallabs.com/" target="_blank">About Pivotal Labs</a> | <a href="https://#/help">Help</a> | <a href="https://#/help">Feedback</a> | <a href="http://pivotallabs.com/tracker" target="_blank">Blog</a> | <a href="https://#/policy/eula">Policies</a> | <a href="mailto:tracker@pivotallabs.com">Contact Us</a>
       <a href="https://www.twitter.com/pivotaltracker" id="twitter_link" target="_blank">Follow Pivotal Tracker on Twitter</a>
     </div>
   </div>

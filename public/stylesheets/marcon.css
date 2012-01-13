@@ -251,7 +251,7 @@ h3, h4 {margin-top: 0}
 #header .statusOff {color: white}
 #header .statusOff {color: white}
 .content h1 {font-size: 2.6em; text-transform: uppercase; font-weight: bold; margin-bottom: 20px}
-.content h2 {font-size: 1.8em; background: url(/images/hr.png) repeat-x scroll left bottom; padding-bottom: 12px; margin-bottom: 16px; text-indent: 2px}
+.content h2 {font-size: 1.8em; background: url(/images/v7/application/backgrounds/hr.png) repeat-x scroll left bottom; padding-bottom: 12px; margin-bottom: 16px; text-indent: 2px}
 #header .navigation_area ul.nav_links a:active {outline: none}
 #header .navigation_area ul.nav_links a:focus {outline: none}
 #header .navigation_area ul.nav_links li.dropdown {z-index: 9}
@@ -520,15 +520,15 @@ a.header_button:hover {background-color: #555555; text-decoration: none; backgro
 .new_project_popup img.close_button {cursor: pointer; left: -5px; position: absolute; top: -5px}
 .new_project_popup span.public_projects_help {position: relative; top: 6px}
 .new_project_popup input[type=checkbox] {width: 18px; position: relative; top: 6px}
-.new_project_popup div.popup_head {background: url(/images/v7/backgrounds/create_project_bg_top.png)}
+.new_project_popup div.popup_head {background: url(/images/projects/create_project_bg_top.png)}
 .new_project_popup div.popup_head > div.inner {padding: 6px 7px 0; padding-bottom: 5px}
 .new_project_popup .spinner {float: right; margin-top: 13px; margin-right: 10px}
 .new_project_popup div.heading {overflow: hidden; background: #ffffff; border-bottom: 1px solid #dddddd; height: 41px; padding-left: 18px}
 .new_project_popup div.heading h3 {float: left; text-transform: uppercase; font-size: 13px; line-height: 42px}
-.new_project_popup div.heading input {float: right; width: 123px; height: 33px; text-indent: -9999em; background: url(/images/v7/buttons/authenticated/project/create_project_button.png); border: none; margin-top: 4px; margin-right: 3px; *text-align: center; *font-size: 0}
-.new_project_popup div.heading input:hover {background: url(/images/v7/buttons/authenticated/project/create_project_button_hover.png)}
+.new_project_popup div.heading input {float: right; width: 123px; height: 33px; text-indent: -9999em; background: url(/images/projects/create_project_button.png); border: none; margin-top: 4px; margin-right: 3px; *text-align: center; *font-size: 0}
+.new_project_popup div.heading input:hover {background: url(/images/projects/create_project_button_hover.png)}
 .new_project_popup div.heading input.disabled {opacity: 0.5}
-.new_project_popup div.heading input.disabled:hover {background: url(/images/v7/buttons/authenticated/project/create_project_button.png)}
+.new_project_popup div.heading input.disabled:hover {background: url(/images/projects/create_project_button.png)}
 .new_project_popup .popup_foot {height: 16px; background: url(/images/v7/backgrounds/create_project_bg_btm.png)}
 .new_project_popup div.popup_content {border-top: 1px solid #ffffff; padding-left: 30px}
 .new_project_popup div.popup_content span {font-size: 12px}
@@ -553,7 +553,7 @@ a.header_button:hover {background-color: #555555; text-decoration: none; backgro
 #main > .content #time_form input[type=submit] {display: inline}
 #footer {color: #cccccc; font-weight: bold}
 #footer #footer_content {width: 1000px; margin: 0 auto; border-top: 1px solid #cccccc; padding-top: 10px}
-#footer #footer_content #twitter_link {float: right; background: url("/images/t_mini-b.png") no-repeat 0 0; padding-left: 20px}
+#footer #footer_content #twitter_link {float: right; background: url("/images/v7/logos/t_mini-b.png") no-repeat 0 0; padding-left: 20px}
 #footer a {color: #777777; font-size: 12px; padding: 0 2px}
 #footer a:hover {text-decoration: underline}
 .reports_pages #main > .content h3 {font-size: 1.4em; color: #555555}
@@ -795,7 +795,7 @@ a#fdbk_tab:hover {background-position: right top !important; background-color: #
 .accounts_pages.projects_page .accounts_pages.memberships_page .content_section .header_actions {float: right}
 .accounts_pages.projects_page .listing_table_header #create_new_project_button {float: left}
 .accounts_pages.projects_page .listing_table_header span {float: left}
-.accounts_pages.projects_page .listing_table_header #create_new_project_button {display: block; width: 123px; height: 33px; text-indent: -9999em; background: url(/images/v7/buttons/authenticated/project/create_project_button.png) no-repeat}
+.accounts_pages.projects_page .listing_table_header #create_new_project_button {display: block; width: 123px; height: 33px; text-indent: -9999em; background: url(/images/projects/create_project_button.png) no-repeat}
 .accounts_pages.projects_page .listing_table_header .account_projects_archive_toggle {float: left; font-size: 12px; margin-top: 7px; margin-right: 20px; color: #88c2e5}
 .accounts_pages.projects_page .listing_table {font-size: 12px}
 .accounts_pages.projects_page .listing_table .project_name {font-size: 13px}

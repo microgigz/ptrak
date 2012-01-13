@@ -1,3 +1,6 @@
+<%#
+# To apply heaer on a page
+%>
 <%= stylesheet_link_tag "/projects/non_stories_view_prod-release-20111025-20111221-3_pkg"  %>
 <%#*<header>%>
   <div id="header" class="notice_header">
@@ -5,7 +8,13 @@
       <div class="center">
       <%end%>
       <div class="inner">
-        <h1><a href="/">Pivotal Tracker</a></h1>        
+<%#*<<<<<<< HEAD%>
+        <h1><a href="/">Pivotal Tracker</a></h1>
+        <div class="navigation_area clearfix">
+          
+<%#*=======%>
+        <%#*<h1><a href="/">Pivotal Tracker</a></h1>%>
+<%#*>>>>>>> e5882bb597abf0b7ed8715e53a5decf283470c62%>
           <% if user_signed_in? %>
         <div class="navigation_area clearfix">
             <div class="welcome_message" >Welcome,<%= current_user.name.capitalize %></div>
@@ -52,11 +61,5 @@
         </div>
       <%end%>
     </div>
-    <script type="text/javascript">
-    //<![CDATA[
-    <%#*jQuery('.end_of_intro_period').replaceWith(new Date(1298106077000).asFriendlyDateString());%>
-    <%#*jQuery('.end_of_grandfather_period').replaceWith(new Date(1311127277000).asFriendlyDateString());%>
-    //]]>
-  </script>
   </div>
 <%#*</header>%>

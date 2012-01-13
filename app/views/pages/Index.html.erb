@@ -1,186 +1,120 @@
-<%#
-# Main index page
-%>
+ <%= content_for :header do %>
+ <%= javascript_include_tag "home/home" %>
+<%= javascript_include_tag "https://ssl.google-analytics.com/ga.js" %>
+<%= javascript_include_tag "https://use.typekit.com/kep3kek.js" %>
+<script type="text/javascript">
+    try{Typekit.load();}catch(e){}
+  </script>
+  <script type="text/javascript">
+    //<![CDATA[
+    window._gaq = window._gaq || [];
+    window._gaq.push(['_setAccount', 'UA-1687866-3']);
+    window._gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    //]]>
+  </script>
+<%= stylesheet_link_tag "home/home" %>
+<style type="text/css">
+    .tk-myriad-pro{font-family:"myriad-pro-1","myriad-pro-2",sans-serif;}.tk-myriad-pro-semi-condensed{font-family:"myriad-pro-semi-condensed-1","myriad-pro-semi-condensed-2",sans-serif;}
+  </style>
+  <%end%>
+<body class="marcom_page index">
+  <div id="wrapper">
+    <%= render :partial => 'layouts/header' %>
 
+    <% title 'Pivotal Tracker - Simple, Effective Agile Project Management and Team Collaboration Software, from Pivotal Labs' %>
     <div id="featured">
       <div class="center">
-        <!--<img  class="screenshot" src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/featured.png"/>-->
-        <%= image_tag("featured.png", :alt => "Replica", :class => "screenshot") %>
+        <%= image_tag "featured.png", :class => 'screenshot' %>
         <div class="inner">
-          <!--<h2>Deliver better software, faster.</h2>-->
           <h2>Build better software, faster.</h2>
-          <div class="hr_container"><hr></div>
-
+          <div class="hr_container"><hr/></div>
           <h4>Collaborative, lightweight agile project management tool, brought to you by the experts in agile software development.</h4>
-
-          <%= image_tag("featured.png", :alt => "Replica", :class => "screenshot") %>
-          <div class="inner">
-            <h2>Build better software, faster.</h2>
-            <div class="hr_container"><hr></div>
-            <h4>Collaborative, lightweight agile project management tool, brought to you by the experts in agile software development.</h4></hr>
-
-            <%if (signedin?)%>
-              <%= link_to "Signup",new_user_registration_path, :class => "button sign_up"%><!--<a href="https://www.pivotaltracker.com/signup/new" class="button sign_up ">Sign up</a>-->
-            <%end%>
-            <%= link_to "View Features",feature_path, :class => "button view_features"%><!--<a href="https://www.pivotaltracker.com/features" class="button view_features">View Features</a>-->
-          </div>
+          <%= link_to 'Sign up', '/', :class => "button sign_up" %>
+          <%= link_to 'View Features', feature_path, :class => "button view_features" %>
         </div>
       </div>
-      <div class="section grey">
-        <div class="center">
-          <div class="inner">
-            <ul>
-              <li>
-                <h3>Increase Visibility and Collaboration</h3>
-                <p>Bring everyone, even distributed teams into the same
-                  virtual room. Enable a more efficient way to agree on priorities and
-                  stay aligned with the entire team.</p>
-              </li>
-              <li>
-                <h3>Plan Based on Realistic Estimates</h3>
-                <p>Stay on target with Tracker's continuous, automatic prediction of milestone completion dates, based on your team's performance.</p>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <h3>Deliver on Customer Feedback</h3>
-                <p>Get the right product to the market sooner, based on
-                  continuous feedback and prioritization. Respond to changing needs and
-                  new requirements easily.</p>
-              </li>
-              <li>
-                <h3>Transform How You Build Software</h3>
-                <p>Supercharge your agile project teams with focused, real
-                  time collaboration. Accelerate agile adoption with a simple, proven
-                  process.</p>
-              </li>
-            </ul>
-            <ul>
-              <li><a href="https://www.pivotaltracker.com/tracker-for-iphone-and-ipad"><%=  image_tag("ios.png", :alt => "Pivotal Tracker iOS App") %><!--<img alt="Pivotal Tracker iOS App" src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/ios.png">--></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="section white">
-        <div class="center">
-          <div class="inner">
-            <h2>Join thousands of people and companies who have discovered a more productive way to work.</h2>
-            <div class="testimonial">
-              <div class="inner">
-                <blockquote>
-                  "Tracker is the ideal story tracking tool for truly Agile/XP
-                  environments. Its slim feature set keeps you focused on stories and
-                  velocity, rather than distracted with nuances and overloaded features
-                  and process. Being Agile is about keeping energy focused on writing
-                  code, not burning cycles on tools that turn out more and more process.
-                  Tracker's sweet spot is its concise, lightweight, only-what-you-need,
-                  user interface. I'm a fanboy."
-                </blockquote>
-                <p>-- Jud Valeski, CTO, GNIP</p>
-                <p><a href="https://www.pivotaltracker.com/testimonials" class="testimonials">See what others are saying</a></p>
-              </div>
-            </div>
-            <ul class="clientlist">
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("groupon.png", :alt => "Groupon") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/groupon.png" alt="Groupon">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("grockit.png", :alt =>"Grockit") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/grockit.png" alt="Grockit">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("mavenlink.png", :alt => "Mavenlink") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/mavenlink.png" alt="Mavenlink">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("newrelic.png", :alt =>" New Relic") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/newrelic.png" alt="New Relic">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("flowtown.png", :alt => "Flowtown") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/flowtown.png" alt="Flowtown">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("bestbuy.png", :alt => "Best Buy") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/bestbuy.png" alt="Best Buy">--></a></li>
-            </ul>
-            <ul class="clientlist">
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("zendesk.png", :alt => "Zendesk") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/zendesk.png" alt="Zendesk">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("emi.png", :alt => "EMI") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/emi.png" alt="EMI">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("getsatisfaction.png", :alt => "Get Satisfaction") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/getsatisfaction.png" alt="Get Satisfaction">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("diaspora.png", :alt => "Diaspora")%><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/diaspora.png" alt="Diaspora">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("balsamiq.png", :alt => "Balsamiq")%><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/balsamiq.png" alt="Balsamiq">--></a></li>
-              <li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("urbandictionary.png", :alt => "Urban Dictionary")%><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/urbandictionary.png" alt="Urban Dictionary">--></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div id="push"></div>
     </div>
-  <%#*</div>%>
-  <%#*<div class="section grey">%>
-    <%#*<div class="center">%>
-      <%#*<div class="inner">%>
-        <%#*<ul>%>
-          <%#*<li>%>
-            <%#*<h3>Increase Visibility and Collaboration</h3>%>
-            <%#*<p>Bring everyone, even distributed teams into the same%>
-              <%#*virtual room. Enable a more efficient way to agree on priorities and%>
-              <%#*stay aligned with the entire team.</p>%>
-          <%#*</li>%>
-          <%#*<li>%>
-            <%#*<h3>Plan Based on Realistic Estimates</h3>%>
-            <%#*<p>Stay on target with Tracker's continuous, automatic prediction of milestone completion dates, based on your team's performance.</p>%>
-          <%#*</li>%>
-        <%#*</ul>%>
-        <%#*<ul>%>
-          <%#*<li>%>
-            <%#*<h3>Deliver on Customer Feedback</h3>%>
-            <%#*<p>Get the right product to the market sooner, based on%>
-              <%#*continuous feedback and prioritization. Respond to changing needs and%>
-              <%#*new requirements easily.</p>%>
-          <%#*</li>%>
-          <%#*<li>%>
-            <%#*<h3>Transform How You Build Software</h3>%>
-            <%#*<p>Supercharge your agile project teams with focused, real%>
-              <%#*time collaboration. Accelerate agile adoption with a simple, proven%>
-              <%#*process.</p>%>
-          <%#*</li>%>
-        <%#*</ul>%>
-        <%#*<ul>%>
-          <%#*<li><a href="https://www.pivotaltracker.com/tracker-for-iphone-and-ipad"><%=  image_tag("ios.png", :alt => "Pivotal Tracker iOS App") %><!--<img alt="Pivotal Tracker iOS App" src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/ios.png">--></a></li>%>
-        <%#*</ul>%>
-      <%#*</div>%>
-    <%#*</div>%>
-  <%#*</div>%>
-  <%#*<div class="section white">%>
-    <%#*<div class="center">%>
-      <%#*<div class="inner">%>
-        <%#*<h2>Join thousands of people and companies who have discovered a more productive way to work.</h2>%>
-        <%#*<div class="testimonial">%>
-          <%#*<div class="inner">%>
-            <%#*<blockquote>%>
 
-<%#*<<<<<<< HEAD%>
-  
-<%#*=======%>
-              <%#*"Tracker is the ideal story tracking tool for truly Agile/XP%>
-              <%#*environments. Its slim feature set keeps you focused on stories and%>
-              <%#*velocity, rather than distracted with nuances and overloaded features%>
-              <%#*and process. Being Agile is about keeping energy focused on writing%>
-              <%#*code, not burning cycles on tools that turn out more and more process.%>
-              <%#*Tracker's sweet spot is its concise, lightweight, only-what-you-need,%>
-              <%#*user interface. I'm a fanboy."%>
-            <%#*</blockquote>%>
-            <%#*<p>-- Jud Valeski, CTO, GNIP</p>%>
-            <%#*<p><a href="https://www.pivotaltracker.com/testimonials" class="testimonials">See what others are saying</a></p>%>
-          <%#*</div>%>
-        <%#*</div>%>
-        <%#*<ul class="clientlist">%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("groupon.png", :alt => "Groupon") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/groupon.png" alt="Groupon">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("grockit.png", :alt =>"Grockit") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/grockit.png" alt="Grockit">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("mavenlink.png", :alt => "Mavenlink") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/mavenlink.png" alt="Mavenlink">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("newrelic.png", :alt =>" New Relic") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/newrelic.png" alt="New Relic">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("flowtown.png", :alt => "Flowtown") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/flowtown.png" alt="Flowtown">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("bestbuy.png", :alt => "Best Buy") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/bestbuy.png" alt="Best Buy">--></a></li>%>
-        <%#*</ul>%>
-        <%#*<ul class="clientlist">%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("zendesk.png", :alt => "Zendesk") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/zendesk.png" alt="Zendesk">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("emi.png", :alt => "EMI") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/emi.png" alt="EMI">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("getsatisfaction.png", :alt => "Get Satisfaction") %><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/getsatisfaction.png" alt="Get Satisfaction">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("diaspora.png", :alt => "Diaspora")%><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/diaspora.png" alt="Diaspora">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("balsamiq.png", :alt => "Balsamiq")%><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/balsamiq.png" alt="Balsamiq">--></a></li>%>
-          <%#*<li><a href="#" rel="nofollow" target="_blank"><%=  image_tag("urbandictionary.png", :alt => "Urban Dictionary")%><!--<img src="Pivotal%20Tracker%20-%20Simple,%20Effective%20Agile%20Project%20Management%20and%20Team%20Collaboration%20Software,%20from%20Pivotal%20Labs_files/urbandictionary.png" alt="Urban Dictionary">--></a></li>%>
-        <%#*</ul>%>
+    <div class="section grey">
+      <div class="center">
+        <div class="inner">
+          <ul>
+            <li>
+              <h3>Increase Visibility and Collaboration</h3>
+              <p>Bring everyone, even distributed teams into the same virtual room. Enable a more efficient way to agree on priorities and stay aligned with the entire team.</p>
+            </li>
+            <li>
+              <h3>Plan Based on Realistic Estimates</h3>
+              <p>Stay on target with Tracker's continuous, automatic prediction of milestone completion dates, based on your team's performance.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h3>Deliver on Customer Feedback</h3>
+              <p>Get the right product to the market sooner, based on continuous feedback and prioritization. Respond to changing needs and new requirements easily.</p>
+            </li>
+            <li>
+              <h3>Transform How You Build Software</h3>
+              <p>Supercharge your agile project teams with focused, real time collaboration. Accelerate agile adoption with a simple, proven process.</p>
+            </li>
+          </ul>
+          <ul>
+            <li><a href="/tracker-for-iphone-and-ipad"><img alt="Pivotal Tracker iOS App" src="https://cdn2-pivotaltracker.pantherssl.com/images/v7/marcom/home/screenshots/ios.png?1324523826" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-      <%#*</div>%>
-    <%#*</div>%>
-  <%#*</div>%>
-  <%#*<div id="push"></div>%>
-<%#*</body>%>
-<%#*>>>>>>> 9b6d9804e616d3e8ad832546164b17d75b0302cc%>
+    <div class="section white">
+      <div class="center">
+        <div class="inner">
+          <h2>Join thousands of people and companies who have discovered a more productive way to work.</h2>
+          <div class="testimonial">
+            <div class="inner">
+
+
+
+              <blockquote>
+
+
+                "We love Pivotal Tracker! It is a supremely awesome tool for helping us developer-folk do some of the hardest tasks we're faced with: estimating amounts of work in simple terms, helping clients re-prioritize work, and tracking our progress based on our own estimates. Thanks for making such a great piece of software."
+              </blockquote>
+              <p>-- Charles Brian Quinn, highgroove studios</p>
+
+
+
+
+              <p><a href="/testimonials" class="testimonials">See what others are saying</a></p>
+            </div>
+          </div>
+          <ul class="clientlist">
+            <li><a href="http://www.groupon.com" rel="nofollow" target="_blank"><img src="/images/groupon.png" alt="Groupon"></a></li>
+            <li><a href="http://www.grockit.com" rel="nofollow" target="_blank"><img src="/images/grockit.png" alt="Grockit"></a></li>
+            <li><a href="http://www.mavenlink.com" rel="nofollow" target="_blank"><img src="/images/mavenlink.png" alt="Mavenlink"></a></li>
+            <li><a href="http://www.newrelic.com" rel="nofollow" target="_blank"><img src="/images/newrelic.png" alt="New Relic"></a></li>
+            <li><a href="http://www.flowtown.com" rel="nofollow" target="_blank"><img src="/images/flowtown.png" alt="Flowtown"></a></li>
+            <li><a href="http://www.bestbuy.com" rel="nofollow" target="_blank"><img src="/images/bestbuy.png" alt="Best Buy"></a></li>
+          </ul>
+          <ul class="clientlist">
+            <li><a href="http://www.zendesk.com" rel="nofollow" target="_blank"><img src="/images/zendesk.png" alt="Zendesk"></a></li>
+            <li><a href="http://www.emimusic.com" rel="nofollow" target="_blank"><img src="/images/emi.png" alt="EMI"></a></li>
+            <li><a href="http://www.getsatisfaction.com" rel="nofollow" target="_blank"><img src="/images/getsatisfaction.png" alt="Get Satisfaction"></a></li>
+            <li><a href="http://www.joindiaspora.com" rel="nofollow" target="_blank"><img src="/images/diaspora.png" alt="Diaspora"></a></li>
+            <li><a href="http://www.balsamiq.com" rel="nofollow" target="_blank"><img src="/images/balsamiq.png" alt="Balsamiq"></a></li>
+            <li><a href="http://www.urbandictionary.com" rel="nofollow" target="_blank"><img src="/images/urbandictionary.png" alt="Urban Dictionary"></a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="push"></div>
+  </div>
+
+  <%= render :partial => 'layouts/footer' %>
+</body>
