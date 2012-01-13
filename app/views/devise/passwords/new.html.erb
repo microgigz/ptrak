@@ -1,12 +1,23 @@
-<h2>Forgot your password?</h2>
-
+<div class="section">
+  <div class="wrapper ">
+    <div class="dialog_column">
+      <div class="dialog">
+        <div id="sign_in" class="inner">
+<%#*<h2>Please Enter your email</h2>%>
+          <h2>Forgot Your Password</h2>
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+  <%#*<p><%= f.label :forgot_your_password, :id => "lbl_forgot_pwd" %>
+  <%= f.text_field :email, :placeholder => "Please Enter Your Email", :id => "txt_forgot_pwd" %>
 
-  <p><%= f.submit "Send me reset password instructions" %></p>
+  <p><%= f.submit "Send me reset password instructions", :id => "send_instructions" %></p>
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+<%#= render :partial => "devise/shared/links" %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

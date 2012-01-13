@@ -1,20 +1,10 @@
 Ptrak::Application.routes.draw do
-  devise_for :users , :controllers => { :registrations => "registrations",  :sessions => "sessions"}
+  devise_for :users, :controllers => { :registrations => "registrations"}
 
-  #get "project/new"
-
-  #get "project/show"
-
-  #get "sessions/new"
-
-  #get "users/new"
-
-  #get "users/show"
-  #get "stories/usecase"
-
-  match "pages/Index", :to => "pages#index"
+  match "pages/Index", :to => "pages#Index"
   #resources :sessions
   resources :projects
+  resource :users
   resources :stories do
     get :update_status, :on=>:member
   end
@@ -80,5 +70,5 @@ Ptrak::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+   match ':controller(/:action(/:id(.:format)))'
 end

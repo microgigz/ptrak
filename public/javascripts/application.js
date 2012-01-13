@@ -4,15 +4,5 @@
 
 $(document).ready(function()
 {
-    $input = $('input#user_email');
-
-    $input.focus( function()
-    {        
-        $input.css('color', $input.val() === DEFAULT_VALUE ? '#aaa' : '#000');
-
-        alert( "wow");
-        alert( $input === DEFAULT_VALUE);
-    });
-   
 
 });
