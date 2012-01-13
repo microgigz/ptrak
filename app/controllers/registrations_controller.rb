@@ -6,9 +6,9 @@ class RegistrationsController < Devise::RegistrationsController
     logger.debug "*****************************************"
     logger.debug "executed"
     logger.debug "*****************************************"
-    RAILS_DEFAULT_LOGGER.debug "called"
-    logout_user
-    redirect_to 'destroy_user_session_path'
+    
+    
+    'destroy_user_session_path'
 
   end
 #

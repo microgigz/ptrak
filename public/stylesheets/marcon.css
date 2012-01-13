@@ -196,7 +196,7 @@ div.center > div.inner {margin: 0 15px; overflow: hidden}
 #header ul.nav_links > li a:hover {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-decoration: none; background-color: #153b5c}
 #header ul.nav_links > li a.current {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-decoration: none; background-color: #153b5c}
 html, body {height: 100%}
-#wrapper {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -282px}
+#wrapper {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -282px;}
 .simple_overlay {display: none; z-index: 10000; background-color: #333333; -moz-box-shadow: 0 0 90px 5px #000000; -webkit-box-shadow: 0 0 90px #000000}
 .simple_overlay .close {background-image: url(/images/v7/marcom/buttons/close_overlay.png); position: absolute; right: -17px; top: -15px; cursor: pointer; height: 34px; width: 34px}
 .simple_overlay embed {display: block}
@@ -321,45 +321,46 @@ input[type="submit"]:hover, input[type="button"]:hover {
     float: left;
     font-size: 1.3em;
     font-weight: bold;
-    line-height: 65px;
+    /*line-height: 65px;*/
     margin-right: 12px;
     text-align: right;
     text-indent: 3px;
     text-shadow: 1px 1px 2px #333333;
     text-transform: uppercase;
     width: 170px;
+    margin-top: 20px;
 }
 
- #footer .section.light {
+#footer .section.light {
     border-top: 1px solid #444444;
     background: url(/images/footer_light_bg.png) repeat-x
 }
 
- #footer .section.light p {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
- #footer .section.light a {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
- #footer .section.light div.center {position: relative; background: url(/images/grey_fold_down.png) no-repeat center top}
- #footer .section.light div.center #embossed_logo {position: absolute; bottom: 0; right: 100%}
- #footer .section.light .article {float: left; width: 282px; margin: 0 68px 23px 0}
- #footer .section.light .article h4 {height: 34px; margin-top: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: -3px 0}
- #footer .section.light .article ul {margin-top: 5px; padding-top: 6px; background: url(/images/dotted_line.png) repeat-x left top}
- #footer .section.light .article ul li {padding-top: 4px}
- #footer .section.light .article.pivotal h4 {background-image: url(/images/text_developed_by_pivotal_labs.png)}
- #footer .section.light .article.pivotal a {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; color: #8cc5e9; background-color: #4b4b4b; font-family: Georgia, "Times New Roman", serif; font-size: 1.2em; font-style: italic; padding: 4px 10px 5px}
- #footer .section.light .article.pivotal a:hover {background-color: #444444}
- #footer .section.light .article.pivotal ul li + li {margin-top: 10px}
- #footer .section.light .article.blog h4 a {background-image: url(/images/text_blog.png); display: block; text-indent: -9999px; width: 53px; height: 34px}
- #footer .section.light .article.blog ul li {padding: 10px 2px 7px; background: url(/images/dotted_line.png) repeat-x left bottom}
- #footer .section.light .article.blog ul li:last-child {background-image: none}
- #footer .section.light .article.connect {width: 212px; margin-right: 0}
- #footer .section.light .article.connect h4 {background-image: url(/images/text_connect_with_us.png)}
- #footer .section.light .article.connect a strong {color: #dddddd; font-weight: normal}
- #footer .section.dark {height: 41px; line-height: 41px; background: url(/images/footer_dark_bg.png) repeat-x; font-weight: bold}
- #footer .section.dark span {color: #b9b9b9; font-size: 1.3em; text-shadow: 1px 1px 3px #000000}
- #footer .section.dark a {color: #ffffff; font-weight: 600}
- #footer .section.dark span + span {float: right; color: #cccccc}
- #footer .section.dark span + span a {padding-left: 3px; position: relative; top: 8px}
+#footer .section.light p {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
+#footer .section.light a {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
+#footer .section.light div.center {position: relative; background: url(/images/grey_fold_down.png) no-repeat center top}
+#footer .section.light div.center #embossed_logo {position: absolute; bottom: 0; right: 100%}
+#footer .section.light .article {float: left; width: 282px; margin: 0 68px 23px 0}
+#footer .section.light .article h4 {height: 34px; margin-top: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: -3px 0}
+#footer .section.light .article ul {margin-top: 5px; padding-top: 6px; background: url(/images/dotted_line.png) repeat-x left top}
+#footer .section.light .article ul li {padding-top: 4px}
+#footer .section.light .article.pivotal h4 {background-image: url(/images/text_developed_by_pivotal_labs.png)}
+#footer .section.light .article.pivotal a {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; color: #8cc5e9; background-color: #4b4b4b; font-family: Georgia, "Times New Roman", serif; font-size: 1.2em; font-style: italic; padding: 4px 10px 5px}
+#footer .section.light .article.pivotal a:hover {background-color: #444444}
+#footer .section.light .article.pivotal ul li + li {margin-top: 10px}
+#footer .section.light .article.blog h4 a {background-image: url(/images/text_blog.png); display: block; text-indent: -9999px; width: 53px; height: 34px}
+#footer .section.light .article.blog ul li {padding: 10px 2px 7px; background: url(/images/dotted_line.png) repeat-x left bottom}
+#footer .section.light .article.blog ul li:last-child {background-image: none}
+#footer .section.light .article.connect {width: 212px; margin-right: 0}
+#footer .section.light .article.connect h4 {background-image: url(/images/text_connect_with_us.png)}
+#footer .section.light .article.connect a strong {color: #dddddd; font-weight: normal}
+#footer .section.dark {height: 41px; line-height: 41px; background: url(/images/footer_dark_bg.png) repeat-x; font-weight: bold}
+#footer .section.dark span {color: #b9b9b9; font-size: 1.3em; text-shadow: 1px 1px 3px #000000}
+#footer .section.dark a {color: #ffffff; font-weight: 600}
+#footer .section.dark span + span {float: right; color: #cccccc}
+#footer .section.dark span + span a {padding-left: 3px; position: relative; top: 8px}
 
- input[type="submit"][disabled], input[type="button"][disabled] {cursor: default}
+input[type="submit"][disabled], input[type="button"][disabled] {cursor: default}
 select {margin-right: 5px; padding-top: 1px}
 div#or {position: relative; height: 0.6em; width: 700px; margin-bottom: 30px; border-bottom: 1px solid black}
 div#or span {position: absolute; left: 3em; padding: 0 0.5em; background-color: white}
@@ -1214,3 +1215,74 @@ body.imports_page .errorText {display: block; font-size: 13px; font-weight: bold
 .invitations_page .existing_members.expandable.expanded p {line-height: 1.2em; height: auto; overflow: none}
 .invitations_page .existing_members.expandable.expanded a.expander span:before {content: "less"}
 .invitations_page h2 > span {font-weight: normal; font-size: 12px; padding-left: 20px}
+
+
+/*
+body.marcom_page.signup .section.grey > div.center > div.inner {margin-left: 70px}
+body.marcom_page.signup .section.grey div.testimonial {float: left; width: 290px; margin-right: 110px}
+body.marcom_page.signup .section.grey div.testimonial blockquote {font-size: 1.2em}
+body.marcom_page.signup .section.grey div.testimonial p {font-size: 1.2em}*/
+
+/*body.marcom_page .section.grey {
+  background: url("/images/grey_bg.png") repeat-x scroll left top #F3F3F3;
+  border-top: 1px solid #FFFFFF;
+}
+.section.grey div.center {
+  background: url("/images/grey_fold_up.png") no-repeat scroll center bottom transparent;
+  height: 100%;
+}*/
+/*.section.grey{
+    height: 300px;
+}
+.section.grey > div.center > div.inner {
+    margin-left: 70px
+}
+.section.grey div.testimonial {
+    float: left; width: 290px; margin-right: 110px
+}
+.section.grey div.testimonial blockquote {
+    font-size: 1.2em
+}
+.section.grey div.testimonial p {
+    font-size: 1.2em
+}*/
+
+#i_sign_up{
+    background: url("/images/light_bg.jpg") repeat scroll center top transparent;
+    margin-top: 0;
+    padding-top: 25px;
+    height: 400px;
+}
+
+#i_center{    
+    margin-left: 250px;    
+    width: 50%;
+}
+i_section, .i_grey{  
+    background: url("/images/grey_bg.png") repeat-x scroll left top #F3F3F3;
+    border-top: 1px solid #FFFFFF;
+    margin: 0;
+}
+
+#i2_center {
+    background: url("/images/grey_fold_up.png") no-repeat scroll center bottom transparent;
+    height: 100%;
+    margin: 0 auto;
+    width: 960px;
+}
+#i2_inner{
+    overflow: hidden;
+    padding: 35px 0 20px;
+    margin-left: 70px;
+}
+.i_testimonial{
+    float: left;
+    margin-right: 110px;
+    width: 290px;
+}
+.t_inner blockquote{
+    color: #000000;
+    line-height: 1.4em;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
