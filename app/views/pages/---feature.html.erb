@@ -1,24 +1,23 @@
-<%= content_for :header do %>
-  <%= stylesheet_link_tag "features/feature",:media => 'screen' %>
-  <%= javascript_include_tag "features/ga" %>
-  <%= javascript_include_tag "features/home" %>
-  <%= javascript_include_tag "features/feature" %>
-  <%#*<script src="/images/features/marcom_prod-release-20111025-20111221-3_pkg.js" type="text/javascript"></script>%>
-  <%#*<script type="text/javascript" src="/images/features/kep3kek.js"></script>%>
+<!DOCTYPE html>
+<head>
+  <link href="/images/feature/marcom_prod-release-20111025-20111129-1_pkg.css" media="screen" rel="Stylesheet" type="text/css"/>
+  <%= javascript_include_tag "feature/ga" %>
+
+  <%= javascript_include_tag "features/jquery.tools.min" %>
+
+  <%= javascript_include_tag "kep3kek" %>
+
   <style type="text/css">.tk-myriad-pro{font-family:"myriad-pro-1","myriad-pro-2",sans-serif;}.tk-myriad-pro-semi-condensed{font-family:"myriad-pro-semi-condensed-1","myriad-pro-semi-condensed-2",sans-serif;}</style>
-  <%#*<link href="/images/features/kep3kek-e.css" rel="stylesheet">%>
+
+  <%= stylesheet_link_tag 'kep3kek-e' %>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-  <%#*<script src="/images/features/features_prod-release-20111025-20111221-3_pkg.js" type="text/javascript"></script>%>
-
+  <%= javascript_include_tag "features/features_prod-release-20111025-20111129-1_pkg"  %>
   <script type="text/javascript">
     //<![CDATA[
     window._gaq = window._gaq || [];
     window._gaq.push(['_setAccount', 'UA-1687866-3']);
     window._gaq.push(['_trackPageview']);
-
-
-
+    
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
@@ -27,136 +26,7 @@
 
     //]]>
   </script>
-  <style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
-    /** reset styling **/
-    .firebugResetStyles {
-      z-index: 2147483646 !important;
-      top: 0 !important;
-      left: 0 !important;
-      display: block !important;
-      border: 0 none !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      outline: 0 !important;
-      min-width: 0 !important;
-      max-width: none !important;
-      min-height: 0 !important;
-      max-height: none !important;
-      position: fixed !important;
-      -moz-transform: rotate(0deg) !important;
-      -moz-transform-origin: 50% 50% !important;
-      -moz-border-radius: 0 !important;
-      -moz-box-shadow: none !important;
-      background: transparent none !important;
-      pointer-events: none !important;
-    }
-
-    .firebugBlockBackgroundColor {
-      background-color: transparent !important;
-    }
-
-    .firebugResetStyles:before, .firebugResetStyles:after {
-      content: "" !important;
-    }
-    /**actual styling to be modified by firebug theme**/
-    .firebugCanvas {
-      display: none !important;
-    }
-
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    .firebugLayoutBox {
-      width: auto !important;
-      position: static !important;
-    }
-
-    .firebugLayoutBoxOffset {
-      opacity: 0.8 !important;
-      position: fixed !important;
-    }
-
-    .firebugLayoutLine {
-      opacity: 0.4 !important;
-      background-color: #000000 !important;
-    }
-
-    .firebugLayoutLineLeft, .firebugLayoutLineRight {
-      width: 1px !important;
-      height: 100% !important;
-    }
-
-    .firebugLayoutLineTop, .firebugLayoutLineBottom {
-      width: 100% !important;
-      height: 1px !important;
-    }
-
-    .firebugLayoutLineTop {
-      margin-top: -1px !important;
-      border-top: 1px solid #999999 !important;
-    }
-
-    .firebugLayoutLineRight {
-      border-right: 1px solid #999999 !important;
-    }
-
-    .firebugLayoutLineBottom {
-      border-bottom: 1px solid #999999 !important;
-    }
-
-    .firebugLayoutLineLeft {
-      margin-left: -1px !important;
-      border-left: 1px solid #999999 !important;
-    }
-
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    .firebugLayoutBoxParent {
-      border-top: 0 none !important;
-      border-right: 1px dashed #E00 !important;
-      border-bottom: 1px dashed #E00 !important;
-      border-left: 0 none !important;
-      position: fixed !important;
-      width: auto !important;
-    }
-
-    .firebugRuler{
-      position: absolute !important;
-    }
-
-    .firebugRulerH {
-      top: -15px !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 14px !important;
-      background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x !important;
-      border-top: 1px solid #BBBBBB !important;
-      border-right: 1px dashed #BBBBBB !important;
-      border-bottom: 1px solid #000000 !important;
-    }
-
-    .firebugRulerV {
-      top: 0 !important;
-      left: -15px !important;
-      width: 14px !important;
-      height: 100% !important;
-      background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y !important;
-      border-left: 1px solid #BBBBBB !important;
-      border-right: 1px solid #000000 !important;
-      border-bottom: 1px dashed #BBBBBB !important;
-    }
-
-    .overflowRulerX > .firebugRulerV {
-      left: 0 !important;
-    }
-
-    .overflowRulerY > .firebugRulerH {
-      top: 0 !important;
-    }
-
-    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    .fbProxyElement {
-      position: fixed !important;
-      pointer-events: auto !important;
-    }</style>
-  <%end%>
+</head>
 <body class="marcom_page features">
 
   <div id="wrapper">
@@ -164,38 +34,38 @@
       ENVIRONMENT='prod'
     </script>
 
-    <%= render :partial => 'layouts/header' %>
-
-
     <div id="featured">
       <div class="center">
         <div class="inner">
           <div class="features_tour">
             <h2>Features Tour</h2>
+            <% if (signedin?) %>
+              <%= link_to "Sign up",new_user_registration_path, :class => "button sign_up"%>
 
-            <a href="/" class="button sign_up ">Sign up</a>
 
+            <%end%>
           </div>
 
           <div style="display: block;" class="feature_content overview enabled">
 
             <div class="feature_right">
               <a href="#">
-                <img rel="#overview_video" class="screenshot" src="/images/features/overview.png">
+                <img rel="#overview_video" class="screenshot" src="/images/features/overview.png"/>
               </a>
 
-              <div class="simple_overlay" id="overview_video">
+              <div style="top: 50.52px; left: 207px; position: fixed; display: none;" class="simple_overlay" id="overview_video">
                 <div class="close"></div>
                 <object>
+                  <embed src="/player/flvplayer.swf?file=/video/pivotal-tracker-intro.flv&autostart=true" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="676" width="850"/>
 
-                  <embed src="/images/features/flvplayer.swf?file=/video/pivotal-tracker-intro.flv&autostart=true" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" height="676" width="850"/>
                 </object>
+
               </div>
 
               <script type="text/javascript">
                 $(document).ready(function() {
                   $("img[rel]").overlay({
-                    top: '18%'
+                    top: '10%'
                   });
                 });
               </script>
@@ -206,14 +76,14 @@
               <div class="hr_container"><hr></div>
               <h4>“Forget the bug tracker or issue tool you're using now. This
                 is an iPod. You're using a Zune. You can run your whole company on it.
-                And you probably should.” <span>-- Nivi, Venture Hacks</span></h4>
+                And you probably should.” <span>-- Nivi, Venture Hacks</span></h4></hr>
             </div>
           </div>
 
 
           <div class="feature_content tracker_story">
             <div class="feature_right">
-              <img class="screenshot" src="/images/features/tracker_story.png">
+              <img class="screenshot" src="/images/features/tracker_story.png"/>
             </div>
             <div class="feature_left">
               <h3>The Tracker Story</h3>
@@ -221,41 +91,41 @@
               <h4>Pivotal Labs is a consulting shop and not a product company,
                 so it might seem odd for us to release an agile project management tool
                 like Tracker. We didn't build Tracker for the sake of building a
-                product; we needed it.</h4>
+                product; we needed it.</h4></hr>
             </div>
           </div>
 
 
           <div class="feature_content one_view">
             <div class="feature_right">
-              <img class="screenshot" src="/images/features/one_view.png">
+              <img class="screenshot" src="/images/features/one_view.png"/>
             </div>
             <div class="feature_left">
               <h3>One View.<br>Plan and work seamlessly.</h3>
               <div class="hr_container"><hr></div>
               <h4>From exec to developer, everyone shares one view. Collaborate
-                at a fine-grained level, without losing sight of the bigger picture.</h4>
+                at a fine-grained level, without losing sight of the bigger picture.</h4></hr>
             </div>
           </div>
 
 
           <div class="feature_content real_time">
             <div class="feature_right">
-              <img class="screenshot" src="/images/features/realtime_photo.png">
+              <img class="screenshot" src="/images/features/realtime_photo.png"/>
             </div>
             <div class="feature_left">
               <h3>Real Time, Focused Collaboration.</h3>
               <div class="hr_container"><hr></div>
               <h4>Manage and react to everything that matters on your project,
                 in real time. Bring your distributed team together into one virtual
-                room, and collaborate around a shared, prioritized backlog.</h4>
+                room, and collaborate around a shared, prioritized backlog.</h4></hr>
             </div>
           </div>
 
 
           <div class="feature_content agile">
             <div class="feature_right">
-              <img class="screenshot" src="/images/features/agile_burndown.png">
+              <img class="screenshot" src="/images/features/agile_burndown.png"/>
             </div>
             <div class="feature_left">
               <h3>Agile Development, by the Experts.</h3>
@@ -305,7 +175,7 @@
           <div class="features_nav_wrapper">
             <a id="navPrev" href="#" onclick="return false;" class="nav prev"><span>Previous</span></a>
             <div class="inner">
-              <ul style="width: 1151.58px;" id="features_nav">
+              <ul style="width: 1136px;" id="features_nav">
                 <li><a href="#overview" class="selected">Overview</a></li>
                 <li><a href="#tracker_story">The Tracker Story</a></li>
                 <li><a href="#one_view">One View</a></li>
@@ -330,12 +200,12 @@
             <ul>
               <li>
                 <h4>What is Pivotal Tracker?</h4>
-                <p><a href="https://www.pivotaltracker.com/">Pivotal Tracker</a> is an easy to use, agile project management tool that brings focused collaboration to software development teams. Built by <a href="http://www.pivotallabs.com/">Pivotal Labs</a>, it embodies proven agile methods, based on experience from hundreds of successful large scale <a href="http://www.pivotallabs.com/clients" target="_blank">projects</a>. </p>
+                <p><a href="https://#/">Pivotal Tracker</a> is an easy to use, agile project management tool that brings focused collaboration to software development teams. Built by <a href="http://www.pivotallabs.com/">Pivotal Labs</a>, it embodies proven agile methods, based on experience from hundreds of successful large scale <a href="http://www.pivotallabs.com/clients" target="_blank">projects</a>. </p>
               </li>
               <li>
                 <h4>Join the Community</h4>
                 <p>Pivotal Tracker is the agile project management tool of
-                  choice for over 310,000 users across thousands of companies, from large
+                  choice for over 300,000 users across thousands of companies, from large
                   public companies to fast growing startups, and open source development
                   teams.</p>
               </li>
@@ -538,7 +408,7 @@
               <li>
                 <img src="/images/features/birds_eye_view.png">
                 <h4>Get on the Same Page</h4>
-                <p>With <a href="https://www.pivotaltracker.com/">Pivotal Tracker</a>,
+                <p>With <a href="https://#/">Pivotal Tracker</a>,
                   everyone shares the same, up to the minute view of what's going on with
                   the project, and what needs to be done next. It lets product owners
                   know in intimate detail where things are, without having to ask, and
@@ -616,7 +486,7 @@
                 <p>Whether your team is in the same room, across the hall
                   or across the world, Tracker keeps everyone in sync with the latest
                   changes. Not logged in? Tracker can keep you up to date through email,
-                  RSS, <a href="https://www.pivotaltracker.com/help/integrations#twitter">Twitter</a> or <a href="https://www.pivotaltracker.com/help/integrations#campfire">Campfire</a>, or use web callbacks to keep you up-to-date however you like.</p>
+                  RSS, <a href="https://#/help/integrations#twitter">Twitter</a> or <a href="https://#/help/integrations#campfire">Campfire</a>, or use web callbacks to keep you up-to-date however you like.</p>
               </li>
             </ul>
             <ul>
@@ -671,7 +541,7 @@
             <div class="headline">
               <img src="/images/features/realworld_xp.png">
               <h3 class="callout">Based on Real-World Experience</h3>
-              <p class="callout">The agile, iterative workflow and story management in <a href="https://www.pivotaltracker.com/">Pivotal Tracker</a> embodies years of experience by Pivotal Labs on real world <a href="http://www.pivotallabs.com/clients" target="_blank">client projects</a>. This is agile project management that really works!</p>
+              <p class="callout">The agile, iterative workflow and story management in <a href="https://#/">Pivotal Tracker</a> embodies years of experience by Pivotal Labs on real world <a href="http://www.pivotallabs.com/clients" target="_blank">client projects</a>. This is agile project management that really works!</p>
             </div>
           </div>
         </div>
@@ -713,7 +583,7 @@
               <li>
                 <img src="/images/features/workflow.png">
                 <h4>Simple, Effective Workflow</h4>
-                <p>Jump right into your project with a <a href="https://www.pivotaltracker.com/features#workflow">simple workflow</a>
+                <p>Jump right into your project with a <a href="https://#/features#workflow">simple workflow</a>
                   that emphasizes rapid delivery and lots of feedback. Simplify your
                   process, rather than struggle trying to manage shifting complexity.</p>
               </li>
@@ -794,7 +664,7 @@
                   stories, huddle as a team, and estimate them in terms of complexity
                   using 'points'. To get started, take a really small story, give it 1
                   point, and estimate the rest keeping relative complexity in mind. This
-                  helps <a href="https://www.pivotaltracker.com/">Pivotal Tracker</a>
+                  helps <a href="https://#/">Pivotal Tracker</a>
                   predict when you might be finished with a milestone or release, but more
                   importantly, estimation drives important conversations and helps you
                   flesh out hidden complexity early.</p>
@@ -828,7 +698,7 @@
                 <p>Development work begins when your team starts the first
                   story in the Current panel, which shows this week's iteration from the
                   Backlog. As coding for a given story is completed, the whole team will
-                  see that story change state and color <a href="https://www.pivotaltracker.com/features#real_time">in real time</a>,
+                  see that story change state and color <a href="https://#/features#real_time">in real time</a>,
                   giving everyone visibility where things stand with the project.
                   Developers always know what they have to do next by grabbing the next
                   available story from the backlog.</p>
@@ -839,7 +709,7 @@
                 <p>Stories are evolving conversations, it's easy for
                   anyone to engage by posting comments on stories, and receiving instant
                   notifications via email, Twitter, or RSS. Bring your distributed team
-                  into the <a href="https://www.pivotaltracker.com/features#one_view">same virtual room</a>!</p>
+                  into the <a href="https://#/features#one_view">same virtual room</a>!</p>
               </li>
               <li>
                 <img src="/images/features/workflow_acceptance.png">
@@ -875,7 +745,7 @@
             <div class="headline">
               <img src="/images/features/game.png">
               <h3 class="callout">Fun, simple, powerful.</h3>
-              <p class="callout">It’s been said that <strong><a href="https://www.pivotaltracker.com/">Pivotal Tracker</a> turns work into a game.</strong>
+              <p class="callout">It’s been said that <strong><a href="https://#/">Pivotal Tracker</a> turns work into a game.</strong>
                 Keep working to improve your velocity by honing your software
                 development process, identifying problem areas through the transparency
                 provided by Tracker. As your team takes stories through their life
@@ -900,7 +770,7 @@
                 <li>
                   <img src="/images/features/api.png">
                   <h4>API</h4>
-                  <p>It's easy to extend Tracker and build your own tools using the <a href="https://www.pivotaltracker.com/help/api">Tracker Developer API</a>. There is a growing collection of useful <a href="https://www.pivotaltracker.com/help/thirdpartytools">third-party tools</a> already available.</p>
+                  <p>It's easy to extend Tracker and build your own tools using the <a href="https://#/help/api">Tracker Developer API</a>. There is a growing collection of useful <a href="https://#/help/thirdpartytools">third-party tools</a> already available.</p>
                 </li>
               </ul>
               <ul>
@@ -916,7 +786,7 @@
                   <h4>Public Projects</h4>
                   <p>Open source teams can harness the collaborative power
                     of Tracker and share progress with the community, with public projects.
-                    Check out some <a href="https://www.pivotaltracker.com/public_projects">public projects</a> now!</p>
+                    Check out some <a href="https://#/public_projects">public projects</a> now!</p>
                 </li>
               </ul>
             </div>
@@ -1010,17 +880,17 @@
               <h3>Built In Integrations</h3>
               <ul>
                 <li>
-                  <h4><a href="https://www.pivotaltracker.com/help/integrations#lighthouse">Lighthouse</a><img class="logo" src="/images/features/lighthouse_logo.png"></h4>
+                  <h4><a href="https://#/help/integrations#lighthouse">Lighthouse</a><img class="logo" src="/images/features/lighthouse_logo.png"></h4>
                   <p>See and import your Lighthouse tickets directly into
                     Tracker with drag and drop, and keep them updated as you collaborate and
                     complete related stories.</p>
                 </li>
                 <li>
-                  <h4><a href="https://www.pivotaltracker.com/help/integrations#zendesk">Zendesk</a><img class="logo" src="/images/features/logo_zendesk.png"></h4>
-                  <p>Turn your Zendesk support tickets that involve bug fixes into Tracker stories, and reflect status of these to your support team.</p>
+                  <h4><a href="https://#/help/integrations#zendesk">Zendesk</a><img class="logo" src="/images/features/logo_zendesk.png"></h4>
+                  <p>Turn your Zendesk support tickets that involve bux fixes into Tracker stories, and reflect status of these to your support team.</p>
                 </li>
                 <li>
-                  <h4><a href="https://www.pivotaltracker.com/help/integrations#bugzilla">Bugzilla</a><img class="logo" src="/images/features/bugzilla_logo.png"></h4>
+                  <h4><a href="https://#/help/integrations#bugzilla">Bugzilla</a><img class="logo" src="/images/features/bugzilla_logo.png"></h4>
                   <p>Report and manage your bugs in this popular defect
                     tracking tool, and use Tracker in conjunction to prioritize them along
                     with feature work and collaborate in real time.</p>
@@ -1028,21 +898,21 @@
               </ul>
               <ul>
                 <li>
-                  <h4><a href="https://www.pivotaltracker.com/help/integrations#jira">JIRA</a><img class="logo" src="/images/features/JIRA_logo.png"></h4>
+                  <h4><a href="https://#/help/integrations#jira">JIRA</a><img class="logo" src="/images/features/JIRA_logo.png"></h4>
                   <p>Leverage the openness and flexibility of JIRA while
                     keeping your team focused with Tracker. Import and link your issues via
                     drag and drop, and share story progress and conversation with JIRA
                     users.</p>
                 </li>
                 <li>
-                  <a href="https://www.pivotaltracker.com/help/integrations#get_satisfaction"><h4 class="getsatisfaction">Get Satisfaction</h4></a>
+                  <a href="https://#/help/integrations#get_satisfaction"><h4 class="getsatisfaction">Get Satisfaction</h4></a>
                   <p>Engage with your user community easily. View, import,
                     and collaborate around ideas, questions, and problems posted for your
                     product on your Get Satisfaction powered support site.</p>
                 </li>
                 <li>
-                  <h4><a href="https://www.pivotaltracker.com/help/integrations#other">Create your own</a><img class="logo" src="/images/features/api_logo.png"></h4>
-                  <p>An open <a href="https://www.pivotaltracker.com/help/integrations#other">integration</a> framework, a rich <a href="https://www.pivotaltracker.com/help/api">developer API</a>, and <a href="https://www.pivotaltracker.com/help/integrations#activity_web_hook">activity webhooks</a> allow you to connect Tracker with just about any software tool in your workflow.</p>
+                  <h4><a href="https://#/help/integrations#other">Create your own</a><img class="logo" src="/images/features/api_logo.png"></h4>
+                  <p>An open <a href="https://#/help/integrations#other">integration</a> framework, a rich <a href="https://#/help/api">developer API</a>, and <a href="https://#/help/integrations#activity_web_hook">activity webhooks</a> allow you to connect Tracker with just about any software tool in your workflow.</p>
                 </li>
               </ul>
             </div>
@@ -1058,58 +928,5 @@
   <noscript>
     <div id='js_required'>Tracker requires JavaScript. Please enable it in your browser.</div>
   </noscript>
-  <div id="footer">
-    <div class="section light">
-      <div class="center">
-        <img alt="Pivotal Labs" id="embossed_logo" src="/images/features/pivotallabs_embossed.png">
-        <div class="inner">
-          <div class="article pivotal">
-            <h4>Developed by Pivotal Labs</h4>
-            <ul>
-              <li>
-                <p>Pivotal Labs is the recognized leader in agile software
-                  development. We have successfully delivered hundreds of client
-                  products, including Pivotal Tracker, our own agile project management
-                  software. Our disciplined agile techniques accelerate development,
-                  reduce risk, and increase responsiveness to market trends.</p>
-              </li>
-              <li>
-                <a href="http://www.pivotallabs.com/">Learn more about Pivotal Labs &gt;</a>
-              </li>
-            </ul>
-          </div>
-          <div class="article blog">
-            <h4><a href="http://www.pivotallabs.com/tracker">Blog</a></h4>
-            <ul>
-              <li><a href="https://pivotallabs.com/users/ahogan/blog/articles/1980-pivotal-labs-has-new-opportunities-in-web-mobile-and-at-tracker" target="_blank">Pivotal Labs has new opportunities in web, mo...</a></li><li><a href="https://pivotallabs.com/users/dan/blog/articles/1975-pivotal-tracker-api-v2-to-be-removed-on-jan-27" target="_blank">Pivotal Tracker API V2 To Be Removed on Jan 27</a></li><li><a href="https://pivotallabs.com/users/dan/blog/articles/1970-apigee-pivotal-tracker-api-console" target="_blank">Apigee Pivotal Tracker API Console</a></li><li><a href="https://pivotallabs.com/users/dan/blog/articles/1961-pivotal-tracker-introductory-webinar-next-wed-dec-21-register-now-" target="_blank">Pivotal Tracker Introductory Webinar Next Wed...</a></li>
-            </ul>
-          </div>
-          <div class="article connect">
-            <h4>Connect with us</h4>
-            <ul>
-              <li><a href="http://www.twitter.com/pivotaltracker">Follow us <strong>@pivotaltracker</strong></a></li>
-              <li><a href="mailto:tracker@pivotallabs.com">Email us <strong>tracker@pivotallabs.com</strong></a></li>
-              <li><a href="https://www.pivotaltracker.com/policy/privacy">Privacy Policies</a></li>
-              <li><a href="https://www.pivotaltracker.com/policy/eula">Terms of Service</a></li>
-              <li><a href="https://www.pivotaltracker.com/help">FAQ</a></li>
-              <li><a href="https://www.pivotaltracker.com/help/api?version=v3">API</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section dark">
-      <div class="center">
-        <div class="inner">
-          <span>© 2012 Pivotal Labs, Inc.</span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-
-
-
-
-</body></html>
+</body>

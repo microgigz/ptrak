@@ -11,10 +11,19 @@
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
         <div class="content_scetion">
           <h1>MY PROFILE</h1>
-          <%= devise_error_messages! %>
+
+
           <table class="form_table">
             <tbody>
-              
+              <%= devise_error_messages! %>
+              <tr>
+                <td class="label_column">
+                  <%= f.label :username %>
+                </td>
+                <td class="field_column">
+                  <%= f.text_field :username, :class => "settings_field"%>
+                </td>
+              </tr>
               <tr>
                 <td class="label_column">
                   <%= f.label :name %>
@@ -25,10 +34,27 @@
               </tr>
               <tr>
                 <td class="label_column">
+                  <%= f.label :Initials %>
+                </td>
+                <td class="field_column">
+                  <%= f.text_field :Initials, :class => "settings_field"%>
+                </td>
+              </tr>
+              <tr>
+                <td class="label_column">
                   <%= f.label :email %>
                 </td>
                 <td class="field_column">
                   <%= f.text_field :email, :class => "settings_field"%>
+                </td>
+              </tr>
+              <tr>
+                <td class="label_column">
+                  <%= f.label :start_page %>
+                </td>
+                <td class="field_column">
+                  <% selection = "Always start on the Dashboard", "Most recent project or the Dashboard when there are new messages" %>
+                  <%= f.select :start_page,selection %>
                 </td>
               </tr>
               <tr>
@@ -205,8 +231,6 @@
             </tbody>
           </table>
         </div>
-
-        <p></p>
       <% end %>
 
       <h3>Cancel my account</h3>
@@ -217,4 +241,6 @@
     </div>
   </div>
 
+
 </div>
+

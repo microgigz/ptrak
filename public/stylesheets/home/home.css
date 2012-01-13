@@ -1,0 +1,634 @@
+/* 
+    Document   : index
+    Created on : Jan 9, 2012, 3:55:24 PM
+    Author     : administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent}
+body {line-height: 1}
+ol, ul {list-style: none}
+blockquote, q {quotes: none}
+blockquote:before {content: ''; content: none}
+blockquote:after {content: ''; content: none}
+q:before {content: ''; content: none}
+q:after {content: ''; content: none}
+:focus {outline: 0}
+ins {text-decoration: none}
+del {text-decoration: line-through}
+table {border-collapse: collapse; border-spacing: 0}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+*:first-child + html .clearfix {zoom: 1}
+.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+html {font-size: 125% !important; font-family: Arial, Helvetica, sans-serif}
+body {font-size: 50%; line-height: 1.3}
+a {color: #327a9f; text-decoration: none}
+a:hover {text-decoration: underline}
+a:active {outline: none}
+a:focus {outline: none}
+p {color: #666666; font-size: 1.2em; line-height: 1.4; margin-bottom: 1em}
+blockquote {font-family: Georgia, "Times New Roman", serif; font-size: 1.3em; font-style: italic; color: #666666}
+select, input, textarea {font-size: 12px; font-family: Arial, Helvetica, sans-serif}
+li, ul, div {margin: 0; padding: 0}
+li {list-style: none outside none}
+input[type=submit]::-moz-focus-inner {border: 0}
+div.center {width: 960px; margin: 0 auto}
+div.center > div.inner {margin: 0 15px; overflow: hidden}
+.right {float: right}
+.left {float: left}
+#header {height: 45px; background: #256188; overflow: hidden}
+#header h1 {float: left; width: 326px; height: 25px; margin-top: 11px; margin-bottom: 0; padding: 0}
+#header h1 a {display: block; width: 100%; height: 100%; text-indent: -9999em; background: url(/images/pivotal_tracker_white.png) no-repeat left top}
+#header ul.nav_links {float: right; margin-top: 11px; *width: 750px}
+#header ul.nav_links > li {float: left; width: auto}
+#header ul.nav_links > li + li {margin-left: 17px}
+#header ul.nav_links > li a {display: block; color: #ffffff; font-size: 1.1em; font-weight: bold; line-height: 24px; padding: 0 10px; text-transform: uppercase; text-shadow: 1px 1px 3px #111111}
+#header ul.nav_links > li a:hover {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-decoration: none; background-color: #153b5c}
+#header ul.nav_links > li a.current {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; text-decoration: none; background-color: #153b5c}
+html, body {height: 100%}
+#wrapper {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -282px}
+.simple_overlay {display: none; z-index: 10000; background-color: #333333; -moz-box-shadow: 0 0 90px 5px #000000; -webkit-box-shadow: 0 0 90px #000000}
+.simple_overlay .close {background-image: url(/images/close_overlay.png); position: absolute; right: -17px; top: -15px; cursor: pointer; height: 34px; width: 34px}
+.simple_overlay embed {display: block}
+a.button.white {color: #256188; background-color: #ffffff}
+a.button.white:hover {background-color: #256188; color: #ffffff}
+a.outlined.button {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; color: #256188; border: 1px solid #cccccc; font-size: 11px; font-weight: bold; padding: 6px 7px 4px; text-transform: uppercase}
+a.outlined.button:hover {text-decoration: none}
+.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+.wf-loading #featured h4 {visibility: hidden}
+.wf-loading .section h2 {visibility: hidden}
+.wf-loading .section.grey h3 {visibility: hidden}
+.wf-loading .section.grey p {visibility: hidden}
+.wf-loading #footer p {visibility: hidden}
+.wf-loading #footer .section.light ul li a {visibility: hidden}
+.wf-loading .marcom_page.pricing #featured ul li {visibility: hidden}
+.wf-loading .marcom_page.pricing .notice_header h2 {visibility: hidden}
+.wf-loading .marcom_page.pricing .notice_header p {visibility: hidden}
+.wf-loading .public_projects .section {visibility: hidden}
+.wf-active #featured h4 {visibility: visible}
+.wf-active .section h2 {visibility: visible}
+.wf-active .section.grey h3 {visibility: visible}
+.wf-active .section.grey p {visibility: visible}
+.wf-active #footer p {visibility: visible}
+.wf-active #footer .section.light ul li a {visibility: visible}
+.wf-active .marcom_page.pricing #featured ul li {visibility: visible}
+.wf-active .marcom_page.pricing .notice_header h2 {visibility: visible}
+.wf-active .marcom_page.pricing .notice_header p {visibility: visible}
+.wf-active .public_projects .section {visibility: visible}
+body.marcom_page {min-width: 1024px}
+body.marcom_page #header {border-bottom: 1px solid #153b5c}
+body.marcom_page #header ul.nav_links {*width: 545px}
+body.marcom_page span.todo {display: block; color: red; font-size: 2em; font-weight: bold; margin: 25px; text-decoration: blink}
+body.marcom_page input[type=text] {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 1.3em; font-weight: bold; color: #000000; padding: 6px 0 5px 7px; border: 1px solid #333333; margin: 0}
+body.marcom_page input[type=password] {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 1.3em; font-weight: bold; color: #000000; padding: 6px 0 5px 7px; border: 1px solid #333333; margin: 0}
+body.marcom_page #featured {background: #171717 url(/images/dark_bg.png) repeat-x left top; border-top: 1px solid #515151}
+body.marcom_page #featured > div.center {position: relative; height: 100%}
+body.marcom_page #featured > div.center > div.inner {margin-right: 0; overflow: hidden}
+body.marcom_page #featured h2 {text-indent: -9999em}
+body.marcom_page #featured h3 {text-indent: -9999em}
+body.marcom_page #featured h4 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-weight: 200; margin: 15px 0 24px 4px; font-size: 1.5em; color: #999999; -webkit-font-smoothing: subpixel-antialiased}
+body.marcom_page #featured div.hr_container {width: 335px}
+body.marcom_page #featured hr {border-top: 1px solid #000000; border-bottom: 1px solid #666666; border-left: none; border-right: none; clear: left}
+body.marcom_page a.button {float: left; display: block; height: 42px; text-indent: -9999em}
+body.marcom_page a.button.sign_up {width: 153px; margin-right: 25px; background: url(/images/try_it_for_free_aqua.png) no-repeat}
+body.marcom_page a.button:active {position: relative; top: 1px}
+body.marcom_page > #wrapper > .section {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif}
+body.marcom_page > #wrapper > .section div.center > div.inner {padding: 35px 0 20px; overflow: hidden}
+body.marcom_page > #wrapper > .section h2 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; color: #111111; font-size: 2.2em; font-weight: 400; letter-spacing: -0.01em; margin-bottom: 0.6em}
+body.marcom_page .section h3 {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em; color: #333333; font-size: 1.6em; line-height: 1.2em}
+body.marcom_page .section p {font-size: 1.3em; margin-bottom: 1.7em}
+body.marcom_page .section.grey {background: #f3f3f3 url(/images/grey_bg.png) repeat-x left top; border-top: 1px solid #ffffff}
+body.marcom_page .section.grey div.center {height: 100%; background: url(/images/grey_fold_up.png) no-repeat center bottom}
+body.marcom_page .section.white {border-top: 1px solid #dddddd}
+body.marcom_page .section.white h2 {font-size: 1.8em; margin-bottom: 0.8em}
+body.marcom_page .testimonial blockquote {color: #000000; line-height: 1.4em; margin-bottom: 0.5em}
+body.marcom_page .testimonial p {font-family: Georgia, "Times New Roman", serif; font-style: italic; text-align: right}
+body.marcom_page .testimonial blockquote + p {color: #999999; margin-bottom: 0.8em}
+body.marcom_page .testimonial a.testimonials {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background-color: #eeeeee; padding: 4px 10px 5px}
+body.marcom_page ul.clientlist {overflow: hidden; margin-bottom: 0.8em}
+body.marcom_page ul.clientlist li {float: left; background: url(/images/client_bg_big.png) no-repeat}
+body.marcom_page ul.clientlist li a {display: block; width: 82px; height: 57px}
+body.marcom_page ul.clientlist li + li {margin-left: 7px}
+body.marcom_page #footer {height: 282px}
+body.marcom_page #push {height: 282px}
+body.marcom_page #footer {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif}
+body.marcom_page #footer .section.light {border-top: 1px solid #444444; background: url(/images/footer_light_bg.png) repeat-x}
+body.marcom_page #footer .section.light p {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
+body.marcom_page #footer .section.light a {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
+body.marcom_page #footer .section.light div.center {position: relative; background: url(/images/grey_fold_down.png) no-repeat center top}
+body.marcom_page #footer .section.light div.center #embossed_logo {position: absolute; bottom: 0; right: 100%}
+body.marcom_page #footer .section.light .article {float: left; width: 282px; margin: 0 68px 23px 0}
+body.marcom_page #footer .section.light .article h4 {height: 34px; margin-top: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: -3px 0}
+body.marcom_page #footer .section.light .article ul {margin-top: 5px; padding-top: 6px; background: url(/images/dotted_line.png) repeat-x left top}
+body.marcom_page #footer .section.light .article ul li {padding-top: 4px}
+body.marcom_page #footer .section.light .article.pivotal h4 {background-image: url(/images/text_developed_by_pivotal_labs.png)}
+body.marcom_page #footer .section.light .article.pivotal a {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; color: #8cc5e9; background-color: #4b4b4b; font-family: Georgia, "Times New Roman", serif; font-size: 1.2em; font-style: italic; padding: 4px 10px 5px}
+body.marcom_page #footer .section.light .article.pivotal a:hover {background-color: #444444}
+body.marcom_page #footer .section.light .article.pivotal ul li + li {margin-top: 10px}
+body.marcom_page #footer .section.light .article.blog h4 a {background-image: url(/images/text_blog.png); display: block; text-indent: -9999px; width: 53px; height: 34px}
+body.marcom_page #footer .section.light .article.blog ul {padding-top: 0}
+body.marcom_page #footer .section.light .article.blog ul li {padding: 10px 2px 7px; background: url(/images/dotted_line.png) repeat-x left bottom}
+body.marcom_page #footer .section.light .article.blog ul li:last-child {background-image: none}
+body.marcom_page #footer .section.light .article.connect {width: 212px; margin-right: 0}
+body.marcom_page #footer .section.light .article.connect h4 {background-image: url(/images/text_connect_with_us.png)}
+body.marcom_page #footer .section.light .article.connect a strong {color: #dddddd; font-weight: normal}
+body.marcom_page #footer .section.dark {height: 41px; line-height: 41px; background: url(/images/footer_dark_bg.png) repeat-x; font-weight: bold}
+body.marcom_page #footer .section.dark span {color: #b9b9b9; font-size: 1.3em; text-shadow: 1px 1px 3px #000000}
+body.marcom_page #footer .section.dark a {color: #ffffff; font-weight: 600}
+body.marcom_page #footer .section.dark span + span {float: right; color: #cccccc}
+body.marcom_page #footer .section.dark span + span a {padding-left: 3px; position: relative; top: 8px}
+body.public_projects {min-width: 1024px}
+body.public_projects #header {border-bottom: 1px solid #153b5c}
+body.public_projects #header ul.nav_links {*width: 545px}
+body.public_projects span.todo {display: block; color: red; font-size: 2em; font-weight: bold; margin: 25px; text-decoration: blink}
+body.public_projects input[type=text] {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 1.3em; font-weight: bold; color: #000000; padding: 6px 0 5px 7px; border: 1px solid #333333; margin: 0}
+body.public_projects input[type=password] {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 1.3em; font-weight: bold; color: #000000; padding: 6px 0 5px 7px; border: 1px solid #333333; margin: 0}
+body.public_projects #featured {background: #171717 url(/images/dark_bg.png) repeat-x left top; border-top: 1px solid #515151}
+body.public_projects #featured > div.center {position: relative; height: 100%}
+body.public_projects #featured > div.center > div.inner {margin-right: 0; overflow: hidden}
+body.public_projects #featured h2 {text-indent: -9999em}
+body.public_projects #featured h3 {text-indent: -9999em}
+body.public_projects #featured h4 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-weight: 200; margin: 15px 0 24px 4px; font-size: 1.5em; color: #999999; -webkit-font-smoothing: subpixel-antialiased}
+body.public_projects #featured div.hr_container {width: 335px}
+body.public_projects #featured hr {border-top: 1px solid #000000; border-bottom: 1px solid #666666; border-left: none; border-right: none; clear: left}
+body.public_projects a.button {float: left; display: block; height: 42px; text-indent: -9999em}
+body.public_projects a.button.sign_up {width: 153px; margin-right: 25px; background: url(/images/try_it_for_free_aqua.png) no-repeat}
+body.public_projects a.button:active {position: relative; top: 1px}
+body.public_projects > #wrapper > .section {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif}
+body.public_projects > #wrapper > .section div.center > div.inner {padding: 35px 0 20px; overflow: hidden}
+body.public_projects > #wrapper > .section h2 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; color: #111111; font-size: 2.2em; font-weight: 400; letter-spacing: -0.01em; margin-bottom: 0.6em}
+body.public_projects .section h3 {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em; color: #333333; font-size: 1.6em; line-height: 1.2em}
+body.public_projects .section p {font-size: 1.3em; margin-bottom: 1.7em}
+body.public_projects .section.grey {background: #f3f3f3 url(/images/grey_bg.png) repeat-x left top; border-top: 1px solid #ffffff}
+body.public_projects .section.grey div.center {height: 100%; background: url(/images/grey_fold_up.png) no-repeat center bottom}
+body.public_projects .section.white {border-top: 1px solid #dddddd}
+body.public_projects .section.white h2 {font-size: 1.8em; margin-bottom: 0.8em}
+body.public_projects .testimonial blockquote {color: #000000; line-height: 1.4em; margin-bottom: 0.5em}
+body.public_projects .testimonial p {font-family: Georgia, "Times New Roman", serif; font-style: italic; text-align: right}
+body.public_projects .testimonial blockquote + p {color: #999999; margin-bottom: 0.8em}
+body.public_projects .testimonial a.testimonials {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background-color: #eeeeee; padding: 4px 10px 5px}
+body.public_projects ul.clientlist {overflow: hidden; margin-bottom: 0.8em}
+body.public_projects ul.clientlist li {float: left; background: url(/images/client_bg_big.png) no-repeat}
+body.public_projects ul.clientlist li a {display: block; width: 82px; height: 57px}
+body.public_projects ul.clientlist li + li {margin-left: 7px}
+body.public_projects #footer {height: 282px}
+body.public_projects #push {height: 282px}
+body.public_projects #footer {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif}
+body.public_projects #footer .section.light {border-top: 1px solid #444444; background: url(/images/footer_light_bg.png) repeat-x}
+body.public_projects #footer .section.light p {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
+body.public_projects #footer .section.light a {color: #b9b9b9; font-size: 1.3em; line-height: 1.4em; text-shadow: 1px 1px 3px #000000; margin: 0}
+body.public_projects #footer .section.light div.center {position: relative; background: url(/images/grey_fold_down.png) no-repeat center top}
+body.public_projects #footer .section.light div.center #embossed_logo {position: absolute; bottom: 0; right: 100%}
+body.public_projects #footer .section.light .article {float: left; width: 282px; margin: 0 68px 23px 0}
+body.public_projects #footer .section.light .article h4 {height: 34px; margin-top: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: -3px 0}
+body.public_projects #footer .section.light .article ul {margin-top: 5px; padding-top: 6px; background: url(/images/dotted_line.png) repeat-x left top}
+body.public_projects #footer .section.light .article ul li {padding-top: 4px}
+body.public_projects #footer .section.light .article.pivotal h4 {background-image: url(/images/text_developed_by_pivotal_labs.png)}
+body.public_projects #footer .section.light .article.pivotal a {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; color: #8cc5e9; background-color: #4b4b4b; font-family: Georgia, "Times New Roman", serif; font-size: 1.2em; font-style: italic; padding: 4px 10px 5px}
+body.public_projects #footer .section.light .article.pivotal a:hover {background-color: #444444}
+body.public_projects #footer .section.light .article.pivotal ul li + li {margin-top: 10px}
+body.public_projects #footer .section.light .article.blog h4 a {background-image: url(/images/text_blog.png); display: block; text-indent: -9999px; width: 53px; height: 34px}
+body.public_projects #footer .section.light .article.blog ul {padding-top: 0}
+body.public_projects #footer .section.light .article.blog ul li {padding: 10px 2px 7px; background: url(/images/dotted_line.png) repeat-x left bottom}
+body.public_projects #footer .section.light .article.blog ul li:last-child {background-image: none}
+body.public_projects #footer .section.light .article.connect {width: 212px; margin-right: 0}
+body.public_projects #footer .section.light .article.connect h4 {background-image: url(/images/text_connect_with_us.png)}
+body.public_projects #footer .section.light .article.connect a strong {color: #dddddd; font-weight: normal}
+body.public_projects #footer .section.dark {height: 41px; line-height: 41px; background: url(/images/footer_dark_bg.png) repeat-x; font-weight: bold}
+body.public_projects #footer .section.dark span {color: #b9b9b9; font-size: 1.3em; text-shadow: 1px 1px 3px #000000}
+body.public_projects #footer .section.dark a {color: #ffffff; font-weight: 600}
+body.public_projects #footer .section.dark span + span {float: right; color: #cccccc}
+body.public_projects #footer .section.dark span + span a {padding-left: 3px; position: relative; top: 8px}
+body.marcom_page.index #header ul {position: relative; z-index: 3}
+body.marcom_page.index #featured {height: 330px}
+body.marcom_page.index #featured div.center > div.inner {margin-right: 0}
+body.marcom_page.index #featured h2 {margin-top: 82px; margin-bottom: 36px; width: 341px; font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-size: 24px; font-weight: normal; color: #eeeeee; text-shadow: 1px 2px 3px #000000; width: auto !important; text-indent: 0px; background-image: none !important}
+body.marcom_page.index #featured hr {margin-top: 15px}
+body.marcom_page.index #featured img.screenshot {float: right; margin-top: -24px; position: relative; z-index: 100}
+body.marcom_page.index #featured a.button.sign_up {width: 175px; height: 47px; margin-right: 25px; background: url(/images/signup_red.png) no-repeat 0 0}
+body.marcom_page.index #featured a.button.sign_up:hover {background-position: 0 -47px}
+body.marcom_page.index #featured a.button.sign_up:focus {background-position: 0 -47px}
+body.marcom_page.index #featured a.button.view_features {width: 158px; height: 47px; background: url(/images/view_features.png) no-repeat 0 0}
+body.marcom_page.index #featured a.button.view_features:hover {background-position: 0 -47px}
+body.marcom_page.index #featured a.button.view_features:focus {background-position: 0 -47px}
+body.marcom_page.index .section.grey ul {float: left; width: 29%}
+body.marcom_page.index .section.grey ul + ul {margin-left: 6%}
+body.marcom_page.index .section.grey h3 {color: #720713}
+body.marcom_page.index .section.white div.testimonial {float: right; width: 33%; background: url(/images/divider_vertical_mini.png) no-repeat left top}
+body.marcom_page.index .section.white div.testimonial > div.inner {margin-left: 30px}
+body.marcom_page.features .feature_content {display: none}
+body.marcom_page.features .feature_content.enabled {display: block}
+body.marcom_page.features .inner .feature_content {overflow: hidden; width: 100%}
+body.marcom_page.features #featured {height: 404px}
+body.marcom_page.features #featured h2 {float: left; width: 205px; height: 34px; margin-top: 33px; background: url(/images/text_features_tour.png) no-repeat}
+body.marcom_page.features #featured h3 {width: 174px; margin-top: 72px; clear: left; font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 300; color: #eeeeee; text-shadow: 1px 2px 3px #000000; width: auto !important; text-indent: 0px; background-image: none !important}
+body.marcom_page.features #featured h4 {width: 400px}
+body.marcom_page.features #featured a.button.sign_up {float: left; margin-top: 29px; margin-left: 25px; background: url(/images/try_it_for_free_aqua.png) no-repeat 0 0}
+body.marcom_page.features #featured a.button.sign_up:hover {background-position: 0 -42px}
+body.marcom_page.features #featured a.button.sign_up:focus {background-position: 0 -42px}
+body.marcom_page.features #featured img.screenshot {float: right}
+body.marcom_page.features #featured div.features_nav_wrapper {position: absolute; width: 100%; bottom: 0; left: 0; border: 1px solid #666666; overflow: hidden}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav {display: block; width: 53px; height: 55px; background: url(/images/left_right_bg.png) repeat-x}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav span {display: block; width: 100%; height: 100%; text-indent: -9999em; background-repeat: no-repeat}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev.enabled:hover {background-image: url(/images/nav_active_bg.png)}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.next.enabled:hover {background-image: url(/images/nav_active_bg.png)}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev {float: left; border-right: 1px solid #000000}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev span {background-position: 48% 53%}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav {cursor: auto}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.enabled {cursor: pointer}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev.enabled span {background-image: url(/images/prev_enabled.png)}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev.enabled:hover {border-right: 1px solid #720713}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.prev span {background-image: url(/images/prev_disabled.png)}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.next {float: right; border-left: 1px solid #666666}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.next span {background-position: 50% 51%}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.next.enabled span {background-image: url(/images/next_enabled.png)}
+body.marcom_page.features #featured div.features_nav_wrapper a.nav.next span {background-image: url(/images/next_disabled.png)}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner {float: left; width: 850px; height: 55px; border-left: 1px solid #666666; position: relative; overflow: hidden}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav {position: absolute; width: 2000em; overflow: hidden; left: 0; top: 0}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li + li {border-left: 1px solid #666666}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li {float: left}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li a {display: block; line-height: 55px; color: #cccccc; font-size: 1.3em; font-weight: bold; padding: 0px 20px; border-right: 1px solid #000000; background: url(/images/nav_bg.png) repeat-x; text-shadow: 0 -1px 1px #000000}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li a.selected {color: #ffffff; background-image: url(/images/nav_active_bg.png); background-color: #700712; border-right: 1px solid #720713; text-decoration: none; text-shadow: 0 -1px 1px #222222}
+body.marcom_page.features #featured div.features_nav_wrapper div.inner ul#features_nav li a:hover {color: #ffffff; background-image: url(/images/nav_active_bg.png); background-color: #700712; border-right: 1px solid #720713; text-decoration: none; text-shadow: 0 -1px 1px #222222}
+body.marcom_page.features .section.grey > div.center > div.inner {padding-top: 35px}
+body.marcom_page.features .section.grey h3 {color: #720713}
+body.marcom_page.features .section.white > div.center > div.inner {padding-top: 35px}
+body.marcom_page.features .section.white h3 {color: #720713}
+body.marcom_page.features .feature_content.content h3 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; color: #111111; font-size: 2.2em; font-weight: 400; letter-spacing: -0.01em; line-height: 1.3em}
+body.marcom_page.features .feature_content.content h4 {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em; color: #333333; font-size: 1.6em; line-height: 1.2em; margin-bottom: 0.2em}
+body.marcom_page.features .feature_content.content p {line-height: 1.5em}
+body.marcom_page.features .feature_content.content h3.callout {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; color: #111111; font-size: 1.8em; font-weight: 400; letter-spacing: -0.01em; line-height: 1.5em}
+body.marcom_page.features .feature_content.content p.callout {font-family: Georgia, "Times New Roman", serif; font-size: 1.4em; color: #777777; font-style: italic; margin-bottom: 45px; line-height: 1.5em}
+body.marcom_page.features .feature_content.content p.callout strong {font-weight: normal; color: #000000}
+body.marcom_page.features #featured .feature_content.overview img.screenshot {margin: 0px 16px 0 20px}
+body.marcom_page.features #featured .feature_content.overview h4 {font-family: Georgia, "Times New Roman", serif; font-weight: normal; font-size: 13px; font-style: italic; line-height: 1.5em}
+body.marcom_page.features #featured .feature_content.overview h4 span {color: #444444}
+body.marcom_page.features .feature_content.content.overview .section.grey ul {overflow: hidden; margin-bottom: 15px}
+body.marcom_page.features .feature_content.content.overview .section.grey ul li {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; float: left; width: 45%; margin-right: 5%}
+body.marcom_page.features .feature_content.content.overview .section.grey ul li h4 {padding: 0 15px 0 15px}
+body.marcom_page.features .feature_content.content.overview .section.grey ul li p {padding: 0 15px 0 15px}
+body.marcom_page.features .feature_content.content.overview .section.grey ul li.jolt h4 {padding-left: 50px}
+body.marcom_page.features .feature_content.content.overview .section.grey ul li.jolt p {padding-left: 50px}
+body.marcom_page.features .feature_content.content.overview .section.grey ul img {float: left}
+body.marcom_page.features .feature_content.content.overview .section.white > div.center > div.inner {margin-right: 0; margin-bottom: 30px}
+body.marcom_page.features .feature_content.content.overview .section.white .testimonial {padding-top: 35px; padding-bottom: 20px}
+body.marcom_page.features .feature_content.content.overview .section.white h3 {margin-left: 15px}
+body.marcom_page.features .feature_content.content.overview .section.white p {margin-left: 15px}
+body.marcom_page.features .feature_content.content.overview .section.white ul {overflow: hidden}
+body.marcom_page.features .feature_content.content.overview .section.white ul li {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; float: left; width: 30%; margin-right: 3%; padding: 15px 0; margin-bottom: 1em}
+body.marcom_page.features .feature_content.content.overview .section.white ul li a {display: block; width: 100%; height: 100%}
+body.marcom_page.features .feature_content.content.overview .section.white ul li a:hover {text-decoration: none}
+body.marcom_page.features .feature_content.content.overview .section.white ul li h4 {padding: 0 15px 0 15px}
+body.marcom_page.features .feature_content.content.overview .section.white ul li p {padding: 0 15px 0 15px}
+body.marcom_page.features .feature_content.content.overview .section.white ul li p {margin-bottom: 0; margin-left: 0}
+body.marcom_page.features .feature_content.content.overview .section.white ul li p span {display: inline-block; width: 11px; text-indent: -9999em; background: url(/images/learnmore.png) no-repeat 0 6px; margin-left: 7px}
+body.marcom_page.features .feature_content.content.overview .section.white ul li:hover {background-color: #eeeeee}
+body.marcom_page.features .feature_content.content.overview .section.white ul img {float: left}
+body.marcom_page.features #featured .feature_content.tracker_story img.screenshot {margin-top: 42px}
+body.marcom_page.features #featured .feature_content.tracker_story h3 {width: 179px; background: url(/images/text_tracker_story.png) no-repeat}
+body.marcom_page.features .feature_content.tracker_story strong {color: #555555}
+body.marcom_page.features .feature_content.tracker_story img {float: right}
+body.marcom_page.features .feature_content.tracker_story ul > li {padding-right: 340px; padding-bottom: 10px; margin-bottom: 15px}
+body.marcom_page.features .feature_content.tracker_story ul li.index_cards {background: url(/images/index_cards.png) no-repeat 650px 50px}
+body.marcom_page.features .feature_content.tracker_story ul li.need_solution {background: url(/images/ruby_on_rails.png) no-repeat 675px 11px}
+body.marcom_page.features .feature_content.tracker_story ul li.project_management {background: url(/images/client_list.png) no-repeat left top; border-bottom: 7px solid #ffffff; padding: 0 0 20px 320px; margin-bottom: 35px}
+body.marcom_page.features .feature_content.tracker_story ul li.why {border-bottom: 7px solid #ffffff; padding: 0 0 10px 0; margin-bottom: 35px}
+body.marcom_page.features .feature_content.tracker_story ul li.why h3 {margin-bottom: 7px}
+body.marcom_page.features .feature_content.tracker_story ul li.why div.callout {float: left; width: 310px; height: 320px; background: #e9e9e9}
+body.marcom_page.features .feature_content.tracker_story ul li.why div.callout > .inner {font-family: Georgia, "Times New Roman", serif; padding: 19px 25px}
+body.marcom_page.features .feature_content.tracker_story ul li.why div.callout ol li {list-style-type: decimal; list-style-position: inside; color: #000000; font-style: italic; font-size: 1.3em; line-height: 1.5em; margin-bottom: 1em}
+body.marcom_page.features .feature_content.tracker_story ul li.why > p {padding-left: 330px}
+body.marcom_page.features .feature_content.tracker_story ul li.philosophy {padding: 0}
+body.marcom_page.features .feature_content.tracker_story ul li.philosophy h3:first-child {float: right; margin-right: 83px; margin-top: 77px}
+body.marcom_page.features .feature_content.tracker_story ul li.philosophy p {width: 51%}
+body.marcom_page.features #featured .feature_content.one_view img.screenshot {margin-top: 33px; margin-right: 17px}
+body.marcom_page.features #featured .feature_content.one_view h3 {width: 264px; height: 58px; background: url(/images/text_one_view.png) no-repeat}
+body.marcom_page.features #featured .feature_content.one_view h4 {width: 415px}
+body.marcom_page.features .feature_content.one_view ul {overflow: hidden}
+body.marcom_page.features .feature_content.one_view ul li {float: left; width: 50%; margin-bottom: 20px}
+body.marcom_page.features .feature_content.one_view ul li img {float: left; margin-bottom: 1em}
+body.marcom_page.features .feature_content.one_view ul li h4 {padding-right: 80px; padding-left: 55px}
+body.marcom_page.features .feature_content.one_view ul li p {padding-right: 80px; padding-left: 55px}
+body.marcom_page.features .feature_content.one_view .testimonial > .inner {padding: 0 72px 20px 60px}
+body.marcom_page.features .feature_content.one_view .testimonial > .inner blockquote {line-height: 1.6em}
+body.marcom_page.features #featured .feature_content.real_time img.screenshot {margin-top: 33px; margin-right: 33px}
+body.marcom_page.features #featured .feature_content.real_time h3 {width: 242px; background: url(/images/text_realtime.png) no-repeat}
+body.marcom_page.features #featured .feature_content.real_time h4 {width: 415px}
+body.marcom_page.features .feature_content.real_time {overflow: hidden}
+body.marcom_page.features .feature_content.real_time ul {float: left; width: 40%}
+body.marcom_page.features .feature_content.real_time ul li {overflow: hidden; margin-bottom: 50px}
+body.marcom_page.features .feature_content.real_time ul li img {float: left}
+body.marcom_page.features .feature_content.real_time ul li h4 {padding-left: 58px}
+body.marcom_page.features .feature_content.real_time ul li p {padding-left: 58px}
+body.marcom_page.features .feature_content.real_time ul.screens {width: 60%}
+body.marcom_page.features .feature_content.real_time ul.screens .team_communication {margin-left: 8px}
+body.marcom_page.features .feature_content.real_time ul.screens h4 {padding-left: 165px; padding-right: 80px}
+body.marcom_page.features .feature_content.real_time ul.screens p {padding-left: 165px; padding-right: 80px}
+body.marcom_page.features .feature_content.real_time .testimonial > .inner {margin-bottom: 50px; padding: 0 60px}
+body.marcom_page.features .feature_content.real_time .testimonial > .inner blockquote {line-height: 1.6em}
+body.marcom_page.features #featured .feature_content.agile img.screenshot {margin-top: 33px; margin-right: 34px}
+body.marcom_page.features #featured .feature_content.agile h3 {width: 216px; background: url(/images/text_agile.png) no-repeat}
+body.marcom_page.features .feature_content.agile {overflow: hidden}
+body.marcom_page.features .feature_content.agile div.headline {overflow: hidden; margin-bottom: 10px}
+body.marcom_page.features .feature_content.agile div.headline h3 {margin-top: 10px}
+body.marcom_page.features .feature_content.agile div.headline img {float: right}
+body.marcom_page.features .feature_content.agile .testimonial {padding: 0 125px 25px 125px}
+body.marcom_page.features .feature_content.agile ul {float: left; width: 40%}
+body.marcom_page.features .feature_content.agile ul li {overflow: hidden; margin-bottom: 50px}
+body.marcom_page.features .feature_content.agile ul li img {float: left}
+body.marcom_page.features .feature_content.agile ul li h4 {padding-left: 58px}
+body.marcom_page.features .feature_content.agile ul li p {padding-left: 58px}
+body.marcom_page.features .feature_content.agile ul .feedback {margin-left: 7px}
+body.marcom_page.features .feature_content.agile ul .release_planning {margin-left: 97px}
+body.marcom_page.features .feature_content.agile ul .ownership {margin-left: 103px}
+body.marcom_page.features .feature_content.agile ul.screens {width: 60%}
+body.marcom_page.features .feature_content.agile ul.screens h4 {padding-right: 80px; padding-left: 160px}
+body.marcom_page.features .feature_content.agile ul.screens p {padding-right: 80px; padding-left: 160px}
+body.marcom_page.features #featured .feature_content.workflow img.screenshot {margin-top: 60px; margin-right: 40px}
+body.marcom_page.features #featured .feature_content.workflow h3 {width: 179px; background: url(/images/text_tracker_story.png) no-repeat}
+body.marcom_page.features .feature_content.workflow strong {color: #555555}
+body.marcom_page.features .feature_content.workflow img {float: right; margin-right: 70px}
+body.marcom_page.features .feature_content.workflow .testimonial {padding-top: 35px; padding-bottom: 26px}
+body.marcom_page.features .feature_content.workflow .testimonial > .inner {padding: 0 72px 0 60px}
+body.marcom_page.features .feature_content.workflow .testimonial > .inner blockquote {line-height: 1.6em}
+body.marcom_page.features .feature_content.workflow ul {margin-bottom: 50px}
+body.marcom_page.features .feature_content.workflow ul > li {overflow: hidden; padding: 20px; border-bottom: 1px solid #dddddd}
+body.marcom_page.features .feature_content.workflow ul > li + li {border-top: 1px solid #ffffff}
+body.marcom_page.features .feature_content.workflow ul li.last {border-bottom: none}
+body.marcom_page.features .feature_content.workflow ul h4 {padding-right: 350px}
+body.marcom_page.features .feature_content.workflow ul p {padding-right: 350px}
+body.marcom_page.features #featured .feature_content.for_developers img.screenshot {margin-top: 80px; margin-right: 175px}
+body.marcom_page.features #featured .feature_content.for_developers h3 {width: 185px; background: url(/images/text_developer.png) no-repeat}
+body.marcom_page.features .feature_content.for_developers {overflow: hidden}
+body.marcom_page.features .feature_content.for_developers div.headline {overflow: hidden; margin-bottom: 10px}
+body.marcom_page.features .feature_content.for_developers div.headline img {float: right; margin: 37px 75px 0 75px}
+body.marcom_page.features .feature_content.for_developers div.features {overflow: hidden}
+body.marcom_page.features .feature_content.for_developers div.features ul {float: left; width: 50%}
+body.marcom_page.features .feature_content.for_developers div.features ul li {overflow: hidden; margin-bottom: 50px}
+body.marcom_page.features .feature_content.for_developers div.features ul li img {float: left}
+body.marcom_page.features .feature_content.for_developers div.features ul li h4 {padding-left: 58px; padding-right: 46px}
+body.marcom_page.features .feature_content.for_developers div.features ul li p {padding-left: 58px; padding-right: 46px}
+body.marcom_page.features .feature_content.for_developers div.featured_tools h3 {padding-bottom: 2px}
+body.marcom_page.features .feature_content.for_developers div.featured_tools ul {float: left; width: 28%; padding-right: 5%}
+body.marcom_page.features .feature_content.for_developers div.featured_tools ul h4 {color: #444444}
+body.marcom_page.features #featured .feature_content.integrations img.screenshot {margin-top: 36px; margin-right: 82px}
+body.marcom_page.features #featured .feature_content.integrations h3 {width: 124px; background: url(/images/text_integrations.png) no-repeat}
+body.marcom_page.features .feature_content.integrations {overflow: hidden}
+body.marcom_page.features .feature_content.integrations ul.features {overflow: hidden}
+body.marcom_page.features .feature_content.integrations ul.features li {float: left; width: 50%; overflow: hidden; margin-bottom: 32px}
+body.marcom_page.features .feature_content.integrations ul.features li img {float: left}
+body.marcom_page.features .feature_content.integrations ul.features li h4 {padding-left: 58px; padding-right: 85px}
+body.marcom_page.features .feature_content.integrations ul.features li p {padding-left: 58px; padding-right: 85px}
+body.marcom_page.features .feature_content.integrations div.featured_integrations {overflow: hidden; margin-bottom: 30px}
+body.marcom_page.features .feature_content.integrations div.featured_integrations ul {overflow: hidden}
+body.marcom_page.features .feature_content.integrations div.featured_integrations ul li {float: left; width: 28%; padding-right: 5%}
+body.marcom_page.features .feature_content.integrations div.featured_integrations ul li h4 {font-size: 1.6em; color: #444444}
+body.marcom_page.features .feature_content.integrations div.featured_integrations ul li h4 img {position: relative; top: 7px; left: 6px; display: inline-block}
+body.marcom_page.features .feature_content.integrations div.featured_integrations ul li h4.getsatisfaction {width: 94px; height: 22px; background: url(/images/satisfaction_logo.png) no-repeat; text-indent: -9999em}
+body.marcom_page.pricing #header.notice_header {height: auto; padding-bottom: 7px}
+body.marcom_page.pricing #header.notice_header .notice {background: url(/images/paid_notice_bg.png) no-repeat center bottom; padding-bottom: 10px; overflow: hidden}
+body.marcom_page.pricing #header.notice_header .notice > .inner {margin: 5px 19px}
+body.marcom_page.pricing #header.notice_header .notice h2 {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-size: 1.7em; font-weight: 600; color: #ffffff; text-shadow: 0px 1px 4px #000000; margin-bottom: 1px}
+body.marcom_page.pricing #header.notice_header .notice p {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; color: #dfd7c3; margin: 0}
+body.marcom_page.pricing #header.notice_header .notice strong {font-weight: normal; color: #ffffcc}
+body.marcom_page.pricing #header.notice_header .notice a {color: #dfd7c3; font-weight: 600; text-decoration: underline}
+body.marcom_page.pricing #header.notice_header .notice a:hover {color: #ffffff}
+body.marcom_page.pricing span.special_offer {color: #810000}
+body.marcom_page.pricing #featured {background: url(/images/light_bg_tall.jpg) center top; height: 434px}
+body.marcom_page.pricing #featured > div.center {background: url("/images/grey_fold_up.png") no-repeat scroll center bottom}
+body.marcom_page.pricing #featured h2 {height: 34px; margin-top: 33px; margin-bottom: 40px; background: url(/images/text_free_trial_no_credit_card.png) no-repeat}
+body.marcom_page.pricing #featured h2.intro_discount_available {height: 48px; margin-top: 15px; margin-bottom: 33px}
+body.marcom_page.pricing #featured h2.intro_discount_available.july19 {background: url(/images/text_free_trial_intropromo_july19.png) no-repeat}
+body.marcom_page.pricing #featured h2.intro_discount_available.july20 {background: url(/images/text_free_trial_intropromo_july20.png) no-repeat}
+body.marcom_page.pricing #featured a.button.sign_up {float: right; width: 175px; height: 47px; margin-top: -4px; margin-right: 6px; background: url(/images/signup_red.png) no-repeat 0 0}
+body.marcom_page.pricing #featured a.button.sign_up.intro_discount_available {margin-top: 7px}
+body.marcom_page.pricing #featured a.button.sign_up:hover {background-position: 0 -47px}
+body.marcom_page.pricing #featured a.button.sign_up:focus {background-position: 0 -47px}
+body.marcom_page.pricing #featured ul.plan_types {margin-bottom: 3px; overflow: hidden}
+body.marcom_page.pricing #featured ul.plan_types li {float: left; width: 40%; height: 22px; text-indent: -9999em; background: url(/images/text_startup_plans.png) no-repeat center top}
+body.marcom_page.pricing #featured ul.plan_types li + li {width: 60%; background: url(/images/text_pro_plans.png) no-repeat center top}
+body.marcom_page.pricing #featured ul#pricing_plans {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; margin-bottom: 12px}
+body.marcom_page.pricing #featured ul#pricing_plans > li + li {margin-left: 6px}
+body.marcom_page.pricing #featured ul#pricing_plans > li {position: relative; float: left; width: 184px; margin-bottom: 20px}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan {padding: 0 4px 0 5px}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li:first-child {height: 54px; text-align: center}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li:first-child span {display: block; text-indent: -9999em}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li + li {font-size: 1.2em; color: #999999; padding: 10px 16px 10px; background-color: #eeeeee; border-top: 1px solid #ffffff; border-bottom: 1px solid #cccccc}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li + li strong {color: #717171}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li + li em {-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 1px 9px; font-size: 14px; font-weight: 600; font-style: normal; color: #ffffff; text-shadow: 0 -1px 1px #000000; background-color: #22404e; margin-right: 3px}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li + li em.startup {background: #353535}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li + li em + span {font-weight: 600}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li.collaborators {position: relative}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li.collaborators span {padding-right: 15px; background: url(/images/tooltip.png) no-repeat right 3px}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li.collaborators div.collaborators_tooltip {position: absolute; z-index: 2; top: 74%; right: 7px; opacity: 0.8}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li.collaborators div.collaborators_tooltip div.pointer {width: 12px; height: 7px; margin-left: 116px; background: url(/images/tooltip_pointer.png)}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan li.collaborators div.collaborators_tooltip p {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; width: 172px; margin: 0; padding: 4px 8px 5px; font-size: 11px; text-align: left; color: #bbbbbb; background-color: #000000}
+body.marcom_page.pricing #featured ul#pricing_plans > li ul.plan span.project_members {color: #333333}
+body.marcom_page.pricing #featured ul#pricing_plans > li .shadow {position: absolute; left: 0; top: 100%; display: block; width: 184px; height: 18px; background: url(/images/plan_shadow.png) no-repeat 0 -6px}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_1 {background: url(/images/plan_1.png)}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_1 li.collaborators div.collaborators_tooltip {right: -20px}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_1 li.collaborators div.collaborators_tooltip div.pointer {margin-left: 90px}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_2 {background: url(/images/plan_2.png)}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_2 li.collaborators div.collaborators_tooltip div.pointer {margin-left: 142px}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_3 {background: url(/images/plan_3.png)}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_4 {background: url(/images/plan_4.png)}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_5 {background: url(/images/plan_5.png)}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_4 em {padding: 1px 7px}
+body.marcom_page.pricing #featured ul#pricing_plans li#plan_5 em {padding: 1px 7px}
+body.marcom_page.pricing #featured div.feature_highlight {position: relative; float: left; height: 48px; padding-left: 24px; margin-left: 170px; background: url(/images/feature_highlight_bg.png) no-repeat left top}
+body.marcom_page.pricing #featured div.feature_highlight p {color: #eeeeee; font-size: 1.25em; line-height: 48px; padding-left: 30px; text-align: center; background: url(/images/free.png) left center no-repeat}
+body.marcom_page.pricing #featured div.feature_highlight p a {text-decoration: underline; color: #dddddd}
+body.marcom_page.pricing #featured div.feature_highlight p a:hover {color: #cccccc}
+body.marcom_page.pricing #featured div.feature_highlight div.right {position: absolute; top: 0; right: -24px; height: 100%; width: 24px; background: url(/images/feature_highlight_bg.png) no-repeat right top}
+body.marcom_page.pricing #wrapper .section.grey > div.center > div.inner {padding: 50px 0 17px}
+body.marcom_page.pricing #wrapper .section.grey ul {margin-left: 7px; overflow: hidden}
+body.marcom_page.pricing #wrapper .section.grey ul li {float: left; width: 42%; padding-left: 4%}
+body.marcom_page.pricing #wrapper .section.grey ul li:first-child {margin-right: 8%}
+body.marcom_page.pricing #wrapper .section.grey ul #save {background: url(/images/save.png) no-repeat 3px top}
+body.marcom_page.pricing #wrapper .section.grey ul #public {background: url(/images/greenbox.png) no-repeat left top}
+body.marcom_page.pricing #wrapper .section.grey ul #nonprofit {background: url(/images/world.png) no-repeat 3px top}
+body.marcom_page.pricing #wrapper .section.grey ul #local {background: url(/images/localinstall.png) no-repeat left top}
+body.marcom_page.pricing #wrapper .section.grey ul span.free {color: #46960c}
+body.marcom_page.pricing #wrapper .section.white > div.center > div.inner {margin-left: 15px; margin-right: 15px; margin-top: 6px}
+body.marcom_page.pricing #wrapper .section.white h2 {margin-bottom: 0}
+body.marcom_page.pricing #wrapper .section.white ul {overflow: hidden}
+body.marcom_page.pricing #wrapper .section.white ul li {float: left; width: 44%; margin-right: 6%}
+body.marcom_page.pricing #wrapper .section.white ul:first-child li {float: none; width: 100%}
+body.marcom_page.pricing #wrapper .section.white .braintree {display: block; margin-top: 5px}
+body.marcom_page.signup #featured {background: url(/images/light_bg.jpg) center top; overflow: hidden}
+body.marcom_page.signup #featured > div.center {background: url("/images/grey_fold_up.png") no-repeat scroll center bottom}
+body.marcom_page.signup #featured h2 {width: 280px; height: 34px; margin-top: 50px; margin-bottom: 25px; background: url(/images/text_signup.png) no-repeat}
+body.marcom_page.signup #featured form {position: relative; margin-bottom: 33px}
+body.marcom_page.signup #featured form p.have_account {font-size: 1.1em; margin-bottom: 4px; margin-left: 263px; color: #cccccc}
+body.marcom_page.signup #featured form p.have_account a {color: #ffffff; text-decoration: underline}
+body.marcom_page.signup #featured form p.have_account a:hover {color: #cccccc}
+body.marcom_page.signup #featured form ul li {position: relative; overflow: hidden; margin-bottom: 17px}
+body.marcom_page.signup #featured form label {float: left; display: block; width: 125px; line-height: 33px; color: #e0e0e0; font-size: 1.3em; font-weight: bold; text-align: right; text-shadow: 1px 1px 2px #333333; text-transform: uppercase; text-indent: 3px; margin-right: 12px}
+body.marcom_page.signup #featured form label.infield {width: 340px; text-shadow: none; position: absolute; top: 8px !important; left: 12px !important; color: #cccccc; left: 132px; margin-left: 132px; text-align: left; top: 1px !important}
+body.marcom_page.signup #featured form br {display: none}
+body.marcom_page.signup #featured form .error_above_or_below {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; display: block; float: left; width: 250px; height: 33px; color: #ffffff; font-size: 1.1em; font-weight: bold; line-height: 33px; text-align: center; text-transform: uppercase; background: #720713; margin-left: 10px}
+body.marcom_page.signup #featured form input[type=text] {float: left; width: 350px; padding: 9px 0 7px 7px}
+body.marcom_page.signup #featured form input[type=password] {float: left; width: 350px; padding: 9px 0 7px 7px}
+body.marcom_page.signup #featured form input[type=submit] {width: 158px; height: 47px; margin-left: 134px; margin-bottom: 15px; text-indent: -9999em; border: none; background: url(/images/get_started.png) no-repeat 0 0}
+body.marcom_page.signup #featured form input[type=submit]:hover {cursor: pointer; background-position: 0 -47px}
+body.marcom_page.signup #featured form input[type=submit]:focus {background-position: 0 -47px}
+body.marcom_page.signup #featured form input[type=submit]:active {position: relative; top: 1px}
+body.marcom_page.signup #featured form div.openID {margin-top: 5px; margin-left: 138px}
+body.marcom_page.signup #featured form div.openID span {font-family: Georgia, "Times New Roman", serif; font-size: 12px; color: #333333; font-style: italic}
+body.marcom_page.signup #featured form div.openID .links a {padding: 0 10px; font-family: Georgia, "Times New Roman", serif; font-size: 1.2em; font-style: italic; color: #153b5c; line-height: 20px}
+body.marcom_page.signup #featured form div.openID .links a img {margin-bottom: -5px}
+body.marcom_page.signup #featured form div.openID .links a.google_domain {border-left: 1px solid #dddddd}
+body.marcom_page.signup #featured div.announcement {left: 518px; position: absolute; top: 17px; width: 324px}
+body.marcom_page.signup #featured div.announcement p {color: #ffffff; font-size: 1.5em; line-height: 1.4em; text-shadow: 0 0 11px #000000}
+body.marcom_page.signup .section.grey > div.center > div.inner {margin-left: 70px}
+body.marcom_page.signup .section.grey div.testimonial {float: left; width: 290px; margin-right: 110px}
+body.marcom_page.signup .section.grey div.testimonial blockquote {font-size: 1.2em}
+body.marcom_page.signup .section.grey div.testimonial p {font-size: 1.2em}
+body.marcom_page.signup .section.white {height: 300px}
+body.marcom_page.testimonials a.button.sign_up {float: left; height: 47px; width: 175px; margin-top: 25px; margin-left: 17px; text-indent: -9999em; background: url(/images/signup_red.png) no-repeat}
+body.marcom_page.testimonials a.button.sign_up:hover {background-position: 0 -47px}
+body.marcom_page.testimonials a.button.sign_up:focus {background-position: 0 -47px}
+body.marcom_page.testimonials #featured {background: #3e3e3e url(/images/dark_bg_2.png) repeat-x left top}
+body.marcom_page.testimonials #featured > div.center > div.inner {padding-bottom: 40px}
+body.marcom_page.testimonials #featured h2 {float: left; width: 700px; height: 30px; margin-top: 33px; font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-size: 20px; font-weight: normal; color: #eeeeee; text-shadow: 1px 2px 3px #000000; text-indent: 0px; background-image: none !important}
+body.marcom_page.testimonials #featured ul.testimonial {float: left; width: 42%; margin: 20px 7% 0 1%}
+body.marcom_page.testimonials #featured ul.testimonial li {padding: 28px 16px}
+body.marcom_page.testimonials #featured ul.testimonial li.callout {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #383838; border: 1px solid #333333; padding: 12px 16px; background-image: none; margin-top: 16px}
+body.marcom_page.testimonials #featured ul.testimonial li.video blockquote {overflow: hidden}
+body.marcom_page.testimonials #featured ul.testimonial li.video blockquote img {float: left; margin-right: 12px}
+body.marcom_page.testimonials #featured ul.testimonial li + li {background: url(/images/horizontal_divider.png) no-repeat left top}
+body.marcom_page.testimonials #featured ul.testimonial li + li.callout {margin-top: 0}
+body.marcom_page.testimonials #featured ul.testimonial li.callout + li {background-image: none}
+body.marcom_page.testimonials #featured ul.testimonial blockquote {color: #cccccc}
+body.marcom_page.testimonials #featured ul.testimonial p {margin: 0}
+body.marcom_page.testimonials #featured ul.testimonial em {color: #ffff99}
+body.marcom_page.testimonials #featured ul.testimonial a {color: #8cc5e9; text-decoration: underline}
+body.marcom_page.testimonials #featured ul.testimonial a:hover {text-decoration: none}
+body.marcom_page.testimonials #featured ul.testimonial + ul.testimonial {margin: 20px 1% 0 7%}
+body.marcom_page.testimonials > #wrapper > .section.grey > .center > .inner {padding-bottom: 40px}
+.condensed_headlines {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em}
+.hidden {display: none}
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0}
+.clearfix {display: inline-table}
+* html .clearfix {height: 1%}
+.clearfix {display: block}
+.no-really-clearfix {overflow: hidden}
+body.public_projects #footer {display: none}
+body.public_projects > #wrapper #panels .panel_body ul.list > li.no_projects_found {font-size: 13px; font-weight: bold; text-align: center; color: #aaaaaa; padding: 100px 0 0; border-bottom: none}
+body.public_projects > #wrapper {background: #efefef}
+body.public_projects > #wrapper > .section {background: url(/images/bg.png) repeat-x; border-top: 1px solid #ffffff}
+body.public_projects > #wrapper > .section > .center {position: relative}
+body.public_projects > #wrapper > .section h1 {position: absolute; top: -2px; left: 0; height: 58px; width: 100%; text-indent: -9999em; background: url(/images/explore_badge.png) no-repeat center top}
+body.public_projects > #wrapper > .section a.nav_button {display: block; height: 28px; width: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: left top}
+body.public_projects > #wrapper > .section a.nav_button:hover {background-position: 0 -28px}
+body.public_projects > #wrapper > .section a.disabled {cursor: default}
+body.public_projects > #wrapper > .section ul.stats li {color: #aaaaaa; font-size: 1.2em}
+body.public_projects > #wrapper > .section ul.stats li + li {margin-left: 30px}
+body.public_projects > #wrapper > .section ul.stats li.stories {background: url(/images/stories.png) no-repeat left top}
+body.public_projects > #wrapper > .section ul.stats li.members {background: url(/images/members.png) no-repeat left top}
+body.public_projects > #wrapper > .section ul.stats li.activity {background: url(/images/activity.png) no-repeat left top}
+body.public_projects > #wrapper div.pagination {width: 66px}
+body.public_projects > #wrapper div.pagination * {display: block; float: left; height: 28px; width: 28px; text-indent: -9999em; background-repeat: no-repeat; background-position: left top; margin-left: 5px}
+body.public_projects > #wrapper div.pagination a:hover {background-position: 0 -28px}
+body.public_projects > #wrapper div.pagination .prev_page {background-image: url(/images/left_light.png)}
+body.public_projects > #wrapper div.pagination .next_page {background-image: url(/images/right_light.png)}
+body.public_projects > #wrapper #featured_project {margin-top: 17px; margin-bottom: 18px; padding: 0 17px 0 10px}
+body.public_projects > #wrapper #featured_project h2 {position: relative; top: 5px; font-size: 1.3em; color: #666666; font-weight: bold; text-transform: lowercase; margin: 0}
+body.public_projects > #wrapper #featured_project .main_details {position: relative; overflow: hidden}
+body.public_projects > #wrapper #featured_project .main_details h3 {float: left; font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; font-size: 4.4em; text-shadow: 0px 2px 0px #ffffff; letter-spacing: -0.02em}
+body.public_projects > #wrapper #featured_project .main_details img {float: left; margin: 5px 0 0 20px}
+body.public_projects > #wrapper #featured_project .main_details ul {float: right; overflow: hidden; margin-top: 14px}
+body.public_projects > #wrapper #featured_project .main_details ul li {float: left; text-indent: -9999em}
+body.public_projects > #wrapper #featured_project .main_details ul li a.view_project {display: block; width: 124px; height: 30px; margin-right: 10px; background: url(/images/view_project.png) no-repeat left top}
+body.public_projects > #wrapper #featured_project .main_details ul li a.view_project:hover {background-position: 0 -30px}
+body.public_projects > #wrapper #featured_project .main_details ul li a {margin-top: 2px}
+body.public_projects > #wrapper #featured_project .main_details ul li span.disabled {margin-top: 2px}
+body.public_projects > #wrapper #featured_project .main_details ul li .pagination span.disabled {-moz-opacity: 0.3; opacity: 0.3; filter: alpha(opacity=30)}
+body.public_projects > #wrapper #featured_project .secondary_details {overflow: hidden; margin-top: 3px}
+body.public_projects > #wrapper #featured_project .secondary_details p {float: left; width: 55%; font-family: Georgia, "Times New Roman", serif; color: #999999; font-size: 1.4em; font-style: italic; margin-bottom: 0}
+body.public_projects > #wrapper #featured_project .secondary_details ul {float: right; overflow: hidden}
+body.public_projects > #wrapper #featured_project .secondary_details ul li {float: left}
+body.public_projects > #wrapper #featured_project .secondary_details ul li.stories {padding-left: 23px}
+body.public_projects > #wrapper #featured_project .secondary_details ul li.members {padding-left: 19px}
+body.public_projects > #wrapper #featured_project .secondary_details ul li.activity {padding-left: 27px}
+body.public_projects > #wrapper #panels {overflow: hidden}
+body.public_projects > #wrapper #panels .panel {float: left; width: 450px; padding-bottom: 5px; background: url(/images/panel_bg_btm.png) no-repeat left bottom}
+body.public_projects > #wrapper #panels .panel_header {height: 41px; background: url(/images/panel_header.png) no-repeat left top}
+body.public_projects > #wrapper #panels .panel_header > .inner {padding: 3px 9px 0 17px; overflow: hidden}
+body.public_projects > #wrapper #panels .panel_header div.controls {float: right; margin-top: 5px}
+body.public_projects > #wrapper #panels .panel_header div.controls a.nav_button {margin-left: 3px}
+body.public_projects > #wrapper #panels .panel_header h2 {float: left; font-family: Arial, Helvetica, sans-serif; color: #ffffff; font-size: 1.3em; font-weight: bold; text-transform: uppercase; line-height: 38px; margin: 0}
+body.public_projects > #wrapper #panels .panel_body {position: relative; height: 675px; background: url(/images/panel_bg.png) repeat-y; overflow: hidden}
+body.public_projects > #wrapper #panels .panel_body .panel_gradient {position: absolute; width: 442px; height: 19px; bottom: 0; left: 4px; background: url(/images/panel_gradient.png) no-repeat left bottom; background: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #ffffff); background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#ffffff)); pointer-events: none}
+body.public_projects > #wrapper #panels .panel_body > .inner {padding: 0 4px}
+body.public_projects > #wrapper #panels .panel_body ul.list {overflow: hidden}
+body.public_projects > #wrapper #panels .panel_body ul.list > li {overflow: hidden; padding: 5px 17px 6px 13px; border-top: 2px solid #ffffff; border-bottom: 1px solid #dddddd}
+body.public_projects > #wrapper #panels .panel_body ul.list > li.last {border-bottom: none}
+body.public_projects > #wrapper #panels .panel_body h3 {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; line-height: 1.4em}
+body.public_projects > #wrapper #panels .panel_body p {margin: 0}
+body.public_projects > #wrapper #panels .panel_body p.project_description {font-family: Georgia, "Times New Roman", serif; color: #999999; font-size: 1.2em; font-style: italic; line-height: 1.4em; padding-left: 1px}
+body.public_projects > #wrapper #panels .panel_body ul.stats {float: right; margin-top: 4px}
+body.public_projects > #wrapper #panels .panel_body ul.stats li {padding-left: 27px; margin: 0 0 4px}
+body.public_projects > #wrapper #panels .panel_body ul.stats li.stories {background-position: 4px 0}
+body.public_projects > #wrapper #panels .panel_body ul.stats li.members {background-position: 8px 0}
+body.public_projects > #wrapper #panels .panel_body ul.stats li.activity {background-position: 0 0}
+body.public_projects > #wrapper #panels #active_projects {margin-right: 30px}
+body.public_projects > #wrapper #panels #active_projects div.panel_header div.controls {overflow: hidden}
+body.public_projects > #wrapper #panels #active_projects div.panel_header span.prev_page {cursor: pointer; background-image: url(/images/left_dark.png)}
+body.public_projects > #wrapper #panels #active_projects div.panel_header span.prev_page.disabled {cursor: default; background-image: url(/images/left_dark_disabled.png)}
+body.public_projects > #wrapper #panels #active_projects div.panel_header span.next_page {cursor: pointer; background-image: url(/images/right_dark.png)}
+body.public_projects > #wrapper #panels #active_projects div.panel_header span.next_page.disabled {cursor: default; background-image: url(/images/right_dark_disabled.png)}
+body.public_projects > #wrapper #panels #active_projects div.panel_header a.active {display: block}
+body.public_projects > #wrapper #panels #active_projects div.panel_header a.disabled:hover {background-position: 0 0}
+body.public_projects > #wrapper #panels #active_projects div.panel_header ul {overflow: hidden}
+body.public_projects > #wrapper #panels #active_projects div.panel_header ul li {position: relative; float: left}
+body.public_projects > #wrapper #panels #active_projects div.panel_header label {position: absolute; top: 6px !important; left: 9px !important; font-size: 1.3em; font-weight: bold; color: #cccccc}
+body.public_projects > #wrapper #panels #active_projects div.panel_header input#find_projects {font-family: "myriad-pro-1", "myriad-pro-2", Arial, Helvetica, sans-serif; width: 152px; padding: 4px 22px 4px 6px; margin-right: 1px; border: 1px solid #222222; color: #333333; background: #ffffff url(/images/search.png) 161px 5px no-repeat}
+body.public_projects > #wrapper #panels #active_projects div.main_details {float: left; width: 77%}
+body.public_projects > #wrapper #panels #active_projects ul.stats {width: 12%}
+body.public_projects > #wrapper #panels #activity_feed div.panel_header a.nav_button {display: none}
+body.public_projects > #wrapper #panels #activity_feed div.panel_header a.pause {background-image: url(/images/pause.png)}
+body.public_projects > #wrapper #panels #activity_feed div.panel_header a.play {background-image: url(/images/play.png)}
+body.public_projects > #wrapper #panels #activity_feed div.panel_header a.active {display: block}
+body.public_projects > #wrapper #panels #activity_feed ul.list > li.unexpanded {padding: 5px 11px 13px 13px; height: 48px; display: block}
+body.public_projects > #wrapper #panels #activity_feed ul.list > li.unexpanded .short {display: auto}
+body.public_projects > #wrapper #panels #activity_feed ul.list > li.unexpanded .long {display: none}
+body.public_projects > #wrapper #panels #activity_feed ul.list > li.expanded {padding-right: 11px; height: auto}
+body.public_projects > #wrapper #panels #activity_feed ul.list > li.expanded .short {display: none}
+body.public_projects > #wrapper #panels #activity_feed ul.list > li.expanded .long {display: block; padding-bottom: 5px}
+body.public_projects > #wrapper #panels #activity_feed div.main_details {float: left; width: 78%}
+body.public_projects > #wrapper #panels #activity_feed div.main_details h3 {display: inline; font-size: 1.4em}
+body.public_projects > #wrapper #panels #activity_feed div.main_details .activity_description {font-size: 1.3em; color: #000000; padding-left: 5px}
+body.public_projects > #wrapper #panels #activity_feed div.main_details .activity_description.long {padding-left: 0}
+body.public_projects > #wrapper #panels #activity_feed div.main_details p {font-size: 1.3em; font-weight: bold; color: #666666}
+body.public_projects > #wrapper #panels #activity_feed div.secondary_details {float: right; margin-top: 1px}
+body.public_projects > #wrapper #panels #activity_feed div.secondary_details a {float: left; display: block; width: 55px; height: 17px; background: url(/images/details.png) no-repeat; text-indent: -9999em; margin: 1px 6px 0 0}
+body.public_projects > #wrapper #panels #activity_feed div.secondary_details a:hover {background-image: url(/images/details_hover.png)}
+body.public_projects > #wrapper #panels #activity_feed div.secondary_details a.active {background-image: url(/images/details_inset.png)}
+body.public_projects > #wrapper #panels #activity_feed div.project_info {clear: left}
+body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats {float: none; overflow: hidden; margin-top: 4px}
+body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats li {float: left; padding-left: 26px; margin-bottom: 0}
+body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats li.stories {margin-right: 15px}
+body.public_projects > #wrapper #panels #activity_feed div.project_info ul.stats li.members {margin-right: 22px}

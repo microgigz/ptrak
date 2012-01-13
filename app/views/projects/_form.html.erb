@@ -1,29 +1,37 @@
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+<div class="popup_head">
+  <%= image_tag "projects/close_button_overlay.png", :class => "close_image" %>
+  <div class="inner">
+    <% @project=Project.new %>
+    <%= form_for @project,:html => { :id => "new_project_popup" } do |f| %>
+      <div class="heading">
+        <%= f.submit %>
+        <h3>Create New Project</h3>
+      </div>
+      <div class="popup_content">
+        <div class="add_project_flash" id="add_project_flash_338789">
+          <% if @project.errors.any? %>
 
-      <ul>
-      <% @project.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+            <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+            <ul>
+              <% @project.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        </div>
+        <ul>
+          <li>
+            <%= f.label :pro_name,'Project Name' %>
+            <%= f.text_field :pro_name, :id => "project_name", %>
 
-  <div class="field">
-    <%= f.label :pro_name %><br />
-    <%= f.text_field :pro_name %>
+          </li>
+          <li>
+
+          </li>
+
+        </ul>
+
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :pro_status %><br />
-    <%= f.text_field :pro_status %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
