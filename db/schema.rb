@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120110071411) do
+ActiveRecord::Schema.define(:version => 20120116071731) do
 
   create_table "projects", :force => true do |t|
     t.string   "pro_name"
@@ -46,10 +46,10 @@ ActiveRecord::Schema.define(:version => 20120110071411) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.string   "Initials"
-    t.string   "username"
     t.string   "time_zone"
-    t.string   "start_page"
+    t.string   "username"
+    t.string   "initials"
+    t.string   "startpage"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

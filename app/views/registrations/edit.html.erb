@@ -11,8 +11,6 @@
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
         <div class="content_scetion">
           <h1>MY PROFILE</h1>
-
-
           <table class="form_table">
             <tbody>
               <%= devise_error_messages! %>
@@ -34,10 +32,10 @@
               </tr>
               <tr>
                 <td class="label_column">
-                  <%= f.label :Initials %>
+                  <%= f.label :initials %>
                 </td>
                 <td class="field_column">
-                  <%= f.text_field :Initials, :class => "settings_field"%>
+                  <%= f.text_field :initials, :class => "settings_field"%>
                 </td>
               </tr>
               <tr>
@@ -50,11 +48,11 @@
               </tr>
               <tr>
                 <td class="label_column">
-                  <%= f.label :start_page %>
+                  <%= f.label :startpage %>
                 </td>
                 <td class="field_column">
                   <% selection = "Always start on the Dashboard", "Most recent project or the Dashboard when there are new messages" %>
-                  <%= f.select :start_page,selection %>
+                  <%= f.select :startpage,selection %>
                 </td>
               </tr>
               <tr>

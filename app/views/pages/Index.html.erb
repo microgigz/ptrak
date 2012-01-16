@@ -26,7 +26,6 @@
   <div id="wrapper">
     <%= render :partial => 'layouts/header' %>
 
-<<<<<<< HEAD
     <% title 'Pivotal Tracker - Simple, Effective Agile Project Management and Team Collaboration Software, from Pivotal Labs' %>
     <div id="featured">
       <div class="center">
@@ -35,7 +34,7 @@
           <h2>Build better software, faster.</h2>
           <div class="hr_container"><hr/></div>
           <h4>Collaborative, lightweight agile project management tool, brought to you by the experts in agile software development.</h4>
-          <%= link_to 'Sign up', '/', :class => "button sign_up" %>
+          <%= link_to 'Sign up', new_user_registration_path, :class => "button sign_up" %>
           <%= link_to 'View Features', feature_path, :class => "button view_features" %>
         </div>
       </div>
