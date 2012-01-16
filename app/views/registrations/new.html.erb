@@ -1,25 +1,45 @@
-<div id="featured">
-  <div class="center">
-    <div class="inner">      
-      <h2 id="signup"><%= image_tag("text_signup.png", :alt => "Sign Up", :class => "") %></h2>
+<%= render 'layouts/header' %>
+<div id="i_sign_up">
+  <div id="i_center">
+    <h2 id="signup"><%= image_tag("text_signup.png", :alt => "Sign Up", :class => "") %></h2>
 
-  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 
-        <%= devise_error_messages! %>
-        <p><%= f.label :name %><br />
-          <%= f.text_field :name %></p>
-        <p><%= f.label :email, :html=> {:class => "label_sign_up"} %><br />
-          <%= f.text_field :email %></p>
-        <p><%= f.label :password %><br />
-          <%= f.password_field :password %></p>
+      <%= devise_error_messages! %>
+      <p><%= f.label :name %><br />
+        <%= f.text_field :name %></p>
+      <p><%= f.label :email, :html=> {:class => "label_sign_up"} %><br />
+        <%= f.text_field :email %></p>
+      <p><%= f.label :password %><br />
+        <%= f.password_field :password %></p>
 
-        <p><%= f.label :confirm_password %><br />
-          <%= f.password_field :password_confirmation %></p>
+      <p><%= f.label :confirm_password %><br />
+        <%= f.password_field :password_confirmation %></p>
 
-        <p><%= f.submit "Sign up" %></p>
-      <% end %>
-
-      <%#= render :partial => "devise/shared/links" %>
+      <p><%= f.submit "Sign up" %></p>
+    <% end %>
+  </div>
+</div>
+<div class="i_section i_grey">
+  <div id="i2_center">
+    <div id="i2_inner">
+      <div class="i_testimonial">
+        <div class="t_inner">
+          <blockquote>
+            "I leave Tracker open all day. I use it for documenting, estimating and prioritizing things that need to be done. It's a relief to open Tracker at the start of the day and focus on the next most important task. It keeps me from getting distracted and having too many things going at the same time. It also serves as documentation of what I've completed in the past -- to show that I'm making good use of my time."
+          </blockquote>
+          <p>--  Aaron Peckham, Founder, Urban Dictionary</p>
+        </div>
+      </div>
+      <div class="i_testimonial">
+        <div class="t_inner">
+          <blockquote>
+            "Pivotal Tracker is the central nervous system of our product development process. It provides engineers and product owners a single place to holistically manage and visualize product progress. It would be hard to imagine a world without Pivotal Tracker."
+          </blockquote>
+          <p>-- Rob Fan, CTO, Sharethrough</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

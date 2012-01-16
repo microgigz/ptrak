@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pivotal</title>
+    <%= stylesheet_link_tag "login" %>
+    <%= javascript_include_tag :defaults %>
+
+    <%= csrf_meta_tag %>
+  </head>
+  <body class="marcom_ancillary signin_page">
+
+    <div id="header" class="notice_header">
+      <h1><%= link_to "", "/" %></h1>
+    </div>
+    <%= yield %>
+  </body>
+</html>
