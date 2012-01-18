@@ -322,10 +322,10 @@ a.show_more {color: #2da6ea; font-size: 9pt; padding: 10px 0 0 0; font-weight: b
 .sortable .sortasc {background-color: #ddffac; background-image: url(/images/v7/icons/up.gif)}
 .sortable .sortdesc {background-color: #b9ddff; background-image: url(/images/v7/icons/down.gif)}
 .sortable .nosort {cursor: default}
-.rounded_box {background-image: url(/images/v7/backgrounds/rounded_box.png); background-repeat: no-repeat; height: 100%; zoom: 1}
-.rounded_box > div {background-image: url(/images/v7/backgrounds/rounded_box.png); background-repeat: no-repeat; height: 100%; zoom: 1}
-.rounded_box > div > div {background-image: url(/images/v7/backgrounds/rounded_box.png); background-repeat: no-repeat; height: 100%; zoom: 1}
-.rounded_box > div > div > div {background-image: url(/images/v7/backgrounds/rounded_box.png); background-repeat: no-repeat; height: 100%; zoom: 1}
+.rounded_box {background-image: url(/images/rounded_box.png); background-repeat: no-repeat; height: 100%; zoom: 1}
+.rounded_box > div {background-image: url(/images/rounded_box.png); background-repeat: no-repeat; height: 100%; zoom: 1}
+.rounded_box > div > div {background-image: url(/images/rounded_box.png); background-repeat: no-repeat; height: 100%; zoom: 1}
+.rounded_box > div > div > div {background-image: url(/images/rounded_box.png); background-repeat: no-repeat; height: 100%; zoom: 1}
 .rounded_box {background-position: top right; padding-right: 7px; padding-top: 7px; height: 76px; margin-bottom: 27px}
 .rounded_box > div {background-position: top left; padding-left: 7px; padding-top: 7px; margin-top: -7px}
 .rounded_box > div > div {background-position: bottom right; padding-bottom: 7px; margin-right: -7px; margin-left: 7px}
@@ -358,8 +358,8 @@ a.show_more {color: #2da6ea; font-size: 9pt; padding: 10px 0 0 0; font-weight: b
 .dashboard_page #my_projects > span.inner {display: block; margin-right: 10%}
 .dashboard_page #my_projects a#create_new_project_button {position: relative; top: -6px; margin-top: 6px; float: right; display: block; text-indent: -9999em; height: 30px; width: 135px; background: #ffffff url(/images/v7/application/buttons/create_project.png) no-repeat}
 .dashboard_page #my_projects a#create_new_project_button:hover {background-position: 0 -30px}
-.dashboard_page #my_projects div.project_box {color: #333333; font-weight: bold; display: block; height: 90px; position: relative; text-align: center; border: 1px solid #cccccc; margin-bottom: 20px; background: url("/images/v7/backgrounds/gray_gradient.png") repeat-x bottom left}
-.dashboard_page #my_projects div.project_box:hover {text-decoration: none; background: url("/images/v7/backgrounds/blue_gradient.png") repeat-x bottom left; color: #ffffff; cursor: pointer}
+.dashboard_page #my_projects div.project_box {color: #333333; font-weight: bold; display: block; height: 90px; position: relative; text-align: center; border: 1px solid #cccccc; margin-bottom: 20px; background: url("/images/gray_gradient.png") repeat-x bottom left}
+.dashboard_page #my_projects div.project_box:hover {text-decoration: none; background: url("/images/projects/blue_gradient.png") repeat-x bottom left; color: #ffffff; cursor: pointer}
 .dashboard_page #my_projects div.project_box:hover .project_title {color: #ffffff; font-weight: normal}
 .dashboard_page #my_projects div.project_box .project_title {position: absolute; font-size: 1.3em; top: 35px; left: 22px; color: #000000}
 .dashboard_page #my_projects div.project_box .project_box_hover_links {position: absolute; left: 22px; bottom: 0px}
@@ -376,7 +376,7 @@ a.show_more {color: #2da6ea; font-size: 9pt; padding: 10px 0 0 0; font-weight: b
 .dashboard_page #my_projects .pagination .spinner {position: relative; right: 4em}
 .dashboard_page #activity_feed {overflow: hidden}
 .dashboard_page #activity_feed h2 span {float: left}
-.dashboard_page #activity_feed h2 a.activity_feed_subscribe_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/v7/icons/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
+.dashboard_page #activity_feed h2 a.activity_feed_subscribe_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/projects/gray_gradient.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
 .dashboard_page #activity_feed #activity_feed_items .pagination {float: right}
 .dashboard_page #activity_feed #activity_feed_items ul.list {margin-top: -10px; overflow: hidden}
 .dashboard_page #activity_feed #activity_feed_items ul.list > li {overflow: hidden; padding: 9px 10px 10px 4px; border-bottom: 1px solid #dddddd}
@@ -442,11 +442,11 @@ a.header_button:hover {background-color: #555555; text-decoration: none; backgro
 .new_project_popup .spinner {float: right; margin-top: 13px; margin-right: 10px}
 .new_project_popup div.heading {overflow: hidden; background: #ffffff; border-bottom: 1px solid #dddddd; height: 41px; padding-left: 18px}
 .new_project_popup div.heading h3 {float: left; text-transform: uppercase; font-size: 13px; line-height: 42px}
-.new_project_popup div.heading input {float: right; width: 123px; height: 33px; text-indent: -9999em; background: url(/images/v7/buttons/authenticated/project/create_project_button.png); border: none; margin-top: 4px; margin-right: 3px; *text-align: center; *font-size: 0}
-.new_project_popup div.heading input:hover {background: url(/images/v7/buttons/authenticated/project/create_project_button_hover.png)}
+.new_project_popup div.heading input {float: right; width: 123px; height: 33px; text-indent: -9999em; background: url(/images/projects/create_project_button_hover.png); border: none; margin-top: 4px; margin-right: 3px; *text-align: center; *font-size: 0}
+.new_project_popup div.heading input:hover {background: url(/images/projects/create_project_button_hover.png)}
 .new_project_popup div.heading input.disabled {opacity: 0.5}
-.new_project_popup div.heading input.disabled:hover {background: url(/images/v7/buttons/authenticated/project/create_project_button.png)}
-.new_project_popup .popup_foot {height: 16px; background: url(/images/v7/backgrounds/create_project_bg_btm.png)}
+.new_project_popup div.heading input.disabled:hover {background: url(/images/projects/create_project_button_hover.png)}
+.new_project_popup .popup_foot {height: 16px; background: url(/images/projects/create_project_bg_btm.png)}
 .new_project_popup div.popup_content {border-top: 1px solid #ffffff; padding-left: 30px}
 .new_project_popup div.popup_content span {font-size: 12px}
 .new_project_popup div.popup_content span > a {color: #33597c}
@@ -562,7 +562,7 @@ h2 + .action_area {margin-top: -1px}
 .no-really-clearfix {overflow: hidden}
 .help_page .thirdpartytools h2 {overflow: hidden}
 .help_page .thirdpartytools h2 span {float: left}
-.help_page .thirdpartytools a.feed_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/v7/icons/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
+.help_page .thirdpartytools a.feed_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/projects/gray_gradient.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
 .help_page #main > .content .help_section {margin: auto; padding-bottom: 4em}
 .help_page #main > .content .help_section .content_section li {font-size: 12px}
 .help_page #main > .content .help_section pre {font-size: 12px}
@@ -591,7 +591,7 @@ h2 + .action_area {margin-top: -1px}
 .help_page #main > .content .help_section .refined_search .example {display: block; font-family: monospace; font-size: 1.2em; color: #333399}
 .policy_page .thirdpartytools h2 {overflow: hidden}
 .policy_page .thirdpartytools h2 span {float: left}
-.policy_page .thirdpartytools a.feed_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/v7/icons/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
+.policy_page .thirdpartytools a.feed_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/projects/gray_gradient.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
 .policy_page #main > .content .help_section {margin: auto; padding-bottom: 4em}
 .policy_page #main > .content .help_section .content_section li {font-size: 12px}
 .policy_page #main > .content .help_section pre {font-size: 12px}
@@ -712,7 +712,7 @@ a#fdbk_tab:hover {background-position: right top !important; background-color: #
 .accounts_pages.projects_page .accounts_pages.memberships_page .content_section .header_actions {float: right}
 .accounts_pages.projects_page .listing_table_header #create_new_project_button {float: left}
 .accounts_pages.projects_page .listing_table_header span {float: left}
-.accounts_pages.projects_page .listing_table_header #create_new_project_button {display: block; width: 123px; height: 33px; text-indent: -9999em; background: url(/images/v7/buttons/authenticated/project/create_project_button.png) no-repeat}
+.accounts_pages.projects_page .listing_table_header #create_new_project_button {display: block; width: 123px; height: 33px; text-indent: -9999em; background: url(/images/projects/create_project_button_hover.png) no-repeat}
 .accounts_pages.projects_page .listing_table_header .account_projects_archive_toggle {float: left; font-size: 12px; margin-top: 7px; margin-right: 20px; color: #88c2e5}
 .accounts_pages.projects_page .listing_table {font-size: 12px}
 .accounts_pages.projects_page .listing_table .project_name {font-size: 13px}

@@ -13,7 +13,8 @@ Ptrak::Application.routes.draw do
   match "/feature", :to=>  'pages#feature'
   match "/story",   :to => 'stories#usecase'
   match "/tasks",   :to => 'stories#usecase'
-  match "/project", :to => 'project#new'
+  match "/dashboard",:to => 'projects#dashboard'
+  match "/project", :to => 'projects#new'
   root :to => "pages#Index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -70,5 +71,5 @@ Ptrak::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-   match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(/:id(.:format)))'
 end
