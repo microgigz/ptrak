@@ -1,62 +1,67 @@
 <%= stylesheet_link_tag "/projects/non_stories_view_prod-release-20111025-20111221-3_pkg"  %>
 <%#*<header>%>
-  <div id="header" class="notice_header">
-    <% if !user_signed_in? %>
-      <div class="center">
-      <%end%>
-      <div class="inner">
-        <h1><a href="/">Pivotal Tracker</a></h1>        
-          <% if user_signed_in? %>
+<div id="header" class="notice_header">
+  <% if !user_signed_in? %>
+    <div class="center">
+    <%end%>
+    <div class="inner">
+      <% if user_signed_in? %>
+        <h1><%= link_to "Pivotal Tracker", projects_path %> </h1>
+      <% else %>
+        <h1><%= link_to "Pivotal Tracker", "/" %></h1>
+      <% end %>
+
+      <% if user_signed_in? %>
         <div class="navigation_area clearfix">
-            <div class="welcome_message" >Welcome,<%= current_user.name.capitalize %></div>
-            <ul class="nav_links">
-              <li class="dashboard">
-                <%= link_to "Dashboard", projects_path %><%#:class => "current"%>
-              </li>
-              <li>
-                <%= link_to "Reports",'#' %>
-              </li>
-              <li>
-                <%=link_to "Profile", edit_user_registration_path%>
-              </li>
-              
-              <li>
-                <%= link_to "Help", '#' %>
-              </li>
-              <li>
-                <%= link_to "Sign Out",destroy_user_session_path %>
-              </li>
-            </ul>
-            </div>
-          <%else%>
-            <ul class="nav_links">
-              <li>
-                <%= link_to "Features",feature_path %>
-              </li>
-              <li>
-                <%= link_to "Clients & Testimonials" , '#' %>
-              </li>
-              <li>
-                <%= link_to "Public Projects",'#' %>
-              </li>
+          <div class="welcome_message" >Welcome,<%= current_user.name.capitalize %></div>
+          <ul class="nav_links">
+            <li class="dashboard">
+              <%= link_to "Dashboard", projects_path %><%#:class => "current"%>
+            </li>
+            <li>
+              <%= link_to "Reports",'#' %>
+            </li>
+            <li>
+              <%=link_to "Profile", edit_user_registration_path%>
+            </li>
 
-              <li>
-                <%= link_to "Pricing",'#' %>
-              </li>
-              <li><%= link_to "Sign In",new_user_session_path %></li>
-
-            </ul>
-          <%end%>
-
-        <% if !user_signed_in? %>
+            <li>
+              <%= link_to "Help", '#' %>
+            </li>
+            <li>
+              <%= link_to "Sign Out",destroy_user_session_path %>
+            </li>
+          </ul>
         </div>
+      <%else%>
+        <ul class="nav_links">
+          <li>
+            <%= link_to "Features",feature_path %>
+          </li>
+          <li>
+            <%= link_to "Clients & Testimonials" , '#' %>
+          </li>
+          <li>
+            <%= link_to "Public Projects",'#' %>
+          </li>
+
+          <li>
+            <%= link_to "Pricing",'#' %>
+          </li>
+          <li><%= link_to "Sign In",new_user_session_path %></li>
+
+        </ul>
       <%end%>
-    </div>
-    <script type="text/javascript">
-    //<![CDATA[
-    <%#*jQuery('.end_of_intro_period').replaceWith(new Date(1298106077000).asFriendlyDateString());%>
-    <%#*jQuery('.end_of_grandfather_period').replaceWith(new Date(1311127277000).asFriendlyDateString());%>
-    //]]>
-  </script>
+
+      <% if !user_signed_in? %>
+      </div>
+    <%end%>
   </div>
+  <script type="text/javascript">
+    //<![CDATA[
+<%#*jQuery('.end_of_intro_period').replaceWith(new Date(1298106077000).asFriendlyDateString());%>
+<%#*jQuery('.end_of_grandfather_period').replaceWith(new Date(1311127277000).asFriendlyDateString());%>
+  //]]>
+  </script>
+</div>
 <%#*</header>%>
