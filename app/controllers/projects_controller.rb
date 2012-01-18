@@ -11,7 +11,9 @@ class ProjectsController < ApplicationController
       format.xml  { render :xml => @projects }
     end
   end
-
+  def dashboard
+    @projects = Project.all
+  end
   # GET /projects/1
   # GET /projects/1.xml
   def show

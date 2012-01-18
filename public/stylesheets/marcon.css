@@ -435,8 +435,8 @@ a.show_more {color: #2da6ea; font-size: 9pt; padding: 10px 0 0 0; font-weight: b
 .dashboard_page #my_projects > span.inner {display: block; margin-right: 10%}
 .dashboard_page #my_projects a#create_new_project_button {position: relative; top: -6px; margin-top: 6px; float: right; display: block; text-indent: -9999em; height: 30px; width: 135px; background: #ffffff url(/images/v7/application/buttons/create_project.png) no-repeat}
 .dashboard_page #my_projects a#create_new_project_button:hover {background-position: 0 -30px}
-.dashboard_page #my_projects div.project_box {color: #333333; font-weight: bold; display: block; height: 90px; position: relative; text-align: center; border: 1px solid #cccccc; margin-bottom: 20px; background: url("/images/v7/backgrounds/gray_gradient.png") repeat-x bottom left}
-.dashboard_page #my_projects div.project_box:hover {text-decoration: none; background: url("/images/v7/backgrounds/blue_gradient.png") repeat-x bottom left; color: #ffffff; cursor: pointer}
+.dashboard_page #my_projects div.project_box {color: #333333; font-weight: bold; display: block; height: 90px; position: relative; text-align: center; border: 1px solid #cccccc; margin-bottom: 20px; background: url("images/gray_gradient.png") repeat-x bottom left}
+.dashboard_page #my_projects div.project_box:hover {text-decoration: none; background: url("/images/projects/blue_gradient.png") repeat-x bottom left; color: #ffffff; cursor: pointer}
 .dashboard_page #my_projects div.project_box:hover .project_title {color: #ffffff; font-weight: normal}
 .dashboard_page #my_projects div.project_box .project_title {position: absolute; font-size: 1.3em; top: 35px; left: 22px; color: #000000}
 .dashboard_page #my_projects div.project_box .project_box_hover_links {position: absolute; left: 22px; bottom: 0px}
@@ -453,7 +453,7 @@ a.show_more {color: #2da6ea; font-size: 9pt; padding: 10px 0 0 0; font-weight: b
 .dashboard_page #my_projects .pagination .spinner {position: relative; right: 4em}
 .dashboard_page #activity_feed {overflow: hidden}
 .dashboard_page #activity_feed h2 span {float: left}
-.dashboard_page #activity_feed h2 a.activity_feed_subscribe_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/v7/icons/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
+.dashboard_page #activity_feed h2 a.activity_feed_subscribe_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/projects/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
 .dashboard_page #activity_feed #activity_feed_items .pagination {float: right}
 .dashboard_page #activity_feed #activity_feed_items ul.list {margin-top: -10px; overflow: hidden}
 .dashboard_page #activity_feed #activity_feed_items ul.list > li {overflow: hidden; padding: 9px 10px 10px 4px; border-bottom: 1px solid #dddddd}
@@ -654,7 +654,7 @@ h2 + .action_area {margin-top: -1px}
 .no-really-clearfix {overflow: hidden}
 .help_page .thirdpartytools h2 {overflow: hidden}
 .help_page .thirdpartytools h2 span {float: left}
-.help_page .thirdpartytools a.feed_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/v7/icons/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
+.help_page .thirdpartytools a.feed_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/projects/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
 .help_page #main > .content .help_section {margin: auto; padding-bottom: 4em}
 .help_page #main > .content .help_section .content_section li {font-size: 12px}
 .help_page #main > .content .help_section pre {font-size: 12px}
@@ -683,7 +683,7 @@ h2 + .action_area {margin-top: -1px}
 .help_page #main > .content .help_section .refined_search .example {display: block; font-family: monospace; font-size: 1.2em; color: #333399}
 .policy_page .thirdpartytools h2 {overflow: hidden}
 .policy_page .thirdpartytools h2 span {float: left}
-.policy_page .thirdpartytools a.feed_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/v7/icons/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
+.policy_page .thirdpartytools a.feed_link {float: left; display: block; height: 16px; width: 16px; background: url(/images/projects/feed-icon-16x16.png) no-repeat top left; text-indent: -9999em; margin-top: 3px; margin-left: 7px}
 .policy_page #main > .content .help_section {margin: auto; padding-bottom: 4em}
 .policy_page #main > .content .help_section .content_section li {font-size: 12px}
 .policy_page #main > .content .help_section pre {font-size: 12px}

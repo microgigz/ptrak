@@ -535,7 +535,7 @@ sub:function(){
 browser:{}
 }),e.each("Boolean Number String Function Array Date RegExp Object".split(" "),function(a,b){
     G["[object "+b+"]"]=b.toLowerCase()
-    }),x=e.uaMatch(w),x.browser&&(e.browser[x.browser]=!0,e.browser.version=x.version),e.browser.webkit&&(e.browser.safari=!0),j.test(" ")&&(k=/^[\s\xA0]+/,l=/[\s\xA0]+$/),h=e(c),c.addEventListener?z=function(){
+    }),x=e.uaMatch(w),x.browser&&(e.browser[x.browser]=!0,e.browser.version=x.version),e.browser.webkit&&(e.browser.safari=!0),j.test("Â ")&&(k=/^[\s\xA0]+/,l=/[\s\xA0]+$/),h=e(c),c.addEventListener?z=function(){
     c.removeEventListener("DOMContentLoaded",z,!1),e.ready()
     }:c.attachEvent&&(z=function(){
     c.readyState==="complete"&&(c.detachEvent("onreadystatechange",z),e.ready())

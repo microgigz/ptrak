@@ -13,6 +13,7 @@ Ptrak::Application.routes.draw do
   match "/feature", :to=>  'pages#feature'
   match "/story",   :to => 'stories#usecase'
   match "/tasks",   :to => 'stories#usecase'
+  match "/dashboard",:to => 'projects#dashboard'
   match "/project", :to => 'project#new'
   root :to => "pages#Index"
   # The priority is based upon order of creation:

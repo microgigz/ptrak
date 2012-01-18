@@ -26,7 +26,12 @@
 
 </head>
 <body class="yui-skin-sam projects_page">
-  <div style="display: none;"><img alt="" src="projects_files/actions_overlay_bg.png"><img alt="" src="projects_files/create_project_button.png"><img alt="" src="projects_files/create_project_button_hover.png"></div>
+  <div style="display: none;">
+    <%image_tag "projects/actions_overlay_bg.png"%>
+    <%image_tag "projects/create_project_button.png"%>
+    <%image_tag "projects/create_project_button_hover.png"%>
+  </div>
+  <%= render :partial=>'layouts/header' %>
   <div id="main">
     <script type="text/javascript">
       ENVIRONMENT='prod'
@@ -111,8 +116,8 @@
 
 
 
-                    <div class="project_stats">*&nbsp;Updated after adding members</div>%><%# un comments after aadding members%>
-                    <div class="project_stats">*&nbsp;Updated after adding Stories</div>%><%# un comments after aadding Storoies%>
+                    <div class="project_stats">*&nbsp;Updated after adding members</div><%# un comments after aadding members%>
+                    <div class="project_stats">*&nbsp;Updated after adding Stories</div><%# un comments after aadding Storoies%>
                     <%= image_tag "/projects/gear_myprojects.png", :alt => 'settings',:class => 'settings' %>
                   </li>
                 <%end%>

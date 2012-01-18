@@ -1,0 +1,165 @@
+<%= content_for :header do %>
+
+  <%= stylesheet_link_tag 'projects/non_stories_view' %>
+  <%= javascript_include_tag "features/ga" %>
+  <%= javascript_include_tag "projects/non_stories_view_prod-release-3_pkg" %>
+  <%= javascript_include_tag "projects/will_peginate" %>
+  <!--[CDATA[
+  window._gaq = window._gaq || [];
+  window._gaq.push(['_setAccount', 'UA-1687866-3']);
+  window._gaq.push(['_trackPageview']);
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  //]]>
+-->
+<%end%>
+
+<body class="yui-skin-sam dashboards_page">
+  <div style="display: none;">
+    <%=image_tag "projects/actions_overlay_bg.png"%>
+    <%=image_tag "projects/create_project_button.png"%>
+    <%=image_tag "projects/create_project_button_hover.png"%>
+
+  </div>
+  <%= render :partial => 'layouts/header' %>
+  <div id="main">
+    <script type="text/javascript">
+      ENVIRONMENT='prod'
+    </script>
+    
+
+    <div class="content clearfix">
+      <div id="flash">
+
+        <ul>
+
+
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="dashboard_page">
+        <h1>Dashboard</h1>
+
+        <div class="content_section left_column" id="my_projects">
+          <span class="inner">
+
+            <div id="my_projects_list">
+              <h2><a class="header_button right_link" href="#" id="new_project_link" onclick="    SimpleOverlay.create(function(overlay){
+                overlay.overlay.setOpacity(0.3);
+                overlay.onCancel = function() { $$('.add_project_error_message').each(function(el){el.innerHTML = '';}) };
+
+                img = $$('#new_project_popup .close_image').first();
+                YAHOO.util.Event.addListener(img, 'click', overlay.cancel.bind(overlay));
+
+                return $('new_project_popup');
+              });
+
+              $('new_project_popup').show();
+              setTimeout(function() { $$('#new_project_popup .project_name_field').first().focus(); }, 50);
+              jQuery(&quot;label.infield&quot;).inFieldLabels({fadeDuration: 100});
+              ; return false;">Create Project</a>
+                <span>My Projects</span>
+              </h2>
+              <div class="project_list">
+                <% @projects.each do |project| %>
+                  <div class="project_box" onclick="window.location.pathname='/projects/432771'">
+                    <div class="project_title"> <%= project.pro_name %> </div>
+                    <div class="velocity_box">
+                      <%= image_tag "projects/no_velocity.png" %>
+                      <div class="project_box_hover_links">
+
+                        <a class="hover_link" href="https://#/projects/432771/overview">overview</a>
+
+                        <a class="hover_link" href="https://#/projects/432771/settings">settings</a>
+
+                        <a class="hover_link" href="https://#/projects/432771/memberships">members</a>
+
+                      </div>
+                      <div class="caption" title="you have 1 story to finish"><%#Updated after adding storins%></div>
+
+                      <div title="Velocity: 0, Volatility: 0.0%" class="velocity"></div>
+                    </div>
+                  </div>
+                <%end%>
+
+
+                <a href="https://#/projects" class="show_all outlined button white">Show All My Projects</a>
+              </div>
+
+            </div>
+
+          </span>
+        </div>
+        <div class="content_section right_column" id="activity_feed">
+          <div id="activity_feed_items"><h2><span>Activity Feed</span><a href="https://#/user_activities/bb3eed21daa3a519760910640975721e" class="activity_feed_subscribe_link">subscribe</a></h2>
+            <div class="rounded_box">
+              <div>
+                <div>
+                  <div>
+                    <span class="inner">
+                      <p>This is your activity feed. It will show you the latest activity within your projects.</p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="content_section news">
+          <h2>Tracker News</h2>
+          <div class="messages left_column">
+            <div class="markdown_content">
+
+              <h3>Follow us on Twitter</h3>
+
+              <p>For the latest news and updates on Tracker, follow <a href="http://www.twitter.com/pivotaltracker">@pivotaltracker</a>, and check out the <a href="http://www.pivotallabs.com/tracker">Tracker blog</a>.</p>
+
+            </div>
+          </div>
+          <div class="messages right_column">
+            <div class="markdown_content">
+              <h3>Recent Updates</h3>
+
+              <p>The old version of the API (V2) will be removed on Jan 27, 2012, please see <a href="https://pivotallabs.com/users/dan/blog/articles/1975-pivotal-tracker-api-v2-to-be-removed-on-jan-27">this blog post</a> for the details. Read more about what's new on the <a href="https://#/help/recentupdates">recent updates</a> page.</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <br/>
+
+      <div class="new_project_popup" id="new_project_popup" style="display:none">
+        <%=render "form"%>
+        <div class="popup_foot"></div>
+
+      </div>
+
+    </div>
+    <noscript>
+      <div id='js_required'>Tracker requires JavaScript. Please enable it in your browser.</div>
+    </noscript>
+    <div class="push"></div>
+  </div>
+  <%= render :partial => "layouts/signIn_footer" %>
+
+
+  <script type="text/javascript">
+  //<![CDATA[
+  onload = function(){};
+  //]]>
+  </script>
+
+
+</body>
