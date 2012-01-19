@@ -103,7 +103,7 @@ body.marcom_page > #wrapper > .section h2 {font-family: "myriad-pro-1", "myriad-
 body.marcom_page .section h3 {font-family: "myriad-pro-semi-condensed-1", "myriad-pro-semi-condensed-2", Arial, Helvetica, sans-serif; font-weight: 600; letter-spacing: -0.01em; color: #333333; font-size: 1.6em; line-height: 1.2em}
 body.marcom_page .section p {font-size: 1.3em; margin-bottom: 1.7em}
 body.marcom_page .section.grey {background: #f3f3f3 url(/images/features/grey_bg.png) repeat-x left top; border-top: 1px solid #ffffff}
-body.marcom_page .section.grey div.center {height: 100%; background: url(/images/features/grey_fold_up.png) no-repeat center bottom}
+body.marcom_page .section.grey div.center {height: 30%; background: url(/images/features/grey_fold_up.png) no-repeat center bottom}
 body.marcom_page .section.white {border-top: 1px solid #dddddd}
 body.marcom_page .section.white h2 {font-size: 1.8em; margin-bottom: 0.8em}
 body.marcom_page .testimonial blockquote {color: #000000; line-height: 1.4em; margin-bottom: 0.5em}

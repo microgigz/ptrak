@@ -1,11 +1,9 @@
+<%= content_for :header do %>
 
-<head>
-
-  <title>My Projects - Pivotal Tracker</title>
-
-  <link href="projects_files/non_stories_view_prod-release-20111025-20111221-3_pkg.css" media="screen" rel="Stylesheet" type="text/css"/>
-  <script src="projects_files/ga.js" async="" type="text/javascript"></script><script src="projects_files/non_stories_view_prod-release-20111025-20111221-3_pkg.js" type="text/javascript"></script>
-
+  <%= stylesheet_link_tag 'projects/non_stories_view' %>
+  <%= javascript_include_tag "features/ga" %>
+  <%= javascript_include_tag "projects/non_stories_view_prod-release-3_pkg" %>
+  <%= javascript_include_tag "projects/will_peginate" %>
   <script type="text/javascript">
     //<![CDATA[
     window._gaq = window._gaq || [];
@@ -23,8 +21,8 @@
     //]]>
   </script>
 
+<%end%>
 
-</head>
 <body class="yui-skin-sam projects_page">
   <div style="display: none;">
     <%image_tag "projects/actions_overlay_bg.png"%>
@@ -98,7 +96,8 @@
                   <li>
                     <div class="title">
 
-                      <a href="https://#/projects/432771" class="project_name"><%= project.pro_name %></a>
+                      <%= link_to project.pro_name, stories_path, :class => "project_name"%>
+                      <%#*<a href="https://#/projects/432771" <%= project.pro_name %><!--</a>%>-->
 
                     </div>
 
